@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.active.e_uc.user.po.TblSysmsg" table="tbl_sysmsg" >
+ 
+ <id name="id" column="id" >
+	 <generator class="native"/>
+</id>
+<property name="usageType" column="USAGE_TYPE" />
+<property name="contentType" column="CONTENT_TYPE" />
+<property name="displayMode" column="DISPLAY_MODE" />
+<property name="content" column="CONTENT" />
+<property name="receiverType" column="RECEIVER_TYPE" />
+<property name="receiver" column="RECEIVER" />
+<property name="startTime" column="START_TIME" />
+<property name="endTime" column="END_TIME" />
+<property name="app" column="APP" />
+<property name="creatorId" column="CREATOR_ID" />
+<property name="creatorType" column="CREATOR_TYPE" />
+<property name="orgId" column="ORG_ID" />
+<property name="aid" column="AID" />
+<property name="deptId" column="DEPT_ID" />
+<property name="orderNum" column="ORDER_NUM" />
+</class>
+</hibernate-mapping>

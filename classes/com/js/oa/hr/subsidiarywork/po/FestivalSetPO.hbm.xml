@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.subsidiarywork.po.FestivalSetPO" table="OA_FESTIVALSET" >
+<id name="id" column="FESTIVAL_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="calendarType" column="CalendarType" />
+<property name="wishCardName" column="WISHCARDNAME" />
+<property name="appointYear" column="AppointYear" />
+<property name="festiveYear" column="FestiveYear" />
+<property name="festiveMonth" column="FestiveMonth" />
+<property name="festiveDay" column="FestiveDay" />
+<property name="festivalName" column="FESTIVALNAME"  />
+<property name="festivalRemind" column="FESTIVALREMIND"  />
+<property name="festivalWish" column="FESTIVALWISH"  />
+<property name="festivalWishCard" column="FESTIVALWISHCARD" type="net.sf.hibernate.type.TextType" />
+<property name="createdOrg" column="CreatedOrg"  />
+<property name="createdEmp" column="CreatedEmp"  />
+<property name="useRange" column="UseRange"  />
+<property name="userRangeName" column="userRangeName"  />
+
+<property name="domainId" column="DOMAIN_ID"/>
+</class>
+</hibernate-mapping>

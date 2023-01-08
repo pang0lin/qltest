@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.subsidiarywork.po.OARemindPO" table="OA_REMIND" >
+<id name="id" column="REMIND_ID" type="long">
+<generator class="native" />
+</id>
+
+<property name="empId" column="EMP_ID" />
+<property name="orgRange" column="ORGRANGE" />
+<property name="remindType" column="REMINDTYPE" />
+<property name="wishText" column="WISHTEXT"  />
+<property name="wishCard" column="WISHCARD" />
+<property name="festivalName" column="FESTIVALNAME" />
+
+</class>
+</hibernate-mapping>

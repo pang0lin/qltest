@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoitureCancelPO" table="VEH_CANCEL" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="cancelDate" column="CANCELDATE" type="timestamp" length="23"/>
+<property name="cancelTime" column="CANCELTIME"/>
+<property name="cancelMode" column="CANCELMODE" type="string" length="1"/>
+<property name="cancelReason" column="CANCELREASON" type="string" length="1000"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+<many-to-one name="voitureApplyPO"
+            class="com.js.oa.routine.voiture.po.VoitureApplyPO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="APPLYID" />
+</class>
+</hibernate-mapping>

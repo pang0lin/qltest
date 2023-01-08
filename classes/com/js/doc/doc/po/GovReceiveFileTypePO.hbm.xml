@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovReceiveFileTypePO" table="DOC_RECEIVEFILETYPE" >
+<id name="id" column="id" >
+ <generator class="native"/>
+</id>
+<property name="receiveFileTypeName" column="RECEIVEFILETYPENAME" />
+<property name="userName" column="RECEIVEFILETYPE_USERNAME" />
+<property name="userId" column="RECEIVEFILETYPE_USERID" />
+<property name="orgId" column="RECEIVEFILETYPE_ORGID" />
+<property name="groupId" column="RECEIVEFILETYPE_GROUPID" />
+<property name="createdEmp" column="CREATEDEMP" />
+<property name="createdOrg" column="CREATEDORG" />
+<property name="domainId" column="DOMAIN_ID"/>
+
+</class>
+</hibernate-mapping>

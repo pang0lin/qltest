@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqOutPO" table="kq_out" >
+<id name="id" column="ID" type="long">
+<generator class="native" />
+</id>
+<property name="userId" column="USER_ID" />
+<property name="userName" column="USER_NAME" />
+<property name="orgId" column="ORG_ID" />
+<property name="orgName" column="ORG_NAME" />
+<property name="place" column="PLACE" />
+<property name="signTime" column="SIGN_TIME" />
+<property name="startTime" column="STARTTIME" />
+<property name="endTime" column="ENDTIME" />
+<property name="cause" column="CAUSE" />
+<property name="projectId" column="PROJECT_ID" />
+<property name="status" column="STATUS" />
+</class>
+</hibernate-mapping>

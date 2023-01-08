@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.TrainClassPO"
+        table="OA_TRAINCLASS"
+        >
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="trainName" column="TRAIN_NAME" />
+        <property name="trainDescribe" column="TRAIN_DESCRIBE" />
+		<property name="trainContent" column="TRAIN_CONTENT" />
+		<property name="trainAim" column="TRAIN_AIM" />
+		<property name="domain" column="DOMAIN" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.CsMasterPO"
+        table="ST_CSMASTER"
+        >
+        <id name="id" column="CS_NO">
+            <generator class="native" />
+        </id>
+        <property name="csDate" column="CS_DATE" />
+        <property name="csStock" column="CS_STOCK" />
+        <property name="csMan" column="CS_MAN" />
+        <property name="makeDate" column="MAKE_DATE" />
+        <property name="makeMan" column="MAKE_MAN" />
+        <property name="checkFlag" column="CHECK_FLAG" />
+        <property name="checkDate" column="CHECK_DATE" />
+        <property name="checkMan" column="CHECK_MAN" />
+        <property name="checkManName" column="CHECK_MANNAME" />
+        <property name="remark" column="REMARK" />
+
+        <set name="csDetail"
+            
+            table="ST_CSDETAIL"
+            lazy="false"
+            inverse="true"
+            cascade="save-update"
+            order-by="GOODS_ID"
+            sort="unsorted">
+            <key column="CS_NO" />
+            <one-to-many class="com.js.oa.routine.resource.po.CsDetailPO" />
+        </set>
+    </class>
+</hibernate-mapping>

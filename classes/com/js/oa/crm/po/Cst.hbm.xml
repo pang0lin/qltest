@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.crm.po.Cst" table="cst_c">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="CName" type="java.lang.String">
+			<column name="c_name" />
+		</property>
+		<property name="CType" type="java.lang.String">
+			<column name="c_type" />
+		</property>
+
+		<property name="CTele" type="java.lang.String">
+			<column name="c_tele" />
+		</property>
+
+		<property name="CEmail" type="java.lang.String">
+			<column name="c_email" />
+		</property>
+		<property name="CMobile" type="java.lang.String">
+			<column name="c_mobile" />
+		</property>
+		<property name="CFax" type="java.lang.String">
+			<column name="c_fax" />
+		</property>
+		<property name="p1" type="java.lang.String">
+			<column name="p1" />
+		</property>
+		<property name="c1" type="java.lang.String">
+			<column name="c1" />
+		</property>
+		<property name="CAddress" type="java.lang.String">
+			<column name="c_address" />
+		</property>
+		
+		<property name="CRName" type="java.lang.String">
+			<column name="c_r_name" />
+		</property>
+		<property name="CRTele" type="java.lang.String">
+			<column name="c_r_tele" />
+		</property>
+		<property name="CREmail" type="java.lang.String">
+			<column name="c_r_email" />
+		</property>
+		<property name="CRMobile" type="java.lang.String">
+			<column name="c_r_mobile" />
+		</property>
+		<property name="CRzw" type="java.lang.String">
+			<column name="c_r_zw" />
+		</property>
+		<property name="CRgw" type="java.lang.String">
+			<column name="c_r_gw" />
+		</property>
+		<property name="createUser" type="java.lang.String">
+			<column name="create_user" />
+		</property>
+		<property name="createUserId" type="java.lang.String">
+			<column name="create_user_id" />
+		</property>
+		<property name="createTime" type="java.lang.String">
+			<column name="create_time" />
+		</property>
+
+		<!--	新增  	-->
+		<property name="cstState" type="java.lang.String">
+			<column name="cst_state" />
+		</property>
+		<property name="cstStateName" type="java.lang.String">
+			<column name="cst_state_name" />
+		</property>
+		<property name="CTypeName" type="java.lang.String">
+			<column name="c_type_name" />
+		</property>
+		<property name="trustTime" type="java.lang.String">
+			<column name="trust_time" />
+		</property>
+		<property name="requestTime" type="java.lang.String">
+			<column name="request_time" />
+		</property>
+		<property name="chargeUser" type="java.lang.String">
+			<column name="charge_user" />
+		</property>
+		<property name="inteCompTime" type="java.lang.String">
+			<column name="inte_comp_time" />
+		</property>
+		<property name="acceptUser" type="java.lang.String">
+			<column name="accept_user" />
+		</property>
+		<property name="acceptTime" type="java.lang.String">
+			<column name="accept_time" />
+		</property>
+		<property name="floowUser" type="java.lang.String">
+			<column name="floow_user" />
+		</property>
+		<property name="sendTime" type="java.lang.String">
+			<column name="send_time" />
+		</property>
+		<property name="cstRequset" type="java.lang.String">
+			<column name="cst_requset" />
+		</property>
+		<property name="floowUserId" type="java.lang.String">
+			<column name="floow_user_id" />
+		</property>
+		<property name="acceptUserId" type="java.lang.String">
+			<column name="accept_user_id" />
+		</property>
+		<property name="chargeUserId" type="java.lang.String">
+			<column name="charge_user_id" />
+		</property>
+		
+		<property name="orgId" type="java.lang.String">
+			<column name="org_id" />
+		</property>
+		<property name="orgName" type="java.lang.String">
+			<column name="org_name" />
+		</property>
+		<property name="orgIdString" type="java.lang.String">
+			<column name="org_id_string" />
+		</property>
+		<property name="cstDesc" type="java.lang.String">
+			<column name="cst_desc" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.channelmanager.po.UserChannelPO"
+        table="OA_USERCHANNEL"
+        >
+        <id name="userChannelId" column="USERCHANNEL_ID">
+            <generator class="native"/>
+        </id>
+        <property name="userChannelName" column="USERCHANNELNAME" />
+        <property name="userChannelOrder" column="USERCHANNELORDER" />
+        <property name="domainId" column="DOMAIN_ID" />
+		
+        <property name="channelReader" column="CHANNELREADER" />
+		<property name="channelReadOrg" column="CHANNELREADORG" />
+		<property name="channelReadGroup" column="CHANNELREADGROUP" />
+		<property name="channelReadName" column="CHANNELREADNAME" />
+    </class>
+</hibernate-mapping>

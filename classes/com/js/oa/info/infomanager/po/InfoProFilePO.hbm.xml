@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InfoProFilePO"
+        table="HAIER_FILEMANGER"
+        >
+        <id name="fileId" column="FILE_ID">
+            <generator class="native"/>
+        </id>
+         <property name="filePreId" column="FILEPRE_ID"  />
+        <property name="proFile" column="PROFILE"  />
+        <property name="fileName" column="FILENAME"  />
+        <property name="fileNum" column="FILENUM"  />
+        <property name="character" column="FILE_CHARACTER" />
+        <property name="version" column="FILE_VERSION" />
+        <property name="fileDate" column="FILEDATE" />
+        <property name="reviewDate" column="REVIEWDATE" />
+        <property name="department" column="DEPARTMENT"/>
+        <property name="author" column="AUTHOR" />
+        <property name="viewMan" column="VIEWMAN" />
+        <property name="isNew" column="ISNEW" />
+        <property name="fileViewName" column="FILEVIEWNAME" />
+        <property name="fileAppendName" column="FILEAPPENDNAME" />
+        <property name="filePath" column="FILEPATH" />
+        <property name="appendPath" column="APPENDPATH" />
+        <property name="reviewRecordId" column="REVIEWRECORDID" />
+        <property name="reviseRecordId" column="REVISERECORDID" />
+        <property name="isAppend" column="isAppend" />
+    </class>
+</hibernate-mapping>

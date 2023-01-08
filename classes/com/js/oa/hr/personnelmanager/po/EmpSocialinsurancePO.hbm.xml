@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.EmpSocialinsurancePO"
+        table="oa_emp_socialinsurance"
+        >
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="payMonth" column="pay_month" />
+        <property name="payType" column="pay_type" />
+		<property name="payBase" column="pay_base" />
+		<property name="stopMonth" column="stop_month" />
+		<property name="memos" column="memos" />
+		<property name="empOrg" column="emp_org" />
+
+		<many-to-one name="emp"
+            class="com.js.system.vo.usermanager.EmployeeVO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="EMP_ID" />
+    </class>
+</hibernate-mapping>

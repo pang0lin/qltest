@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.paper.po.NotePaperPO" table="OA_NOTEPAPER" >
+<id name="id" column="NOTEPAPER_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="empId" column="EMP_ID" type="long" length="20" not-null="true"/>
+<property name="notePaperContent" column="NOTEPAPERCONTENT" type="string" length="600" not-null="true"/>
+<property name="notePaperColor" column="NOTEPAPERCOLOR" type="string" length="10"/>
+<property name="createdTime" column="CREATEDTIME" type="timestamp" length="7" not-null="true"/>
+<property name="updateTime" column="UPDATETIME" type="timestamp" length="7"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="showno" column="SHOW_NO"/>
+</class>
+</hibernate-mapping>

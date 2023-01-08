@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.setup.po.OptionSetPO" table="OA_OPTIONSET" >
+<id name="id" column="OPTIONSET_ID" type="long">
+	<generator class="native" />
+</id>
+
+<property name="empId" column="EMPID" type="long" length="20"/>
+<property name="calendarRemind" column="CALENDARREMIND" type="integer" length="5"/>
+<property name="workingDay" column="WORKINGDAY" type="string" length="7"/>
+<property name="firstDayOfWeek" column="FIRSTDAYOFWEEK" type="byte" length="1"/>
+<property name="fisrtWeekOfYear" column="FISRTWEEKOFYEAR" type="string" length="20"/>
+<property name="beginTimeOfDay" column="BEGINTIMEOFDAY" type="string" length="5"/>
+<property name="endTimeOfDay" column="ENDTIMEOFDAY" type="string" length="5"/>
+<property name="finishTaskColor" column="FINISHTASKCOLOR" type="string" length="10"/>
+<property name="overdueTaskColor" column="OVERDUETASKCOLOR" type="string" length="10"/>
+<property name="notePaperColor" column="NOTEPAPERCOLOR" type="string" length="10"/>
+</class>
+</hibernate-mapping>

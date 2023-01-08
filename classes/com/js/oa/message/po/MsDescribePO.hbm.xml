@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsDescribePO" table="MS_INFODESCRIBE" >
+        <id name="describeId" column="DESCRIBEID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="receiveId" column="RECEIVEID" type="java.lang.Long"/>
+        <property name="sendId" column="SENDID" type="java.lang.Long"/>
+        <property name="receiveMan" column="RECEIVEMAN" type="java.lang.String"/>
+        <property name="sendMan" column="SENDMAN" type="java.lang.String"/>
+        <property name="msContent" column="MSCONTENT" type="java.lang.String"/>
+        <property name="sendTime" column="SENDTIME" type="timestamp"/>
+        <property name="receiveCode" column="RECEIVECODE" type="java.lang.String"/>
+        <property name="outMobilephone" column="OUTMOBILECODE" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

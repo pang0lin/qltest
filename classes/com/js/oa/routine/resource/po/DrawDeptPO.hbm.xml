@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.DrawDeptPO"
+        table="ST_DRAWDEPT"
+        >
+        <id name="id" column="DRAWDEPT_ID">
+            <generator class="native" />
+        </id>
+        <property name="name" column="DRAWDEPT_NAME" />
+        <property name="remark" column="REMARK" />
+        <property name="createdEmp" column="CREATEDEMP" />
+        <property name="createdOrg" column="CREATEDORG" />
+		<property name="domainid" column="DOMAIN_ID" />
+        <many-to-one name="stock"
+            class="com.js.oa.routine.resource.po.StockPO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="STOCK_ID" />
+    </class>
+</hibernate-mapping>

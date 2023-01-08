@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovTypeSetPO" table="DOC_TYPESET" >
+<id name="id" column="TYPESET_ID" >
+ <generator class="native"/>
+</id>
+
+<property name="typeSetName" column="TYPESET_NAME" type="string" length="50"/>
+<property name="typeSetWordNumber" column="TYPESET_WORDNUMBER" type="string" length="50"/>
+<property name="sendToUser" column="SendToUser" />
+<property name="sendToOrg" column="SendToOrg"  />
+<property name="sendToGroup" column="SendToGroup" />
+<property name="sendToName" column="SendToName" />
+<property name="createdEmp" column="CreatedEmp" />
+<property name="createdOrg" column="createdOrg" />
+<property name="redHeadId" column="redHeadId" />
+<property name="domainId" column="DOMAIN_ID"/>
+
+</class>
+</hibernate-mapping>

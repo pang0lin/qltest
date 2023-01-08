@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.person.po.PersonClassPO" table="OA_LINKMANCLASS" >
+<id name="id" column="CLASS_ID" type="long">
+	<generator class="native" />
+</id>
+<property name="empId" column="EMP_ID" type="long" length="20" not-null="true"/>
+<property name="className" column="CLASSNAME" type="string" length="50" not-null="true"/>
+<property name="classDescribe" column="CLASSDESCRIBE" type="string" length="200"/>
+<property name="classType" column="CLASSTYPE"  />
+<property name="createdOrg" column="createdOrg"  />
+<property name="domainId" column="DOMAIN_ID"/>
+<set
+	name="linkmen"
+	table="OA_LINKMAN"
+	lazy="false"
+	inverse="false"
+	cascade="none"
+	sort="unsorted">
+	<key column="CLASS_ID"/>
+	<one-to-many
+		class="com.js.oa.personalwork.person.po.PersonPO"
+	/>
+</set>
+
+</class>
+</hibernate-mapping>

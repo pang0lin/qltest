@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.BoardRoomApplyTypePO" table="OA_BDROOMAPPTYPE" >
+        <id name="bdroomAppTypeId" column="BDROOMAPPTYPEID">
+             <generator class="native"/>
+        </id>
+        <property name="type" column="TYPE" type="java.lang.String"/>
+		<property name="createdEmp" column="CREATEDEMP" type="java.lang.Long"/>
+		<property name="createdOrg" column="CREATEDORG" type="java.lang.Long"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<property name="applyType" column="applyType"/>
+		<property name="typeDefault" column="typeDefault"/>
+		
+		<property name="usedScopeName" column="USEDSCOPENAME"/>
+		<property name="usedScopeId" column="USEDSCOPEID"/>
+		<property name="usedScopeOrgId" column="USEDSCOPEORGID"/>
+		<property name="usedScopeGroupId" column="USEDSCOPEGROUPID"/>
+		<property name="applyFirst" column="applyFirst"/>
+		
+         <set name="boardRoomApply"
+                table="OA_BOARDROOMAPPLY"
+                lazy="true"
+                inverse="false"
+                cascade="none"
+    		sort="unsorted">
+    		<key column="bdroomAppTypeId"/>
+    		<one-to-many class="com.js.oa.routine.boardroom.po.BoardRoomApplyPO"/>
+                </set>
+	</class>
+</hibernate-mapping>

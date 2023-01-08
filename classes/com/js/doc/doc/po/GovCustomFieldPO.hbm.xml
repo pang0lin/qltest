@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovCustomFieldPO" table="form_initfield">
+    <id column="id" name="id" type="java.lang.Long">
+       <generator class="native"/>
+    </id>
+    <property name="gffName" column="gffName" />
+    <property name="gffDisplayName" column="gffDisplayName" />
+    <property name="govFormType" column="govFormType" />
+    <property name="domainId" column="domainId" />
+    <property name="gffDisplayType" column="gffDisplayType" />
+    <property name="gffLength" column="gffLength" />
+    <property name="gffFieldType" column="gffFieldType" />
+    <property name="gffIsNull" column="gffIsNull" />
+</class>
+</hibernate-mapping>

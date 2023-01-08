@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.netdisk.po.NetDiskPO"
+        table="oa_netdisk_file"
+        >
+        <id name="fileId" column="FILE_ID">
+            <generator class="native"/>
+        </id>
+        <property name="fileName" column="file_name"  />
+		<property name="fileSaveName" column="file_savename"/>
+		<property name="fileSaveNameMin" column="file_savenamemin"/>
+		<property name="fileExtName" column="file_extName"  />
+		<property name="fileType" column="file_type"  />
+		<property name="fileOwn" column="file_own"  />
+		<property name="fileOwnId" column="file_ownId"  />
+		<property name="fileFatherId" column="file_fatherId"  />
+		<property name="filePath" column="file_path"  />
+		<property name="fileIsShare" column="file_isShare"  />
+		<property name="fileShareToName" column="file_shareToName"  />
+		<property name="fileShareToOrg" column="file_shareToOrg"  />
+		<property name="fileShareToGroup" column="file_shareToGroup"  />
+		<property name="fileShareToEmp" column="file_shareToEmp"  />
+		
+		<property name="fileShareToNameWrite" column="file_shareToName_write"  />
+		<property name="fileShareToOrgWrite" column="file_shareToOrg_write"  />
+		<property name="fileShareToGroupWrite" column="file_shareToGroup_write"  />
+		<property name="fileShareToEmpWrite" column="file_shareToEmp_write"  />
+		
+		<property name="readTimeFrom" column="readtimefrom"  />
+		<property name="readTimeTo" column="readtimeto"  />
+		<property name="writeTimeFrom" column="writetimefrom"  />
+		<property name="writeTimeTo" column="writetimeto"  />
+		
+		
+		<property name="fileCreatedTime" column="file_createdTime"  />
+		<property name="fileSize" column="file_size"  />
+		<property name="fileNote" column="file_note"  />
+		<property name="fileOwenAccount" column="FILE_OWENACCOUNT"  />
+		<property name="fileIdString" column="FILE_IDSTRING"  />
+		<property name="domainId" column="DOMAIN_ID"  />
+    </class>
+</hibernate-mapping>

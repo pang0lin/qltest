@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.scheme.workreport.po.WorkReportLeaderPO" table="rep_LEADER" >
+<id name="id" column="REPORTLEADER_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="empId" column="EMP_ID" type="long" length="20"/>
+<property name="rlDomainId" column="DOMAIN_ID" type="long" length="20"/>
+
+ <property name="hadRead" column="HADREAD" type="byte" length="1"/>
+<many-to-one
+	name="report"
+	class="com.js.oa.scheme.workreport.po.WorkReportPO"
+	cascade="none"
+	outer-join="auto"
+	update="true"
+	insert="true"
+	column="REPORT_ID"
+/>
+
+</class>
+</hibernate-mapping>

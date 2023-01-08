@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<class name="com.js.oa.scheme.worklog.po.ProjectStepPO" table="OA_PROJECTSTEP" >
+    <id name="stepId" type="java.lang.Long" column="STEP_ID">
+        <generator class="native" />
+    </id>
+    <property name="stepDomainId" type="java.lang.Long" column="DOMAIN_ID" length="20">
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property name="stepName" type="java.lang.String" column="STEPNAME" length="30">
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <many-to-one name="workProjectClass" class="com.js.oa.scheme.worklog.po.WorkProjectClassPO" not-null="true">
+        <column name="CLASS_ID" />
+    </many-to-one>
+</class>
+</hibernate-mapping>

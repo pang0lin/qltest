@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.setup.po.WorkProxyPO" table="OA_WORKPROXY" >
+<id name="id" column="PROXY_ID" type="long">
+	<generator class="native"/>
+</id>
+<property name="empId" column="EMP_ID" type="long" length="20" not-null="true"/>
+<property name="proxyEmpId" column="PROXYEMPID" type="long" length="20" not-null="true"/>
+<property name="proxyEmpName" column="PROXYEMPNAME"/>
+<property name="beginTime" column="BEGINTIME" type="timestamp" length="7" not-null="true"/>
+<property name="endTime" column="ENDTIME" type="timestamp" length="7" not-null="true"/>
+<property name="proxyState" column="PROXYSTATE"/>
+
+<property name="proxyAllProcess" column="PROXYALLPROCESS"/>
+<property name="proxyProcess" column="PROXYPROCESS"/>
+
+<property name="proxyOrgId" column="proxyOrgId"/>
+<property name="proxyOrgName" column="proxyOrgName"/>
+
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="empName" column="empName"/>
+<property name="createEmpId" column="createEmpId"/>
+<property name="createEmpName" column="createEmpName"/>
+<property name="createTime" column="createTime"/>
+</class>
+</hibernate-mapping>

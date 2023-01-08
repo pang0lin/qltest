@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.relproject.po.RelProjectPO" table="PRO_BODY" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="title" column="title"/>
+<property name="catalog" column="catalog"/>
+<property name="startTime" column="startTime"/>
+<property name="endTime" column="endTime"/>
+<property name="status" column="status"/>
+<property name="proDesc" column="prodesc"/>
+<property name="rate" column="rate"/>
+<property name="classId" column="classId"/>
+
+<set name="projectActor"
+            table="pro_actor"
+            lazy="true"
+            inverse="false"
+            cascade="all"
+            sort="unsorted">
+            <key column="project_id" />
+            <one-to-many class="com.js.oa.relproject.po.RelProActorPO" />
+        </set>
+
+</class>
+</hibernate-mapping>

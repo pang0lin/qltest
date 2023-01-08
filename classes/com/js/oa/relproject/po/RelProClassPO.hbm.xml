@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.relproject.po.RelProClassPO" table="pro_class" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="name" column="name"/>
+<property name="createEmp" column="create_emp"/>
+<property name="createOrg" column="create_org"/>
+<property name="createEmpName" column="create_empName"/>
+<property name="createOrgName" column="create_orgName"/>
+<property name="classSortCode" column="CLASSSORTCODE"/>
+<property name="classSort" column="CLASSSORT"/>
+<property name="parentId" column="parent_id"/>
+<property name="level" column="class_level"/>
+
+</class>
+</hibernate-mapping>

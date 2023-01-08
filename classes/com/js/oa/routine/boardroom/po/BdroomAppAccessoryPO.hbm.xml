@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.boardroom.po.BdroomAppAccessoryPO" table="OA_BDROOMAPPACCESSORY" >
+<id name="bdroomAppAccessoryId" column="BDROOMAPPACCESSORYID">
+<generator class="native" />
+</id>
+<property name="accessoryname" column="NAME"/>
+<property name="accessorysavename" column="SAVENAME"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+<many-to-one
+	name="boardRoomApply"
+	class="com.js.oa.routine.boardroom.po.BoardRoomApplyPO"
+	cascade="none"
+	outer-join="false"
+	update="false"
+	insert="false"
+	column="BOARDROOMAPPLYID"
+/>
+</class>
+</hibernate-mapping>

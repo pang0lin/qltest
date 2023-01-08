@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.dcq.po.DcqMessagesubmissionPO" table="dcq_messagesubmission" >
+<id name="messageId" column="messageId" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="oid" column="oid" />
+<property name="browserIDStr" column="browserIDStr" />
+<property name="receives" column="receives" />
+<property name="infoTitle" column="infoTitle" />
+<property name="infoContent" column="infoContent" />
+
+<property name="urgencyLevel" column="urgencyLevel" />
+<property name="telephone" column="telephone" />
+<property name="amendments" column="amendments" />
+<property name="releaseStatus" column="releaseStatus" />
+<property name="isReturn" column="isReturn" />
+
+<property name="Status" column="Status" />
+<property name="reportUnit" column="reportUnit" />
+<property name="sendPersonID" column="sendPersonID" />
+<property name="leadersIDStr" column="leadersIDStr" />
+<property name="mark" column="mark" />
+
+<property name="bz" column="bz" />
+
+</class>
+</hibernate-mapping>

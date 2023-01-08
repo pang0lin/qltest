@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqChuChaiPO" table="kq_chuchai" >
+<id name="chuChaiId" column="chuchaiId" type="long">
+<generator class="native" />
+</id>
+<property name="chuChaiEmp" column="chuchaiEmp" />
+<property name="chuChaiDate" column="chuchaiDate" />
+<property name="chuChaiStart" column="chuchaiStart" />
+<property name="chuChaiEnd" column="chuchaiEnd" />
+<property name="chuChaiHour" column="chuchaiHour" />
+<property name="chuChaiType" column="chuchaiType" />
+</class>
+</hibernate-mapping>

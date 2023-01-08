@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.cooperate.po.NodeMemberPO" table="CO_NODEMEMBER" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="bodyId" column="body_id"/>
+<property name="nodeId" column="node_id"/>
+<property name="empId" column="emp_id"/>
+<property name="empName" column="emp_name"/>
+<property name="handTime" column="handTime"/>
+<property name="doneTime" column="doneTime"/>
+<property name="status" column="status"/>
+<property name="isPoster" column="isPoster"/>
+<property name="tracker" column="tracker"/>
+
+</class>
+</hibernate-mapping>

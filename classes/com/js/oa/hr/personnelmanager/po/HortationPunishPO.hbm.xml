@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.personnelmanager.po.HortationPunishPO" table="OA_HORTATIONPUNISHCLASS" >
+<id name="id" column="id" type="java.lang.Long">
+	<generator class="native" />
+</id>
+<property name="hp_name" column="hp_name" type="java.lang.String" length="50"/>
+<property name="hp_type" column="hp_type" type="java.lang.String" length="2"/>
+<property name="hp_apply" column="hp_apply" type="java.lang.String" length="200"/>
+<property name="hp_dealwith" column="hp_dealwith" type="java.lang.String" length="200"/>
+<property name="hp_describe" column="hp_describe" type="java.lang.String" length="2000"/>
+<property name="domain" column="domain" type="java.lang.Long" length="20"/>
+</class>
+</hibernate-mapping>

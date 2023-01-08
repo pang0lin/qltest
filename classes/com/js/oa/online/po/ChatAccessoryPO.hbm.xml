@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.online.po.ChatAccessoryPO"
+		table="chat_accessory">
+		    <id name="accessoryId" type="java.lang.Long">
+            <column name="accessory_id" />
+            <generator class="native" />
+             </id>
+		<property name="accessoryName" column="accessory_name"
+			type="string" length="150" />
+		<property name="accessorySavename" column="accessory_savename"
+			type="string" length="1000" />
+		<many-to-one name="chatPO" class="com.js.oa.online.po.ChatPO"
+			cascade="none" outer-join="false"  insert="false" update="false" 
+			column="chat_id" />
+	</class>	
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.portal.po.CustomurlPO" table="custom_url" >
+        <id name="id" column="ID">
+             <generator class="native"/>
+        </id>
+        <property name="urlname" column="URLNAME" type="java.lang.String"/>
+		<property name="urlapp" column="URLAPP" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

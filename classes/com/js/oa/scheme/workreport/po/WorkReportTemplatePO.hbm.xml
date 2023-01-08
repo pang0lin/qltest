@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.scheme.workreport.po.WorkReportTemplatePO" table="REP_TEMP" >
+<id name="id" column="TEMPLATE_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="templateDomainId" column="DOMAIN_ID" type="long" length="20"/>
+<property name="templateName" column="TEMPLATENAME" type="string" length="100" not-null="true"/>
+<property name="templateContent" column="TEMPLATECONTENT" type="net.sf.hibernate.type.TextType"  />
+<property name="templateDescript" column="TEMPLATEDESCRIPT" type="string" length="200"/>
+<property name="createdEmp" column="CREATEDEMP" type="long" length="20"/>
+<property name="createdOrg" column="CREATEDORG" type="long" length="20"/>
+<property name="templateUseEmp" column="TEMPLATEUSEEMP" type="string" length="1000"/>
+<property name="templateUseOrg" column="TEMPLATEUSEORG" type="string" length="1000"/>
+<property name="templateUseGroup" column="TEMPLATEUSEGROUP" type="string" length="1000"/>
+<property name="createdEmpName" column="CreatedEmpName"  />
+<property name="templateUseRange" column="TemplateUseRange" />
+</class>
+</hibernate-mapping>

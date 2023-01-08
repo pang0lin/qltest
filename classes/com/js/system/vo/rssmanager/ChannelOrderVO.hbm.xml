@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.system.vo.rssmanager.ChannelOrderVO" table="org_rss_self_order">
+		<id name="orderId" column="order_id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="channelId" column="channel_id"/>
+        <property name="userId" column="user_id"/>
+        <property name="orderState" column="order_state"/>
+        <property name="string1" column="string1"/>
+		<property name="string2" column="string2"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WorkFlowChannelPO"
+        table="JSF_WORKFLOWCHANNEL"
+        >
+        <id name="workFlowChannelId" column="WORKFLOWCHANNEL_ID" type="long">
+            <generator class="native" />
+        </id>
+        <property name="processId" column="PROCESSID" />
+        <many-to-one name="channel"
+            class="com.js.oa.info.channelmanager.po.InformationChannelPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="CHANNELID" />
+    </class>
+</hibernate-mapping>

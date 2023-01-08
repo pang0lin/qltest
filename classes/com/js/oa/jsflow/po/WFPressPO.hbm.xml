@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--办理期限表的配置文件-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFPressPO"
+        table="JSF_PRESS"
+        >
+        <id name="wfPressId" column="WF_PRESS_ID" type="long">
+            <generator class="native" />
+        </id>
+
+        <!--条件字段-->
+        <property name="conditionField" column="CONDITIONFIELD" />
+
+        <!--条件操作符-->
+        <property name="pressRelation" column="PRESSRELATION" />
+
+        <!--比较值-->
+        <property name="compareValue" column="COMPAREVALUE" />
+
+        <!--提醒时间-->
+        <property name="motionTime" column="MOTIONTIME" />
+
+        <!--办理期限-->
+        <property name="pressMotionTime" column="PRESSMOTIONTIME" />
+
+        <property name="domainId" column="DOMAIN_ID" />
+
+        <!--与活动表（JSF_ACTIVITY）是多对一关系-->
+        <many-to-one name="wfActivity"
+            class="com.js.oa.jsflow.po.WFActivityPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="WF_ACTIVITY_ID" />
+    </class>
+</hibernate-mapping>

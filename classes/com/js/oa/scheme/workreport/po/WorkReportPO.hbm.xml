@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.scheme.workreport.po.WorkReportPO" table="REP_REPORT" >
+<id name="id" column="REPORT_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="reportDomainId" column="DOMAIN_ID" type="long" length="20"/>
+<property name="empId" column="EMP_ID" type="long" length="20" not-null="true"/>
+<property name="reportEmpName" column="REPORTEMPNAME" type="string" length="20"/>
+<property name="previousReport" column="PREVIOUSREPORT" type="net.sf.hibernate.type.TextType"/>
+<property name="nextReport" column="NEXTREPORT" type="net.sf.hibernate.type.TextType"/>
+<property name="reportRemark" column="REPORTREMARK" type="string" length="300"/>
+<property name="accessoryName" column="ACCESSORYNAME" type="string" length="400"/>
+<property name="accessorySaveName" column="ACCESSORYSAVENAME" type="string" length="400"/>
+<property name="reportType" column="REPORTTYPE" type="byte" length="1" not-null="true"/>
+<property name="reportTime" column="REPORTTIME" type="timestamp" length="7" not-null="true"/>
+<property name="reortUpdateTime" column="REORTUPDATETIME" type="timestamp" length="7"/>
+<property name="reportReader" column="REPORTREADER" type="string" length="1000"/>
+<property name="reportReaderId" column="REPORTREADERID" type="string" length="1000"/>
+<property name="hadRead" column="HADREAD" type="byte" length="1"/>
+<property name="templateId" column="Template_Id"  />
+<property name="reportCourse" column="REPORTCOURSE"  />
+<property name="reportJob" column="REPORTJOB"  />
+<property name="reportDepart" column="REPORTDEPART"  />
+<property name="reportOrgID" column="REPORTORGID" type="string" length="20"/>
+<property name="sendType" column="SENDTYPE"  />
+<property name="reportName" column="reportName"  />
+<property name="relprojectId" column="relproject_id"  />
+<property name="reportInputTime" column="reportInputTime" />
+<set
+	name="reportLeader"
+	table="REP_LEADER"
+	lazy="true"
+	inverse="false"
+	cascade="delete"
+	sort="unsorted"
+	>
+	<key column="REPORT_ID"/>
+	<one-to-many
+		class="com.js.oa.scheme.workreport.po.WorkReportLeaderPO"
+	/>
+</set>
+
+<set
+	name="reportPostil"
+	table="REP_POSTIL"
+	lazy="true"
+	inverse="false"
+	cascade="delete"
+	sort="unsorted"
+	>
+	<key column="REPORT_ID"/>
+	<one-to-many
+		class="com.js.oa.scheme.workreport.po.WorkReportPostilPO"
+	/>
+</set>
+
+
+</class>
+</hibernate-mapping>

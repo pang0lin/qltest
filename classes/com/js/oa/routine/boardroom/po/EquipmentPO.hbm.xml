@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.EquipmentPO" table="OA_EQUIPMENT" >
+        <id name="equipmentId" column="EQUIPMENTID">
+             <generator class="native"/>
+        </id>
+        <property name="name" column="NAME" type="java.lang.String"/>
+		<property name="code" column="CODE" type="java.lang.String"/>
+		<property name="cost" column="COST" type="java.lang.Float"/>
+		<property name="status" column="STATUS" type="java.lang.Integer"/>
+		<property name="manageDept" column="MANAGEDEPT" type="java.lang.String"/>
+		<property name="manageDeptName" column="MANAGEDEPTNAME" type="java.lang.String"/>
+		<property name="remark" column="REMARK" type="java.lang.String"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+               <property name="createdEmp" column="CREATEDEMP" type="java.lang.Long"/>
+		<property name="createdOrg" column="CREATEDORG" type="java.lang.Long"/>
+		<property name="standard" column="STANDARD" />
+		<property name="storeManID" column="STOREMANID" />
+		<property name="storeManName" column="STOREMANNAME" />
+		<property name="corpId" column="corp_id" />
+		<many-to-one name="equipmentType" class="com.js.oa.routine.boardroom.po.EquipmentTypePO" not-null="true">
+			<column name="EQUIPMENTSORTID"/>
+		</many-to-one>
+		<set name="equipmentApply"
+                table="OA_EQUIPMENTAPPLY"
+                lazy="true"
+                inverse="false"
+                cascade="none"
+    		sort="unsorted">
+    		<key column="equipmentId"/>
+    		<one-to-many class="com.js.oa.routine.boardroom.po.EquipmentApplyPO"/>
+                </set>
+	</class>
+</hibernate-mapping>

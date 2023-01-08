@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.WorkAddressPO"
+        table="OA_WORKADDRESS"
+        >
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="workName" column="WORK_NAME" />
+        <property name="workAddress" column="WORK_ADDRESS" />
+		<property name="workCountry" column="WORK_COUNTRY" />
+		<property name="workState" column="WORK_STATE" />
+                <property name="workCity" column="WORK_CITY" />
+                <property name="workFax" column="WORK_FAX" />
+                <property name="workTelephone" column="WORK_TELEPHONE" />
+		<property name="domain" column='"DOMAIN"' />
+		<property name="addrUserName" column="ADDRUSERNAME"  />
+		<property name="addrUserId" column="ADDRUSERID"  />
+		<property name="addrUserOrg" column="ADDRUSERORG"  />
+		<property name="addrUserGroup" column="ADDRUSERGROUP" />
+    </class>
+</hibernate-mapping>

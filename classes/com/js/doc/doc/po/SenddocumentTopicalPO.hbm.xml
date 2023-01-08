@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.SenddocumentTopicalPO"  table="doc_senddocumenttopical">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="tableType" column="tableType" />
+		<property name="areaType" column="areaType" />
+		<property name="sortTopical" column="sortTopical"/>
+		<property name="attributeTopical" column="attributeTopical"/>
+		<property name="createdEmp" column="createdEmp"/>
+        <property name="createdOrg" column="createdOrg"/>
+        <property name="corpId" column="corp_id"/>
+	</class>
+</hibernate-mapping>
+

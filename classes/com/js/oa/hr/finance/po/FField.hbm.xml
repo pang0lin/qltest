@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.finance.po.FField" table="f_field" >
+        <id name="fieldId" type="java.lang.Long">
+            <column name="field_id" />
+            <generator class="native" />
+        </id>
+        <property name="tableName" type="java.lang.String">
+            <column name="table_name" length="40" />
+        </property>
+        <property name="fieldName" type="java.lang.String">
+            <column name="field_name" length="40" />
+        </property>
+        <property name="fieldDesname" type="java.lang.String">
+            <column name="field_desname" length="40" />
+        </property>
+        <property name="fieldType" type="java.lang.String">
+            <column name="field_type" length="40" />
+        </property>
+        <property name="fieldLen" type="java.lang.Long">
+            <column name="field_Len" />
+        </property>
+        <property name="fieldDefault" type="java.lang.String">
+            <column name="field_Default" length="100" />
+        </property>
+        <property name="fieldListShow" type="java.lang.Long">
+            <column name="field_list_show" />
+        </property>
+        <property name="fieldIsTotal" type="java.lang.Long">
+            <column name="field_Is_Total" />
+        </property>
+        <property name="fieldIsNull" type="java.lang.Long">
+            <column name="field_Is_Null" />
+        </property>
+        <property name="fieldIsEnable" type="java.lang.Long">
+            <column name="field_Is_enable" />
+        </property>
+        <property name="fieldIsSys" type="java.lang.Long">
+            <column name="field_Is_Sys" />
+        </property>
+        <property name="createdEmp" type="java.lang.Long">
+            <column name="created_emp" />
+        </property>
+        <property name="createdOrg" type="java.lang.Long">
+            <column name="created_org" />
+        </property>
+         <property name="fieldOrder" type="java.lang.Long">
+            <column name="field_order" />
+        </property>
+    </class>
+</hibernate-mapping>

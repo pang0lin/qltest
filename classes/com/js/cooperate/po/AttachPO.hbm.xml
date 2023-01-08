@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.cooperate.po.AttachPO" table="CO_ATTACH" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="bodyId" column="body_id"/>
+<property name="conId" column="con_id"/>
+<property name="fileName" column="fileName"/>
+<property name="fileType" column="fileType"/>
+<property name="saveName" column="saveName"/>
+
+</class>
+</hibernate-mapping>

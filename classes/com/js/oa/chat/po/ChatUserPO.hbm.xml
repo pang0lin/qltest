@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.chat.po.ChatUserPO" table="OA_CHAT_USER" >
+<id name="id" column="ID" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="empId" column="EMP_ID" />
+<property name="chatStatus" column="CHAT_STATUS"/>
+<property name="isRead" column="ISREAD"/>
+
+<many-to-one
+	name="chat"
+	class="com.js.oa.chat.po.ChatPO"
+	cascade="none"
+	outer-join="auto"
+	update="false"
+	insert="true"
+	column="CHAT_ID"
+/>
+
+</class>
+</hibernate-mapping>

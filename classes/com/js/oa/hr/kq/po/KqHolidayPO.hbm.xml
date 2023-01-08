@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqHolidayPO" table="kq_holiday" >
+<id name="id" column="id" type="long">
+<generator class="native" />
+</id>
+<property name="domainId" column="DOMAIN_ID" />
+<property name="holidayName" column="HOLIDAY_NAME" />
+<property name="beginDate" column="begin_date" />
+<property name="endDate" column="end_date" />
+<property name="memo" column="MEMO" />
+<property name="type" column="type" />
+<property name="paibanSet" column="paibanSet" />
+<property name="corpId" column="corp_id" />
+<property name="reduceAnnual" column="reduceannual" />
+<property name="reduceTrial" column="reduceTrial" />
+</class>
+</hibernate-mapping>

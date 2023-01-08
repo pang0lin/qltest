@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqDutyOutPO" table="kq_duty_out" >
+<id name="outId" column="outId" type="long">
+<generator class="native" />
+</id>
+<property name="outEmp" column="outEmp" />
+<property name="outDate" column="outDate" />
+<property name="outHour" column="outHour" />
+<property name="outType" column="outType" />
+<property name="outInputDate" column="outInputDate" />
+</class>
+</hibernate-mapping>

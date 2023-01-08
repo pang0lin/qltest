@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.workplan.po.WorkplanPO" table="oa_workplan">
+	<id name="id" column="id" type="long">
+		<generator class="native" />
+	</id>
+	<property name="leaderId" column="leaderId" />
+	<property name="leaderName" column="leaderName" />
+	<property name="recordId" column="recordId" />
+	<property name="recordName" column="recordName" />
+	<property name="workDate" column="workDate" />
+	<property name="workYearMonth" column="workYearMonth" />
+	<property name="workStatus" column="workStatus" />
+	<property name="workType" column="workType" />
+	<property name="workPlace" column="workPlace" />
+	<property name="description" column="description" />
+	<property name="recordTime" column="recordTime" />
+	<property name="dutyName" column="dutyName" />
+	<property name="orgName" column="orgName" />
+</class>
+</hibernate-mapping>

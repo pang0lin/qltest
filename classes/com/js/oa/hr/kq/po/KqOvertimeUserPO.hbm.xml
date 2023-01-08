@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqOvertimeUserPO" table="kq_overtime_user" >
+<id name="id" column="id" type="long">
+<generator class="native" />
+</id>
+<property name="overtimeId" column="overtime_id" />
+<property name="userId" column="user_id" />
+<property name="userName" column="user_name" />
+<property name="orgId" column="org_id" />
+</class>
+</hibernate-mapping>

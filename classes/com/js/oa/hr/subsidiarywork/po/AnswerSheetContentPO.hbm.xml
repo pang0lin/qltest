@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.subsidiarywork.po.AnswerSheetContentPO" table="OA_ANSWERSHEETCONTENT" >
+        <id name="contentId" column="CONTENTID">
+            <generator class="native" />
+        </id>
+		<property name="content" column="CONTENT"/>
+		<property name="themeId" column="THEMEID"/>
+		<property name="score" column="SCORE"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<many-to-one
+    		name="answerSheet"
+			class="com.js.oa.hr.subsidiarywork.po.AnswerSheetPO"
+			not-null="true"
+		>
+        <column name="ANSWERSHEETID"/>
+		</many-to-one>
+
+		<set name="answerSheetOption"
+			table="OA_ANSWERSHEETOPTION"
+			lazy="false"
+			inverse="false"
+			cascade="none"
+			sort="unsorted">
+			<key column="CONTENTID"/>
+    <one-to-many class="com.js.oa.hr.subsidiarywork.po.AnswerSheetOptionPO"/>
+</set>
+	
+    </class>
+</hibernate-mapping>

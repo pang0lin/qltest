@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoiturePO" table="VEH_INFO" >
+<id name="id" column="VOITUREID" type="long">
+<generator class="native"/>
+</id>
+
+<property name="model" column="MODEL" type="string" length="30"/>
+<property name="num" column="NUM" type="string" length="20"/>
+<property name="name" column="NAME" type="string" length="50"/>
+<property name="motorMan" column="MOTORMAN" type="string" length="60"/>
+<property name="fixedCost" column="FIXEDCOST" type="double" length="12"/>
+<property name="oilCost" column="OILCOST" type="double" length="12"/>
+<property name="kiloPrice" column="KILOPRICE" type="double" length="12"/>
+<property name="maintainCyc" column="MAINTAINCYC" type="string" length="30"/>
+<property name="maintainOdograph" column="MAINTAINODOGRAPH" type="string" length="30"/>
+<property name="orgId" column="ORGID" type="string" length="500"/>
+<property name="orgName" column="ORGNAME" type="string" length="500"/>
+<property name="remark" column="REMARK" type="string" length="400"/>
+<property name="useRangeId" column="useRangeId" type="string" length="150"/>
+<property name="useRangeName" column="useRangeName" type="string" length="300"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="status" column="status"/>
+<property name="createdEmp" column="createdEmp"/>
+<property name="createdOrg" column="createdOrg"/>
+<property name="isDelete" column="isDelete"></property>
+<property name="vehicleNum" column="vehicleNum"></property>
+<set name="voitureFeePO"
+	
+    table="VEH_FEE"
+    lazy="true"
+    inverse="true"
+    cascade="save-update"
+    sort="unsorted">
+    <key column="VOITUREID" />
+    <one-to-many class="com.js.oa.routine.voiture.po.VoitureFeePO" />
+</set>
+<set name="voitureSendPO"
+	
+    table="VEH_SEND"
+    lazy="true"
+    inverse="true"
+    cascade="save-update"
+    sort="unsorted">
+    <key column="VOITUREID" />
+    <one-to-many class="com.js.oa.routine.voiture.po.VoitureSendPO" />
+</set>
+<set name="voitureMaintainPO"
+	
+    table="VEH_MAINTAIN"
+    lazy="true"
+    inverse="true"
+    cascade="save-update"
+    sort="unsorted">
+    <key column="VOITUREID" />
+    <one-to-many class="com.js.oa.routine.voiture.po.VoitureMaintainPO" />
+</set>
+<many-to-one name="voitureTypePO"
+            class="com.js.oa.routine.voiture.po.VoitureTypePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="voitureTypeId" />
+
+</class>
+</hibernate-mapping>

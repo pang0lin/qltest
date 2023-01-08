@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.examination.po.ExaminationTypePO"
+        table="OA_EXAMINATION_TYPE"
+        >
+        <id name="id" column="TYPEID">
+            <generator class="native" />
+        </id>
+        <property name="typeName" column="TYPENAME" />
+        <property name="createdEmp" column="CREATEEMP" />
+        <property name="createdOrg" column="CREATEORG" />
+        <property name="domainID" column="DOMAIN_ID" />
+    </class>
+</hibernate-mapping>

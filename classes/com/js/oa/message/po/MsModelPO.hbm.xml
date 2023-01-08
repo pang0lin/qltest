@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsModelPO" table="MS_MODEL" >
+        <id name="modelOutId" column="ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="modelId" column="MODELID" type="java.lang.String"/>
+        <property name="modelSend" column="MODELSEND" type="java.lang.String"/>
+        <property name="content" column="CONTENT" type="java.lang.String"/>
+        <property name="reday1" column="REDAY1" type="java.lang.String"/>
+        <property name="reday2" column="REDAY2" type="java.lang.String"/>
+        <property name="reday3" column="REDAY3" type="java.lang.String"/>
+        <property name="reday4" column="REDAY4" type="java.lang.String"/>
+        <property name="reday5" column="REDAY5" type="java.lang.String"/>
+        <property name="reday6" column="REDAY6" type="java.lang.String"/>
+        <property name="reday7" column="REDAY7" type="java.lang.String"/>
+        <property name="reday8" column="REDAY8" type="java.lang.String"/>
+        <property name="reday9" column="REDAY9" type="java.lang.String"/>
+        <property name="reday10" column="REDAY10" type="java.lang.String"/>
+        <property name="reday11" column="REDAY11" type="java.lang.String"/>
+        <property name="domainId" column="DOMAIN_ID"/>
+    </class>
+</hibernate-mapping>

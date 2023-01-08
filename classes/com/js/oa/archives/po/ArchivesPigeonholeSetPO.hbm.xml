@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesPigeonholeSetPO" table="OA_PIGEONHOLESET" >
+<id name="pigeonholeSetId" column="PIGEONHOLESETID" >
+<generator class="native" />
+</id>
+
+<property name="pigeonholeSetType" column="PIGEONHOLESETTYPE"/>
+<property name="pigeonholeSetPlace" column="PIGEONHOLESETPLACE"/>
+<property name="isHold" column="ISHOLD"/>
+<property name="isSendMessage" column="ISSENDMESSAGE"/>
+<property name="domainId" column="DOMAIN_ID"/>
+</class>
+</hibernate-mapping>

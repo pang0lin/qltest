@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.datasync.po.DataSyncSetPO"
+        table="data_sync_set"
+        >
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="syncId" column="sync_Id"  />
+        <property name="setTitle" column="setTitle"  />
+        <property name="description" column="description"  />
+        <property name="setType" column="setType" />
+        <property name="dataSourceType" column="dataSourceType"  />
+        <property name="dataSourceName" column="dataSourceName"  />
+        <property name="operateTable" column="operateTable"  />
+        <property name="operateType" column="operateType" />
+        <property name="exeCondition" column="execondition"  />
+        <property name="executeOrder" column="executeOrder"  />
+        <property name="mainTableName" column="mainTableName"  />
+        <property name="subTableName" column="subTableName"  />
+        <property name="syncCondition" column="syncCondition"  />
+    </class>
+</hibernate-mapping>

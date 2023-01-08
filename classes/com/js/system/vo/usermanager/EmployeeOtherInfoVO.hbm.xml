@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.usermanager.EmployeeOtherInfoVO" table="ORG_EMP_OTHERINFO" >
+<id name="id" column="id" type="long">
+	<generator class="native"/>
+</id>
+<property name="empId" column="emp_ID" type="long" not-null="true"/>
+<property name="sap_ID" column="sap_ID" type="string" length="50"/>
+<property name="cym" column="cym" type="string" length="20"/>
+<property name="csd" column="csd" type="string" length="50"/>
+<property name="hkszd" column="hkszd" type="string" length="50"/>
+<property name="hyzk" column="hyzk" type="string" length="10"/>
+<property name="jkzk" column="jkzk" type="string" length="10"/>
+<property name="zyjszc" column="zyjszc" type="string" length="20"/>
+<property name="zyzg" column="zyzg" type="string" length="20"/>
+<property name="wjgj" column="wjgj" type="string" length="20"/>
+<property name="yjjzgj" column="yjjzgj" type="string" length="20"/>
+<property name="qrz_zgxl" column="qrz_zgxl" type="string" length="20"/>
+<property name="qrz_zgxw" column="qrz_zgxw" type="string" length="20"/>
+<property name="qrz_byyxx" column="qrz_byyxx" type="string" length="20"/>
+<property name="qrz_zy" column="qrz_zy" type="string" length="20"/>
+<property name="zzjy_zgxl" column="zzjy_zgxl" type="string" length="20"/>
+<property name="zzjy_zgxw" column="zzjy_zgxw" type="string" length="20"/>
+<property name="zzjy_byyxx" column="zzjy_byyxx" type="string" length="60"/>
+<property name="zzjy_zy" column="zzjy_zy" type="string" length="40"/>
+<property name="cs" column="cs" type="string" length="20"/>
+<property name="bmlx" column="bmlx" type="string" length="20"/>
+<property name="sfjzgb" column="sfjzgb" type="string" length="2"/>
+<property name="rxzsj" column="rxzsj" type="string" length="20"/>
+<property name="rxjsj" column="rxjsj" type="string" length="20"/>
+<property name="wyhrz" column="wyhrz" type="string" length="2000"/>
+<property name="syqksrq" column="syqksrq" type="string" length="20"/>
+<property name="syqjsrq" column="syqjsrq" type="string" length="20"/>
+<property name="syqqx" column="syqqx" type="string" length="10"/>
+<property name="po_xm" column="po_xm" type="string" length="20"/>
+<property name="po_csny" column="po_csny" type="string" length="20"/>
+<property name="po_mz" column="po_mz" type="string" length="20"/>
+<property name="po_jg" column="po_jg" type="string" length="20"/>
+<property name="po_zzmm" column="po_zzmm" type="string" length="20"/>
+<property name="po_cjgzsj" column="po_cjgzsj" type="string" length="20"/>
+<property name="po_xjzcs" column="po_xjzcs" type="string" length="20"/>
+<property name="po_hkszd" column="po_hkszd" type="string" length="50"/>
+<property name="po_xl" column="po_xl" type="string" length="20"/>
+<property name="po_zyjszc" column="po_zyjszc" type="string" length="40"/>
+<property name="po_byyxx" column="po_byyxx" type="string" length="40"/>
+<property name="po_zy" column="po_zy" type="string" length="40"/>
+<property name="po_gzdwjbm" column="po_gzdwjbm" type="string" length="60"/>
+<property name="po_zw" column="po_zw" type="string" length="40"/>
+<property name="dt_rdsj" column="dt_rdsj" type="string" length="20"/>
+<property name="dt_dnzw" column="dt_dnzw" type="string" length="20"/>
+<property name="dt_ssdzb" column="dt_ssdzb" type="string" length="40"/>
+<property name="dt_zzgxszdw" column="dt_zzgxszdw" type="string" length="40"/>
+<property name="rsrz" column="rsrz" type="string" length="4"/>
+<property name="ftjrz" column="ftjrz" type="string" length="4"/>
+<property name="ivCode" column="ivCode" type="string" length="20"/>
+<property name="bankCode" column="bankCode" type="string" length="20"/>
+<property name="accountCode" column="accountCode" type="string" length="40"/>
+<property name="bankInfo" column="bankInfo" type="string" length="40"/>
+<property name="province" column="province" type="string" length="4"/>
+<property name="city" column="city" type="string" length="4"/>
+<property name="hkxz" column="hkxz" type="string" length="10"/>
+<property name="sfcjshbx" column="sfcjshbx" type="string" length="4"/>
+<property name="sfczjggz" column="sfczjggz" type="string" length="4"/>
+<property name="stjfnx" column="stjfnx" type="string" length="10"/>
+<property name="lxrxx" column="lxrxx" type="string" length="40"/>
+<property name="sfhytsb" column="sfhytsb" type="string" length="40"/>
+<property name="hkszdyzbm" column="hkszdyzbm" type="string" length="10"/>
+<property name="jzdyzbm" column="jzdyzbm" type="string" length="10"/>
+<property name="yjyzbm" column="yjyzbm" type="string" length="10"/>
+<property name="ddyljg1" column="ddyljg1" type="string" length="10"/>
+<property name="ddyljg2" column="ddyljg2" type="string" length="10"/>
+<property name="ddyljg3" column="ddyljg3" type="string" length="10"/>
+<property name="ddyljg4" column="ddyljg4" type="string" length="10"/>
+<property name="ddyljg5" column="ddyljg5" type="string" length="10"/>
+<property name="ydwsbjz" column="ydwsbjz" type="string" length="20"/>
+<property name="ydwsbjs" column="ydwsbjs" type="string" length="10"/>
+<property name="ydwgjjjz" column="ydwgjjjz" type="string" length="20"/>
+<property name="ydwgjjjs" column="ydwgjjjs" type="string" length="10"/>
+<property name="ydwzfgjjsszx" column="ydwzfgjjsszx" type="string" length="20"/>
+<property name="rshblgjjsj" column="rshblgjjsj" type="string" length="20"/>
+<property name="sfydsznz" column="sfydsznz" type="string" length="4"/>
+<property name="rszfw" column="rszfw" type="string" length="20"/>
+<property name="zw" column="zw" type="string" length="20"/>
+</class>
+</hibernate-mapping>

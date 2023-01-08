@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.module.po.SystemMenuPO" table="menu_sys" >
+<id name="menuId" column="MENU_ID" type="long">
+	<generator class="native" />
+</id>
+<property name="menuLevel" column="MENULEVEL"/>
+<property name="menuName" column="MENUNAME"/>
+<property name="menuView" column="MENUVIEW"/>
+<property name="menuViewUser" column="MENUVIEWUSER"/>
+<property name="menuViewOrg" column="MENUVIEWORG"/>
+<property name="menuViewGroup" column="MENUVIEWGROUP"/>
+<property name="menuParent" column="MENUPARENT"/>
+<property name="menuURL" column="MENUURL"/>
+<property name="menuOrder" column="MENUORDER"/>
+<property name="deskTop1" column="DESKTOP1"/>
+<property name="deskTop2" column="DESKTOP2"/>
+<property name="menuIdString" column="menuIdString"/>
+<property name="isSystemInit" column="isSystemInit" />
+<property name="inUse" column="INUSE" />
+
+<property name="leftURL" column="LEFTURL" />
+<property name="rightURL" column="RIGHTURL" />
+<property name="menuCode" column="MENUCODE" />
+<property name="domainId" column="DOMAIN_ID" />
+
+
+</class>
+</hibernate-mapping>

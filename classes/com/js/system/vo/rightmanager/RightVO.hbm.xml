@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.system.vo.rightmanager.RightVO" table="ORG_RIGHT" >
+        <id name="rightId" column="RIGHT_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="rightName" column="RIGHTNAME" />
+        <property name="rightType" column="RIGHTTYPE" />
+        <property name="rightClass" column="RIGHTCLASS" />
+        <property name="rightHasScope" column="RIGHTHASSCOPE" />
+        <property name="rightDescription" column="RIGHTDESCRIPTION" />
+        <property name="rightSelectRange" column="RIGHTSELECTRANGE" />
+        <property name="rightCode" column="RIGHTCODE" />
+		<property name="domainId" column="DOMAIN_ID" />
+		<property name="rightStatus" column="right_status" />
+		<property name="rightCustomer" column="rightCustomer" />
+		
+        <set name="role"
+            table="ORG_ROLE_RIGHT"
+            lazy="true"
+            inverse="false"
+            cascade="none"
+            sort="unsorted"
+			>
+        	<key column="Right_id" />
+                <many-to-many class="com.js.system.vo.rolemanager.RoleVO" column="Role_id" outer-join="false" />
+        </set>
+        <set name="rightScopes"
+            table="ORG_RIGHTSCOPE"
+            lazy="false"
+            inverse="false"
+            cascade="none"
+            sort="unsorted"
+			>
+		<key column="Right_id"/>
+	 	<one-to-many class="com.js.system.vo.rolemanager.RightScopeVO" />
+	</set>
+    </class>
+</hibernate-mapping>

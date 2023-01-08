@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesDossierPO" table="OA_ARCHIVESDOSSIER" >
+<id name="dossierId" column="DOSSIER_ID">
+<generator class="native" />
+</id>
+<property name="generalNo" column="GENERALNO"/>
+
+<property name="catalogNo" column="CATALOGNO"/>
+<property name="dossierNo" column="DOSSIERNO"/>
+<property name="dossierName" column="DOSSIERNAME"/>
+<property name="dossierKey" column="DOSSIERKEY"/>
+<property name="saveStyle" column="SAVESTYLE"/>
+<property name="saveBeginTime" column="SAVEBEGINTIME"/>
+<property name="saveEndTime" column="SAVEENDTIME"/>
+<property name="secretLevel" column="SECRETLEVEL"/>
+<property name="pageCount" column="PAGECOUNT"/>
+<property name="copyCount" column="COPYCOUNT"/>
+<property name="principal" column="PRINCIPAL"/>
+<property name="principalName" column="PRINCIPALNAME"/>
+<property name="pigeonholeTime" column="PIGEONHOLETIME"/>
+<property name="dossierStatus" column="DOSSIERSTATUS"/>
+<property name="classReader" column="CLASSREADER"/>
+<property name="classReadOrg" column="CLASSREADORG"/>
+<property name="classReadGroup" column="CLASSREADGROUP"/>
+<property name="classReadName" column="CLASSREADNAME"/>
+<property name="createdEmp" column="CREATEDEMP"/>
+<property name="createdOrg" column="CREATEDORG"/>
+<many-to-one name="archivesClass" class="com.js.oa.archives.po.ArchivesClassPO" not-null="true">
+ 	<column name="CLASSNO"/>
+</many-to-one>
+<set name="archivesFile" lazy="true" inverse="true">
+    <key>
+    	<column name="DOSSIER_ID"/>
+    </key>
+    <one-to-many class="com.js.oa.archives.po.ArchivesFilePO"/>
+</set>
+
+<set name="archivesDossierAccessory"
+    table="OA_ARCHIVESDOSSIERACCESSORY"
+    lazy="true"
+    inverse="false"
+    cascade="none"
+    sort="unsorted">
+    <key column="DOSSIER_ID"/>
+    <one-to-many class="com.js.oa.archives.po.ArchivesDossierAccessoryPO"/>
+</set>
+</class>
+</hibernate-mapping>

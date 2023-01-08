@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class
+        name="com.js.oa.info.channelmanager.po.ChannelPositionPO"
+        table="OA_CHANNELPOSITION"
+        >
+        <id name="positionId" column="POSITION_ID" type="int">
+            <generator class="assigned" />
+        </id>
+
+        <property name="positionName" column="POSITION_NAME" />
+    </class>
+</hibernate-mapping>

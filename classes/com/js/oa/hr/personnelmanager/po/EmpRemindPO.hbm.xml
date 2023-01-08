@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.EmpRemindPO" table="oa_emp_remind">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native"></generator>
+        </id>
+      <property name="empName" type="java.lang.String">
+            <column name="emp_name" length="2000" />
+        </property>
+        <property name="empId" type="java.lang.String">
+            <column name="emp_id" length="2000" />
+        </property>
+        <property name="remindTime" type="java.lang.String">
+            <column name="remind_time" length="20" />
+        </property>
+        <property name="remindType" type="java.lang.String">
+            <column name="remind_type" length="1" />
+        </property>
+        <property name="sendToId" type="java.lang.String">
+            <column name="send_to_id" length="2000" />
+        </property>
+        <property name="sendToName" type="java.lang.String">
+            <column name="send_to_name" length="2000" />
+        </property>
+        <property name="createId" type="java.lang.Long">
+            <column name="create_id" />
+        </property>
+        <property name="creater" type="java.lang.String">
+            <column name="creater" length="50" />
+        </property>
+        <property name="createTime" type="java.lang.String">
+            <column name="create_time" length="20" />
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="state" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

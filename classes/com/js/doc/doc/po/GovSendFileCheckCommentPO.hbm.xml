@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovSendFileCheckCommentPO" table="DOC_SENDFILECHECKCOMMENT" >
+ <id name="id" column="SENDFILECHECKCOMMENT_ID" type="long">
+	 <generator class="native"/>
+</id>
+
+<property name="empId" column="EMPID" type="long" length="20"/>
+<property name="empName" column="EMPNAME" type="string" length="50"/>
+<property name="empSign" column="EMPSIGN" type="string" length="50"/>
+<property name="empIdea" column="EMPIDEA" type="string" length="200"/>
+<property name="createdTime" column="CREATEDTIME" />
+<many-to-one
+	name="sendFile"
+	class="com.js.doc.doc.po.GovSendFileCheckPO"
+	cascade="none"
+	outer-join="false"
+	update="true"
+	insert="true"
+	column="SENDFILECHECK_ID"
+/>
+
+</class>
+</hibernate-mapping>

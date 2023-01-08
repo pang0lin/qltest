@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.organizationmanager.SyncRTXVO" table="ORG_SYNCRTX" >
+<id name="id" column="SYNC_ID" type="java.lang.Long">
+	<generator class="native" />
+</id>
+<property name="orgId" column="ORG_ID" type="java.lang.Long"/>
+<property name="userAccount" column="USERACCOUNT" type="java.lang.String"/>
+<property name="userPwd" column="USERPWD" type="java.lang.String"/>
+<property name="dataType" column="DATATYPE" type="java.lang.Byte"/>
+<property name="dataOpr" column="DATAOPR" type="java.lang.Byte"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.active.e_uc.user.po.TblUser" table="tbl_user" >
+ 
+ <id name="id" column="ID" >
+	 <generator class="native"/>
+</id>
+
+
+<property name="userName" column="USERNAME" />
+<property name="passWord" column="PASSWORD" />
+<property name="type" column="TYPE" />
+<property name="isPrimaryAdmin" column="IS_PRIMARY_ADMIN" />
+<property name="orgId" column="ORG_ID" />
+<property name="aid" column="AID" />
+<property name="isValid" column="IS_VALID" />
+<property name="startValidDate" column="START_VALID_DATE" />
+<property name="endValidDate" column="END_VALID_DATE" />
+<property name="nickName" column="NICKNAME" />
+<property name="sex" column="SEX" />
+<property name="mailaddr" column="MAILADDR" />
+<property name="telephone" column="TELEPHONE" />
+<property name="mphone" column="MPHONE" />
+<property name="protocolRcv" column="PROTOCOL_RCV" />
+<property name="protocolSend" column="PROTOCOL_SEND" />
+<property name="hid" column="HID" />
+<property name="verifyHid" column="VERIFY_HID" />
+<property name="country" column="COUNTRY" />
+<property name="province" column="PROVINCE" />
+<property name="city" column="CITY" />
+<property name="addr" column="ADDR" />
+<property name="zip" column="ZIP" />
+<property name="pid" column="PID" />
+<property name="truename" column="TRUENAME" />
+<property name="brief" column="BRIEF" />
+<property name="occupy" column="OCCUPY" />
+<property name="homepage" column="HOMEPAGE" />
+<property name="interest" column="INTEREST" />
+<property name="safeinfo" column="SAFEINFO" />
+<property name="shengxiao" column="SHENGXIAO" />
+<property name="bloodtype" column="BLOODTYPE" />
+<property name="star" column="STAR" />
+<property name="college" column="COLLEGE" />
+<property name="imageindex" column="IMAGEINDEX" />
+<property name="deptId" column="DEPT_ID" />
+<property name="birthday" column="BIRTHDAY" />
+<property name="grade" column="GRADE" />
+<property name="popedomList" column="POPEDOM_LIST" />
+<property name="accountId" column="ACCOUNT_ID" />
+<property name="continueService" column="CONTINUE_SERVICE" />
+<property name="role" column="ROLE" />
+<property name="dicOrder" column="DIC_ORDER" />
+<property name="trolServerId" column="TROL_SERVER_ID" />
+<property name="trolState" column="TROL_STATE" />
+<property name="trolWelcomeMess" column="TROL_WELCOME_MESS" />
+<property name="trolIsOnline" column="TROL_IS_ONLINE" />
+<property name="trolLongonAccerptFlag" column="TROL_LOGON_ACCEPT_FLAG" />
+<property name="jobcard" column="JOBCARD" />
+<property name="creationdate" column="CREATIONDATE" />
+<property name="modificationdate" column="MODIFICATIONDATE" />
+<property name="selfPicture" column="SELF_PICTURE" />
+<property name="userid" column="USERID" />
+<property name="job" column="JOB" />
+<set name="apps" table="tbl_user_app" cascade="delete"> 
+            <key column="UID"/> 
+            <one-to-many class="com.active.e_uc.user.po.TblUserApp"/> 
+
+</set> 
+<set name="roomuser" table="tbl_roomuser" cascade="delete"> 
+            <key column="UID"/> 
+            <one-to-many class="com.active.e_uc.user.po.TblRoomUser"/> 
+</set>             
+</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.cooperate.po.BodyExPO" table="CO_BODYEX" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="bodyId" column="body_Id"/>
+<property name="content" column="content"/>
+<property name="empId" column="empId"/>
+<property name="empName" column="empName"/>
+<property name="appendTime" column="appendTime"/>
+
+</class>
+</hibernate-mapping>

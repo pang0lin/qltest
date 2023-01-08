@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.officeroom.po.OfficePO" table="OA_OFFICE" >
+        <id name="officeId" column="OFFICE_ID">
+             <generator class="native"/>
+        </id>
+        <property name="officename" column="OFFICENAME" type="java.lang.String"/>
+        
+		<property name="officenumber" column="OFFICENUMBER" type="java.lang.String"/>
+		<property name="officearea" column="OFFICEAREA" type="java.lang.Long"/>
+		<property name="officefaces" column="OFFICEFACES" type="java.lang.String"/>
+		
+		<property name="buidId" column="BUIDID" type="java.lang.Long"/>
+		<property name="buildname" column="BUILDNAME" type="java.lang.String"/>
+		<property name="buidnumber" column="BUIDNUMBER" type="java.lang.String"/>
+		<property name="officereader" column="OFFICEREADER" type="java.lang.String"/>
+		
+		<property name="officereadorg" column="OFFICEREADORG" type="java.lang.String"/>
+		<property name="officereadgroup" column="OFFICEREADGROUP" type="java.lang.String"/>
+		<property name="officereadname" column="OFFICEREADNAME" type="java.lang.String"/>
+		
+		<property name="createdemp" column="CREATEDEMP" type="java.lang.Long"/>
+		<property name="createdempname" column="CREATEDEMPNAME" type="java.lang.String"/>
+		<property name="bz" column="BZ" type="java.lang.String"/>
+		
+		<property name="officestation" column="OFFICESTATION" type="java.lang.Long"/>
+		<property name="officeAdminId" column="OFFICEADMINID" type="java.lang.String"/>
+		<property name="officeAdminName" column="OFFICEADMINNAME" type="java.lang.String"/>
+		<property name="officeIsUse" column="OFFICEISUSE" type="java.lang.String"/>
+		
+	
+	</class>
+</hibernate-mapping>

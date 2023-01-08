@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.examination.po.ExaminationAnswerPO" table="OA_EXAMINATION_ANSWER" >
+<id name="answerID" column="ANSWER_ID" >
+	<generator class="native"/>
+</id>
+<property name="examinationID" column="EXAMMANAGEID" />
+<property name="empID" column="EMPID" />
+<property name="empName" column="EMPNAME" />
+<property name="orgID" column="ORGID" />
+<property name="orgName" column="ORGNAME" />
+<property name="examTime" column="EXAMTIME" />
+<property name="score" column="SCORE" />
+<set name="examinationAnswerItem"
+            
+            table="OA_EXAMINATION_ANSWER_ITEM"
+            lazy="false"
+            inverse="true"
+            cascade="none"
+            order-by="ID"
+            sort="unsorted">
+            <key column="ANSWER_ID" />
+            <one-to-many class="com.js.oa.hr.examination.po.ExaminationAnswerItemPO" />
+  </set>
+</class>
+</hibernate-mapping>

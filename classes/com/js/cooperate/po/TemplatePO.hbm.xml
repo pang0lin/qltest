@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.cooperate.po.TemplatePO" table="CO_TEMPLATE" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="title" column="TITLE"/>
+<property name="content" column="content"/>
+<property name="type" column="type"/>
+<property name="useEmpId" column="useEmpId"/>
+<property name="useOrgId" column="useOrgId"/>
+<property name="useGroupId" column="useGroupId"/>
+<property name="useRange" column="useRange"/>
+
+<property name="createdEmp" column="CREATEDEMP" />
+<property name="createdOrg" column="CREATEDORG" />
+
+</class>
+</hibernate-mapping>

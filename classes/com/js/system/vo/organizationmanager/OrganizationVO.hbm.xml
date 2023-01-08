@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.organizationmanager.OrganizationVO"  table="ORG_ORGANIZATION">
+<id column="ORG_ID" name="orgId" type="java.lang.Long">
+	<generator class="native" />
+</id>
+<property column="ORGPARENTORGID" length="20" name="orgParentOrgId" type="long"/>
+<property column="ORGMANAGEREMPID" length="80" name="orgManagerEmpId" type="string"/>
+<property column="ORGMANAGEREMPNAME" length="80" name="orgManagerEmpName" type="string"/>
+<property column="ORGNAME" name="orgName" not-null="true" type="string"/>
+<property column="ORGSIMPLENAME" name="orgSimpleName"/>
+<property column="ORGSERIAL" name="orgSerial" />
+<property column="ORGORDERCODE"  name="orgOrderCode"/>
+<property column="ORGFOUNDDATE" length="7" name="orgFoundDate" type="date"/>
+<property column="ORGDESCRIPTE" length="300" name="orgDescripte"/>
+<property column="ORGLEVEL" name="orgLevel"/>
+<property column="ORGHASJUNIOR" name="orgHasJunior"/>
+<property column="ORGSTATUS" name="orgStatus"/>
+<property column="ORGIDSTRING" name="orgIdString"/>
+<property column="ORGHASCHANNEL" name="orgHasChannel"/>
+<property column="ORGNAMESTRING" name="orgNameString"/>
+<property column="RTXDEPTID" name="rtxDeptId"/>
+<property column="RTXDEPTPID" name="rtxDeptPId"/>
+<property column="ORGBANNER" name="orgBanner"/>
+<property column="DOMAIN_ID" name="domainId" />
+<property column="ORGTYPE" name="orgType" />
+<property column="orgChannelType" name="orgChannelType" />
+<property column="orgChannelUrl" name="orgChannelUrl" />
+<property column="guid" name="guid" />
+<property column="lastupdate" name="lastupdate" type="string" /> 
+<set name="employees"
+     table="ORG_ORGANIZATION_USER"
+     lazy="true"
+     inverse="true"
+     cascade="none"
+     sort="unsorted"
+	 >
+     <key column="ORG_ID"/>
+     <many-to-many
+          class="com.js.system.vo.usermanager.EmployeeVO"
+	  column="Emp_Id"
+	  outer-join="false"/>
+</set>
+</class>
+</hibernate-mapping>

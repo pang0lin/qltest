@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.EmpAttendancePO"
+        table="oa_emp_attendance"
+        >
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="empName" column="emp_name" />
+        <property name="yearMonth" column="year_month" />
+		<property name="planHours" column="plan_hours" />
+		<property name="realHours" column="real_hours" />
+		<property name="delayHours" column="delay_hours" />
+		<property name="dbrestHours" column="dbrest_hours" />
+		<property name="officialHours" column="official_hours" />
+		<property name="leaveHours" column="leave_hours" />
+		<property name="offworkHours" column="offwork_hours" />
+		<property name="offtuneHours" column="offtune_hours" />
+		<property name="uncardHours" column="uncard_hours" />
+		<property name="lateHours" column="late_hours" />
+		<property name="descriptions" column="descriptions" />
+		<property name="empOrg" column="emp_org" />
+
+		<many-to-one name="emp"
+            class="com.js.system.vo.usermanager.EmployeeVO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="EMP_ID" />
+    </class>
+</hibernate-mapping>

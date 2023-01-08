@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.messages.Remind" table="sys_remind" >
+<id name="id" column="id" type="long">
+<generator class="native" />
+</id>
+
+<property name="data_id" column="data_id" />
+<property name="emp_id" column="emp_id" />
+<property name="remind_type" column="remind_type"  />
+
+</class>
+</hibernate-mapping>

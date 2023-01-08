@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.report.po.ReportReplacePO" table="oa_reportReplace">
+        <id name="replaceId" type="java.lang.Long">
+            <column name="replaceId" />
+            <generator class="native" />
+        </id>
+        <property name="beReplaceName" type="java.lang.String">
+            <column name="beReplaceName"/>
+        </property>
+        <property name="beReplaceString" type="java.lang.String">
+            <column name="beReplaceString"/>
+        </property>
+        <property name="replaceString" type="java.lang.String">
+            <column name="replaceString"/>
+        </property>
+        <property name="sqlType" type="java.lang.String">
+            <column name="sqlType"/>
+        </property>
+        <many-to-one name="report"
+        	class="com.js.oa.report.po.ReportPO"
+            cascade="none"
+            outer-join="auto"
+            update="false"
+            insert="true"
+            column="reportId"
+        	/>
+    </class>
+</hibernate-mapping>

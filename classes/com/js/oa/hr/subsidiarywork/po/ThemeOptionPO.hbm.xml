@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.subsidiarywork.po.ThemeOptionPO" table="OA_THEMEOPTION" >
+        <id name="themeOptionId" column="THEMEOPTIONID">
+           <generator class="native" />
+        </id>
+        <property name="title" column="TITLE"/>
+		<property name="pitchon" column="PITCHON"/>
+		<property name="optionScore" column="OPTIONSCORE"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<many-to-one
+    		name="questheme"
+			class="com.js.oa.hr.subsidiarywork.po.QuesthemePO"
+			not-null="true"
+		>
+        <column name="QUESTHEMEID" />
+    </many-to-one>
+    </class>
+</hibernate-mapping>

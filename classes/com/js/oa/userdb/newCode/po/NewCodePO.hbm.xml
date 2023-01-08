@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.userdb.newCode.po.NewCodePO" table="JSF_NEWCODE" >
+<id name="codeId" column="code_id" type="long">
+	<generator class="native" />
+</id>
+<property name="codeName" column="code_name"  />
+<property name="codeContent" column="code_content" />
+<property name="codeStatus" column="code_status"  />
+
+</class>
+</hibernate-mapping>

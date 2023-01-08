@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--读写控制表(JSF_PROTECTCONTROL)的配置文件-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFProtectControlPO"
+        table="JSF_PROTECTCONTROL"
+        >
+        <id name="wfProtectControlId" column="WF_PROTECTCONTROL_ID" type="long">
+            <generator class="native" />
+        </id>
+
+        <!--控制类型-->
+        <property name="controlType" column="CONTROLTYPE" />
+
+        <!--控制字段-->
+        <property name="controlField" column="CONTROLFIELD" />
+
+        <property name="domainId" column="DOMAIN_ID" />
+
+        <!--与流程活动表（JSF_ACTIVITY）是多对一关系-->
+        <many-to-one name="wfActivity"
+            class="com.js.oa.jsflow.po.WFActivityPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="WF_ACTIVITY_ID" />
+
+    </class>
+</hibernate-mapping>

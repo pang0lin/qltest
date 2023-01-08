@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InformationBrowserPO"
+        table="OA_INFORMATIONBROWSER"
+        >
+        <id name="browserId" column="BROWSER_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="empId" column="EMP_ID" />
+        <property name="browserName" column="BROWSERNAME" />
+        <property name="browserOrgName" column="BROWSERORGNAME" />
+        <property name="browseTime" column="BROWSETIME" />
+        <property name="browserOrgIdStr" column="browserOrgIdStr" />
+		<property name="domainId" column="DOMAIN_ID" />
+
+
+        <!--与OA_INFORMATION（信息）表是多对一的关系-->
+        <many-to-one name="information"
+            class="com.js.oa.info.infomanager.po.InformationPO"
+            cascade="none"
+            outer-join="auto"
+            update="false"
+            insert="true"
+            column="INFORMATION_ID" />
+    </class>
+
+</hibernate-mapping>

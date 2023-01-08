@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.EmployeeChangePO" table="ST_EMPLOYEECHANGE" >
+        <id name="empChangeId" column="EMPCHANGE_ID">
+            <generator class="native" />
+        </id>
+        <property name="empChangeDate" column="EMPCHANGE_DATE" type="java.util.Date" length="7"/>
+		<property name="empChangeEmpId" column="EMPCHANGE_EMPID" type="java.lang.Long" length="20"/>
+		<property name="empChangeOldOrg" column="EMPCHANGE_OLDORG" type="java.lang.Long" length="20"/>
+		<property name="empChangeNewOrg" column="EMPCHANGE_NEWORG" type="java.lang.Long" length="20"/>
+		<property name="empChangeOldDuty" column="EMPCHANGE_OLDDUTY" type="java.lang.Long" length="20"/>
+		<property name="empChangeNewDuty" column="EMPCHANGE_NEWDUTY" type="java.lang.Long" length="20"/>
+		<property name="empChangeChangeType" column="EMPCHANGE_CHANGETYPE" type="java.lang.String" length="50"/>
+                <property name="domainId" column="DOMAIN_ID" />
+	</class>
+</hibernate-mapping>

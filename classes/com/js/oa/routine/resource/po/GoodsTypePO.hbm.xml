@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.GoodsTypePO"
+        table="ST_GOODSTYPE"
+        >
+        <id name="id" column="GOODSTYPE_ID">
+            <generator class="native" />
+        </id>
+        <property name="name" column="GOODSTYPE_NAME" />
+        <property name="remark" column="REMARK" />
+        <property name="createdEmp" column="CREATEDEMP" />
+        <property name="createdOrg" column="CREATEDORG" />
+        <property name="parentid" column="PARENTID" />
+        <property name="parentname" column="PARENTNAME" />
+        <property name="domainid" column="DOMAIN_ID" />
+        <property name="stockId" column="STOCK_ID" />
+        <property name="goodsTypePrefix" column="GOODSTYPE_PREFIX" />
+        
+
+        <set
+            name="stock"
+            table="ST_STOCK_GOODSTYPE"
+            lazy="false"
+            inverse="false"
+            cascade="all"
+            sort="unsorted"
+        >
+          <key
+                  column="GOODSTYPE_ID"
+         />
+
+              <many-to-many
+                  class="com.js.oa.routine.resource.po.StockPO"
+                  column="STOCK_ID"
+                  outer-join="auto"
+              />
+        </set>
+
+        <set name="goods"
+            
+            table="ST_GOODS"
+            lazy="true"
+            inverse="true"
+            cascade="save-update"
+            sort="unsorted">
+            <key column="GOODSTYPE_ID" />
+            <one-to-many class="com.js.oa.routine.resource.po.GoodsTypePO" />
+        </set>
+    </class>
+</hibernate-mapping>

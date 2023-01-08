@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.datasync.po.DataSyncPO"
+        table="data_sync"
+        >
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="syncTitle" column="syncTitle"  />
+        <property name="memo" column="memo"  />
+        <property name="processId" column="process_id"  />
+        <property name="activityId" column="activity_id" />
+    </class>
+</hibernate-mapping>

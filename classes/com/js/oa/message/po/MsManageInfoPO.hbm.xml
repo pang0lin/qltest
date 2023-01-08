@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsManageInfoPO" table="MS_MANAGEINFO" >
+        <id name="msInfoId" column="MSINFO_ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="grantId" column="GRANTID"/>
+        <property name="grantName" column="GRANTNAME"/>
+        <property name="grantType" column="GRANTTYPE"/>
+        <many-to-one
+		name="msManage"
+		class="com.js.oa.message.po.MsManagePO"
+		cascade="none"
+		outer-join="false"
+		update="true"
+		insert="true"
+		column="MS_ID"
+		/>
+    </class>
+</hibernate-mapping>

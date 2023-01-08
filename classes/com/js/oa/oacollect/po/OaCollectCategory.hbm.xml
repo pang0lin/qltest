@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.oacollect.po.OaCollectCategory" table="oa_collect_category" >
+        <id name="categoryId" type="java.lang.Long">
+            <column name="category_id" />
+            <generator class="native" />
+        </id>
+        <property name="categoryName" type="java.lang.String">
+            <column name="category_name" length="20" />
+        </property>
+        <property name="categoryNote" type="java.lang.String">
+            <column name="category_note" length="20" />
+        </property>
+        <property name="createEmp" type="java.lang.Long">
+            <column name="create_emp" />
+        </property>
+        <property name="createEmpName" type="java.lang.String">
+            <column name="create_emp_name" length="40" />
+        </property>
+        <property name="createOrg" type="java.lang.Long">
+            <column name="create_org" />
+        </property>
+        <property name="createOrgName" type="java.lang.String">
+            <column name="create_org_name" length="40" />
+        </property>
+        <property name="categorySortCode" type="java.lang.Integer">
+            <column name="category_sort_code" />
+        </property>
+        <property name="categorySort" type="java.lang.String">
+            <column name="category_sort" length="100" />
+        </property>
+        <property name="parentId" type="java.lang.Long">
+            <column name="parent_id" />
+        </property>
+        <property name="categoryLevel" type="java.lang.Integer">
+            <column name="category_level" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="created_date" length="0" />
+        </property>
+        <property name="readerName" type="java.lang.String">
+            <column name="readerName" length="300" />
+        </property>
+        <property name="readerId" type="java.lang.String">
+            <column name="readerId" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>

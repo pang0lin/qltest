@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.relproject.po.RelProActorSinglePO" table="PRO_actor" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="projectId" column="project_id"/>
+<property name="actorId" column="actorid"/>
+<property name="actorName" column="actorname"/>
+<property name="actorType" column="actortype"/>
+<property name="actorRole" column="actorrole"/>
+
+</class>
+</hibernate-mapping>

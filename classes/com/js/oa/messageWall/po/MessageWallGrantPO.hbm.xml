@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.messageWall.po.MessageWallGrantPO" table="OA_MESSAGEWALL_GRANT">
+		<id name="id" column="ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="wallname" column="WALLNAME"></property>
+		<property name="wallmanagerid" column="WALLMANAGERID"></property>
+		<property name="wallmanager" column="WALLMANAGER"></property>
+		<property name="wallreader" column="WALLREADER"></property>
+		<property name="wallreadorg" column="WALLREADORG"></property>
+		<property name="wallreadgroup" column="WALLREADGROUP"></property>
+		<property name="wallreadname" column="WALLREADNAME"></property>
+		<property name="wallmaxnum" column="WALLMAXNUM"></property>
+		<property name="createdemp" column="CREATEDEMP"></property>
+	</class>
+</hibernate-mapping>

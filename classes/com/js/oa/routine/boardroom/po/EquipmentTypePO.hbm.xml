@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.EquipmentTypePO" table="OA_EQUIPMENTTYPE" >
+        <id name="equipmentSortId" column="EQUIPMENTSORTID">
+             <generator class="native"/>
+        </id>
+        <property name="name" column="Name" type="java.lang.String"/>
+		<property name="createdEmp" column="CREATEDEMP" type="java.lang.Long"/>
+		<property name="createdOrg" column="CREATEDORG" type="java.lang.Long"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<property name="corpId" column="corp_id" />
+                <set name="equipment"
+                table="OA_EQUIPMENT"
+                lazy="true"
+                inverse="false"
+                cascade="none"
+    		sort="unsorted">
+    		<key column="equipmentSortId"/>
+    		<one-to-many class="com.js.oa.routine.boardroom.po.EquipmentPO"/>
+                </set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.ReceiveFileSeqPO"  table="DOC_ReceiveFileSeq">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="seqNameR" column="seqNameR" />
+		<property name="seqProceNameR" column="seqProceNameR" />
+		<property name="seqProceId" column="seqProceId"/>
+		<property name="seqBitNumR" column="seqBitNumR"/>
+		<property name="seqIsYearR" column="seqIsYearR"/>
+		<property name="seqInitValueR" column="seqInitValueR" />
+		<property name="seqFormatR" column="seqFormatR" />
+		<property name="seqModeR" column="seqModeR"/>
+                <property name="seqfigR" column="seqfigR"/>
+		<property name="seqIsName" column="seqIsName"/>
+                <property name="receiveUser" column="receiveUser"/>
+                <property name="receiveOrg" column="receiveOrg"/>
+                <property name="receiveGroup" column="receiveGroup"/>
+                <property name="receiveScopeName" column="receiveScopeName"/>
+                <property name="receiveScopeId" column="receiveScopeId"/>
+                 <property name="seqType" column="seqType"/>
+                 <property name="createdEmp" column="createdEmp"/>
+                <property name="createdOrg" column="createdOrg"/>
+                <property name="corpId" column="corp_id"/>
+                <property name="repeatOfYear" column="repeatOfYear"/>
+                <property name="seqCurYear" column="seqcuryear"/>
+        </class>
+</hibernate-mapping>
+
+
+
+
+
+
+

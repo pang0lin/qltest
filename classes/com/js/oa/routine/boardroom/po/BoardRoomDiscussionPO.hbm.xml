@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.BoardRoomDiscussionPO" table="OA_BOARDROOM_Discussion" >
+        <id name="discussionId" column="discussionId">
+             <generator class="native"/>
+        </id>
+
+		<property name="discussionContext" column="discussionContext"/>
+		<property name="discussionEmpId" column="discussionEmpId"/>
+		<property name="discussionEmpName" column="discussionEmpName"/>
+		<property name="flag" column="flag"/>
+		<property name="discussionDate" column="discussionDate"/>
+		<property name="applyId" column="applyId"/>
+		<property name="orgId" column="orgId"/>
+	</class>
+</hibernate-mapping>

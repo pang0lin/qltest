@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.hr.kq.po.KqWeiXinBMDPO" table="KQ_WEIXINBMD">
+		<id name="id" column="id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="emp_id" column="emp_id" />
+		<property name="beginTime" column="beginTime" />
+		<property name="endTime" column="endTime" />
+	</class>
+</hibernate-mapping>

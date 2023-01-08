@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.dcq.po.DcqMeetingPO" table="dcq_meeting" >
+<id name="meetingID" column="meetingID" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="userID" column="userID" />
+<property name="orgID" column="orgID" />
+<property name="oid" column="oid" />
+<property name="meetingName" column="meetingName" />
+<property name="beginTime" column="beginTime" />
+
+<property name="endTime" column="endTime" />
+<property name="meetingSite" column="meetingSite" />
+<property name="name" column="name" />
+<property name="job" column="job" />
+<property name="phone" column="phone" />
+
+<property name="orgName" column="orgName" />
+<property name="orgCode" column="orgCode" />
+<property name="acceptPerson" column="acceptPerson" />
+<property name="acceptPhone" column="acceptPhone" />
+<property name="type" column="type" />
+
+<property name="dataName" column="dataName" />
+<property name="readType" column="readType" />
+<property name="dataID" column="dataID" />
+<property name="reOid" column="reOid" />
+<property name="meetingSubject" column="meetingSubject" />
+
+<property name="meetingBatch" column="meetingBatch" />
+<property name="meetingType" column="meetingType" />
+<property name="registerDate" column="registerDate" />
+<property name="registerID" column="registerID" />
+<property name="readTime" column="readTime" />
+
+<property name="mark" column="mark" />
+<property name="remark" column="remark" />
+
+</class>
+</hibernate-mapping>

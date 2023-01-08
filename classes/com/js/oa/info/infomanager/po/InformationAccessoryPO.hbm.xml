@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InformationAccessoryPO"
+        table="OA_INFORMATIONACCESSORY"
+        >
+        <id name="accessoryId" column="ACCESSORY_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="accessoryType" column="ACCESSORYTYPE" />
+        <property name="accessoryName" column="ACCESSORYNAME" />
+        <property name="accessorySaveName" column="ACCESSORYSAVENAME" />
+        <property name="accessoryIsImage" column="ACCESSORYISIMAGE" />
+		<property name="domainId" column="DOMAIN_ID" />
+
+        <!--与OA_INFORMATION（信息）表是多对一的关系-->
+        <many-to-one name="information"
+            class="com.js.oa.info.infomanager.po.InformationPO"
+            cascade="save-update"
+            outer-join="auto"
+            update="false"
+            insert="true"
+            column="INFORMATION_ID" />
+    </class>
+</hibernate-mapping>

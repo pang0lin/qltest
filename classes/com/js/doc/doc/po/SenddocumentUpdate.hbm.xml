@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.SenddocumentUpdate"  table="doc_senddocumentUpdate">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="updateEmpId" column="updateEmpId" />
+		<property name="updateEmpName" column="updateEmpName" />
+		<property name="updateOrgId" column="updateOrgId"/>
+		<property name="updateOrgName" column="updateOrgName"/>
+		<property name="sendTitle" column="sendTitle"/>
+		<property name="sendMainTo" column="sendMainTo" />
+		<property name="sendCopyTo" column="sendCopyTo" />
+		<property name="updateTime" column="updateTime"/>
+                <property name="sendFileId" column="sendFileId"/>
+	</class>
+</hibernate-mapping>

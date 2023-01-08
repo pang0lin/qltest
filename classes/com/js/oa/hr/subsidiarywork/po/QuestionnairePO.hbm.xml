@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.subsidiarywork.po.QuestionnairePO" table="OA_QUESTIONNAIRE" >
+        <id name="questionnaireId" column="QUESTIONNAIREID">
+            <generator class="native" />
+        </id>
+        <property name="title" column="TITLE"/>
+		<property name="actorEmp" column="ACTOREMP"/>
+		<property name="actorOrg" column="ACTORORG"/>
+		<property name="actorGroup" column="ACTORGROUP"/>
+		<property name="actorName" column="ACTORNAME"/>
+		<property name="examineEmp" column="EXAMINEEMP"/>
+		<property name="examineOrg" column="EXAMINEORG"/>
+		<property name="examineGroup" column="EXAMINEGROUP"/>
+		<property name="examineName" column="EXAMINENAME"/>
+		<property name="status" column="STATUS"/>
+		<property name="startDate" column="STARTDATE"/>
+		<property name="endDate" column="ENDDATE"/>
+		<property name="grade" column="GRADE" />
+		<property name="createdEmp" column="CREATEDEMP"/>
+		<property name="cratedOrg" column="CRATEDORG"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<set name="questheme"
+			table="OA_QUESTHEME"
+			lazy="true"
+			inverse="false"
+			cascade="none"
+			sort="unsorted">
+			<key column="QUESTIONNAIREID"/>
+    <one-to-many class="com.js.oa.hr.subsidiarywork.po.QuesthemePO"/>
+</set>
+    </class>
+</hibernate-mapping>

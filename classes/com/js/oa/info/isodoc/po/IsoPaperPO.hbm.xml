@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.info.isodoc.po.IsoPaperPO"  table="OA_ISO_Paper">
+
+		<id column="isoPaperId" name="isoPaperId" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+<property name="informationId" column="informationId" />
+<property name="documentNO" column="documentNO" />
+<property name="informationName" column="informationName" />
+<property name="infromationVersion" column="infromationVersion" />
+<property name="provideTime" column="provideTime" />
+<property name="provideNum" column="provideNum" />
+<property name="providePage" column="providePage" />
+<property name="receiveUser" column="receiveUser" />
+<property name="receiveOrg" column="receiveOrg" />
+<property name="receiveGroup" column="receiveGroup" />
+<property name="receiveScopeName" column="receiveScopeName" />
+<property name="provideUserId" column="provideUserId" />
+<property name="provideUserName" column="provideUserName" />
+<property name="provideOrgId" column="provideOrgId" />
+<property name="provideOrgName" column="provideOrgName" />
+<property name="paperStatus" column="paperStatus" />
+<property name="receiveScopeId" column="receiveScopeId" />
+<property name="domainId" column="domainId" />
+<property name="backUserId" column="backUserId" />
+<property name="backUserName" column="backUserName" />
+<property name="backTime" column="backTime" />
+<property name="channelName" column="channelName"/>
+</class>
+</hibernate-mapping>

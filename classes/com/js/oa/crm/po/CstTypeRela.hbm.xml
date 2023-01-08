@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.crm.po.CstTypeRelat" table="cst_type_r">
+		<id name="customerId" type="java.lang.Long">
+			<column name="customer_id" />
+			<generator class="assigned"/>
+		</id>
+		<property name="customerTypeId" type="java.lang.Long">
+			<column name="customer_type_id" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.basedata.po.DistrictPO" table="OA_DISTRICT" >
+<id name="id" column="DISTRICT_ID" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="districtName" column="DISTRICTNAME" type="java.lang.String"/>
+<property name="postalCode" column="POSTALCODE" type="java.lang.String"/>
+<property name="phoneCode" column="PHONECODE" type="java.lang.String"/>
+<property name="parentId" column="PARENTID" type="java.lang.Long"/>
+<property name="idString" column="IDSTRING" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

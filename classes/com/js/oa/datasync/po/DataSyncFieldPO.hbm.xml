@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.datasync.po.DataSyncFieldPO"
+        table="data_sync_field"
+        >
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="syncSetId" column="SYNCSET_ID"  />
+        <property name="fromField" column="fromField"  />
+        <property name="fromType" column="fromType"  />
+        <property name="fromValueSet" column="fromValueSet" />
+        <property name="toField" column="toField"  />
+        <property name="toType" column="toType" />
+        <property name="fieldIsMainForm" column="fieldIsMainForm" />
+    </class>
+</hibernate-mapping>

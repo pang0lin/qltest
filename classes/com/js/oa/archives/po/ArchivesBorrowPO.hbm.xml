@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesBorrowPO" table="OA_ARCHIVESBORROW" >
+<id name="borrowId" column="BORROW_ID">
+<generator class="native" />
+</id>
+<property name="empId" column="EMP_ID"/>
+<property name="empName" column="EMPNAME"/>
+<property name="orgId" column="ORG_ID"/>
+<property name="orgName" column="ORGNAME"/>
+<property name="borrowIntent" column="BORROWINTENT"/>
+<property name="borrowDate" column="BORROWDATE"/>
+<property name="returnDate" column="RETURNDATE"/>
+<property name="isReturned" column="ISRETURNED"/>
+<property name="borrowCount" column="BORROWCOUNT"/>
+<property name="status" column="STATUS"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<many-to-one
+    	name="archivesFile"
+        class="com.js.oa.archives.po.ArchivesFilePO"
+        not-null="true"
+    >
+        <column name="FILE_ID" />
+    </many-to-one>
+</class>
+</hibernate-mapping>

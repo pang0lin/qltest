@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.PerformanceCheckPO"
+        table="oa_emp_performancecheck"
+        >
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="checkYear" column="check_year" />
+        <property name="checkMonth" column="check_month" />
+		<property name="checkMark" column="check_mark" />
+		<property name="addMark" column="check_addmark" />
+		<property name="addReason" column="check_addreason" />
+		<property name="deductMark" column="check_deductmark" />
+		<property name="deductReason" column="check_deductreason" />
+		<property name="empOrg" column="emp_org" />
+
+		<many-to-one name="emp"
+            class="com.js.system.vo.usermanager.EmployeeVO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="EMP_ID" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.webmail.po.WebMailTemp" table="oa_web_mail_temp">
+		<id name="tempId" type="java.lang.Long">
+			<column name="temp_id" />
+			<generator class="native" />
+		</id>
+		<property name="mailId" type="java.lang.String">
+			<column name="mail_id" />
+		</property>
+
+	</class>
+</hibernate-mapping>

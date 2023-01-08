@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<class name="com.js.oa.scheme.taskcenter.po.TaskClassPO" table="OA_TASKCLASS" >
+
+	<id name="classId" type="java.lang.Long" column="CLASS_ID">
+        <generator class="native" />
+    </id>
+
+    <property name="classDomainId" type="java.lang.Long" column="DOMAIN_ID" length="20"/>
+    <property name="className" type="java.lang.String" column="CLASSNAME" length="30"/>
+    <property name="createdEmp" type="java.lang.Long" column="CREATEDEMP" length="20"/>
+    <property name="createdOrg" type="java.lang.Long" column="CREATEDORG" length="20"/>
+	<property name="usedScopeName" column="usedscopename"/>
+	<property name="usedScopeId" column="usedscopeid"/>
+	<property name="usedScopeOrgId" column="usedscopeorgid"/>
+	<property name="usedScopeGroupId" column="usedscopegroupid"/>
+	<property name="orderCode" column="orderCode"/>
+</class>
+</hibernate-mapping>

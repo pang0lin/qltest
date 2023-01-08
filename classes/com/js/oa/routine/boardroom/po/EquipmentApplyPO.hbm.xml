@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.EquipmentApplyPO" table="OA_EQUIPMENTAPPLY" >
+        <id name="equipmentApplyId" column="EQUIPMENTAPPLYID">
+             <generator class="native"/>
+        </id>
+        <property name="empId" column="EMPID" type="java.lang.Long"/>
+		<property name="empName" column="EMPNAME" type="java.lang.String"/>
+		<property name="orgId" column="ORGID" type="java.lang.Long"/>
+		<property name="orgName" column="ORGNAME" type="java.lang.String"/>
+		<property name="startDate" column="STARTDATE" type="timestamp"/>
+		<property name="startTime" column="STARTTIME" type="java.lang.String"/>
+		<property name="endDate" column="ENDDATE" type="timestamp"/>
+		<property name="endTime" column="ENDTIME" type="java.lang.String"/>
+		<property name="purpose" column="PURPOSE" type="java.lang.String"/>
+		<property name="status" column="STATUS" type="java.lang.Integer"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+
+		<many-to-one name="equipment" class="com.js.oa.routine.boardroom.po.EquipmentPO" not-null="true">
+			<column name="EQUIPMENTID"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

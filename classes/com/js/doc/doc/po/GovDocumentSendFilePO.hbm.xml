@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovDocumentSendFilePO" table="DOC_DOCUMENTSENDFILE" >
+<id name="id" column="DOCUMENTSENDFILE_ID" type="long">
+ <generator class="native"/>
+</id>
+
+<property name="documentSendFileHead" column="DOCUMENTSENDFILE_HEAD" type="string" length="50"/>
+<property name="documentSendFileByteNumber" column="DOCUMENTSENDFILE_BYTENUMBER" type="string" length="50"/>
+<property name="documentSendFileSecurityGrade" column="DOCUMENTSENDFILE_SECURITYGRADE" type="string" length="20"/>
+<property name="documentSendFileTitle" column="DOCUMENTSENDFILE_TITLE" type="string" length="200"/>
+<property name="documentSendFileTopicWord" column="DOCUMENTSENDFILE_TOPICWORD" type="string" length="100"/>
+
+<property name="sendToEmp" column="SENDTOEMP" type="string" length="500"/>
+<property name="sendToGroup" column="SENDTOGROUP" type="string" length="500"/>
+<property name="sendToOrg" column="SENDTOORG" type="string" length="500"/>
+
+<property name="sendToName" column="SENDTONAME" type="string" length="100"/>
+<property name="sendToType" column="SENDTOTYPE" type="string" length="20"/>
+<property name="sendRoundName" column="SENDROUNDNAME" type="string" length="100"/>
+<property name="mainToName" column="MAINTONAME" type="string" length="100"/>
+<property name="sunderToName" column="SUNDERTONAME" type="string" length="100"/>
+<property name="copyToName" column="COPYTONAME" type="string" length="100"/>
+<property name="documentSendFileWritePerson" column="DOCUMENTSENDFILE_WRITEPERSON" type="string" length="50"/>
+<property name="documentSendFileWriteDate" column="DOCUMENTSENDFILE_WRITEDATE" />
+<property name="documentSendFileWriteOrg" column="DOCUMENTSENDFILE_WRITEORG" type="string" length="50"/>
+<property name="documentSendFileAssumePeople" column="DOCUMENTSENDFILE_ASSUMEPEOPLE" type="string" length="50"/>
+<property name="documentSendFileAssumeUnit" column="DOCUMENTSENDFILE_ASSUMEUNIT" type="string" length="100"/>
+<property name="documentSendFileCounterSign" column="DOCUMENTSENDFILE_COUNTERSIGN" type="string" length="50"/>
+<property name="documentSendFileCheckDate" column="DOCUMENTSENDFILE_CHECKDATE" type="string" length="50"/>
+<property name="documentSendFileCheckCommit" column="DOCUMENTSENDFILE_CHECKCOMMIT" type="string" length="200"/>
+<property name="documentSendFileSendFile" column="DOCUMENTSENDFILE_SENDFILE" type="string" length="200"/>
+<property name="documentSendFileDate" column="DOCUMENTSENDFILE_DATE" />
+<property name="documentSendFileSendDate" column="DOCUMENTSENDFILE_SENDDATE"  />
+<property name="createdOrg" column="CREATEDORG" type="long" length="20"/>
+<property name="createdEmp" column="CREATEDEMP" type="long" length="20"/>
+<property name="flowFlag" column="FLOWFLAG" type="byte" length="1"/>
+<property name="accessoryName" column="ACCESSORYNAME" type="string" length="1000"/>
+<property name="accessorySaveName" column="ACCESSORYSAVENAME" type="string" length="1000"/>
+<property name="documentSendFilePrintNumber" column="DOCUMENTSENDFILE_PRINTNUMBER" type="integer" length="5"/>
+<property name="receiveFileIsFlowMode" column="RECEIVEFILE_ISFLOWMODE"    />
+<property name="createdTime" column="createdTime" />
+
+
+
+
+
+<property name="sendFileGrade" column="SendFile_Grade"    />
+<property name="sendFileReadComment" column="SendFile_ReadComment"    />
+<property name="sendFileAccessoryDesc" column="sendFile_AccessayDesc"    />
+<property name="sendFileDraft" column="SendFile_Draft"    />
+<property name="sendFileAgentDraft" column="sendFile_AgentDraft"    />
+<property name="sendFileMassDraft" column="SendFile_MassDraft"    />
+<property name="sendFileProveDraft" column="SendFile_ProveDraft"    />
+<property name="sendFilePrinter" column="SendFile_Printer"    />
+<property name="sendFileProof" column="SendFile_proof"    />
+<property name="sendFileText" column="SendFile_Text" type="net.sf.hibernate.type.TextType" />
+<property name="sendFileLink" column="SendFile_Link"    />
+
+
+<property name="sendFileSeal" column="SendFile_Seal"    />
+<property name="sendFileRedHead" column="SendFile_RedHead"    />
+<property name="sendFileRedHeadId" column="SendFile_RedHeadId"    />
+<property name="sendFileSealId" column="SendFile_SealId"    />
+<property name="sendFileShowStyle" column="SendFile_ShowStyle"    />
+<property name="sendFileRedHeadPic" column="SendFile_RedHeadPic"    />
+<property name="sendFileSealPic" column="SendFile_SealPic"    />
+<property name="sendFileOverSee" column="SendFile_OverSee"    />
+<property name="sendFileType" column="sendFileType"    />
+
+<property name="field1" column="field1" />
+<property name="field2" column="field2" />
+<property name="field3" column="field3" />
+<property name="field4" column="field4" />
+<property name="field5" column="field5" />
+<property name="field6" column="field6" />
+<property name="field7" column="field7" />
+<property name="field8" column="field8" />
+<property name="field9" column="field9" />
+<property name="field10" column="field10" />
+
+<property name="receiveFileId" column="RECEIVEFILE_ID" />
+<property name="receiveFileLink" column="RECEIVEFILE_LINK" />
+<property name="htmlContent" column="SENDFILE_HTMLCONTENT" type="net.sf.hibernate.type.TextType" />
+<property name="isDraft" column="SENDFILE_ISDRAFT" />
+<property name="processId" column="SENDFILE_PROCESSID" />
+<property name="processName" column="SENDFILE_PROCESSNAME" />
+<property name="processType" column="SENDFILE_PROCESSTYPE" />
+<property name="tableId" column="SENDFILE_TABLEID" />
+<property name="remindField" column="SENDFILE_REMINDFIELD" />
+<property name="thirdDossier" column="SENDFILE_THIRDDOSSIER" />
+
+<property name="goldGridId" column="SENDFILE_GOLDGRIDID" />
+<property name="transactStatus" column="SENDFILE_TRANSACTSTATUS" />
+<property name="domainId" column="DOMAIN_ID"/>
+
+<property name="fileSendCheckId" column="FILESENDCHECK_ID" />
+<property name="fileSendCheckLink" column="FILESENDCHECK_LINK" />
+
+
+
+<property name="sendFilePoNumId" column="sendFilePoNumId" />
+<property name="sendFileDepartWord" column="sendFileDepartWord" />
+<property name="sendFileTemId" column="sendFileTemId" />
+
+<property name="zjkySeq" column="zjkySeq" />
+<property name="zjkySecrecyterm" column="zjkySecrecyterm" />
+<property name="zjkyContentLevel" column="zjkyContentLevel" />
+<property name="contentAccName" column="contentAccName" />
+<property name="contentAccSaveName" column="contentAccSaveName" />
+
+<property name="toPerson1Id" column="toPerson1Id" />
+<property name="toPerson2Id" column="toPerson2Id" />
+<property name="toPersonBaoId" column="toPersonBaoId" />
+<property name="toPersonInnerId" column="toPersonInnerId" />
+<property name="toPersonBao" column="toPersonBao" />
+<property name="toPersonInner" column="toPersonInner" />
+
+
+<property name="zjkyWordId" column="zjkyWordId" />
+<property name="documentWordType" column="documentSendfile_wordtype" />
+<property name="sendFieldSelectMoreEmp" column="sendFieldSelectMoreEmp" />
+
+
+<set name="govSendFileBrowser"
+     table="doc_SENDFILEBROWSER"
+     cascade="delete"
+     lazy="true"
+     inverse="true"
+>
+    <key column="DOCUMENTSENDFILE_ID"/>
+    <one-to-many class="com.js.doc.doc.po.GovSendFileBrowserPO"/>
+</set>
+<set name="govSendFileNoBrowser"
+     table="DOC_SENDFILENOBROWSER"
+     cascade="delete"
+     lazy="true"
+     inverse="true"
+>
+    <key column="DOCUMENTSENDFILE_ID"/>
+    <one-to-many class="com.js.doc.doc.po.GovSendFileNoBrowserPO"/>
+</set>
+
+<set name="sendFileUser"
+     table="doc_SENDFILE_USER"
+     cascade="delete"
+     lazy="true"
+     inverse="true">
+    <key column="SENDFILE_ID"/>
+    <one-to-many class="com.js.doc.doc.po.GovSendFileUserPO"/>
+</set>
+
+
+<property name="signsendTime" column="signsendTime" />
+<property name="openProperty" column="openProperty" />
+<property name="sendTextField1" column="send_text_field1" />
+<property name="sendTextField2" column="send_text_field2" />
+<property name="sendDropDownSelect1" column="send_drop_down_select1" />
+<property name="sendDropDownSelect2" column="send_drop_down_select2" />
+<property name="sendMutliTextField1" column="send_mutli_text_field1" />
+<property name="oid" column="oid"></property>
+<property name="submitFileType" column="submitFileType"></property>
+<property name="sendFileSyncForward" column="sendFile_syncForward"></property>
+
+</class>
+</hibernate-mapping>

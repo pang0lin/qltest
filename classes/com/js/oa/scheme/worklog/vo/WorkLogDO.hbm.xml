@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class
+    name="com.js.oa.scheme.worklog.vo.WorkLogDO"
+    table="REP_LOG"
+    
+>
+
+    <id
+        name="logId"
+        type="java.lang.Long"
+        column="LOG_ID"
+    >
+        <generator class="native" />
+    </id>
+
+    <property
+        name="empName"
+        type="java.lang.String"
+        column="EMPNAME"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+</class>
+</hibernate-mapping>

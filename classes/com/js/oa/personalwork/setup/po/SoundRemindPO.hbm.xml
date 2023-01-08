@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.setup.po.SoundRemindPO" table="OA_SOUNDREMIND" >
+
+<id name="id" column="REMIND_ID" type="long">
+    <generator class="native" />
+</id>
+
+<property name="empId" column="EMP_ID" type="long" length="20"/>
+<property name="remindType" column="REMINDTYPE" type="byte" length="1"/>
+<property name="domainId" column="DOMAIN_ID" />
+<many-to-one
+	name="soundSet"
+	class="com.js.oa.personalwork.setup.po.SoundSetPO"
+	cascade="none"
+	outer-join="false"
+	update="true"
+	insert="true"
+	column="SOUND_ID"
+/>
+</class>
+</hibernate-mapping>

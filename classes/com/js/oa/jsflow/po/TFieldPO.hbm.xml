@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--自定义字段表（EZPLATFORM11.TFIELD）-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.TFieldPO"
+        table="TFIELD"
+        >
+        <id name="fieldId" column="FIELD_ID" type="long">
+            <generator class="assigned" />
+        </id>
+
+        <!--编号-->
+        <property name="fieldCode" column="FIELD_CODE" />
+
+        <!--名称-->
+        <property name="fieldDesName" column="FIELD_DESNAME" />
+
+        <!--实际名称-->
+        <property name="fieldName" column="FIELD_NAME" />
+
+        <!--所属模块-->
+        <property name="fieldModel" column="FIELD_MODEL" />
+
+        <!--长度-->
+        <property name="fieldLen" column="FIELD_LEN" />
+
+        <!--外键主表-->
+        <property name="fieldRef" column="FIELD_REF" />
+
+        <!--是否需要索引-->
+        <property name="fieldIndex" column="FIELD_INDEX" />
+
+        <!--是否可以为空-->
+        <property name="fieldNull" column="FIELD_NULL" />
+
+        <!--是否默认排序-->
+        <property name="fieldSort" column="FIELD_SORT" />
+
+	<!--是否唯一-->
+        <property name="fieldOnly" column="FIELD_ONLY" />
+
+        <!--默认值-->
+        <property name="fieldDefault" column="FIELD_DEFAULT" />
+
+        <!--是否需要承接上一条记录的值-->
+        <property name="fieldUpdate" column="FIELD_UPDATE" />
+
+        <!--字段说明-->
+        <property name="fieldDes" column="FIELD_DES" />
+
+        <!--是否列表显示-->
+        <property name="fieldList" column="FIELD_LIST" />
+
+        <!--列表显示宽度-->
+        <property name="fieldWidth" column="FIELD_WIDTH" />
+
+        <!--取值-->
+        <property name="fieldValue" column="FIELD_VALUE" />
+
+        <!--约束方式-->
+        <property name="fieldLimit" column="FIELD_LIMIT" />
+
+        <!--创建者-->
+        <property name="fieldOwner" column="FIELD_OWNER" />
+
+        <!--创建日期-->
+        <property name="fieldDate" column="FIELD_DATE" />
+
+        <!-- 接口类名 -->
+         <property name="fieldInterfacename" column="field_interfacename"/>
+         <!-- 接口方法名称 -->
+         <property name="fieldInterfacemethod" column="field_interfacemethod"/>
+         <!-- 接口参数 -->
+         <property name="fieldInterfacemethodpara" column="field_interfacemethodpara"/>
+         
+         <property name="fieldInterfacetype" column="field_interfacetype"/>
+
+        <!--与（TTABLE）表是多对一的关系-->
+        <many-to-one name="table"
+            class="com.js.oa.jsflow.po.TTablePO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="FIELD_TABLE" />
+
+        <!--与类型表（TTYPE）是多对一的关系-->
+
+        <many-to-one name="type"
+            class="com.js.oa.jsflow.po.TTypePO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="FIELD_TYPE" />
+
+        <!--与显示表（TSHOW）是一对多的关系-->
+
+        <many-to-one name="show"
+            class="com.js.oa.jsflow.po.TShowPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="FIELD_SHOW" />
+
+    </class>
+</hibernate-mapping>

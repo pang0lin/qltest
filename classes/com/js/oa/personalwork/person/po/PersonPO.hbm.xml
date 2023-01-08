@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.person.po.PersonPO" table="OA_LINKMAN" >
+<id name="id" column="LINKMAN_ID" type="long">
+	<generator class="native" />
+</id>
+
+<property name="linkManName" column="LINKMANNAME" type="string" length="20" not-null="true"/>
+<property name="linkManEnName" column="LINKMANENNAME" type="string" length="50"/>
+<property name="linkManSex" column="LINKMANSEX" type="string" length="2" not-null="true"/>
+<property name="linkManBirth" column="LINKMANBIRTH" type="timestamp" length="7"/>
+<property name="linkManUnit" column="LINKMANUNIT" type="string" length="100"/>
+<property name="linkManDepart" column="LINKMANDEPART" type="string" length="100"/>
+<property name="linkManProfession" column="LINKMANPROFESSION" type="string" length="50"/>
+<property name="linkManDuty" column="LINKMANDUTY" type="string" length="50"/>
+<property name="linkManEmail" column="LINKMANEMAIL" type="string" length="50"/>
+<property name="linkManEmail2" column="LINKMANEMAIL2" type="string" length="50"/>
+<property name="linkManEmail3" column="LINKMANEMAIL3" type="string" length="50"/>
+<property name="linkManWebUrl" column="LINKMANWEBURL" type="string" length="80"/>
+<property name="bussinessPhone" column="BUSSINESSPHONE" type="string" length="20"/>
+<property name="bussinessFax" column="BUSSINESSFAX" type="string" length="20"/>
+<property name="fixedPhone" column="FIXEDPHONE" type="string" length="20"/>
+<property name="mobilePhone" column="MOBILEPHONE" type="string" length="20"/>
+<property name="linkManCountry" column="LINKMANCOUNTRY" type="string" length="100"/>
+<property name="linkManState" column="LINKMANSTATE" type="string" length="100"/>
+<property name="linkManCounty" column="LINKMANCOUNTY" type="string" length="100"/>
+<property name="linkManAddress" column="LINKMANADDRESS" type="string" length="100"/>
+<property name="linkManPostZip" column="LINKMANPOSTZIP" type="string" length="10"/>
+<property name="linkManDescribe" column="LINKMANDESCRIBE" type="string" length="500"/>
+<property name="linkManType" column="LINKMANTYPE" type="byte" length="1"/>
+<property name="createdEmpName" column="CREATEDEMPNAME" type="string" length="20"/>
+<property name="createdEmpId" column="CREATEDEMPID" type="long" length="20"/>
+<property name="createdOrg" column="CREATEDORG" type="long" length="20"/>
+<property name="viewScope" column="VIEWSCOPE" type="string" length="100"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+<many-to-one
+	name="linkManClass"
+	class="com.js.oa.personalwork.person.po.PersonClassPO"
+	cascade="none"
+        outer-join="auto"
+        update="true"
+        insert="true"
+	column="CLASS_ID"
+/>
+
+</class>
+</hibernate-mapping>

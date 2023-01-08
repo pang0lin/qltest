@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.crm.po.CstSell" table="cst_s">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="parentId" type="java.lang.String">
+			<column name="parent_id" />
+		</property>
+		<property name="proName" type="java.lang.String">
+			<column name="pro_name" />
+		</property>
+		<property name="proId" type="java.lang.String">
+			<column name="pro_id" />
+		</property>
+		<property name="cstName" type="java.lang.String">
+			<column name="cst_name" />
+		</property>
+		<property name="cstId" type="java.lang.String">
+			<column name="cst_id" />
+		</property>
+		<property name="cstProduct" type="java.lang.String">
+			<column name="cst_product" />
+		</property>
+		<property name="productId" type="java.lang.String">
+			<column name="product_id" />
+		</property>
+		<property name="cstPrice" type="java.math.BigDecimal">
+			<column name="cst_price" />
+		</property>
+		<property name="recePrice" type="java.math.BigDecimal">
+			<column name="rece_price" />
+		</property>
+		<property name="unrecePrice" type="java.math.BigDecimal">
+			<column name="unrece_price" />
+		</property>
+		<property name="receInvoice" type="java.math.BigDecimal">
+			<column name="rece_invoice" />
+		</property>
+		<property name="createTime" type="java.lang.String">
+			<column name="create_time" />
+		</property>
+		<property name="createUser" type="java.lang.String">
+			<column name="create_user" />
+		</property>
+		<property name="createUserId" type="java.lang.String">
+			<column name="create_user_id" />
+		</property>
+		<property name="kefuCenter" type="java.lang.String">
+			<column name="kefu_center" />
+		</property>
+		<property name="zhiyeAgree" type="java.lang.String">
+			<column name="zhiye_agree" />
+		</property>
+		<property name="zhiyeCenter" type="java.lang.String">
+			<column name="zhiye_center" />
+		</property>
+		<property name="invoiceState" type="java.lang.String">
+			<column name="invoice_state" />
+		</property>
+		<property name="invoiceOrgName" type="java.lang.String">
+			<column name="invoice_org_name" />
+		</property>
+		<!--	新增  	-->
+		<property name="compactState" type="java.lang.String">
+			<column name="compact_state" />
+		</property>
+		<property name="compactNum" type="java.lang.String">
+			<column name="compact_num" />
+		</property>
+		<property name="parentProNum" type="java.lang.String">
+			<column name="parent_pro_num" />
+		</property>
+		<property name="proNumId" type="java.lang.String">
+			<column name="pro_num_id" />
+		</property>
+		<property name="proNumHead" type="java.lang.String">
+			<column name="pro_num_head" />
+		</property>
+		<property name="proNumIncream" type="java.lang.String">
+			<column name="pro_num_incream" />
+		</property>
+		<property name="chargeUser" type="java.lang.String">
+			<column name="charge_user" />
+		</property>
+		<property name="chargeUserId" type="java.lang.String">
+			<column name="charge_user_id" />
+		</property>
+		<property name="chargeOrg" type="java.lang.String">
+			<column name="charge_org" />
+		</property>
+		<property name="chargeOrgId" type="java.lang.String">
+			<column name="charge_org_id" />
+		</property>
+		<property name="floowUser" type="java.lang.String">
+			<column name="floow_user" />
+		</property>
+		<property name="floowUserId" type="java.lang.String">
+			<column name="floow_user_id" />
+		</property>
+		
+		<property name="trustTime" type="java.lang.String">
+			<column name="trust_time" />
+		</property>
+		<property name="requestTime" type="java.lang.String">
+			<column name="request_time" />
+		</property>
+		<property name="inteCompTime" type="java.lang.String">
+			<column name="inte_comp_time" />
+		</property>
+		<property name="acceptTime" type="java.lang.String">
+			<column name="accept_time" />
+		</property>
+		<property name="sendTime" type="java.lang.String">
+			<column name="send_time" />
+		</property>
+		<property name="proRequset" type="java.lang.String">
+			<column name="pro_pequset" />
+		</property>
+		<property name="sigendTime" type="java.lang.String">
+			<column name="sigend_time" />
+		</property>
+		
+		<property name="info1" type="java.lang.String">
+			<column name="info1" />
+		</property>
+		<property name="info2" type="java.lang.String">
+			<column name="info2" />
+		</property>
+		<property name="info3" type="java.lang.String">
+			<column name="info3" />
+		</property>
+		<property name="info4" type="java.lang.String">
+			<column name="info4" />
+		</property>
+		<property name="info5" type="java.lang.String">
+			<column name="info5" />
+		</property>
+		<property name="info6" type="java.lang.String">
+			<column name="info6" />
+		</property>
+		<property name="info7" type="java.lang.String">
+			<column name="info7" />
+		</property>
+		<property name="info8" type="java.lang.String">
+			<column name="info8" />
+		</property>
+		<property name="orderCode" type="java.lang.Long">
+			<column name="order_code" />
+		</property>
+		<property name="orderString" type="java.lang.String">
+			<column name="order_string" />
+		</property>
+		<property name="lever" type="java.lang.String">
+			<column name="lever" />
+	    </property>	
+	    
+	    <property name="orgId" type="java.lang.String">
+			<column name="org_id" />
+		</property>
+		<property name="orgName" type="java.lang.String">
+			<column name="org_name" />
+		</property>
+		<property name="orgIdString" type="java.lang.String">
+			<column name="org_id_string" />
+		</property>
+	    <property name="caiWu" type="java.lang.String">
+			<column name="cai_wu" />
+		</property>
+		<property name="caiWuId" type="java.lang.String">
+			<column name="cai_wu_id" />
+		</property>
+		<property name="hangYe" type="java.lang.String">
+			<column name="hang_ye" />
+		</property>
+	    <property name="hangYeName" type="java.lang.String">
+			<column name="hang_ye_name" />
+		</property>
+	    
+	   <property name="proState" type="java.lang.String">
+			<column name="pro_state" />
+		</property>
+		<property name="reportId" type="java.lang.String">
+			<column name="report_id" />
+		</property>
+		<property name="reportNum" type="java.lang.String">
+			<column name="report_num" />
+		</property>
+	    <property name="reportNumIden" type="java.lang.String">
+			<column name="report_num_iden" />
+		</property>
+	    
+	    	
+	</class>
+</hibernate-mapping>

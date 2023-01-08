@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.PersonalKindPO"
+        table="OA_PERSONAL_KIND"
+        >
+        <id name="kindId" column="kind_id">
+            <generator class="native" />
+        </id>
+        <property name="kindName" column="kind_name" />
+        <property name="kindDescription" column="kind_description" />
+		<property name="kindSort" column="kind_sort" />
+    </class>
+</hibernate-mapping>

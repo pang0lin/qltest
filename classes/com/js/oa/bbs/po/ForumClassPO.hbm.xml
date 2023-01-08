@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.bbs.po.ForumClassPO" table="OA_FORUMCLASS" >
+<id name="id" column="CLASS_ID" type="long">
+	<generator class="native" />
+</id>
+
+<property name="className" column="CLASSNAME"  />
+<property name="classLevel" column="CLASSLEVEL" />
+<property name="classOwnerName" column="CLASSOWNERNAME"  />
+<property name="classOwnerIds" column="classOwnerIds" />
+<property name="classOwnerId" column="classOwnerId" />
+<property name="classUserName" column="CLASSUSERNAME"  />
+<property name="classUserId" column="CLASSUSERID"  />
+<property name="classUserOrg" column="CLASSUSERORG"  />
+<property name="classUserGroup" column="CLASSUSERGROUP" />
+<property name="classSortCode" column="CLASSSORTCODE"  />
+<property name="classSort" column="CLASSSORT" />
+<property name="classParent" column="CLASSPARENT"  />
+<property name="classDate" column="CLASSDATE"  />
+<property name="createdOrg" column="CREATEDORG"  />
+<property name="createdEmp" column="CREATEDEMP"  />
+<property name="createdEmpName" column="createdEmpName"  />
+<property name="classRemark" column="CLASSREMARK"  />
+<property name="classHasJunior" column="classHasJunior"  />
+<property name="classParentName" column="classParentName"  />
+<property name="checkExamin" column="checkexamin"  />
+<property name="domainId" column="DOMAIN_ID"  />
+<property name="banPrint" column="BANPRINT"  />
+<property name="startPeriod" column="startperiod"  />
+<property name="endPeriod" column="endperiod"  />
+<property name="fullDay" column="fullday"  />
+<property name="classEmail" column="CLASSEMAIL"  />
+<property name="estopAnonymity" column="EstopAnonymity"  />
+<property name="relProjectId" column="relproject_id"  />
+<property name="proClassId" column="pro_class_id"  />
+<set name="forum"
+     table="OA_FORUM"
+     lazy="true"
+     inverse="false"
+     cascade="delete"
+     sort="unsorted">
+    <key column="CLASS_ID"/>
+    <one-to-many class="com.js.oa.bbs.po.ForumPO"/>
+</set>
+
+</class>
+</hibernate-mapping>

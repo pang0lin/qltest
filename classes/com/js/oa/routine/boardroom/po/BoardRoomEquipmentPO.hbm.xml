@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.BoardRoomEquipmentPO" table="oa_bdroomequ" >
+        <id name="equId" column="EQUID">
+             <generator class="native"/>
+        </id>
+        <property name="equName" column="EQUNAME" type="java.lang.String"/>
+		<property name="equDescribe" column="EQUDESCRIBE" type="java.lang.String"/>
+
+		<many-to-one name="boardRoomPO" class="com.js.oa.routine.boardroom.po.BoardRoomPO"
+		  cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+                  column="boardroomid"/>
+          </class>
+  </hibernate-mapping>

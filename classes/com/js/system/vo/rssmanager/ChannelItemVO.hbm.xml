@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.system.vo.rssmanager.ChannelItemVO" table="org_rss_channel_item">
+		<id name="itemId" column="item_id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="channelId" column="channel_id"/>
+        <property name="itemLink" column="item_link"/>
+        <property name="itemTitle" column="item_title"/>
+        <property name="itemDesc" column="item_desc"/>
+        <property name="readState" column="read_state"/>
+		<property name="pubDate" column="pub_date"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.online.po.ChatPO" table="chat">
+		<id name="chatId" type="java.lang.Long">
+			<column name="chat_id" />
+			<generator class="native" />
+		</id>
+		<property name="sendUserId" column="send_userId" />
+		<property name="toUserId" column="to_userId" />
+		<property name="content" column="content" />
+		<property name="chatHasaccessory" column="chat_hasaccessory" />
+		<property name="chatTime" column="chat_time" />
+		<property name="chatFlag" column="chatFlag" />
+		<property name="isRead" column="is_read"></property>
+		<property name="msgSelfFlag" column="msg_self_flag"></property>
+<!--		<property name="msgOtherFlag" column="msg_other_flag"></property>-->
+
+		<property name="accessorySize" column="accessory_size" />
+		<set name="chatAccessory" table="chat_accessory" lazy="true"
+			inverse="false" cascade="none" sort="unsorted">
+			<key column="chat_id" />
+			<one-to-many class="com.js.oa.online.po.ChatAccessoryPO" />
+		</set>
+
+	</class>
+</hibernate-mapping>

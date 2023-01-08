@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.GoodsPO"
+        table="ST_GOODS"
+        >
+        <id name="id" column="GOODS_ID">
+            <generator class="assigned" />
+        </id>
+        <property name="name" column="GOODS_NAME" />
+        <property name="unit" column="GOODS_UNIT" />
+        <property name="price" column="PRICE" />
+        <property name="remark" column="REMARK" />
+        <property name="createdEmp" column="CREATEDEMP" />
+        <property name="createdOrg" column="CREATEDORG" />
+        <property name="maxamount" column="MAXAMOUNT" />
+        <property name="minamount" column="MINAMOUNT" />
+        <property name="stockId" column="STOCK_ID" />
+        <property name="domainid" column="DOMAIN_ID" />
+
+        <property name="specs" column="SPECS" />
+        <property name="model" column="MODEL" />
+        <property name="num" column="NUM" />
+        <property name="pic" column="GOODS_PIC" />
+        <property name="firstStock" column="FIRSTSTOCK" />
+        <property name="averagePrice" column="AVERAGEPRICE" />
+        <property name="status" column="goods_status" />
+        <many-to-one name="goodsType"
+            class="com.js.oa.routine.resource.po.GoodsTypePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="GOODSTYPE_ID" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.SsDetailPO"
+        table="ST_SSDETAIL"
+        >
+        <id name="id" column="SSDETAIL_ID">
+            <generator class="native" />
+        </id>
+        <property name="goodsId" column="GOODS_ID" />
+        <property name="goodsName" column="GOODS_NAME" />
+        <property name="goodsUnit" column="GOODS_UNIT" />
+        <property name="amount" column="SS_AMOUNT" />
+        <property name="price" column="PRICE" />
+        <property name="goodsMoney" column="GOODS_MONEY" />
+	    <property name="goodsSpecs" column="goods_specs" />
+	    <property name="returnReason" column="RETURN_REASON" />
+        <property name="factPrice" column="FACTPRICE" />
+        <property name="factMoney" column="FACTMONEY" />
+        <many-to-one name="ssMaster"
+            class="com.js.oa.routine.resource.po.SsMasterPO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="SS_NO" />
+    </class>
+</hibernate-mapping>

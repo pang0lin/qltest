@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.rolemanager.RightScopeVO" table="ORG_RIGHTSCOPE" >
+<id name="rightScopeId" column="RIGHTSCOPE_ID" type="long">
+    <generator class="assigned" />
+</id>
+<property name="rightScopeType" column="RIGHTSCOPETYPE" type="short" length="2"/>
+<property name="rightScopeScope" column="RIGHTSCOPESCOPE" type="string"/>
+<property name="rightScopeUser" column="RIGHTSCOPEUSER" type="string"/>
+<property name="rightScopeGroup" column="RIGHTSCOPEGROUP" type="string"/>
+<property name="rightScope" column="RIGHTSCOPE" type="string"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<many-to-one
+	name="right"
+	class="com.js.system.vo.rightmanager.RightVO"
+	cascade="none"
+	outer-join="false"
+	update="false"
+	insert="false"
+	column="Right_id"
+/>
+
+<many-to-one
+	name="employee"
+	class="com.js.system.vo.usermanager.EmployeeVO"
+	cascade="none"
+	outer-join="false"
+	update="false"
+	insert="false"
+	column="Emp_id"
+/>
+
+</class>
+</hibernate-mapping>

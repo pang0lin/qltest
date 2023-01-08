@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.security.seamoon.po.SecSeaMoon" table="sec_seamoon">
+        <id name="sn" type="java.lang.String">
+            <column name="sn" length="20" />
+            <generator class="assigned"/>
+        </id>
+        <property name="snKey" type="java.lang.String">
+            <column name="sn_key" length="500" />
+        </property>
+        <property name="userId" type="java.lang.String">
+            <column name="user_id" length="50" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="user_name" length="50" />
+        </property>
+        <property name="secStatus" type="java.lang.String">
+            <column name="sec_status" length="1" />
+        </property>   
+        <property name="beginTime" type="java.sql.Timestamp">
+            <column name="begin_time" length="0" />
+        </property>
+        <property name="endTime" type="java.sql.Timestamp">
+            <column name="end_time" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

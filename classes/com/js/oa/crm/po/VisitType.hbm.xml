@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.crm.po.VisitType" table="cst_type_v">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="userRange" type="java.lang.String">
+			<column name="user_range" />
+		</property>
+		<property name="userRangeName" type="java.lang.String">
+			<column name="user_range_name" />
+		</property>
+		<property name="orgRange" type="java.lang.String">
+			<column name="org_range" />
+		</property>
+		<property name="orgRangeName" type="java.lang.String">
+			<column name="org_range_name" />
+		</property>
+		
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		<property name="createUserId" type="java.lang.String">
+			<column name="create_user_id" />
+		</property>
+		<property name="createUserName" type="java.lang.String">
+			<column name="create_user_name" />
+		</property>
+		<property name="createTime" type="java.lang.String">
+			<column name="create_time" />
+		</property>
+
+	</class>
+</hibernate-mapping>

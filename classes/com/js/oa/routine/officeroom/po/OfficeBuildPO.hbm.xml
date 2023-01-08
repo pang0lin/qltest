@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.officeroom.po.OfficeBuildPO" table="OA_OFFICE_BUILDING" >
+        <id name="buidId" column="BUILD_ID">
+             <generator class="native"/>
+        </id>
+        <property name="buildname" column="BUILDNAME" type="java.lang.String"/>
+		<property name="buildparentid" column="BUILDPARENTID" type="java.lang.String"/>
+		<property name="buildlevel" column="BUILDLEVEL" type="java.lang.String"/>
+		<property name="buildidaccount" column="BUILDIDACCOUNT" type="java.lang.String"/>
+		<property name="buildidstring" column="BUILDIDSTRING" type="java.lang.String"/>
+		<property name="buildreader" column="BUILDREADER" type="java.lang.String"/>
+		<property name="buildreadorg" column="BUILDREADORG" type="java.lang.String"/>
+		<property name="buildreadgroup" column="BUILDREADGROUP" type="java.lang.String"/>
+		<property name="buildreadname" column="BUILDREADNAME" type="java.lang.String"/>
+		<property name="createdemp" column="CREATEDEMP" type="java.lang.Long"/>
+		<property name="createdempname" column="CREATEDEMPNAME" type="java.lang.String"/>
+		<property name="bz" column="BZ" type="java.lang.String"/>
+		<property name="buildAdminId" column="BUILDADMINID" type="java.lang.String"/>
+		<property name="buildAdminName" column="BUILDADMINNAME" type="java.lang.String"/>
+		
+	
+	</class>
+</hibernate-mapping>

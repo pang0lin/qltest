@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.oasysremind.po.OASysRemindPO" table="oa_sys_remind">
+        <id name="remindId" type="java.lang.Long">
+            <column name="remind_id" />
+            <generator class="native" />
+        </id>
+        <property name="remindSourceType" type="java.lang.String">
+            <column name="remind_source_type" length="2" />
+        </property>
+        <property name="remindTableId" type="java.lang.String">
+            <column name="remind_table_id" length="20" />
+        </property>
+        <property name="remindTableName" type="java.lang.String">
+            <column name="remind_table_name" length="20" />
+        </property>
+         <property name="remindTableCode" type="java.lang.String">
+            <column name="remind_table_code" length="20" />
+        </property>
+        <property name="remindType" type="java.lang.String">
+            <column name="remind_type" length="2" />
+        </property>
+        <property name="remindIndex" type="java.lang.String">
+            <column name="remind_index" length="20" />
+        </property>
+        <property name="remindIndexName" type="java.lang.String">
+            <column name="remind_index_name" length="20" />
+        </property>
+        <property name="compareType" type="java.lang.String">
+            <column name="compare_type" length="10" />
+        </property>
+        <property name="compareValue" type="java.lang.String">
+            <column name="compare_value" length="100" />
+        </property>
+        <property name="remindTimeUnit" type="java.lang.String">
+            <column name="remind_time_unit" length="10" />
+        </property>
+        
+        <property name="remindDefQueryCondition" type="java.lang.String">
+            <column name="remind_DefQueryCondition" length="200" />
+        </property>
+         <property name="remindDefQueryOrder" type="java.lang.String">
+            <column name="remind_DefQueryOrder" length="200" />
+        </property>
+        <property name="remindObjId" type="java.lang.String">
+            <column name="remind_obj_id" length="3000" />
+        </property>
+        <property name="remindObjName" type="java.lang.String">
+            <column name="remind_obj_name" length="3000" />
+        </property>
+        <property name="effectiveBegin">
+            <column name="effective_begin" />
+        </property>
+        <property name="effectiveEnd">
+            <column name="effective_end" />
+        </property>
+        <property name="remindTitle" type="java.lang.String">
+            <column name="remind_title" length="100" />
+        </property>
+        <property name="remindUrlUser" type="java.lang.String">
+            <column name="remind_url_user" length="400" />
+        </property>
+        <property name="remindUrlSys" type="java.lang.String">
+            <column name="remind_url_sys" length="400" />
+        </property>
+        <property name="createEmp" type="java.lang.String">
+            <column name="create_emp" length="20" />
+        </property>
+        <property name="createOrg" type="java.lang.String">
+            <column name="create_org" length="20" />
+        </property>
+        
+        <property name="onTimeMode" type="java.lang.String">
+            <column name="onTimeMode" length="2" />
+        </property>
+        <property name="remindWeek" type="java.lang.String">
+            <column name="remind_week" length="2" />
+        </property>
+        <property name="remindMonthDay" type="java.lang.String">
+            <column name="remind_month_day" length="2" />
+        </property>
+        <property name="remindYearMonth" type="java.lang.String">
+            <column name="remind_year_month" length="2" />
+        </property>
+         <property name="remindYearMonthDay" type="java.lang.String">
+            <column name="remind_year_month_day" length="2" />
+        </property>
+        <property name="filterStr" type="java.lang.String">
+            <column name="filterStr" length="200" />
+        </property>
+        <property name="remindTypeClass" type="java.lang.String">
+            <column name="remind_type_class" length="10" />
+        </property>
+        <property name="remindCoun" type="java.lang.String">
+            <column name="remind_remindCoun" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.zky.po.ZkyMedicalPO" table="ZKY_Medical">
+		<id name="InOutID" column="InOutID" type="java.lang.Long">
+			<generator class="native" />
+		</id>
+		<property name="InOutDate" column="InOutDate"/>
+		<property name="PatiName" column="PatiName"/>
+		<property name="stline" column="stline"/>
+		<property name="drugid" column="drugid"/>
+		<property name="DrugName" column="DrugName"/>
+		<property name="DrugRegu" column="DrugRegu"/>
+		<property name="UnitDes" column="UnitDes"/>
+		<property name="quan" column="quan"/>
+		<property name="LPrice" column="LPrice" />
+		<property name="patitypeid2" column="patitypeid2"/>
+		<property name="score" column="score"/>
+	</class>
+</hibernate-mapping>

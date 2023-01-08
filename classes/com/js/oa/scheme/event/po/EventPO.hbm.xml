@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class
+    name="com.js.oa.scheme.event.po.EventPO"
+    table="OA_EVENT"
+    
+>
+
+    <id
+        name="eventId"
+        type="java.lang.Long"
+        column="EVENT_ID"
+    >
+        <generator class="native" />
+    </id>
+
+	<property
+        name="eventDomainId"
+        type="java.lang.Long"
+        column="DOMAIN_ID"
+        length="20"
+    />
+
+    <property
+        name="eventTitle"
+        type="java.lang.String"
+        column="EVENTTITLE"
+        length="80"
+    />
+    <property
+        name="eventAddress"
+        type="java.lang.String"
+        column="EVENTADDRESS"
+        length="80"
+    />
+    <property
+        name="eventBeginDate"
+        type="java.lang.Long"
+        column="EVENTBEGINDATE"
+        length="15"
+    />
+    <property
+        name="eventEndDate"
+        type="java.lang.Long"
+        column="EVENTENDDATE"
+        length="15"
+    />
+    <property
+        name="eventBeginTime"
+        type="java.lang.Integer"
+        column="EVENTBEGINTIME"
+        length="6"
+    />
+    <property
+        name="eventEndTime"
+        type="java.lang.Integer"
+        column="EVENTENDTIME"
+        length="6"
+    />
+    <property
+        name="eventLastTime"
+        type="java.lang.Long"
+        column="EVENTLASTTIME"
+        length="12"
+    />
+    <property
+        name="attendName"
+        type="java.lang.String"
+        column="ATTENDNAME"
+        length="1000"
+    />
+    <property
+        name="attendEmp"
+        type="java.lang.String"
+        column="ATTENDEMP"
+        length="800"
+    />
+    <property
+        name="attendOrg"
+        type="java.lang.String"
+        column="ATTENDORG"
+        length="800"
+    />
+    <property
+        name="attendGroup"
+        type="java.lang.String"
+        column="ATTENDGROUP"
+        length="800"
+    />
+    <property
+        name="eventFullDay"
+        type="java.lang.Integer"
+        column="EVENTFULLDAY"
+        length="1"
+    />
+    <property
+        name="eventRemind"
+        type="java.lang.Integer"
+        column="EVENTREMIND"
+        length="1"
+    />
+    <property
+        name="eventRemindTime"
+        type="java.lang.Long"
+        column="EVENTREMINDTIME"
+        length="10"
+    />
+    <property
+        name="eventContent"
+        type="java.lang.String"
+        column="EVENTCONTENT"
+        length="2000"
+    />
+    <property
+        name="onTimeMode"
+        type="java.lang.Integer"
+        column="ONTIMEMODE"
+        length="1"
+    />
+    <property
+        name="onTimeContent"
+        type="java.lang.String"
+        column="ONTIMECONTENT"
+        length="7"
+    />
+    <property
+        name="echoMode"
+        type="java.lang.Integer"
+        column="ECHOMODE"
+        length="4"
+    />
+    <property
+        name="echoBeginTime"
+        type="java.sql.Timestamp"
+        column="ECHOBEGINTIME"
+        length="7"
+    />
+    <property
+        name="echoEndTime"
+        type="java.sql.Timestamp"
+        column="ECHOENDTIME"
+        length="7"
+    />
+    <property
+        name="echoCounter"
+        type="java.lang.Integer"
+        column="ECHOCOUNTER"
+        length="5"
+    />
+    <property
+        name="eventDate"
+        type="java.sql.Timestamp"
+        column="EVENTDATE"
+        length="7"
+    />
+    <property
+        name="eventEmpId"
+        type="java.lang.Long"
+        column="EVENTEMPID"
+        length="20"
+    />
+    <property
+        name="eventEmpName"
+        type="java.lang.String"
+        column="EVENTEMPNAME"
+        length="20"
+    />
+    <property
+        name="popRemindMode"
+        type="java.lang.Integer"
+        column="POPREMINDMODE"
+        length="1"
+    />
+    <property
+        name="noteRemindMode"
+        type="java.lang.Integer"
+        column="NOTEREMINDMODE"
+        length="1"
+    />
+    
+     <property
+        name="relProjectId"
+        column="relproject_id"
+    />
+    <property
+        name="openEvent"
+        column="openEvent"
+    />
+    <!-- associations -->
+    <!-- bi-directional one-to-many association to OaEventattender -->
+    <set
+        name="eventAttenders"
+        lazy="true"
+        inverse="true"
+    >
+        <key>
+            <column name="EVENT_ID" />
+        </key>
+        <one-to-many
+            class="com.js.oa.scheme.event.po.EventAttenderPO"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

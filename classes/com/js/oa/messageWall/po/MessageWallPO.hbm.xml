@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.messageWall.po.MessageWallPO" table="OA_MESSAGEWALL">
+		<id name="messagewallId" column="MESSAGEWALL_ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="messagewallEmpid" column="MESSAGEWALL_EMPID"></property>		
+		<property name="messagewallEmpname" column="MESSAGEWALL_EMPNAME"></property>
+		<property name="messagewallOrgid" column="MESSAGEWALL_ORGID"></property>
+		<property name="messagewallOrgname" column="MESSAGEWALL_ORGNAME"></property>
+		<property name="messagewallContent" column="MESSAGEWALL_CONTENT"></property>
+		<property name="messagewallClass" column="MESSAGEWALL_CLASS"></property>
+		<property name="messagewallAccounts" column="MESSAGEWALL_USERACCOUNTS"></property>
+		<property name="messagewallTime" column="MESSAGEWALL_TIME"></property>
+		<property name="domainId" column="DOMAIN_ID"></property>
+	</class>
+</hibernate-mapping>

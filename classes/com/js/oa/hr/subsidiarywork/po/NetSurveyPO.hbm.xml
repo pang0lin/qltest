@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.subsidiarywork.po.NetSurveyPO" table="OA_NETSURVEY" >
+<id name="id" column="SURVEY_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="surveyContent" column="SURVEYCONTENT"  />
+<property name="surveyRange" column="SURVEYRANGE"  />
+<property name="surveyRangeName" column="SURVEYRANGENAME"  />
+<property name="surveyStatus" column="SURVEYSTATUS"  />
+<property name="surveyType" column="SURVEYTYPE"  />
+<property name="surveyBeginTime" column="SURVEYBEGINTIME"  />
+<property name="surveyEndTime" column="SURVEYENDTIME"  />
+<property name="createdOrg" column="CreatedOrg"  />
+<property name="createdEmp" column="CreatedEmp"  />
+<property name="domainId" column="DOMAIN_ID"/>
+<set
+	name="surveyItems"
+	table="OA_NETSURVEYITEM"
+	lazy="false"
+	inverse="false"
+	cascade="delete"
+	sort="unsorted"
+        order-by="ITEM_ID asc">
+	<key column="SURVEY_ID"/>
+	<one-to-many class="com.js.oa.hr.subsidiarywork.po.NetSurveyItemPO"/>
+</set>
+
+
+</class>
+</hibernate-mapping>

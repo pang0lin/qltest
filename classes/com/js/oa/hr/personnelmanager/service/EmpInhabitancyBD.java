@@ -1,0 +1,141 @@
+package com.js.oa.hr.personnelmanager.service;
+
+import com.js.oa.hr.personnelmanager.bean.EmpInhabitancyEJBHome;
+import com.js.oa.hr.personnelmanager.po.EmpInhabitancyPO;
+import com.js.util.util.EJBProxy;
+import com.js.util.util.ParameterGenerator;
+import java.util.List;
+import org.apache.log4j.Logger;
+
+public class EmpInhabitancyBD {
+  private static Logger logger = Logger.getLogger(EmpInhabitancyBD.class
+      .getName());
+  
+  public Boolean delete(Long id) {
+    Boolean result = null;
+    ParameterGenerator pg = new ParameterGenerator(1);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(id, Long.class);
+      result = (Boolean)ejbProxy.invoke("delete", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to delete information :" + 
+          e.getMessage());
+    } 
+    return result;
+  }
+  
+  public Boolean save(EmpInhabitancyPO po) {
+    Boolean result = null;
+    ParameterGenerator pg = new ParameterGenerator(1);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(po, EmpInhabitancyPO.class);
+      result = (Boolean)ejbProxy.invoke("save", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to save information :" + 
+          e.getMessage());
+    } 
+    return result;
+  }
+  
+  public EmpInhabitancyPO load(Long id) {
+    EmpInhabitancyPO po = null;
+    ParameterGenerator pg = new ParameterGenerator(1);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(id, Long.class);
+      po = (EmpInhabitancyPO)ejbProxy.invoke(
+          "load", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to load information :" + 
+          e.getMessage());
+    } 
+    return po;
+  }
+  
+  public Boolean modify(EmpInhabitancyPO po) {
+    Boolean result = null;
+    ParameterGenerator pg = new ParameterGenerator(1);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(po, EmpInhabitancyPO.class);
+      result = (Boolean)ejbProxy.invoke("modify", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to modify information :" + 
+          e.getMessage());
+    } 
+    return result;
+  }
+  
+  public Boolean batchDel(String ids) {
+    Boolean result = null;
+    ParameterGenerator pg = new ParameterGenerator(1);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(ids, String.class);
+      result = (Boolean)ejbProxy.invoke("batchDel", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to batchDel information :" + 
+          e.getMessage());
+    } 
+    return result;
+  }
+  
+  public List getEmployeeFROMJZZ2(Integer status) {
+    List result = null;
+    ParameterGenerator pg = new ParameterGenerator(1);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(status, Integer.class);
+      result = (List)ejbProxy.invoke("getEmployeeFROMJZZ2", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to getEmployeeFROMJZZ2 information :" + 
+          e.getMessage());
+    } 
+    return result;
+  }
+  
+  public Boolean saveTOSENDJZZ(Long userId, Integer status) {
+    Boolean result = null;
+    ParameterGenerator pg = new ParameterGenerator(2);
+    try {
+      EJBProxy ejbProxy = new EJBProxy("EmpInhabitancyEJB", 
+          "EmpInhabitancyEJBLocal", 
+          EmpInhabitancyEJBHome.class);
+      pg.put(userId, Long.class);
+      pg.put(status, Integer.class);
+      result = (Boolean)ejbProxy.invoke("saveTOSENDJZZ", 
+          pg.getParameters());
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.error("error to saveTOSENDJZZ information :" + 
+          e.getMessage());
+    } 
+    return result;
+  }
+}

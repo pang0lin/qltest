@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.system.vo.mailmanager.MailVO" table="org_mail">
+		<id name="mailId" column="MAIL_ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="fromUser" column="FROM_USER"/>
+       <property name="passWord" column="PASS_WORD"/>
+       <property name="port" column="port"/>
+		<property name="bakString1" column="BAK_STRING1"/>
+		<property name="createTime" column="CREATE_TIME"/>
+		<property name="bakString" column="BAK_STRING"/>
+		<property name="encryptionType" column="EncryptionType"></property>
+	</class>
+</hibernate-mapping>

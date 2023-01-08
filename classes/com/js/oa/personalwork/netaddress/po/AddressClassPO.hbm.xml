@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.netaddress.po.AddressClassPO" table="OA_NETADDRESSCLASS" >
+<id name="id" column="CLASS_ID" type="long">
+    <generator class="native" />
+</id> 
+<property name="empId" column="EMP_ID" />
+<property name="className" column="CLASSNAME"  />
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="classIsShare" column="CLASS_ISSHARE"></property>
+<set
+	name="addresses"
+	table="OA_NETADDRESS"
+	lazy="true"
+	inverse="false"
+	cascade="delete"
+	sort="unsorted">
+	<key column="CLASS_ID"/>
+	<one-to-many
+		class="com.js.oa.personalwork.netaddress.po.AddressPO"
+	/>
+</set>
+</class>
+</hibernate-mapping>

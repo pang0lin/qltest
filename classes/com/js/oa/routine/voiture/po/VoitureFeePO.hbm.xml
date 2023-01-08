@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoitureFeePO" table="VEH_FEE">
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<!--<property name="voitureId" column="VOITUREID" type="long" length="20"/>-->
+<property name="maintainTime" column="MAINTAINTIME" type="timestamp" length="23"/>
+<property name="oilCost" column="OILCOST" type="double" length="12"/>
+<property name="oilFee" column="OILFEE" type="double" length="12"/>
+<property name="fixFee" column="FIXFEE" type="double" length="12"/>
+<property name="washFee" column="WASHFEE" type="double" length="12"/>
+<property name="taxFee" column="TAXFEE" type="double" length="12"/>
+<property name="insureFee" column="INSUREFEE" type="double" length="12"/>
+<property name="roadFee" column="ROADFEE" type="double" length="12"/>
+<property name="yearTicketFee" column="YEARTICKETFEE" type="double" length="12"/>
+<property name="yearSensorFee" column="YEARSENSORFEE" type="double" length="12"/>
+<property name="purchaseTax" column="PURCHASETAX" type="double" length="12"/>
+<property name="brandFee" column="BRANDFEE" type="double" length="12"/>
+<property name="accidentFee" column="ACCIDENTFEE" type="double" length="12"/>
+<property name="otherFee" column="OTHERFEE" type="double" length="12"/>
+<property name="remark" column="REMARK" type="string" length="500"/>
+<property name="isMaintain" column="ISMAINTAIN" type="string" length="10"/>
+<property name="monthFee" column="MONTHFEE" type="double" length="12"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+
+<property name="jsy" column="jsy"></property>
+<property name="fwld" column="fwld"></property>
+<property name="sylc" column="sylc"></property>
+<property name="bylc" column="bylc"></property>
+<property name="xslc" column="xslc"></property>
+<property name="yy" column="yy"></property>
+<property name="bglhy" column="bglhy"></property>
+
+<many-to-one name="voiturePO"
+            class="com.js.oa.routine.voiture.po.VoiturePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="voitureId" />
+</class>
+</hibernate-mapping>

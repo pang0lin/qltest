@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class name="com.js.oa.scheme.taskcenter.po.TaskPeriodicityPO" table="OA_TASKPERIODICITY" >
+
+    <id name="periodicityId" type="java.lang.Long" column="PERIODICITYID">
+        <generator class="native" />
+    </id>
+
+    <property name="domainId" type="java.lang.Long" column="DOMAIN_ID" length="20"/>
+    <property name="taskType" type="java.lang.String" column="TASKTYPE" length="30"/>
+    <property name="taskTitle" type="java.lang.String" column="TASKTITLE" not-null="true" length="50"/>
+    <property name="taskDescription" type="java.lang.String" column="TASKDESCRIPTION" length="4000"/>
+    <property name="taskCreatedTime" type="java.sql.Timestamp" column="TASKCREATEDTIME" not-null="true" length="7"/>
+    <property name="taskPrincipal" type="java.lang.Long" column="TASKPRINCIPAL" not-null="true" length="20"/>
+    <property name="taskPrincipalName" type="java.lang.String" column="TASKPRINCIPALNAME" length="20"/>
+    <property name="taskChecker" type="java.lang.Long" column="TASKCHECKER" length="20"/>
+    <property name="taskCheckerName" type="java.lang.String" column="TASKCHECKERNAME" length="20"/>
+    <property name="taskJoinedEmp" type="java.lang.String" column="TASKJOINEDEMP" length="1000"/>
+    <property name="taskJoinedEmpName" type="java.lang.String" column="TASKJOINEDEMPNAME" length="500"/>
+    <property name="taskJoineOrg" type="java.lang.String" column="TASKJOINEORG" length="500"/>
+    <property name="taskJoinOrgName" type="java.lang.String" column="TASKJOINORGNAME" length="500"/>
+    <property name="taskPriority" type="java.lang.Integer" column="TASKPRIORITY" length="1"/>
+    <property name="onTimeMode" type="java.lang.Integer" column="ONTIMEMODE" length="1"/>
+    <property name="onTimeContent" type="java.lang.String" column="ONTIMECONTENT" length="7"/>
+    <property name="createdEmp" type="java.lang.Long" column="CREATEDEMP" not-null="true" length="20"/>
+    <property name="createdEmpName" type="java.lang.String" column="CREATEDEMPNAME" length="20"/>
+    <property name="createdOrg" type="java.lang.Long" column="CREATEDORG" length="20"/>
+    <property name="createdOrgName" type="java.lang.String" column="CREATEDORGNAME" length="80"/>
+
+	<set name="taskAccessory"
+            table="oa_taskperiodicityaccessory"
+			
+            lazy="true"
+            inverse="false"
+            cascade="none"
+            sort="unsorted">
+            <key column="PERIODICITYID" />
+            <one-to-many class="com.js.oa.scheme.taskcenter.po.TaskPeriodicityAccessoryPO" />
+    </set>
+</class>
+</hibernate-mapping>

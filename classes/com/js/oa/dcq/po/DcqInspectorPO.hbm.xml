@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.dcq.po.DcqInspectorPO" table="dcq_inspector" >
+<id name="inspectorID" column="inspectorID" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="userID" column="userID" />
+<property name="orgID" column="orgID" />
+<property name="oid" column="oid" />
+<property name="title" column="title" />
+<property name="deliveryTime" column="deliveryTime" />
+
+<property name="finishTime" column="finishTime" />
+<property name="type" column="type" />
+<property name="workPlan" column="workPlan" />
+<property name="editor" column="editor" />
+<property name="completecontent" column="completecontent" />
+
+<property name="completetime" column="completetime" />
+<property name="situation" column="situation" />
+<property name="problem" column="problem" />
+<property name="undertaketime" column="undertaketime" />
+<property name="unitID" column="unitID" />
+
+<property name="undertakeContent" column="undertakeContent" />
+<property name="plancontent" column="plancontent" />
+<property name="planTime" column="planTime" />
+<property name="takecontent" column="takecontent" />
+<property name="code" column="code" />
+
+<property name="source" column="source" />
+<property name="jobType" column="jobType" />
+<property name="keyword" column="keyword" />
+<property name="contentDigest" column="contentDigest" />
+<property name="inspectorRequire" column="inspectorRequire" />
+
+<property name="category" column="category" />
+<property name="sourceUnit" column="sourceUnit" />
+<property name="person" column="person" />
+<property name="telephone" column="telephone" />
+<property name="things" column="things" />
+
+<property name="instructionsIdea" column="instructionsIdea" />
+<property name="instructionsLeader" column="instructionsLeader" />
+<property name="instructionsTime" column="instructionsTime" />
+<property name="hostUID" column="hostUID" />
+<property name="otherUID" column="otherUID" />
+
+<property name="mark" column="mark" />
+<property name="bz" column="bz" />
+
+</class>
+</hibernate-mapping>

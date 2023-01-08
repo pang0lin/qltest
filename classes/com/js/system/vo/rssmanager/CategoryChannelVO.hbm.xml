@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.system.vo.rssmanager.CategoryChannelVO" table="org_rss_category_channel">
+		<id name="channelId" column="channel_id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="categoryId" column="category_id"/>
+        <property name="createUserId" column="create_user_id"/>
+        <property name="channelName" column="channel_name"/>
+        <property name="channelUrl" column="channel_url"/>
+		<property name="createTime" column="create_time"/>
+		<property name="channelDesc" column="channel_desc"/>
+		<property name="string1" column="string1"/>
+		<property name="string2" column="string2"/>
+	</class>
+</hibernate-mapping>

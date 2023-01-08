@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.resume.po.ResumePO" table="temp_resume">
+      <id name="id_dual" column="id_dual" type="long">
+         <generator class="native" />
+      </id>
+      <property name="id" type="java.lang.String">
+            <column name="id" length="50" />
+        </property>
+      <property name="name" type="java.lang.String">
+            <column name="name" length="100" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="sex" length="10" />
+        </property>
+        <property name="age" type="java.lang.String">
+            <column name="age" length="4" />
+        </property>
+        <property name="tel" type="java.lang.String">
+            <column name="tel" length="20" />
+        </property>
+        <property name="applyPosition" type="java.lang.String">
+            <column name="applyPosition" length="40" />
+        </property>
+        <property name="topEducation" type="java.lang.String">
+            <column name="topEducation" length="20" />
+        </property>
+        <property name="topEducationSchool" type="java.lang.String">
+            <column name="topEducationSchool" length="80" />
+        </property>
+        <property name="topDegree" type="java.lang.String">
+            <column name="topDegree" length="20" />
+        </property>
+        <property name="topDegreeSchool" type="java.lang.String">
+            <column name="topDegreeSchool" length="80" />
+        </property>
+        <property name="professionType" type="java.lang.String">
+            <column name="professionType" length="20" />
+        </property>
+        <property name="professionName" type="java.lang.String">
+            <column name="professionName" length="40" />
+        </property>
+        <property name="politicalStatus" type="java.lang.String">
+            <column name="politicalStatus" length="20" />
+        </property>
+        <property name="bachelorSchool" type="java.lang.String">
+            <column name="bachelorSchool" length="80" />
+        </property>
+        <property name="bachelorProfession" type="java.lang.String">
+            <column name="bachelorProfession" length="80" />
+        </property>
+        <property name="url" type="java.lang.String">
+            <column name="url" length="200" />
+        </property>
+        <property name="zt" type="java.lang.String">
+            <column name="zt" length="20" />
+        </property>
+        <property name="bz" type="java.lang.String">
+            <column name="bz" length="2000" />
+        </property>
+    </class>
+</hibernate-mapping>

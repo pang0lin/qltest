@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.organizationmanager.DomainVO"  table="ORG_DOMAIN">
+    <id column="DOMAIN_ID" name="id" type="java.lang.Long">
+	<generator class="native" />
+    </id>
+    <property name="domainName" column="DOMAIN_NAME"/>
+    <property name="domainAccount" column="DOMAIN_ACCOUNT"/>
+    <property name="inUse" column="DOMAIN_INUSE"/>
+	<property name="module" column="DOMAIN_MODULE"/>
+	<property name="userNum" column="DOMAIN_USERNUM"/>
+	<property name="serverOption" column="DOMAIN_SERVEROPTION"/>
+        <property name="workLog" column="DOMAIN_WORKLOG"/>
+        <property name="mailBoxSize" column="DOMAIN_MAILBOXSIZE"/>
+        <property name="netDiskSize" column="DOMAIN_NETDISKSIZE"/>
+
+		<property name="domainType" column="DOMAIN_TYPE"/>
+		<property name="domainInit" column="DOMAIN_INIT"/>
+		<property name="domainDataModule" column="DOMAIN_DATAMODULE"/>
+		<property name="domainAttachLimit" column="DOMAIN_ATTACHLIMIT"/>
+		<property name="domainAttachLimitSize" column="DOMAIN_ATTACHLIMITSIZE"/>
+		<property name="domain_filterlimitcontent" column="DOMAIN_FILTERLIMITCONTENT"/>
+		<property name="domain_filterlimit" column="DOMAIN_FILTERLIMIT"/>
+		
+		<property name="domainRegDate" column="DOMAIN_REGDATE"/>
+		<property name="domainEndDate" column="DOMAIN_ENDDATE"/>
+		<property name="domainMemo" column="DOMAIN_MEMO"/>
+		<property name="noLog" column="DOMAIN_NOLOG"/>
+</class>
+</hibernate-mapping>

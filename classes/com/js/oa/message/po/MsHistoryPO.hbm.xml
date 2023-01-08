@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsHistoryPO" table="MS_HISTORY" >
+        <id name="historyId" column="HISTORY_ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="fromUserId" column="FROMUSERID"/>
+        <property name="fromOrgId" column="FROMORGID"/>
+        <property name="sendToPerson" column="SENDTOPERSON"/>
+        <property name="sendTime" column="SENDTIME"/>
+        <property name="result" column="result"/>
+        <property name="msContext" column="msContext"/>
+        <property name="sendLong" column="sendLong"/>
+        <property name="flag" column="flag"/>
+        <!-- 2016年4月11日 兰大短信回复功能添加表字段 -->
+        <property name="extendCode" column="extendCode"/>
+        <property name="receiveCode" column="receiveCode"/>
+        <property name="receiveContent" column="receiveContent"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.relproject.po.RelProItemPO" table="PRO_ITEM" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="projectId" column="project_id"/>
+<property name="title" column="title"/>
+<property name="startTime" column="startTime"/>
+<property name="endTime" column="endTime"/>
+<property name="itemRemind" column="item_remind"/>
+</class>
+</hibernate-mapping>
+ 

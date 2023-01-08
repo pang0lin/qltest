@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.scheme.workreport.po.WorkReportPostilPO" table="REP_POSTIL" >
+<id name="id" column="POSTIL_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="postilDomainId" column="DOMAIN_ID" type="long" length="20"/>
+<property name="postilEmpName" column="POSTILEMPNAME" type="string" length="20" not-null="true"/>
+<property name="postilContent" column="POSTILCONTENT" type="string" length="600" />
+<property name="postilTime" column="POSTILTIME" type="timestamp" length="7" />
+<property name="postilEmpSign" column="postilEmpSign"  />
+<property name="nextWorkClew" column="NEXTWORKCLEW"  />
+<property name="grade" column="GRADE"  />
+<property name="postilResult" column="POSTILRESULT"  />
+<property name="postilGrade" column="POSTILGRADE"  />
+
+<property name="postilEmpID" column="POSTILEMPID" type="long" length="20"/>
+<many-to-one
+	name="report"
+	class="com.js.oa.scheme.workreport.po.WorkReportPO"
+	cascade="none"
+        outer-join="auto"
+        update="false"
+        insert="true"
+	column="REPORT_ID"
+/>
+
+</class>
+</hibernate-mapping>

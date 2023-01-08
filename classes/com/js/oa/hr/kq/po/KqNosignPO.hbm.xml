@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqNosignPO" table="kq_nosign" >
+<id name="id" column="id" type="long">
+<generator class="native" />
+</id>
+<property name="domainId" column="DOMAIN_ID" />
+<property name="nosignName" column="ONSIGN_NAME" />
+<property name="userIds" column="USERIDS" />
+<property name="userNames" column="USERNAMES" />
+<property name="nosignType" column="NOSIGN_TYPE" />
+</class>
+</hibernate-mapping>

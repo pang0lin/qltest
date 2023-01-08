@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.userdb.statistics.po.JsfStatisticsManage" table="jsf_statistics_manage">
+        <id name="statsId" type="java.lang.Long">
+            <column name="Stats_Id" />
+            <generator class="increment" />
+        </id>
+        <property name="statsTableId" type="java.lang.Long">
+            <column name="Stats_table_id"/>
+        </property>
+        <property name="statsTitle" type="java.lang.String">
+            <column name="Stats_title" length="20" />
+        </property>
+        <property name="statsIndex" type="java.lang.String">
+            <column name="stats_index" length="20" />
+        </property>
+        <property name="statsIndexName" type="java.lang.String">
+            <column name="stats_index_name" length="20" />
+        </property>
+        <property name="statsType" type="java.lang.String">
+            <column name="stats_type" length="20" />
+        </property>
+        <property name="statsGroupIndex" type="java.lang.String">
+            <column name="stats_group_index" length="20" />
+        </property>
+        <property name="statsOrder" type="java.lang.String">
+            <column name="stats_order" length="20" />
+        </property>
+        <property name="statsOrderNum" type="java.lang.String">
+            <column name="stats_order_num" length="20" />
+        </property>
+        <property name="statsBeginTime" type="java.sql.Timestamp">
+            <column name="stats_begin_time" length="0" />
+        </property>
+        <property name="statsEndTime" type="java.sql.Timestamp">
+            <column name="stats_end_time" length="0" />
+        </property>
+        <property name="statsChart" type="java.lang.String">
+            <column name="stats_chart" length="20" />
+        </property>
+        <property name="statsStatus" type="java.lang.String">
+            <column name="stats_status" length="2" />
+        </property>
+        <property name="isExtendUrl" type="java.lang.String">
+            <column name="is_extend_url" length="2" />
+        </property>
+        <property name="extendUrl" type="java.lang.String">
+            <column name="extend_url" length="400" />
+        </property>
+    </class>
+</hibernate-mapping>

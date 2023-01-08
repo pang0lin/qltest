@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.userdb.po.BaseSetPO" table="tbase" >
+<id name="baseId" column="base_id" type="long">
+	<generator class="native" />
+</id>
+
+<property name="baseName" column="base_name"  />
+<property name="baseKey" column="base_key" />
+<property name="baseValue" column="base_value"  />
+<property name="baseType" column="base_type" />
+<property name="baseParent" column="base_parent" />
+<property name="baseContent" column="base_content" />
+<property name="baseUser" column="base_createUser" />
+<property name="baseOrg" column="base_createOrg" />
+<property name="baseOrder" column="base_order" />
+
+</class>
+</hibernate-mapping>

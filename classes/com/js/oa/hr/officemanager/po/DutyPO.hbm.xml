@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.officemanager.po.DutyPO" table="OA_DUTY" >
+<id name="id" column="DUTY_ID" type="long">
+<generator class="native" />
+</id>
+<property name="dutyNO" column="DUTYNO" type="string" length="50"/>
+<property name="dutyName" column="DUTYNAME" type="string" length="50"/>
+<property name="dutyLevel" column="DUTYLEVEL"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="dutyDescribe" column="DUTY_DESCRIBE"/>
+<property name="corpId" column="corpId"/>
+</class>
+</hibernate-mapping>

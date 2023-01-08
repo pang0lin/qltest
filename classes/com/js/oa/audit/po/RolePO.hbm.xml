@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.audit.po.RolePO" table="audit_ROLE" >
+<id name="auditRoleId" column="auditRole_id" type="long">
+	<generator class="native"/>
+</id>
+<property name="roleId" column="ROLE_ID" type="long"/>
+<property name="roleName" column="ROLENAME" type="string"/>
+<property name="roleDescription" column="ROLEDESCRIPTION" type="string"/>
+<property name="roleUserId" column="ROLEUSERID" type="string"/>
+<property name="roleUserName" column="ROLEUSERNAME" type="string"/>
+<property name="createdOrg" column="CREATEDORG" type="long"/>
+<property name="createdEmp" column="CREATEDEMP" type="long"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="roleUseRange" column="ROLEUSERANGE"/>
+<property name="roleUseName" column="ROLEUSENAME"/>
+
+<property name="roleRange" column="ROLERANGE"/>
+<property name="roleRangeName" column="ROLERANGENAME"/>
+<property name="roleRangeType" column="ROLERANGETYPE"/>
+<property name="operate" column="operate"/>
+<property name="logId" column="log_id"/>
+</class>
+</hibernate-mapping>

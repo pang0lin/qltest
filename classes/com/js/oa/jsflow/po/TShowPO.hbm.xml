@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.TShowPO"
+        table="TSHOW"
+        >
+        <id name="showId" column="SHOW_ID">
+            <generator class="assigned" />
+        </id>
+
+        <!--名称-->
+        <property name="showName" column="SHOW_NAME" />
+
+        <!--类型-->
+        <property name="showFlag" column="SHOW_FLAG" />
+
+        <!--与字段表（TFIELD）是一对多的关系-->
+    	<set name="field"
+            table="TFIELD"
+			
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="SHOW_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.TFieldPO" />
+        </set>
+    </class>
+</hibernate-mapping>

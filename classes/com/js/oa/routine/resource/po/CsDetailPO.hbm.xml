@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.CsDetailPO"
+        table="ST_CSDETAIL"
+        >
+        <id name="id" column="CSDETAIL_ID">
+            <generator class="native" />
+        </id>
+        <property name="goodsId" column="GOODS_ID" />
+        <property name="accAmount" column="ACC_AMOUNT" />
+        <property name="factAmount" column="FACT_AMOUNT" />
+        <property name="plAmount" column="PL_AMOUNT" />
+        <property name="seq" column="SEQ" />
+        <property name="goodsName" column="GOODS_NAME" />
+        <property name="goodsUnit" column="GOODS_UNIT" />
+
+        <many-to-one name="csMaster"
+            class="com.js.oa.routine.resource.po.CsMasterPO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="CS_NO" />
+    </class>
+</hibernate-mapping>

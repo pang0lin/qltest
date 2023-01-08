@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.active.e_uc.user.po.TblDepartment" table="tbl_department" >
+ 
+ <id name="id" column="ID" >
+	 <generator class="native"/>
+</id>
+<property name="pid" column="PID" />
+<property name="name" column="NAME" />
+<property name="orgid" column="ORG_ID" />
+<property name="grade" column="GRADE" />
+<property name="url" column="URL" />
+<property name="showChildUser" column="SHOW_CHILD_USER" />
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.crm.po.CstLinkPerson" table="cst_link_p">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="cstId" type="java.lang.String">
+			<column name="cst_id" />
+		</property>
+		
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		<property name="zhiwu" type="java.lang.String">
+			<column name="zhiwu" />
+		</property>
+		<property name="tele" type="java.lang.String">
+			<column name="tele" />
+		</property>
+		<property name="email" type="java.lang.String">
+			<column name="email" />
+		</property>
+		<property name="tele1" type="java.lang.String">
+			<column name="tele1" />
+		</property>
+		<property name="techang" type="java.lang.String">
+			<column name="techang" />
+		</property>
+
+
+	</class>
+</hibernate-mapping>

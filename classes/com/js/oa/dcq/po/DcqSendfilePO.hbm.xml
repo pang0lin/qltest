@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.dcq.po.DcqSendfilePO" table="dcq_sendfile" >
+		<id name="fileId" column="file_id" type="java.lang.Long">
+			<generator class="native" />
+		</id>
+		<property name="oid" column="file_oid" />
+		<property name="postWord" column="postWord" />
+		<property name="docNo" column="docNo" />
+		<property name="urgency" column="urgency" />
+		<property name="dense" column="dense" />
+		<property name="startDate" column="startDate" />
+		<property name="secrecyDateStr" column="secrecyDateStr" />
+		<property name="sourceMethod" column="sourceMethod" />
+		<property name="basis" column="basis" />
+		<property name="standard" column="standard" />
+		<property name="docType" column="docTitle" />
+		<property name="docTitle" column="kWord" />
+		<property name="kWord" column="mainSent" />
+		<property name="mainSent" column="copySent" />
+		<property name="copySent" column="nuclear" />
+		<property name="nuclear" column="printing" />
+		<property name="printing" column="proofreading" />
+		<property name="proofreading" column="issue" />
+		<property name="issue" column="jointly" />
+		<property name="jointly" column="handle" />
+		<property name="handle" column="regDep" />
+		<property name="regDep" column="creator" />
+		<property name="creator" column="orgID" />
+		<property name="orgID" column="docFile" />
+		<property name="browserIDStr" column="browserIDStr" />
+	</class>
+</hibernate-mapping>

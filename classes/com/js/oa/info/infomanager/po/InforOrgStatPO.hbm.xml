@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InforOrgStatPO"
+        table="OA_INFORORGSTAT"
+        >
+	<id name="statId" column="STAT_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="orgId" column="ORG_ID" />
+        <property name="orgName" column="ORGNAME" />
+        <property name="orgIdString" column="ORGIDSTRING" />
+        <property name="statYear" column="STATYEAR" />
+        <property name="statMonth" column="STATMONTH" />
+        <property name="monthIssueNum" column="MONTHISSUENUM" />
+        <property name="accumulateNum" column="ACCUMULATENUM" />
+        <property name="orgLevel" column="ORGLEVEL" />
+		<property name="domainId" column="DOMAIN_ID" />
+		<property name="corpId" column="CORP_ID" />
+
+    </class>
+</hibernate-mapping>

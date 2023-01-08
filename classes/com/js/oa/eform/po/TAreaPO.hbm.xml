@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.eform.po.TAreaPO"
+        table="TAREA"
+        >
+        <id name="id" column="AREA_ID">
+            <generator class="native" />
+        </id>
+        <property name="areaTMC" column="AREA_AREATMC" />
+        <property name="areaName" column="AREA_NAME" />
+        <property name="areaTable" column="AREA_TABLE" />
+        <property name="areaShow" column="AREA_SHOW" />
+        <property name="areaSQL" column="AREA_SQL" />
+        <property name="areaAction" column="AREA_ACTION" />
+		<property name="areaAlterColor" column="AREA_ALTERCOLOR" />
+		<property name="areaPageCount" column="AREA_PAGECOUNT" />
+		<property name="areaSFXS" column="AREA_SFXS" />
+		<property name="areaRef" column="AREA_REF" />
+		<property name="areaSQLEvent" column="AREA_SQLEVENT" />
+		<property name="areaDes" column="AREA_DES" />
+		<property name="areaColumns" column="AREA_COLUMNS" />
+        
+		<many-to-one name="tpage"
+            class="com.js.oa.eform.po.TPagePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="PAGE_ID" />
+
+		<many-to-one name="areatype"
+            class="com.js.oa.eform.po.TAreaTypePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="AREATYPE_ID" />
+
+        <set name="telt"
+            
+            table="TELT"
+            lazy="true"
+            inverse="true"
+            cascade="save-update"
+            sort="unsorted">
+            <key column="AREA_ID" />
+            <one-to-many class="com.js.oa.eform.po.TAreaPO" />
+        </set>
+    </class>
+</hibernate-mapping>

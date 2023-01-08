@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqDutySetPO" table="kq_duty_set" >
+<id name="id" column="id" type="long">
+<generator class="native" />
+</id>
+<property name="domainId" column="DOMAIN_ID" />
+<property name="dutyName" column="DUTY_NAME" />
+<property name="userIds" column="user_ids" />
+<property name="orgIds" column="org_ids" />
+<property name="groupIds" column="group_ids" />
+<property name="userNames" column="user_names" />
+<property name="dutyType1" column="DUTY_TYPE1" />
+<property name="dutyType2" column="DUTY_TYPE2" />
+<property name="dutyType3" column="DUTY_TYPE3" />
+<property name="dutyType4" column="DUTY_TYPE4" />
+<property name="dutyType5" column="DUTY_TYPE5" />
+<property name="dutyType6" column="DUTY_TYPE6" />
+<property name="dutyTime1" column="DUTY_TIME1" />
+<property name="dutyTime2" column="DUTY_TIME2" />
+<property name="dutyTime3" column="DUTY_TIME3" />
+<property name="dutyTime4" column="DUTY_TIME4" />
+<property name="dutyTime5" column="DUTY_TIME5" />
+<property name="dutyTime6" column="DUTY_TIME6" />
+<property name="workday" column="WORKDAY" />
+<property name="dutyHour" column="dutyHour" />
+<property name="ifPunch" column="ifPunch" />
+<property name="minNum" column="minNum" />
+<property name="minNumDown" column="minNumDown" />
+<property name="corpId" column="corp_id" />
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.MyTestPO"
+        table="mytest"
+        >
+        <id name="testId" column="TEST_ID" type="long">
+            <generator class="native" />
+        </id>
+        <property name="name" column="Test_name" />
+        <property name="name2" column="Test_name2" />
+        <property name="content" column="test_content" type="net.sf.hibernate.type.TextType"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.info.isodoc.po.IsoCommentPO"  table="oa_isoComment">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="dealComment" column="dealComment" />
+		<property name="acName" column="acName" />
+		<property name="dealDate" column="dealDate" />
+                <property name="informationId" column="informationId" />
+                <property name="dealEmpName" column="dealEmpName" />
+                <property name="inforversion" column="inforversion" />
+                <property name="infodealType" column="infodealType" />
+	</class>
+</hibernate-mapping>

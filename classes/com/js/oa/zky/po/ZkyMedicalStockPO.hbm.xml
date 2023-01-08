@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.zky.po.ZkyMedicalStockPO" table="ZKY_DrugStock">
+		<id name="drugid" column="drugid" type="java.lang.String">
+			<generator class="native" />
+		</id>
+		<property name="drugname" column="drugname"/>
+		<property name="drugregu" column="drugregu"/>
+		<property name="drugunit" column="drugunit"/>
+		<property name="quan" column="quan"/>
+	</class>
+</hibernate-mapping>

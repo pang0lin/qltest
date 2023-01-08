@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.hr.kq.po.KqOutsideCheckinInfoPO" table="kq_outsidecheckininfo">
+		<id name="id" column="id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="userId" column="userId" />
+		<property name="checkinTime" column="checkintime" />
+		<property name="weidu" column="weidu" />
+		<property name="jingdu" column="jingdu" />
+		<property name="position" column="position" />
+		<property name="imageurl" column="imageurl" />
+		
+		<property name="customName" column="customName" />
+		<property name="customCompany" column="customCompany" />
+		<property name="reason" column="reason" />
+		<property name="customAddress" column="customAddress" />
+		<property name="customType" column="customType" />
+		<property name="customBz" column="customBz" />
+		
+	</class>
+</hibernate-mapping>

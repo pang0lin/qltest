@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.subsidiarywork.po.AnswerSheetPO" table="OA_ANSWERSHEET" >
+        <id name="answerSheetId" column="ANSWERSHEETID">
+            <generator class="native" />
+        </id>
+        
+		<property name="ballotEmp" column="BALLOTEMP" />
+		<property name="ballotDate" column="BALLOTDATE"/>
+		<property name="questionnaireId" column="QUESTIONNAIREID"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<set name="answerSheetContent"
+			table="OA_ANSWERSHEETCONTENT"
+			lazy="false"
+			inverse="false"
+			cascade="none"
+			sort="unsorted">
+			<key column="ANSWERSHEETID"/>
+    <one-to-many class="com.js.oa.hr.subsidiarywork.po.AnswerSheetContentPO"/>
+</set>
+    </class>
+</hibernate-mapping>

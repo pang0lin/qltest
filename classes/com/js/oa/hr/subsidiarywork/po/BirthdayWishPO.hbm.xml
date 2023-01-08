@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.subsidiarywork.po.BirthdayWishPO" table="OA_BIRTHDAYWISH" >
+<id name="id" column="WISH_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="wishEmployees" column="WISHEMPLOYEES"  />
+<property name="wishEmployeesName" column="WISHEMPLOYEESNAME"  />
+<property name="wishContent" column="WISHCONTENT"  />
+<property name="wishCard" column="WISHCARD"   type="net.sf.hibernate.type.TextType" />
+<property name="wishCardName" column="WISHCARDNAME"  />
+<property name="wishSign" column="WISHSIGN"  />
+<property name="createdOrg" column="CreatedOrg"/>
+<property name="createdEmp" column="CreatedEmp"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="path" column="PATH"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.finance.po.FTable" table="f_table" >
+        <id name="tableId" type="java.lang.Long">
+            <column name="table_id" />
+            <generator class="native" />
+        </id>
+        <property name="tableName" type="java.lang.String">
+            <column name="table_name" length="40" unique="true" />
+        </property>
+        <property name="tableDesname" type="java.lang.String">
+            <column name="table_desname" length="40" />
+        </property>
+        <property name="tablePage" type="java.lang.Long">
+            <column name="table_page" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="created_date" length="0" />
+        </property>
+        <property name="createdEmp" type="java.lang.Long">
+            <column name="created_emp" />
+        </property>
+        <property name="createdOrg" type="java.lang.Long">
+            <column name="created_org" />
+        </property>
+    </class>
+</hibernate-mapping>

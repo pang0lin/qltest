@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.setup.po.RemindSetPO" table="sys_remind_set" >
+
+
+<id name="id" column="id" type="long">
+   <generator class="native" />
+</id>
+
+<property name="emp_id" column="emp_id" type="long" length="20"/>
+<property name="status" column="status" type="string" length="50"/>
+<property name="type" column="type" type="string" />
+
+</class>
+</hibernate-mapping>

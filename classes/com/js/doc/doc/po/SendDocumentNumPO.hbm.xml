@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.SendDocumentNumPO"  table="doc_senddocumentNum">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="numName" column="numName" />
+		<property name="fileWord" column="fileWord" />
+		<property name="bitNum" column="bitNum"/>
+		<property name="numIsYear" column="numIsYear"/>
+		<property name="keyValue" column="keyValue"/>
+		<property name="initValue" column="initValue" />
+		<property name="numFormat" column="numFormat" />
+		<property name="numNote" column="numNote"/>
+		<property name="numMode" column="numMode"/>
+		<property name="numType" column="numType"/>
+		<property name="numfig" column="numfig"/>
+        <property name="oldYear" column="oldYear"/>
+        <property name="numIsWord" column="numIsWord"/>
+        <property name="createdEmp" column="createdEmp"/>
+        <property name="createdOrg" column="createdOrg"/>
+        <property name="corpId" column="corp_id"/>
+	</class>
+</hibernate-mapping>

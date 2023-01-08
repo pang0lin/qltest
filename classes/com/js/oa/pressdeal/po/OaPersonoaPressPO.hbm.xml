@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+
+<hibernate-mapping package="com.js.oa.pressdeal.po">
+
+    <class name="OaPersonoaPressPO" table="OA_PERSONOA_PRESS" dynamic-insert="true" dynamic-update="true">
+        <id name="pressId" column="PRESS_ID" type="long">
+            <generator class="native"/>
+        </id>
+ 
+        <property name="title" column="TITLE" type="string"  not-null="true" />
+        <property name="dispatchTime" column="DISPATCH_TIME" type="timestamp"  not-null="true" />
+        <property name="content" column="CONTENT" type="string" />
+        <property name="sendUsername" column="SEND_USERNAME" type="string"  not-null="true" />
+        <property name="sendUserDep" column="SEND_USER_DEP" type="string"  not-null="true" />
+        <property name="receiveUsernameStr" column="RECEIVE_USERNAME_STR" type="string"  not-null="true" />
+        <property name="subcatorgryName" column="SUBCATORGRY_NAME" type="string" />
+        <property name="catorgry" column="CATORGRY" type="string" />
+        <property name="domainId" column="DOMAIN_ID" type="long"  not-null="true" />
+        <property name="standby" column="STANDBY_STR" type="string" />
+        <property name="standbyFloat" column="STANDBY_FLOAT" type="float" />
+        <property name="isNew" column="IS_NEW" type="short"  not-null="true" />
+		<property name="pressStatus" column="PRESS_STATUS" type="byte"/>
+		<property name="workflowurl" column="WORKFLOWURL" type="string" />
+		
+		
+    </class>
+    
+</hibernate-mapping>

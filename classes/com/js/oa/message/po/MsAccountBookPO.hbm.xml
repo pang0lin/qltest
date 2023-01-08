@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsAccountBookPO" table="MS_ACCOUNTBOOK" >
+        <id name="bookId" column="BOOK_ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="bookCount" column="BOOK_COUNT"/>
+        <property name="bookMoney" column="BOOK_MONEY"/>
+        <property name="bookTime" column="BOOK_TIME"/>
+        <property name="domainId" column="DOMAIN_ID"/>
+    </class>
+</hibernate-mapping>

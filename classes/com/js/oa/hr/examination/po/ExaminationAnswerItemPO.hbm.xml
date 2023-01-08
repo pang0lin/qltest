@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.examination.po.ExaminationAnswerItemPO" table="OA_EXAMINATION_ANSWER_ITEM" >
+<id name="id" column="id" >
+	<generator class="native"/>
+</id>
+<property name="examinationID" column="EXAMINATIONID" />
+<property name="examinationResult" column="EXAMINATIONRESULT" />
+<property name="myResult" column="MYRESULT" />
+<property name="isRight" column="ISRIGHT" />
+<property name="fullMark" column="FULLMARK" />
+<property name="mark" column="MARK" />
+<many-to-one name="examinationAnswerPO"
+            class="com.js.oa.hr.examination.po.ExaminationAnswerPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="ANSWER_ID" />
+</class>
+</hibernate-mapping>

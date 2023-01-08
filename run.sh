@@ -1,0 +1,1 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java -jar /Users/pang0lin/Downloads/qltest/ecj-4.6.1.jar   -extdirs "/Users/pang0lin/Downloads/qltest/lib" -sourcepath /Users/pang0lin/Downloads/qltest/classes -encoding UTF-8 -8 -warn:none -proceedOnError -noExit @/Users/pang0lin/Downloads/qltest/file.txt

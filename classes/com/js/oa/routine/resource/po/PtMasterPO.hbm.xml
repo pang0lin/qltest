@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.PtMasterPO"
+        table="ST_PTMASTER"
+        >
+        <id name="id" column="PT_NO">
+            <generator class="assigned" />
+        </id>
+        <property name="ptDate" column="PT_DATE" />
+        <property name="ptStock" column="PT_STOCK" />
+        <property name="ptSupp" column="PT_SUPP" />
+        <property name="ptMan" column="PT_MAN" />
+        <property name="makeDate" column="MAKE_DATE" />
+        <property name="checkFlag" column="CHECK_FLAG" />
+        <property name="checkDate" column="CHECK_DATE" />
+        <property name="checkMan" column="CHECK_MAN" />
+        <property name="checkManName" column="CHECK_MANNAME" />
+        <property name="remark" column="REMARK" />
+        <property name="ptMoney" column="PT_MONEY" />
+        <property name="makeMan" column="MAKE_MAN" />
+        <property name="domainid" column="DOMAIN_ID"/>
+        <property name="serial" column="PT_SERIAL" />
+        <property name="num" column="PT_NUM" />
+        <property name="ptOrg" column="PT_ORG"/>
+        <property name="ptOrgName" column="PT_ORGNAME"/>
+        <property name="ptMode" column="PT_MODE"/>
+        <property name="ptStoreMan" column="PT_storeman"/>
+        <property name="ptBuyer" column="PT_buyer"/>
+        <property name="ptTypeDefine" column="PT_Typedefine"/>
+        <property name="ptHandleName" column="PT_HANDLENAME"/>
+        <property name="invoiceNO" column="INVOICENO"/>
+        <property name="ptHaveWorkFlow" column="pt_haveworkflow"/>
+        <set name="ptDetail"
+            
+            table="ST_PTDETAIL"
+            lazy="false"
+            inverse="true"
+            cascade="save-update"
+            order-by="GOODS_ID"
+            sort="unsorted">
+            <key column="PT_NO" />
+            <one-to-many class="com.js.oa.routine.resource.po.PtDetailPO" />
+        </set>
+    </class>
+</hibernate-mapping>

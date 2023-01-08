@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.BoardRoomPO" table="OA_BOARDROOM" >
+        <id name="boardroomId" column="BOARDROOMID">
+             <generator class="native"/>
+        </id>
+        <property name="name" column="Name" type="java.lang.String"/>
+		<property name="depict" column="DEPICT" type="java.lang.String"/>
+		<property name="location" column="LOCATION" type="java.lang.String"/>
+		<property name="capacitance" column="CAPACITANCE" type="java.lang.String"/>
+		<property name="boardroomType" column="BOARDROOMTYPE" type="java.lang.Integer"/>
+		<property name="cost" column="COST" type="java.lang.Float"/>
+		<property name="emphasis" column="EMPHASIS" type="java.lang.Integer"/>
+		<property name="scope" column="SCOPE" type="java.lang.String"/>
+		<property name="remark" column="REMARK" type="java.lang.String"/>
+		<property name="scopeOrg" column="SCOPEORG" type="java.lang.String"/>
+		<property name="scopeGroup" column="SCOPEGROUP" type="java.lang.String"/>
+		<property name="scopeEmp" column="SCOPEEMP" type="java.lang.String"/>
+		<property name="limit" column="LIMIT0" type="java.lang.Integer"/>
+		<property name="createdEmp" column="CREATEDEMP" type="java.lang.Long"/>
+		<property name="createdOrg" column="CREATEDORG" type="java.lang.Long"/>
+        <property name="controlNumber" column="CONTROLNUMBER" type="java.lang.Long"/>
+        <property name="doorNumber" column="DOORNUMBER" type="java.lang.Long"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<property name="isVideo" column="ISVIDEO"/>
+		<property name="maxNumber" column="MAXNUMBER"/>
+		<property name="workaddress" column="workaddress"/>
+		<property name="manageOrgName" column="manageorgname"/>
+		<property name="applyPhone" column="applyPhone" />
+		<property name="boardRoomLayout" column="boardRoomLayout" />
+		<property name="reserveType" column="reserveType" />
+		<property name="circleType" column="circleType" />
+		<property name="chargeType" column="chargeType" />
+		
+		<property name="useScope" column="useScope" />
+		<property name="useScopeId" column="useScopeId" />
+		
+		<property name="manageOrg" column="manageorg"/>
+                <set name="boardRoomApply"
+                table="OA_BOARDROOMAPPLY"
+                lazy="true"
+                inverse="false"
+                cascade="none"
+    		sort="unsorted">
+    		<key column="boardroomId"/>
+    		<one-to-many class="com.js.oa.routine.boardroom.po.BoardRoomApplyPO"/>
+                </set>
+    <set name="boardRoomEquipment"
+            
+            table="oa_bdroomequ"
+            lazy="false"
+            inverse="true"
+            cascade="none"
+            sort="unsorted">
+            <key column="BOARDROOMID" />
+            <one-to-many class="com.js.oa.routine.boardroom.po.BoardRoomEquipmentPO" />
+        </set>
+
+<property name="boardroomOrder" column="BOARDROOMORDER" type="java.lang.Integer"/>
+	</class>
+</hibernate-mapping>

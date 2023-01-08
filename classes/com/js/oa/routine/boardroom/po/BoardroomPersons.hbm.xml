@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.BoardroomPersons" table="OA_BOARDROOM_PERSONS" >
+        <id name="id" column="id">
+             <generator class="native"/>
+        </id>
+
+		<many-to-one name="apply" class="com.js.oa.routine.boardroom.po.BoardRoomApplyPO" not-null="true">
+			<column name="APPLYID"/>
+		</many-to-one>
+
+		<property name="empId" column="EMPID"/>
+		<property name="empName" column="EMPNAME"/>
+		<property name="orgId" column="ORGID"/>
+		<property name="orgName" column="ORGNAME"/>
+		<property name="replyDate" column="REPLYDATE"/>
+		<property name="status" column="STATUS"/>
+		<property name="content" column="CONTENT"/>
+	</class>
+</hibernate-mapping>

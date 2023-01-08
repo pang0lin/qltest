@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovCustomCheckedFieldPO" table="form_controlfield">
+    <id column="id" name="id" type="java.lang.Long">
+       <generator class="native"/>
+    </id>
+    <property name="gffName" column="gffName" />
+    <property name="gffDisplayName" column="gffDisplayName" />
+    <property name="govFormType" column="govFormType" />
+    <property name="gffType" column="gffType" />
+    <property name="govFormId" column="govFormId" />
+    <property name="domainId" column="domainId" />
+</class>
+</hibernate-mapping>

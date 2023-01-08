@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.doc.doc.po.GovSendFileUserPO" table="DOC_SENDFILE_USER" >
+        <id name="id" column="SENDFILE_USER_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="empId" column="EMP_ID" />
+        <property name="domainId" column="DOMAIN_ID"/>
+        <property name="isReaded" column="isReaded"/>
+        <property name="orgId" column="orgId"/>
+        <property name="outSeeType" column="outSeeType"/>
+        <property name="readDate" column="readDate"/>
+        <property name="isDelete" column="isDelete"/>
+        <property name="userName" column="userName"/>
+        <property name="orgName" column="orgName"/>
+
+        <many-to-one
+            name="sendFile"
+            class="com.js.doc.doc.po.GovDocumentSendFilePO"
+            insert = "true"
+            update = "true"
+            column="SENDFILE_ID"/>
+    </class>
+</hibernate-mapping>

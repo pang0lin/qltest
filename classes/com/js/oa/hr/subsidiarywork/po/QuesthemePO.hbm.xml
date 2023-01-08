@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.subsidiarywork.po.QuesthemePO" table="OA_QUESTHEME" >
+        <id name="questhemeId" column="QUESTHEMEID">
+            <generator class="native" />
+        </id>
+        <property name="title" column="TITLE"/>
+		<property name="type" column="TYPE"/>
+		<property name="score" column="SCORE"/>
+		<property name="orderCode" column="ORDERCODE"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<many-to-one
+    		name="questionnaire"
+			class="com.js.oa.hr.subsidiarywork.po.QuestionnairePO"
+			not-null="true"
+		>
+        <column name="QUESTIONNAIREID"/>
+		</many-to-one>
+
+		<set name="themeOption"
+			table="OA_THEMEOPTION"
+			lazy="false"
+			inverse="false"
+			cascade="none"
+                        order-by="themeOptionId asc">
+			<key column="QUESTHEMEID"/>
+    <one-to-many class="com.js.oa.hr.subsidiarywork.po.ThemeOptionPO"/>
+</set>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.netaddress.po.AddressPO" table="OA_NETADDRESS" >
+<id name="id" column="NETADDRESS_ID" type="long">
+    <generator class="native" />
+</id>
+
+
+<property name="netAddressName" column="NETADDRESSNAME"  />
+<property name="netAddressUrl" column="NETADDRESSURL"  />
+<property name="createdEmpId" column="CREATEDEMPID"  />
+<property name="createdEmpName" column="CREATEDEMPNAME"  />
+<property name="isShare" column="ISSHARE"  />
+<property name="shareToName" column="SHARETONAME"  />
+<property name="shareToEmp" column="SHARETOEMP"  />
+<property name="shareToOrg" column="SHARETOORG"  />
+<property name="shareToGroup" column="SHARETOGROUP" />
+<property name="deskShowUser" column="deskShowUser" type="net.sf.hibernate.type.TextType" />
+<property name="shareDelUserId" column="shareDelUserId"   />
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="synopsis"  column="synopsis"/>
+<property name="saveImg"  column="saveImg"/>
+<property name="operate" column="operate"/>
+<property name="ordernumber" column="ordernumber"/>
+
+    <property name="sso" column="sso"/>
+    <property name="formaction" column="formaction"/>
+    <property name="formusername" column="formusername"/>
+    <property name="formuserpassword" column="formuserpassword"/>
+    <property name="ssologin" column="ssologin"/>
+    <property name="username" column="username"/>
+    <property name="password" column="password"/>
+    <property name="formelseparam" column="formelseparam"/>
+    <property name="formelseparamType" column="formelseparamType"></property>
+    <property name="formelseparamValue" column="formelseparamValue"></property>
+    <property name="elseparam" column="elseparam"/>
+    
+                                                        
+<many-to-one
+	name="addressClass"
+	class="com.js.oa.personalwork.netaddress.po.AddressClassPO"
+	cascade="none"
+        outer-join="auto"
+        update="true"
+        insert="true"
+	column="CLASS_ID"
+/>
+</class>
+</hibernate-mapping>

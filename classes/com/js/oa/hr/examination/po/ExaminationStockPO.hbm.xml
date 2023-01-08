@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.examination.po.ExaminationStockPO" table="OA_EXAMINATION_STOCK" >
+<id name="examinationID" column="EXAMINATION_ID" >
+	<generator class="native"/>
+</id>
+
+<property name="examinationType" column="EXAMINATION_TYPE" />
+<property name="examinationStyle" column="EXAMINATION_STYLE" />
+<property name="subject" column="SUBJECT" />
+<property name="result" column="RESULT" />
+<property name="createdEmp" column="CREATEDEMP" />
+<property name="createdOrg" column="CREATEDORG" />
+<property column="DOMAIN_ID" name="domainId" />
+<property column="SIGN" name="sign" />
+       <set name="examinationItem"
+            
+            table="OA_EXAMINATION_ITEM"
+            lazy="false"
+            inverse="true"
+            cascade="none"
+            order-by="item_id"
+            sort="unsorted">
+            <key column="EXAMINATION_ID" />
+            <one-to-many class="com.js.oa.hr.examination.po.ExaminationItemPO" />
+        </set>
+
+
+</class>
+</hibernate-mapping>

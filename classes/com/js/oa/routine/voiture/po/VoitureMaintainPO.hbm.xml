@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoitureMaintainPO" table="VEH_MAINTAIN" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="maintainTime" column="MAINTAINTIME" type="timestamp"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<many-to-one name="voiturePO"
+            class="com.js.oa.routine.voiture.po.VoiturePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="voitureId" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesClassPO" table="OA_ARCHIVESCLASS" >
+<id name="classId" column="CLASS_ID" >
+<generator class="native" />
+</id>
+
+<property name="className" column="CLASSNAME"/>
+<property name="classParentId" column="CLASSPARENTID"/>
+<property name="classLevel" column="CLASSLEVEL"/>
+<property name="classOrderCode" column="CLASSORDERCODE"/>
+<property name="classIdString" column="CLASSIDSTRING"/>
+<property name="classReader" column="CLASSREADER" />
+<property name="classReadOrg" column="CLASSREADORG" />
+<property name="classReadGroup" column="CLASSREADGROUP" />
+<property name="classReadName" column="CLASSREADNAME" />
+<property name="createdEmp" column="CREATEDEMP" />
+<property name="createdOrg" column="CREATEDORG" />
+<property name="domainId" column="domain_Id" />
+<set name="archivesDossier" lazy="true" inverse="true">
+    <key>
+    	<column name="CLASSNO" />
+    </key>
+    <one-to-many class="com.js.oa.archives.po.ArchivesDossierPO"/>
+</set>
+</class>
+</hibernate-mapping>

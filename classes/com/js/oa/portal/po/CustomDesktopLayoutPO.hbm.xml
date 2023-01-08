@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.portal.po.CustomDesktopLayoutPO" table="oa_portal" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="layoutName" column="LAYOUTNAME" type="string"/>
+<property name="ViewUser" column="VIEWUSER" type="string"/>
+<property name="ViewOrg" column="VIEWORG" type="string"/>
+<property name="ViewGroup" column="VIEWGROUP" type="string"/>
+<property name="viewRangeName" column="VIEWRANGENAME" type="string"/>
+<property name="xmlFile" column="XMLFILE" type="string"/>
+<property name="myColumn" column="MYCOLUMN" type="string"/>
+<property name="domainId" column="DOMAIN_ID" type="string"/>
+<property name="menuName" column="menuName"/>
+<property name="showOrder" column="showOrder"/>
+<property name="menuType" column="menuType"/>
+<property name="createdEmp" column="createdemp" />
+<property name="createdOrg" column="createdorg" />
+<property name="isUrl" column="isurl" />
+<property name="url" column="url" />
+<property name="menuId" column="menuId" />
+<property name="ispublic" column="ispublic" />
+<property name="personEmpId" column="personEmpId" />
+</class>
+</hibernate-mapping>

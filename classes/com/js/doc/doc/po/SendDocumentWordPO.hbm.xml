@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.SendDocumentWordPO"  table="doc_senddocumentword">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+
+		<property name="wordName" column="wordName" />
+		<property name="sendDocumentNumId" column="sendDocumentNumId" />
+		<property name="userRange" column="userRange"/>
+		<property name="userRangeId" column="userRangeId"/>
+		<property name="processId" column="processId"/>
+		<property name="templateId" column="templateId"/>
+		<property name="sendDocumentSeqId" column="sendDocumentSeqId"/>
+                <property name="templateName" column="templateName"/>
+                <property name="processName" column="processName"/>
+                <property name="receiveUser" column="receiveUser"/>
+                <property name="receiveOrg" column="receiveOrg"/>
+                <property name="receiveGroup" column="receiveGroup"/>
+                <property name="receiveScopeName" column="receiveScopeName"/>
+                <property name="receiveScopeId" column="receiveScopeId"/>
+                <property name="redHeadName" column="redHeadName"/>
+                <property name="redHeadSaveName" column="redHeadSaveName"/>
+                <property name="createdEmp" column="createdEmp"/>
+                <property name="createdOrg" column="createdOrg"/>
+                <property name="corpId" column="corp_id"/>
+	</class>
+</hibernate-mapping>

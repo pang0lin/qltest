@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.SsMasterPO"
+        table="ST_SSMASTER"
+        >
+        <id name="id" column="SS_NO">
+            <generator class="assigned" />
+        </id>
+        <property name="ssDate" column="SS_DATE" />
+        <property name="ssStock" column="SS_STOCK" />
+        <property name="ssDept" column="SS_DEPT" />
+        <property name="ssMan" column="SS_MAN" />
+        <property name="makeDate" column="MAKE_DATE" />
+        <property name="checkFlag" column="CHECK_FLAG" />
+        <property name="checkDate" column="CHECK_DATE" />
+        <property name="checkMan" column="CHECK_MAN" />
+        <property name="checkManName" column="CHECK_MANNAME" />
+        <property name="remark" column="REMARK" />
+        <property name="ssMoney" column="SS_MONEY" />
+        <property name="makeMan" column="MAKE_MAN" />
+        <property name="ssHaveWorkFlow" column="SS_HAVEWORKFLOW" />
+        <property name="domainid" column="DOMAIN_ID"/>
+        <property name="serial" column="SS_SERIAL" />
+        <property name="num" column="SS_NUM" />
+         <property name="ssOrg" column="ss_ORG"/>
+        <property name="ssOrgName" column="ss_ORGNAME"/>
+        <property name="ssMode" column="ss_MODE"/>
+        <property name="ssStoreMan" column="ss_storeman"/>
+        <property name="ssPicker" column="ss_picker"/>
+        <property name="ssTypeDefine" column="ss_Typedefine"/>
+        <property name="ssOutFlag" column="SS_OUTFLAG"/>
+        <property name="ssUseManID" column="SS_USEMANID"/>
+        <property name="ssUseMan" column="SS_USEMAN"/>
+        <set name="ssDetail"
+            
+            table="ST_SSDETAIL"
+            lazy="false"
+            inverse="true"
+            cascade="save-update"
+            order-by="GOODS_ID"
+            sort="unsorted">
+            <key column="SS_NO" />
+            <one-to-many class="com.js.oa.routine.resource.po.SsDetailPO" />
+        </set>
+    </class>
+</hibernate-mapping>

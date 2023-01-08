@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.report.po.ReportPO" table="oa_report">
+        <id name="reportId" type="java.lang.Long">
+            <column name="reportId" />
+            <generator class="native" />
+        </id>
+        <property name="viewScopeId" type="java.lang.String">
+            <column name="viewScopeId" length="200" />
+        </property>
+        <property name="viewScope" type="java.lang.String">
+            <column name="viewScope" length="200" />
+        </property>
+        <property name="reportName" type="java.lang.String">
+            <column name="reportName" length="50" />
+        </property>
+        <property name="reportDescribe" type="java.lang.String">
+            <column name="reportDescribe" length="500" />
+        </property>
+        <property name="grfName" type="java.lang.String">
+            <column name="grfName" length="20" />
+        </property>
+        <property name="createEmp" type="java.lang.String">
+            <column name="createEmp" length="20" />
+        </property>
+        <property name="createEmpId" type="java.lang.Long">
+            <column name="createEmpId"/>
+        </property>
+        <property name="createDate">
+            <column name="createDate"/>
+        </property>
+        <property name="domainId" type="java.lang.String">
+            <column name="domainId" length="10" />
+        </property>
+        <property name="corpId" type="java.lang.String">
+            <column name="corpId" length="10" />
+        </property>
+        <property name="createOrgId" type="java.lang.Long">
+            <column name="createOrgId"/>
+        </property>
+        <property name="reportSql" type="java.lang.String">
+            <column name="reportSql" length="500" />
+        </property>
+        <property name="sourceBase" type="java.lang.String">
+            <column name="sourceBase" length="50" />
+        </property>
+        <property name="reportType" type="java.lang.String">
+            <column name="reportType" length="20" />
+        </property>
+        <property name="reportClass" type="java.lang.String">
+            <column name="reportClass"/>
+        </property>
+        <property name="chartSql" type="java.lang.String">
+            <column name="chartSql" length="500" />
+        </property>
+        <property name="reportUrl" type="java.lang.String">
+            <column name="reportUrl" length="200" />
+        </property>
+        <property name="phoneUrl" type="java.lang.String">
+            <column name="phoneUrl" length="200" />
+        </property>
+        <set name="replaceSet"
+        	table="oa_reportReplace" 
+        	lazy="false" 
+        	inverse="false"
+            cascade="all"
+            sort="unsorted" >
+        	<key column="reportId" />
+        	<one-to-many class="com.js.oa.report.po.ReportReplacePO"/>
+        </set>
+    </class>
+</hibernate-mapping>

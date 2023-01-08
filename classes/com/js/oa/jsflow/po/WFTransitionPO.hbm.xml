@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--活动关系表(JSF_TRANSITION)的配置文件-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFTransitionPO"
+        table="JSF_TRANSITION"
+        >
+        <id name="wfTransitionId" column="WF_TRANSITION_ID" type="long">
+            <generator class="native" />
+        </id>
+
+        <!--关系名称-->
+        <property name="transitionName" column="TRANSITIONNAME" />
+
+        <!--关系描述-->
+        <property name="transitionDescription" column="TRANSITIONDESCRIPTION" />
+
+		<!--表达式-->
+        <property name="expression" column="EXPRESSION" />
+
+        <property name="domainId" column="DOMAIN_ID" />
+        <property name="defaultActivity" column="defaultActivity" />
+
+        <!--与活动表（JSF_ACTIVITY）是多对一关系（起始活动）-->
+        <many-to-one name="transitionFrom"
+            class="com.js.oa.jsflow.po.WFActivityPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="TRANSITIONFROM" />
+
+        <!--与活动表（JSF_ACTIVITY）是多对一关系（结束活动）-->
+        <many-to-one name="transitionTo"
+            class="com.js.oa.jsflow.po.WFActivityPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="TRANSITIONTO" />
+
+        <!--与转移约束表（JSF_TRANSITIONRESTRICTION）是一对多的关系-->
+        <set name="wfTransitionRestriction"
+            table="JSF_TRANSITIONRESTRICTION"
+			
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_TRANSITION_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFTransitionRestrictionPO" />
+        </set>
+
+    </class>
+</hibernate-mapping>

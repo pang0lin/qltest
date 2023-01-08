@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WorkFlowImmoFormPO"
+        table="JSF_IMMOBILITYFORM"
+        >
+        <id name="immoFormId" column="WF_IMMOFORM_ID" type="long">
+            <generator class="native" />
+        </id>
+        <property name="realName" column="IMMOFORM_REALNAME" />
+        <property name="moduleId" column="WF_MODULE_ID" />
+        <property name="displayName" column="IMMOFORM_DISPLAYNAME" />
+        <property name="primaryKey" column="IMMOFORM_PRIMARYKEY" />
+    </class>
+</hibernate-mapping>

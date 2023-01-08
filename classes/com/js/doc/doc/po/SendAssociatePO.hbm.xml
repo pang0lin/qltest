@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.SendAssociatePO"  table="DOC_SendAssociate">
+
+<id column="aossiateId" name="aossiateId" type="java.lang.Long">
+<generator class="native"/>
+</id>
+<property name="sendFileId" column="sendFileId" />
+<property name="receiveFileId" column="receiveFileId" />
+<property name="transUserId" column="transUserId" />
+<property name="transOrgId" column="transOrgId" />
+<property name="domainId" column="domainId" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.examination.po.ExaminationManagePO" table="OA_EXAMINATION_MANAGE" >
+<id name="id" column="ID" >
+	<generator class="native"/>
+</id>
+
+<property name="examName" column="EXAM_NAME" />
+<property name="scopeRange" column="SCOPERANGE" />
+<property name="scopeEmpID" column="SCOPEEMPID" />
+<property name="scopeOrgID" column="SCOPEORGID" />
+<property name="scopeGroupID" column="SCOPEGROUPID" />
+<property name="state" column="STATE" />
+<property name="startDate" column="STARTDATE" />
+<property name="startTime" column="STARTTIME" />
+<property name="endDate" column="ENDDATE" />
+<property name="endTime" column="ENDTIME" />
+<property name="radioAmount" column="RADIOAMOUNT" />
+<property name="radioMark" column="RADIOMARK" />
+<property name="checkAmount" column="CHECKAMOUNT" />
+<property name="checkMark" column="CHECKMARK" />
+<property name="questionAmount" column="QUESTIONAMOUNT" />
+<property name="questionMark" column="QUESTIONMARK" />
+<property name="createdEmp" column="CREATEDEMP" />
+<property name="createdOrg" column="CREATEDORG" />
+<property name="domainId" column="DOMAIN_ID" />
+<property name="radioIds" column="RADIOIDS" />
+<property name="checkIds" column="CHECKIDS" />
+<property name="questionIds" column="QUESTIONIDS" />
+</class>
+</hibernate-mapping>

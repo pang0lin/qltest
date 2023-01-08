@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class
+    name="com.js.oa.scheme.event.po.EventAttenderPO"
+    table="OA_EVENTATTENDER"
+    
+>
+
+    <id
+        name="attenderId"
+        type="java.lang.Long"
+        column="ATTENDER_ID"
+    >
+       <generator class="native" />
+    </id>
+
+    <property
+        name="empId"
+        type="java.lang.Long"
+        column="EMP_ID"
+        length="20"
+    />
+    <property
+        name="affirmRemind"
+        type="java.lang.Integer"
+        column="AFFIRMREMIND"
+        length="1"
+    />
+    <property
+        name="eventIsEcho"
+        type="java.lang.Integer"
+        column="EVENTISECHO"
+    />
+    <property
+        name="eventIsViewed"
+        type="java.lang.Integer"
+        column="EVENTISVIEWED"
+    />
+	<property
+        name="eventDomainId"
+        type="java.lang.Long"
+        column="DOMAIN_ID"
+    />
+    <property
+        name="eventIsPoped"
+        type="java.lang.Integer"
+        column="EVENTISPOPED"
+    />
+    <!-- associations -->
+    <!-- bi-directional many-to-one association to OaEvent -->
+    <many-to-one
+        name="event"
+        class="com.js.oa.scheme.event.po.EventPO"
+        not-null="true"
+    >
+        <column name="EVENT_ID" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

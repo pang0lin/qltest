@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<common>
+		<activeSqlType>SQLServer</activeSqlType>
+	</common>
+	<msdesql>
+		<INSERT_INTO_TBL_SMSENDTASK>
+			insert into tbl_SMSendTask
+			(CreatorID,SmSendedNum,OperationType,OrgAddr,DestAddr,SM_Content,SendTime,NeedStateReport,ServiceID,FeeType,FeeCode,SMType,MessageID,DestAddrType,SubTime,TaskStatus,SendLevel,SendState,tryTimes,SendType,taskName)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+		</INSERT_INTO_TBL_SMSENDTASK>
+		<QUERY_TBL_SMRECEIVED>
+			select * from tbl_smreceived where smtype=3 and MessageID=?
+		</QUERY_TBL_SMRECEIVED>
+		<SELECT_TASK_ID>
+			select max(id) id from tbl_SMSendTask
+		</SELECT_TASK_ID>
+		<INSERT_OPERATOR>
+			INSERT INTO tbl_Operator(Operator_ID,Operator_Name,
+			Operator_Code, Password, OperatorType,roleId, LimitType,
+			MaxCount, Modified) VALUES(?,?,?,?,?,?,?,?,?)
+		</INSERT_OPERATOR>
+		<UPDATEUSSDMSG>
+			update tbl_UssdMsg set updatetime = ?,LastTrack =
+			?,CurrentIn = ?,Status = 2, MsgType = ? , FeeType = ? ,
+			FeeRate = ? , FeeNO = ? where CallerNO = ? and Status = 1
+		</UPDATEUSSDMSG>
+		<FETCH_USSD_REQUEST>
+			select top 1 CallerNO, UpdateTime,LastTrack,CurrentIn,
+			MsgType from tbl_UssdMsg where Status = 0 and MsgType in (0,
+			1)
+		</FETCH_USSD_REQUEST>
+		<SELECT_USER>
+			select Operator_ID from tbl_Operator where Operator_Code = ?
+			and Password = ?
+		</SELECT_USER>
+		<testsql>select top 1 * from tbl_Operator</testsql>
+	</msdesql>
+	<db2sql>
+		<INSERT_INTO_TBL_SMSENDTASK>
+			insert into tbl_SMSendTask
+			(CreatorID,SmSendedNum,OperationType,OrgAddr,DestAddr,SM_Content,SendTime,NeedStateReport,ServiceID,FeeType,FeeCode,SMType,MessageID,DestAddrType,SubTime,TaskStatus,SendLevel,SendState,tryTimes,SendType,taskName)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+		</INSERT_INTO_TBL_SMSENDTASK>
+		<QUERY_TBL_SMRECEIVED>
+			select * from tbl_smreceived where smtype=3 and MessageID=?
+		</QUERY_TBL_SMRECEIVED>
+		<SELECT_TASK_ID>
+			select max(id) id from tbl_SMSendTask
+		</SELECT_TASK_ID>
+		<INSERT_OPERATOR>
+			INSERT INTO tbl_Operator(Operator_ID,Operator_Name,
+			Operator_Code, Password, OperatorType,roleId, LimitType,
+			MaxCount, Modified) VALUES(?,?,?,?,?,?,?,?,?)
+		</INSERT_OPERATOR>
+		<UPDATEUSSDMSG>
+			update tbl_UssdMsg set updatetime = ?,LastTrack =
+			?,CurrentIn = ?,Status = 2, MsgType = ? , FeeType = ? ,
+			FeeRate = ? , FeeNO = ? where CallerNO = ? and Status = 1
+		</UPDATEUSSDMSG>
+		<FETCH_USSD_REQUEST>
+			select CallerNO, UpdateTime,LastTrack,CurrentIn, MsgType
+			from tbl_UssdMsg where Status = 0 and MsgType in (0, 1)
+			fetch first 1 row only
+		</FETCH_USSD_REQUEST>
+		<SELECT_USER>
+			select Operator_ID from tbl_Operator where Operator_Code = ?
+			and Password = ?
+		</SELECT_USER>
+		<testsql>
+			select * FROM TBL_OPERATOR fetch first 1 row only
+		</testsql>
+	</db2sql>
+</config>

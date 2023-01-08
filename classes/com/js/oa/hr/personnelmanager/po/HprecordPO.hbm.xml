@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.personnelmanager.po.HprecordPO" table="OA_HPRECORD" >
+<id name="id" column="id" type="java.lang.Long">
+	<generator class="native" />
+</id>
+<property name="hpTitle" column="hp_title" type="java.lang.String" length="100"/>
+<property name="hpType" column="hp_type" type="java.lang.Long" length="20"/>
+<property name="hpPersonnel" column="hp_personnel" type="java.lang.String" length="2000"/>
+<property name="hpPersonnelName" column="hp_personnelname" type="java.lang.String" length="4000"/>
+<property name="hpDate" column="hp_date" type="java.util.Date" length="2000"/>
+<property name="hpExplain" column="hp_explain" type="java.lang.String" length="2000"/>
+<property name="createdEmp" column="createdemp" type="java.lang.Long" length="20"/>
+<property name="createdOrg" column="createdorg" type="java.lang.Long" length="20"/>
+<property name="domain" column="domain" type="java.lang.Long" length="20"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsLimitPO" table="MS_LIMIT" >
+        <id name="limitId" column="ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="limitCount" column="MSLIMITCOUNTER" type="java.lang.Long"/>
+        <property name="sendLimitId" column="SENDID" type="java.lang.String"/>
+        <property name="sendLimitMan" column="SENDMAN" type="java.lang.String"/>
+        <property name="sendLimitOrg" column="SENDORG" type="java.lang.String"/>
+        <property name="sendLimitGroup" column="SENDGROUP" type="java.lang.String"/>
+        <property name="domainId" column="DOMAIN_ID"/>
+		<property name="monthCount" column="MSMONTHCOUNT" type="java.lang.Long"/>
+		<property name="dayCount" column="MSDAYCOUNT" type="java.lang.Long"/>
+	</class>
+</hibernate-mapping>

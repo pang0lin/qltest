@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class
+    name="com.js.oa.scheme.worklog.po.WorkProjectClassPO"
+    table="OA_WORKPROJECTCLASS"
+    
+>
+
+    <id
+        name="classId"
+        type="java.lang.Long"
+        column="CLASS_ID"
+    >
+       <generator class="native" />
+    </id>
+
+    <property
+        name="classDomainId"
+        type="java.lang.Long"
+        column="DOMAIN_ID"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <property
+        name="className"
+        type="java.lang.String"
+        column="CLASSNAME"
+        not-null="true"
+        length="50"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="classRange"
+        type="java.lang.String"
+        column="CLASSRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="classUserRange"
+        type="java.lang.String"
+        column="CLASSUSERRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="classOrgRange"
+        type="java.lang.String"
+        column="CLASSORGRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="classGroupRange"
+        type="java.lang.String"
+        column="CLASSGROUPRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="createdOrg"
+        type="java.lang.Long"
+        column="CREATEDORG"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="createdEmp"
+        type="java.lang.Long"
+        column="CREATEDEMP"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <!-- associations -->
+    <!-- bi-directional one-to-many association to OaProjectstep -->
+    <set
+        name="projectSteps"
+        lazy="true"
+        inverse="true"
+		
+    >
+        <key>
+            <column name="CLASS_ID" />
+        </key>
+        <one-to-many
+            class="com.js.oa.scheme.worklog.po.ProjectStepPO"
+        />
+    </set>
+    <!-- bi-directional one-to-many association to OaWorkproject -->
+    <set
+        name="workProjects"
+        lazy="true"
+        inverse="true"
+		
+    >
+        <key>
+            <column name="CLASS_ID" />
+        </key>
+        <one-to-many
+            class="com.js.oa.scheme.worklog.po.WorkProjectPO"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

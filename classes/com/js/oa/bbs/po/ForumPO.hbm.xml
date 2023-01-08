@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.bbs.po.ForumPO" table="OA_FORUM" >
+<id name="id" column="FORUM_ID" type="long">
+<generator class="native" />
+</id>
+
+<property name="forumTopOrder" column="FORUM_TOPORDER" />
+<property name="forumTopicId" column="FORUMTOPICID" />
+<property name="forumTitle" column="FORUMTITLE" />
+<property name="forumIsSoul" column="FORUMISSOUL" />
+<property name="forumType" column="FORUMTYPE" />
+<property name="forumContent" column="FORUMCONTENT" type="net.sf.hibernate.type.TextType" />
+<property name="forumAttachName" column="FORUMATTACHNAME"  />
+<property name="forumAttachSave" column="FORUMATTACHSAVE" />
+<property name="forumAuthor" column="FORUMAUTHOR"  />
+<property name="forumAuthorId" column="FORUMAUTHORID"  />
+<property name="forumAuthorIp" column="FORUMAUTHORIP"  />
+<property name="forumAuthorOrg" column="FORUMAUTHORORG"  />
+<property name="forumImage" column="FORUMIMAGE" />
+<property name="forumSign" column="FORUMSIGN"  />
+<property name="forumIssueTime" column="FORUMISSUETIME"  />
+<property name="forumModifyTime" column="FORUMMODIFYTIME"  />
+<property name="forumKits" column="FORUMKITS"  />
+<property name="forumRevertNum" column="FORUMREVERTNUM"  />
+<property name="anonymous" column="ANONYMOUS"  />
+<property name="domainId" column="DOMAIN_ID"  />
+<property name="examinNum" column="FEXAMIN"  />
+<property name="forumNotPrint" column="FORUM_NOTPRINT"  />
+<property name="forumNotUpd" column="FORUM_NOTUPD"  />
+<property name="forumNotFlow" column="FORUM_NOTFLOW"  />
+<property name="newretime" column="newretime"  />
+
+<many-to-one
+	name="forumClass"
+	class="com.js.oa.bbs.po.ForumClassPO"
+	cascade="none"
+	outer-join="false"
+	update="true"
+	insert="true"
+	column="CLASS_ID"
+/>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--工作任务表JSF_WORK-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFWorkPO"
+        table="JSF_WORK"
+        >
+        <id name="wfWorkId" column="WF_WORK_ID">
+            <generator class="assigned" />
+        </id>
+
+        <!--当前用户ID-->
+        <property name="wfCurEmployeeId" column="WF_CUREMPLOYEE_ID" />
+
+        <!--办理状态-->
+        <property name="workStatus" column="WORKSTATUS" />
+
+        <!--文件类型-->
+        <property name="workFileType" column="WORKFILETYPE" />
+
+        <!--当前步骤-->
+        <property name="workCurStep" column="WORKCURSTEP" />
+
+        <!--标题-->
+        <property name="workTitle" column="WORKTITLE" />
+
+        <!--左帧链接文件-->
+    	<property name="workLeftLinkFile" column="WORKLEFTLINKFILE" />
+
+        <!--主帧链接文件-->
+        <property name="workMainLinkFile" column="WORKMAINLINKFILE" />
+
+        <!--显示控制-->
+        <property name="workListControl" column="WORKLISTCONTROL" />
+
+        <!--工作活动-->
+        <property name="workActivity" column="WORKACTIVITY" />
+
+        <!--提交人-->
+        <property name="workSubmitPerson" column="WORKSUBMITPERSON" />
+
+        <!--提交时间-->
+        <property name="workSubmitTime" column="WORKSUBMITTIME" />
+
+        <!--提交人ID-->
+        <property name="wfSubmitEmployeeId" column="WF_SUBMITEMPLOYEE_ID" />
+
+        <!--已读标记-->
+        <property name="workReadMarker" column="WORKREADMARKER" />
+
+        <!--任务类型-->
+        <property name="workType" column="WORKTYPE" />
+
+        <!--工作流过程Id-->
+        <property name="workProcessId" column="WORKPROCESS_ID" />
+
+        <!--数据表ID-->
+        <property name="workTableId" column="WORKTABLE_ID" />
+
+        <!--数据记录ID-->
+        <property name="workRecordId" column="WORKRECORD_ID" />
+
+        <!--办理期限-->
+        <property name="workDeadLine" column="WORKDEADLINE" />
+
+        <!--提醒时间-->
+        <property name="workPressTime" column="WORKPRESSTIME" />
+
+        <!--创建日期-->
+        <property name="workCreateDate" column="WORKCREATEDATE" />
+
+        <!--起始标志-->
+        <property name="workStartFlag" column="WORKSTARTFLAG" />
+
+        <!--办结日期-->
+        <property name="workDoneWithDate" column="WORKDONEWITHDATE" />
+
+        <!--允许撤销-->
+        <property name="workAllowCancel" column="WORKALLOWCANCEL" />
+
+        <!--取消的理由-->
+        <property name="workCancelReason" column="WORKCANCELREASON" />
+
+        <!--是否被删除-->
+        <property name="workDelete" column="WORKDELETE" />
+
+        <!--是否是转办任务-->
+        <property name="workIsTran" column="WORKISTRAN" />
+
+        <!--当前用户选择的办理用户-->
+        <property name="workUser" column="WORKUSER" />
+
+        <!--当前活动在流程中的步骤数-->
+        <property name="workStepCount" column="WORKSTEPCOUNT" />
+
+        <!--发起人取消流程连接-->
+        <property name="creatorCancelLink" column="CREATORCANCELLINK" />
+
+        <property name="isStandForWork" column="ISSTANDFORWORK" />
+
+        <property name="standForUserId" column="STANDFORUSERID" />
+
+        <property name="standForUserName" column="STANDFORUSERNAME" />
+        <property name="initActivity" column="INITACTIVITY" />
+        <property name="initStepCount" column="INITSTEPCOUNT" />
+        <property name="submitOrg" column="SUBMITORG" />
+
+		<!--当前流程已被打印的次数 -->
+        <property name="printNum" column="PRINTNUM" />
+        <property name="transActType" column="transActType"/>
+
+        <property name="emergence" column="emergence" />
+        <property name="initActivityName" column="initActivityName" />
+
+		<property name="workDeadlineDate" column="workDeadlineDate" />
+		<property name="workDeadlinePressDate" column="workDeadlinePressDate" />
+
+		<!--转办自动返回-->
+		<property name="tranType" column="tranType" />
+        <property name="tranFromPersonId" column="tranFromPersonId" />
+        <property name="processDeadlineDate" column="processDeadlineDate" />
+        
+        <property name="isSubProcWork" column="isSubProcWork" />
+        <property name="pareProcActiId" column="pareProcActiId" />
+        <property name="pareStepCount" column="pareStepCount" />
+        <property name="pareTableId" column="pareTableId" />
+        <property name="pareRecordId" column="pareRecordId" />
+        <property name="pareProcNextActiId" column="pareProcNextActiId" />
+        
+	<property name="wfCurEmployeeOrgId" column="wfCurEmployeeOrgId"/>
+    <property name="relProjectId" column="relproject_id" />
+     <property name="domainId" column="domain_id" />
+     <property name="workHangup" column="work_hangup" />
+     <property name="stickie" column="stickie" />
+     <!-- 延迟发送 -->
+     <property name="activityDelaySend" column="activityDelaySend" />
+     
+    </class>
+</hibernate-mapping>

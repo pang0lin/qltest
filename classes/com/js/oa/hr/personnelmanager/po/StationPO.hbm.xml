@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.StationPO" table="ST_STATION">
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="name" column="STATION_NAME" />
+        <property name="domainId" column="DOMAIN_ID" />
+		<property name="describe" column="DESCRIPTION" />
+		<property name="corpId" column="corpId" />
+		<property name="no" column="no" />
+    </class>
+</hibernate-mapping>

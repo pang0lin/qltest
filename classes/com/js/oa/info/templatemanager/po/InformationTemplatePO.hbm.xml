@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.info.templatemanager.po.InformationTemplatePO" table="OA_INFORMATIONTEMPLATE" >
+
+<id name="id" column="TEMPLATE_ID" type="long">
+    <generator class="native"/>
+</id>
+
+<property name="templateTitle" column="TEMPLATETITLE" type="string" length="50"/>
+<property name="templateContent" column="TEMPLATECONTENT" type="net.sf.hibernate.type.TextType"/>
+<property name="templateRemark" column="TEMPLATEREMARK" type="string" length="500"/>
+<property name="createdOrg" column="CREATEDORG" type="long" length="20"/>
+<property name="createdEmp" column="CREATEDEMP" type="long" length="20"/>
+<property name="useRangeName" column="USERANGENAME" type="string" length="2000"/>
+<property name="useEmp" column="USEEMP" type="string" length="1000"/>
+<property name="useOrg" column="USEORG" type="string" length="1000"/>
+<property name="useGroup" column="USEGROUP" type="string" length="1000"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="module" column="module"/>
+<property name="ispublic" column="ispublic"/>
+</class>
+</hibernate-mapping>

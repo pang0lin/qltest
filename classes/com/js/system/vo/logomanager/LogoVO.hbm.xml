@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.system.vo.logomanager.LogoVO" table="org_logo">
+		<id name="logoId" column="LOGO_ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="logoName" column="LOGO_NAME"/>
+       <property name="logoPath" column="LOGO_PATH"/>
+		<property name="bakString1" column="BAK_STRING1"/>
+		<property name="bakString" column="BAK_STRING"/>
+		<property name="companyName" column="company_name"/>
+		<property name="isdisplayLogo" column="isdisplay_logo"/>
+		<property name="isdisplayCompanyName" column="isdisplay_company_name"/>
+		<property name="companyColor" column="company_color"/>
+		<property name="logoType" column="logotype"/>
+		<property name="orgId" column="orgId"/>
+		
+	</class>
+</hibernate-mapping>

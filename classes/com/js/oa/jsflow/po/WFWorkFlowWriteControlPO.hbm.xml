@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--工作流启动时写控制表(JSF_WORKFLOWWRITECONTROL)的配置文件-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFWorkFlowWriteControlPO"
+        table="JSF_WORKFLOWWRITECONTROL"
+        >
+        <id name="wfWorkFlowWriteControlId" column="WF_WORKFLOWWRITECONTROL_ID" type="long">
+            <generator class="native" />
+        </id>
+        <property name="writeControlField" column="WRITECONTROLFIELD" />
+        <property name="domainId" column="DOMAIN_ID" />
+        <property name="controlType" column="controlType" />
+
+        <!--与工作流过程定义表JSF_WORKFLOWPROCESS是多对一关系-->
+        <many-to-one name="wfWorkFlowProcess"
+            class="com.js.oa.jsflow.po.WFWorkFlowProcessPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="WF_WORKFLOWPROCESS_ID" />
+    </class>
+</hibernate-mapping>

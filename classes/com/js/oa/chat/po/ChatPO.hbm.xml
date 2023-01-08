@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.chat.po.ChatPO" table="OA_CHAT" >
+<id name="chatId" column="chat_id" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="chatContent" column="chat_content" />
+<property name="chatTo" column="chat_to" />
+<property name="chatTime" column="chat_time" />
+<property name="chatHasattach" column="chat_hasattach" />
+<property name="chatAttachsize" column="chat_attachsize" />
+
+<property name="senderId" column="sender_id" />
+<property name="senderName" column="sender_name" />
+
+
+<set name="chatUser"
+    table="OA_CHAT_USER"
+
+    lazy="true"
+    inverse="false"
+    cascade="none"
+    sort="unsorted">
+    <key column="chat_id"/>
+    <one-to-many class="com.js.oa.chat.po.ChatUserPO"/>
+</set>
+
+<set name="chatAttach"
+    table="OA_CHAT_ATTACH"
+
+    lazy="true"
+    inverse="false"
+    cascade="none"
+    sort="unsorted">
+    <key column="chat_id"/>
+    <one-to-many class="com.js.oa.chat.po.ChatAttachPO"/>
+</set>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.kq.po.KqOvertimePO" table="kq_overtime" >
+<id name="id" column="ID" type="long">
+<generator class="native" />
+</id>
+<property name="userId" column="USER_ID" />
+<property name="userName" column="USER_NAME" />
+<property name="orgId" column="org_id" />
+<property name="orgName" column="org_name" />
+<property name="cause" column="CAUSE" />
+<property name="projectId" column="PROJECT_ID" />
+<property name="startTime" column="STARTTIME" />
+<property name="endTime" column="ENDTIME" />
+<property name="attendUserId" column="ATTENDUSER_ID" />
+<property name="attendUserName" column="ATTENDUSER_NAME" />
+<property name="attendOrgId" column="ATTENDORG_ID" />
+<property name="attendGroupId" column="ATTENDGROUP_ID" />
+<property name="status" column="STATUS" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.scheme.workreport.po.WorkReportTransmitPO" table="REP_TRANSMIT" >
+<id name="id" column="TRANSMIT_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="transFromEMP" column ="TRANSMIT_FROMEMP" type="long" />
+<property name="transFromEMPName" column ="TRANSMIT_FROMEMPNAME" type="string" />
+<property name="transToEMP" column ="TRANSMIT_TOEMP" type="string" />
+<property name="transToEMPName" column ="TRANSMIT_TOEMPNAME" type="string" />
+<property name="transReason" column ="TRANSMIT_REASON" type="string" />
+<property name="workreportID" column ="WORKREPORT_ID" type="long" />
+<property name="domain" column ="DOMAIN" type="long" />
+<property name="transTime" column ="TRANSMIT_TIME" type="timestamp" />
+</class>
+</hibernate-mapping>

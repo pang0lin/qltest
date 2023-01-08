@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesDossierAccessoryPO" table="OA_ARCHIVESDOSSIERACCESSORY" >
+<id name="accessoryid" column="ACCESSORYID">
+<generator class="native" />
+</id>
+<property name="accessoryname" column="ACCESSORYNAME"/>
+<property name="accessorysavename" column="ACCESSORYSAVENAME"/>
+
+<many-to-one
+	name="archivesDossier"
+	class="com.js.oa.archives.po.ArchivesDossierPO"
+	cascade="none"
+	outer-join="false"
+	update="false"
+	insert="false"
+	column="DOSSIER_ID"
+/>
+</class>
+</hibernate-mapping>

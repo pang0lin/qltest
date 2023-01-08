@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.cooperate.po.BodyPO" table="CO_BODY" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="title" column="title"/>
+<property name="content" column="content" type="net.sf.hibernate.type.TextType"/>
+<property name="postTime" column="postTime"/>
+<property name="posterId" column="posterId"/>
+<property name="posterName" column="posterName"/>
+<property name="postOrgName" column="postOrgName"/>
+<property name="sendToId" column="sendToId"/>
+<property name="sendToName" column="sendToName"/>
+<property name="level" column="co_level"/>
+<property name="status" column="status"/>
+<property name="hasTerm" column="hasTerm"/>
+<property name="term" column="term"/>
+<property name="relProjectId" column="relproject_id"/>
+<property name="infoChannelId" column="infoChannelId"/>
+
+</class>
+</hibernate-mapping>

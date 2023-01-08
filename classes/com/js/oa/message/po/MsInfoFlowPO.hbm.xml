@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsInfoFlowPO" table="MS_INFOFLOW" >
+        <id name="messageId" column="MESSAGEID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="receiveId" column="RECEIVEID" type="java.lang.Long"/>
+        <property name="sendId" column="SENDID" type="java.lang.Long"/>
+        <property name="receiveMan" column="RECEIVEMAN" type="java.lang.String"/>
+        <property name="sendMan" column="SENDMAN" type="java.lang.String"/>
+        <property name="msContent" column="MSCONTENT" type="java.lang.String"/>
+        <property name="sendTime" column="SENDTIME" type="timestamp"/>
+        <property name="receiveCode" column="RECEIVECODE" type="java.lang.String"/>
+        <property name="modelId" column="MODELID" type="java.lang.Long"/>
+        <property name="modelSend" column="MODELSEND" type="java.lang.String"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+		<property name="serial" column="SERIAL" type="java.lang.String"/>
+		<property name="serialPwd" column="SERIALPWD" type="java.lang.String"/>
+		<property name="dataId" column="dataId" type="java.lang.Long"/>
+	</class>
+</hibernate-mapping>

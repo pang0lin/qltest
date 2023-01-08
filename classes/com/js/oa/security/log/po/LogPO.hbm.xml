@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.security.log.po.LogPO" table="SEC_LOG" >
+<id name="logId" column="LOG_ID" type="java.lang.Long">
+	<generator class="native" />
+</id>
+<property name="empId" column="EMP_ID"/>
+<property name="empName" column="EMPNAME"/>
+<property name="empOrgName" column="EMPORGNAME"/>
+<property name="moduleSerial" column="MODULE_SERIAL"/>
+<property name="oprStartTime" column="OPRSTARTTIME"/>
+<property name="oprEndTime" column="OPRENDTIME"/>
+<property name="oprSubModule" column="OPRSUBMODULE"/>
+<property name="oprType" column="OPRTYPE"/>
+<property name="oprContent" column="OPRCONTENT"/>
+<property name="logIP" column="LOGIP"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+</class>
+</hibernate-mapping>
+
+

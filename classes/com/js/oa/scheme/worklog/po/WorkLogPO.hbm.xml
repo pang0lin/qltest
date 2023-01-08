@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class
+    name="com.js.oa.scheme.worklog.po.WorkLogPO"
+    table="REP_LOG"
+    
+>
+
+    <id
+        name="logId"
+        type="java.lang.Long"
+        column="LOG_ID"
+    >
+       <generator class="native" />
+    </id>
+
+    <property
+        name="logDomainId"
+        type="java.lang.Long"
+        column="DOMAIN_ID"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <property
+        name="empName"
+        type="java.lang.String"
+        column="EMPNAME"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectStep"
+        type="java.lang.String"
+        column="PROJECTSTEP"
+        not-null="false"
+        length="30"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="logContent"
+        type="java.lang.String"
+        column="LOGCONTENT"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="logDate"
+        type="java.sql.Timestamp"
+        column="LOGDATE"
+        length="7"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="manHour"
+        type="java.lang.Float"
+        column="MANHOUR"
+        length="4"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+	 <property
+        name="dailyId"
+        type="java.lang.String"
+        column="DAILY_ID"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="createdEmp"
+        type="java.lang.Long"
+        column="CREATEDEMP"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="createdOrg"
+        type="java.lang.Long"
+        column="CREATEDORG"
+        length="20"
+    />
+
+    <!--add By zhuo-->
+    <property name="logType" column="LOGTYPE" />
+    <property name="startPeriod" column="STARTPERIOD" />
+    <property name="endPeriod" column="ENDPERIOD" />
+    <property name="projectName" column="PROJECTNAME" />
+    <property name="logResult" column="LOGRESULT" />
+    <property name="logRemark" column="LOGREMARK"  type="net.sf.hibernate.type.TextType" />
+    <property name="logWriteDate" column="LOGWRITEDATE" />
+    <property name="contentType" column="CONTENTTYPE" />
+    <property name="weather" column="WEATHER" />
+    <property name="hadread" column="hadread" />
+	<property name="taskAchieve" column="taskachieve" />
+	<property name="taskLoad" column="taskload" />
+	<property name="projectTaskName" column="projectTaskName" />
+	<property name="projectTaskCode" column="projectTaskCode" />
+    <!-- associations -->
+    <!-- bi-directional many-to-one association to OaWorkproject -->
+    <many-to-one
+        name="workProject"
+        class="com.js.oa.scheme.worklog.po.WorkProjectPO"
+        not-null="false"
+    >
+        <column name="PROJECT_ID" />
+    </many-to-one>
+        <many-to-one
+        name="relProject"
+        class="com.js.oa.relproject.po.RelProjectPO"
+        not-null="false"
+    >
+        <column name="RELPROJECT_ID" />
+    </many-to-one>
+
+	<!--与OA_WORKLOGCOMMENT（日志评论）表是一对多的关系-->
+    <set name="worklogComment"
+            table="REP_LOGCOMMENT"
+			
+            lazy="true"
+            inverse="false"
+            cascade="all"
+			 order-by="COMMENTISSUETIME DESC"
+            sort="unsorted">
+            <key column="LOG_ID" />
+            <one-to-many class="com.js.oa.scheme.worklog.po.WorkLogCommentPO" />
+    </set>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,668 @@
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+	<property name="connection.datasource">
+		java:comp/env/jdbc/jsdb
+	</property>
+	<property name="hibernate.connection.provider_class">
+		net.sf.hibernate.connection.DatasourceConnectionProvider
+	</property>
+   <property name="hibernate.dialect">net.sf.hibernate.dialect.MySQLDialect</property>
+	<!--
+	<property name="hibernate.dialect">net.sf.hibernate.dialect.MySQLDialect</property>
+	<property name="hibernate.dialect">net.sf.hibernate.dialect.Oracle9Dialect</property>
+	<property name="hibernate.dialect">net.sf.hibernate.dialect.DmDialect</property>
+	<property name="hibernate.dialect">net.sf.hibernate.dialect.SybaseDialect</property>
+	-->
+
+	<property name="hibernate.jdbc.fetch_size">50</property>
+	<property name="hibernate.jdbc.batch_size">0</property>
+	<property name="hibernate.transaction.factory_class">
+		net.sf.hibernate.transaction.JDBCTransactionFactory
+	</property>
+	<property name="hibernate.cache.provider_class">
+		net.sf.hibernate.cache.HashtableCacheProvider
+	</property>
+	<!--
+		<property name="hibernate.transaction.manager_lookup_class">net.sf.hibernate.transaction.WeblogicTransactionManagerLookup</property>
+		<property name="hibernate.transaction.manager_lookup_class">net.sf.hibernate.transaction.WebSphereTransactionManagerLookup</property>
+		<property name="hibernate.transaction.manager_lookup_class">net.sf.hibernate.transaction.ResinTransactionManagerLookup</property>
+	-->
+
+	<property name="show_sql">false</property>
+	<property name="hibernate.max_fetch_depth">1</property>
+	<property name="hibernate.jdbc.use_streams_for_binary">
+		true
+	</property>
+	<property name="hibernate.session_factory_name">hibernate</property>
+	<property name="hibernate.jdbc.use_scrollable_resultset">
+		false
+	</property>
+
+	<mapping resource="com/js/system/vo/groupmanager/GroupVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/organizationmanager/OrganizationVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/organizationmanager/DomainVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/rolemanager/RoleVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/rolemanager/RightScopeVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/EmployeeVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/usermanager/EmployeeOrgVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/rightmanager/RightVO.hbm.xml" />
+	<mapping resource="com/js/system/basedata/po/DistrictPO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/organizationmanager/SyncRTXVO.hbm.xml" />
+
+	<mapping resource="com/js/system/menu/po/MenuSetPO.hbm.xml" />
+	<mapping resource="com/js/oa/security/ip/po/IPPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/info/channelmanager/po/InformationChannelPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/channelmanager/po/UserChannelPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/channelmanager/po/ChannelPositionPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/channelmanager/po/DepartmentStylePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InformationPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InformationCommentPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InformationBrowserPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InformationAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InformationHistoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InforHistoryAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/templatemanager/po/InformationTemplatePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InforPersonalStatPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/InforOrgStatPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/info/infomanager/po/AssociateInfoPO.hbm.xml" />
+	<mapping resource="com/js/oa/info/isodoc/po/IsoCommentPO.hbm.xml" />
+	<mapping resource="com/js/oa/info/isodoc/po/IsoDeallogPO.hbm.xml" />
+	<mapping resource="com/js/oa/info/isodoc/po/IsoPaperPO.hbm.xml" />
+	
+	<mapping
+		resource="com/js/oa/info/isodoc/po/IsoBorrowUserPO.hbm.xml" />
+	
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/NetSurveyItemPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/NetSurveyPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/NetSurveyVotePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/BirthdayWishPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/FestivalSetPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/QuestionnairePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/QuesthemePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/ThemeOptionPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/AnswerSheetPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/AnswerSheetOptionPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/AnswerSheetContentPO.hbm.xml" />
+
+
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/MyInfoPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/SoundSetPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/WorkProxyPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/OfficalDictionPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/SoundRemindPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/netaddress/po/AddressPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/netaddress/po/AddressClassPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/netaddress/po/AddressShowPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/paper/po/NotePaperPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/person/po/PersonClassPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/person/po/PersonPO.hbm.xml" />
+
+
+	<mapping
+		resource="com/js/oa/scheme/workreport/po/WorkReportLeaderPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/workreport/po/WorkReportPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/workreport/po/WorkReportPostilPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/workreport/po/WorkReportTemplatePO.hbm.xml" />
+
+
+	<mapping resource="com/js/oa/bbs/po/ForumClassPO.hbm.xml" />
+	<mapping resource="com/js/oa/bbs/po/ForumPO.hbm.xml" />
+	<mapping resource="com/js/oa/bbs/po/PersonalStatPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/routine/resource/po/StockPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/PtMasterPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/PtDetailPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/GoodsTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/routine/resource/po/GoodsPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/DrawDeptPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/SsMasterPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/SsDetailPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/StockChangePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/GoodsStockPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/CsMasterPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/CsDetailPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/WorkFlowStockPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/resource/po/TypeDefinePO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/scheme/worklog/po/ProjectStepPO.hbm.xml" />
+	<mapping resource="com/js/oa/scheme/worklog/po/WorkLogPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/worklog/po/WorkProjectClassPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/worklog/po/WorkProjectPO.hbm.xml" />
+	<mapping resource="com/js/oa/scheme/worklog/vo/WorkLogDO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/worklog/po/WorkLogCommentPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/worklog/po/WorkProjectTaskPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskClassPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskExecPO.hbm.xml" />
+	<mapping resource="com/js/oa/scheme/taskcenter/po/TaskPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskReportPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskRemindPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskReportAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskPeriodicityPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskHistoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskHistoryAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/taskcenter/po/TaskPeriodicityAccessoryPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/scheme/event/po/EventPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/scheme/event/po/EventAttenderPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/scheme/workreport/po/WorkReportTransmitPO.hbm.xml" />
+
+
+	<mapping
+		resource="com/js/oa/hr/officemanager/po/PostTitlePO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/officemanager/po/DutyPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/jsflow/po/WFPackagePO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WFWorkFlowProcessPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/jsflow/po/WFWorkFlowWriteControlPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WFActivityPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WFPressPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/jsflow/po/WFReadWriteControlPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WFTransitionPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/jsflow/po/WFTransitionRestrictionPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WFWorkPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WorkFlowChannelPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WorkFlowImmoFormPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/TTablePO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/TFieldPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/TTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/TShowPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/WFProtectControlPO.hbm.xml" />
+	<mapping resource="com/js/oa/jsflow/po/JSFPDraftPO.hbm.xml" />
+
+
+	<mapping resource="com/js/oa/archives/po/ArchivesClassPO.hbm.xml" />
+	<mapping resource="com/js/oa/archives/po/ArchivesDossierPO.hbm.xml" />
+	<mapping resource="com/js/oa/archives/po/ArchivesFilePO.hbm.xml" />
+	<mapping resource="com/js/oa/archives/po/ArchivesBorrowPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/archives/po/ArchivesFileAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/archives/po/ArchivesDossierAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/archives/po/ArchivesPigeonholeSetPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/archives/po/ArchivesWaitPigeonholePO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmployeeChangePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmployeeChangeTypePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/StationPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/WorkAttendancePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/routine/voiture/po/VoiturePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureMaintainPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureSendPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureApplyPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureFeePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureAuditingPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureCancelPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/voiture/po/VoitureFeedbackPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomApplyPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/EquipmentPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/EquipmentTypePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/EquipmentApplyPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomApplyTypePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BdroomAppAccessoryPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardroomPersons.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardroomMeetingTimePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardroomExecuteStatusPO.hbm.xml" />
+
+	<mapping resource="com/js/doc/doc/po/GovTypeSetPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovTopicWordPO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovPleaseCheckCommentPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovPleaseCheckPO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovSendFileCheckCommentPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovSendFileCheckPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovComeFileUnitPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovDocumentSendFilePO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovReceiveFilePO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovReceiveFileTypePO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovSendFileBrowserPO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovSendFileNoBrowserPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovSendFileUserPO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovSendFileCheckAccePO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovSendFileCheckWithWorkFlowAccePO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovSendFileCheckWithWorkFlowPO.hbm.xml" />
+
+	<mapping resource="com/js/doc/doc/po/GovFileReadPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovFileReadAccePO.hbm.xml" />
+
+
+	<mapping resource="com/js/doc/doc/po/BaseInfoPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/SendDocumentWordPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/SendDocumentSeqPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/SendDocumentNumPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/SenddocumentTopicalPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/SendDocumentUnitPO.hbm.xml" />
+
+	<mapping resource="com/js/doc/doc/po/GovCustomPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/GovCustomFieldPO.hbm.xml" />
+	<mapping
+		resource="com/js/doc/doc/po/GovCustomCheckedFieldPO.hbm.xml" />
+
+
+	<mapping resource="com/js/oa/message/po/MsDescribePO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsInfoFlowPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsInfoListPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsCountPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsLimitPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsOutMoPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsModelPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsAccountBookPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsManagePO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsManageInfoPO.hbm.xml" />
+	<mapping resource="com/js/oa/message/po/MsHistoryPO.hbm.xml" />
+
+	<mapping resource="com/js/util/hibernate/SeqPO.hbm.xml" />
+
+
+	<mapping
+		resource="com/js/oa/portal/po/CustomDesktopLayoutPO.hbm.xml" />
+	<mapping resource="com/js/oa/security/log/po/LogPO.hbm.xml" />
+	<mapping resource="com/js/oa/security/log/po/LogModulePO.hbm.xml" />
+
+	<mapping resource="com/js/oa/eform/po/TPagePO.hbm.xml" />
+	<mapping resource="com/js/oa/eform/po/TAreaTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/eform/po/TAreaPO.hbm.xml" />
+	<mapping resource="com/js/oa/eform/po/TEltPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/module/po/ModuleMenuPO.hbm.xml" />
+	<mapping resource="com/js/oa/module/po/SystemMenuPO.hbm.xml" />
+	<mapping resource="com/js/oa/module/po/ModuleSEQPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/netdisk/po/NetDiskPO.hbm.xml" />
+
+	<mapping resource="com/js/doc/doc/po/ReceiveFileSeqPO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/SendFlowResavePO.hbm.xml" />
+	<mapping resource="com/js/doc/doc/po/ReceiveBaseInfoPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/TrainClassPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/WorkAddressPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/TrainRecordPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/HortationPunishPO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/usermanager/CompetenceVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/ContractVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/EdustoryVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/usermanager/TrainhistoryVO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/HprecordPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomEquipmentPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationTypePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationStockPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationItemPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationSelfTestPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationSelfTestItemPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationManagePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationPersonnelPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationAnswerPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/examination/po/ExaminationAnswerItemPO.hbm.xml" />
+
+
+
+	<mapping
+		resource="com/js/oa/pressdeal/po/OaPersonoaFeedbackPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/pressdeal/po/OaPersonoaPressPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/pressdeal/po/OaPersonoaUserPressRelatioPO.hbm.xml" />
+
+
+	<mapping resource="com/js/doc/doc/po/SendAssociatePO.hbm.xml" />
+
+	<mapping resource="com/js/doc/doc/po/SenddocumentUpdate.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/PersonalKindPO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/WorkVO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/PerformanceCheckPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmpCompoPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmpInhabitancyPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmpSocialinsurancePO.hbm.xml" />
+
+	<mapping resource="com/js/doc/doc/po/ReceiveAssociatePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmpAttendancePO.hbm.xml" />
+
+	<mapping resource="com/js/oa/online/po/SecurityOnlineuser.hbm.xml" />
+	<!-- <mapping resource="com/js/oa/online/po/ChatPO.hbm.xml" />  -->
+	<!-- <mapping resource="com/js/oa/online/po/ChatAccessoryPO.hbm.xml" /> -->
+	<mapping resource="com/js/oa/box/po/BoxPO.hbm.xml" />
+	<mapping resource="com/js/system/vo/mailmanager/MailVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/logomanager/LogoVO.hbm.xml" />
+	<mapping resource="com/active/e_uc/user/po/TblJilu.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/SalaryPO.hbm.xml" />
+	<mapping resource="com/js/oa/webmail/po/Affix.hbm.xml" />
+	<mapping resource="com/js/oa/webmail/po/Attach.hbm.xml" />
+	<mapping resource="com/js/oa/webmail/po/WebMail.hbm.xml" />
+	<mapping resource="com/js/oa/webmail/po/WebMailAcc.hbm.xml" />
+	<mapping resource="com/js/oa/webmail/po/WebMailTemp.hbm.xml" />
+
+
+	<mapping resource="com/js/cooperate/po/AttachPO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/BodyExPO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/BodyPO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/NodeMemberPO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/NodeOpinionPO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/NodePO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/NodeRelPO.hbm.xml" />
+	<mapping resource="com/js/cooperate/po/TemplatePO.hbm.xml" />
+
+	<mapping resource="com/js/oa/relproject/po/RelProjectPO.hbm.xml" />
+	<mapping resource="com/js/oa/relproject/po/RelProActorPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/relproject/po/RelProActorSinglePO.hbm.xml" />
+	<mapping resource="com/js/oa/relproject/po/RelProCatalogPO.hbm.xml" />
+	<mapping resource="com/js/oa/relproject/po/RelProItemPO.hbm.xml" />
+	<mapping resource="com/js/oa/relproject/po/ProNotePO.hbm.xml" />
+
+	<mapping resource="com/js/system/vo/rssmanager/CategoryVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/rssmanager/CategoryChannelVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/rssmanager/ChannelInfoVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/rssmanager/ChannelItemVO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/rssmanager/ChannelOrderVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/rssmanager/ItemStateVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/messages/MessagesVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/messages/Remind.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/RemindSetPO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/messages/MessagesStatusSet.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/subsidiarywork/po/OARemindPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomApplyAssPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqCheckinInfoPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqOvertimePO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqEvectionPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqOutPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqLeavaPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqLeavaTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqOvertimeUserPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqDutyRangePO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqDutySetPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqHolidayPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqWeiXinBMDPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqNosignPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqOffsetPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqRecordPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqSigntimePO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqNosignUserPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/netemp/po/NetEmpPO.hbm.xml" />
+	<mapping
+		resource="com/js/system/vo/sysclientemail/SysClientEmailVO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/personalwork/setup/po/RemindTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/relproject/po/RelProClassPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/crm/po/Cst.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstSell.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstVisit.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstType.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/ProType.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/VisitType.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstTypeRela.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/NumType.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstLinkPerson.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstSellHis.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstLinkThing.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstFile.hbm.xml" />
+	<mapping resource="com/js/oa/crm/po/CstFileHis.hbm.xml" />
+
+	<mapping resource="com/js/oa/audit/po/AuditLog.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditModule.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditManager.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditOrgGroup.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditIpPO.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditPortalPO.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditMenuPO.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/RolePO.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditEmployeePO.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/OrganizationPO.hbm.xml" />
+	<mapping resource="com/js/oa/audit/po/AuditModuleMenuPO.hbm.xml" />
+	<mapping resource="com/js/oa/oasysremind/po/OASysRemindPO.hbm.xml" />
+	<mapping resource="com/js/oa/oacollect/po/OaCollect.hbm.xml" />
+	<mapping resource="com/js/oa/oacollect/po/OaCollectEmp.hbm.xml" />
+	<mapping
+		resource="com/js/oa/userdb/statistics/po/JsfStatisticsManage.hbm.xml" />
+	<mapping resource="com/js/oa/relproject/po/ProAlarmSet.hbm.xml" />
+	<mapping resource="com/js/oa/userdb/po/BaseSetPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/security/seamoon/po/SecSeaMoon.hbm.xml" />
+	<mapping
+		resource="com/js/oa/oacollect/po/OaCollectCategory.hbm.xml" />
+     
+	<mapping resource="com/js/oa/hr/kq/po/KqWaiChuPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqChuChaiPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqJiaBanPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqQingJiaPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/kq/po/KqDutyOutPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/finance/po/FTable.hbm.xml" />
+	<mapping resource="com/js/oa/hr/finance/po/FField.hbm.xml" />
+	<mapping resource="com/js/oa/hr/finance/po/FPage.hbm.xml" />
+	<mapping resource="com/js/oa/hr/finance/po/FUser.hbm.xml" />
+	<mapping resource="com/js/oa/oacollect/po/OaCollectFile.hbm.xml" />
+	<mapping
+		resource="com/js/oa/hr/personnelmanager/po/EmpRemindPO.hbm.xml" />
+	<mapping resource="com/js/oa/report/po/ReportPO.hbm.xml" />
+	<mapping resource="com/js/oa/report/po/ReportTypePO.hbm.xml" />
+	<mapping resource="com/js/oa/report/po/ReportReplacePO.hbm.xml" />
+	<mapping resource="com/js/oa/security/log/po/LogHisPO.hbm.xml" />
+
+
+
+	<mapping
+		resource="com/js/oa/routine/officeroom/po/OfficeBuildPO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/officeroom/po/OfficePO.hbm.xml" />
+	<mapping
+		resource="com/js/oa/routine/officeroom/po/OfficeUsePO.hbm.xml" />
+
+
+
+	<mapping
+		resource="com/js/oa/personalwork/netaddress/po/AddressUpdatePO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomDiscussionPO.hbm.xml" />
+
+	<mapping
+		resource="com/js/oa/routine/boardroom/po/BoardRoomRegularPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/workplan/po/WorkplanPO.hbm.xml" />
+	<mapping resource="com/js/oa/workplan/po/WorkplanGroupPO.hbm.xml" />
+	<mapping resource="com/js/oa/workplan/po/WorkplanStatusPO.hbm.xml" />
+	<mapping resource="com/js/oa/workplan/po/WorkplanProxyPO.hbm.xml" />
+
+	<mapping resource="com/js/oa/chat/po/ChatPO.hbm.xml" />
+	<mapping resource="com/js/oa/chat/po/ChatUserPO.hbm.xml" />
+	<mapping resource="com/js/oa/chat/po/ChatAttachPO.hbm.xml" />
+	<mapping resource="com/js/oa/zky/po/ZkyMangersPO.hbm.xml" />
+	<mapping resource="com/js/oa/zky/po/ZkyMedicalPO.hbm.xml" />
+	<mapping resource="com/js/oa/zky/po/ZkyMedicalStockPO.hbm.xml" />
+	<mapping resource="com/js/oa/hr/resume/po/ResumePO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/EmployeeOtherInfoVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/ChildrenVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/QtqsqkVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/GnwgxVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/JcxxVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/PxjlVO.hbm.xml" />
+	<mapping resource="com/js/system/vo/usermanager/BankCardVO.hbm.xml"/>
+	<mapping resource="com/js/oa/portal/po/CustomurlPO.hbm.xml" />
+
+	<!-- 留言墙 -->
+	<mapping resource="com/js/oa/messageWall/po/MessageWallPO.hbm.xml"/>
+	<mapping resource="com/js/oa/messageWall/po/MessageWallGrantPO.hbm.xml"/>
+	<mapping resource="com/js/oa/hr/kq/po/KqOutsideCheckinInfoPO.hbm.xml"/>
+	
+	<mapping resource="com/js/oa/scheme/taskcenter/po/TaskPressPO.hbm.xml"/>
+	<!-- 东城区 -->
+	<mapping resource="com/js/oa/dcq/po/DcqSendfilePO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqFileaccessoryPO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqInformationPO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqInspectorPO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqMeetingPO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqMessagesubmissionPO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqRecivefilePO.hbm.xml"/>
+	<mapping resource="com/js/oa/dcq/po/DcqMeetingMaterialsPO.hbm.xml"/>
+	
+	<mapping resource="com/js/oa/portal/po/CustomDefaultPO.hbm.xml"/>
+	<mapping resource="com/js/oa/userdb/newCode/po/NewCodePO.hbm.xml"/>
+	<mapping resource="com/js/oa/userdb/newCode/po/CodeSetPO.hbm.xml"/>
+	
+	<mapping resource="com/js/oa/datasync/po/DataSyncFieldPO.hbm.xml"/>
+	<mapping resource="com/js/oa/datasync/po/DataSyncPO.hbm.xml"/>
+	<mapping resource="com/js/oa/datasync/po/DataSyncSetPO.hbm.xml"/>
+	
+	<mapping resource="com/js/oa/haier/po/ERPStockPO.hbm.xml"/>
+	<mapping resource="com/js/oa/info/infomanager/po/InfoProFilePO.hbm.xml" />
+	<mapping resource="com/js/oa/info/infomanager/po/InfoProFileReviewPO.hbm.xml" />
+	
+	
+</session-factory>
+
+</hibernate-configuration>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+    
+<hibernate-mapping>
+    <class name="com.js.oa.scheme.taskcenter.po.TaskPressPO" table="OA_TASKPRESS" >
+        <id name="pressId" type="java.lang.Long" column="pressId">
+            <generator class="native" />
+		</id>
+        <property name="pressContext" column="pressContext" />
+        <property name="pressUserName" column="pressUserName" />
+        <property name="toUserName" column="toUserName" />
+        <property name="pressUserId" type="java.lang.Long" column="pressUserId" length="20"/>
+        <property name="taskId" type="java.lang.Long" column="taskId" length="20"/>
+        <property name="toUserId"  column="toUserId" />
+        <property name="pressDate" column="pressDate" />
+        <property name="isHidden" type="java.lang.Integer" column="isHidden" />
+        <property name="presstype" type="java.lang.Integer" column="presstype" />
+    </class>
+</hibernate-mapping>

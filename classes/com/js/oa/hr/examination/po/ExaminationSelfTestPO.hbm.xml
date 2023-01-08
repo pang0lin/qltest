@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.examination.po.ExaminationSelfTestPO" table="OA_EXAMINATION_SELFTEST" >
+<id name="selfTestID" column="SELFTESTID" >
+	<generator class="native"/>
+</id>
+
+<property name="testEmpID" column="TESTEMPID" />
+<property name="testEmpName" column="TESTEMPNAME" />
+<property name="testOrgID" column="TESTORGID" />
+<property name="testOrgName" column="TESTORGNAME" />
+<property name="testTime" column="TESTTIME" />
+<property name="domainId" column="DOMAIN_ID" />
+<set name="examinationSelfTestItem"
+            
+            table="OA_EXAMINATION_SELFTEST_ITEM"
+            lazy="false"
+            inverse="true"
+            cascade="none"
+            order-by="ITEMID"
+            sort="unsorted">
+            <key column="SELFTESTID" />
+            <one-to-many class="com.js.oa.hr.examination.po.ExaminationSelfTestItemPO" />
+  </set>
+</class>
+</hibernate-mapping>

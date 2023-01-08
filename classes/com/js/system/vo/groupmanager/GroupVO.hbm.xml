@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.groupmanager.GroupVO" table="ORG_GROUP">
+<id name="groupId" column="GROUP_ID" type="long">
+	<generator class="native" />
+</id>
+<property name="groupName" column="GROUP_NAME" type="java.lang.String" length="30" not-null="true"/>
+<property name="groupDescription" column="GROUPDESCRIPTION" />
+<property name="groupUserString" column="GROUPUSERSTRING" type="net.sf.hibernate.type.TextType" />
+<property name="groupUserNames" column="GROUPUSERNAMES" type="net.sf.hibernate.type.TextType" />
+<property name="createdOrg" column="CREATEDORG" />
+<property name="createdEmp" column="CREATEDEMP" />
+
+<property name="rangeName" column="RANGENAME" />
+<property name="rangeEmp" column="RANGEEMP" />
+<property name="rangeOrg" column="RANGEORG" />
+<property name="rangeGroup" column="RANGEGROUP" />
+<property name="domainId" column="DOMAIN_ID" />
+<property name="groupType" column="GROUPTYPE" />
+<property name="groupOrder" column="GROUPORDER" />
+<property name="orgIdString" column="ORGIDSTRING" />
+
+<set name="employees"
+     table="ORG_USER_GROUP"
+     lazy="true"
+     inverse="false"
+     cascade="none"
+     sort="unsorted">
+     <key column="Group_id"/>
+     <many-to-many
+         class="com.js.system.vo.usermanager.EmployeeVO"
+		 column="Emp_id"
+		 outer-join="false"
+	 />
+</set>
+
+</class>
+</hibernate-mapping>

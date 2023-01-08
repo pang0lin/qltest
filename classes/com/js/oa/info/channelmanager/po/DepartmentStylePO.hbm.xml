@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.channelmanager.po.DepartmentStylePO"
+        table="OA_DEPARTMENTSTYLE"
+        >
+        <id name="styleId" column="STYLE_ID">
+            <generator class="assigned" />
+        </id>
+        <property name="styleName" column="STYLE_NAME" />
+        <property name="topPic1" column="TOPPIC1" />
+        <property name="topPic2" column="TOPPIC2" />
+        <property name="topPic3" column="TOPPIC3" />
+        <property name="topPic4" column="TOPPIC4" />
+        <property name="topPic5" column="TOPPIC5" />
+        <property name="topPic6" column="TOPPIC6" />
+        <property name="topPic7" column="TOPPIC7" />
+        <property name="topPic8" column="TOPPIC8" />
+
+        <property name="leftPic1" column="LEFTPIC1" />
+        <property name="leftPic2" column="LEFTPIC2" />
+
+        <property name="rightPic1" column="RIGHTPIC1" />
+        <property name="rightPic2" column="RIGHTPIC2" />
+        <property name="rightPic3" column="RIGHTPIC3" />
+        <property name="rightPic4" column="RIGHTPIC4" />
+        <property name="rightPic5" column="RIGHTPIC5" />
+        <property name="rightPic6" column="RIGHTPIC6" />
+        <property name="rightPic7" column="RIGHTPIC7" />
+        <property name="rightPic8" column="RIGHTPIC8" />
+        <property name="rightCss1" column="RIGHTCSS1" />
+        <property name="nyPic1" column="NYPIC1" />
+        <property name="nyPic2" column="NYPIC2" />
+        <property name="nyColor1" column="NYCOLOR1" />
+        <property name="otherPic1" column="OTHERPIC1" />
+        <property name="otherPic2" column="OTHERPIC2" />
+        <property name="otherPic3" column="OTHERPIC3" />
+        <property name="otherColor1" column="OTHERCOLOR1" />
+    </class>
+</hibernate-mapping>

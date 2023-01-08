@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.RWSWorkFlowStatusPO"  table="RWS_WorkFlowStatus">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="tableName" column="tableName" />
+		<property name="recordId" column="recordId" />
+		<property name="status" column="status"/>
+		<property name="yuguidang_empid" column="yuguidang_empid"/>
+		<property name="yuguidang_time" column="yuguidang_time"/>
+		<property name="guidang_empid" column="guidang_empid"/>
+		<property name="guidang_time" column="guidang_time"/>
+		<property name="guidang_guid" column="guidang_guid"/>
+		<property name="quxiaoguidang_empid" column="quxiaoguidang_empid"/>
+		<property name="quxiaoguidang_time" column="quxiaoguidang_time"/>
+		<property name="tongyiguidang_empid" column="tongyiguidang_empid" />
+		<property name="tongyiguidang_time" column="tongyiguidang_time" />
+	</class>
+</hibernate-mapping>

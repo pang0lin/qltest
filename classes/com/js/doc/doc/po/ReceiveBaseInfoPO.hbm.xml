@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.ReceiveBaseInfoPO"  table="DOC_receivedocumentBASEINFO">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+                <property name="receiveFileType" column="receiveFileType" />
+                <property name="pigeonholeType" column="pigeonholeType" />
+                <property name="decumentKind" column="decumentKind"/>
+                <property name="receiveSecretLevel" column="receiveSecretLevel"/>
+                <property name="urgencyLevel" column="urgencyLevel"/>
+                <property name="keepTerm" column="keepTerm"/>
+                <property name="seqType" column="seqType"/>
+                <property name="receiveDropDownSelect1" column="receive_drop_down_select1" />
+				<property name="receiveDropDownSelect2" column="receive_drop_down_select2" />
+	</class>
+</hibernate-mapping>
+
+
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.scheme.taskcenter.po.TaskReportAccessoryPO" table="OA_TASKREPORTACCESSORY" >
+<id name="accessoryid" column="ACCESSORYID">
+<generator class="native" />
+</id>
+<property name="accessoryname" column="ACCESSORYNAME"/>
+<property name="accessorysavename" column="ACCESSORYSAVENAME"/>
+<property name="domain_id" column="DOMAIN_ID"/>
+
+
+<many-to-one
+	name="taskReport"
+	class="com.js.oa.scheme.taskcenter.po.TaskReportPO"
+	cascade="none"
+	outer-join="false"
+	update="false"
+	insert="false"
+	column="REPORT_ID"
+/>
+</class>
+</hibernate-mapping>

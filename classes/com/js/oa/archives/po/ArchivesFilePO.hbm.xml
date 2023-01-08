@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesFilePO" table="OA_ARCHIVESFILE" >
+<id name="fileId" column="FILE_ID">
+<generator class="native" />
+</id>
+
+<property name="placeNo" column="PLACENO"/>
+<property name="roomNo" column="ROOMNO"/>
+<property name="fileNo" column="FILENO"/>
+<property name="principal" column="PRINCIPAL"/>
+<property name="principalName" column="PRINCIPALNAME"/>
+<property name="fileName" column="FILENAME"/>
+<property name="fileKey" column="FILEKEY"/>
+<property name="pageCount" column="PAGECOUNT"/>
+<property name="copyCount" column="COPYCOUNT"/>
+<property name="residualCount" column="RESIDUALCOUNT"/>
+<property name="secretLevel" column="SECRETLEVEL"/>
+<property name="saveStyle" column="SAVESTYLE"/>
+<property name="saveBeginTime" column="SAVEBEGINTIME"/>
+<property name="saveEndTime" column="SAVEENDTIME"/>
+<property name="fileRemark" column="FILEREMARK"/>
+<property name="fileStatus" column="FILESTATUS"/>
+<property name="pigeonholeStatus" column="PIGEONHOLESTATUS"/>
+<property name="isBorrow" column="ISBORROWED"/>
+<property name="classReader" column="CLASSREADER"/>
+<property name="classReadOrg" column="CLASSREADORG"/>
+<property name="classReadGroup" column="CLASSREADGROUP"/>
+<property name="classReadName" column="CLASSREADNAME"/>
+<property name="createdEmp" column="CREATEDEMP"/>
+<property name="createdOrg" column="CREATEDORG"/>
+<property name="isWaitPigeonhole" column="ISWAITPIGEONHOLE"/>
+<property name="pigeonholeCaption" column="PIGEONHOLECAPTION"/>
+<property name="pigeonholeTypeName" column="PIGEONHOLETYPENAME"/>
+<property name="pigeonholeFileName" column="PIGEONHOLEFILENAME"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+<property name="serialNO" column="SERIALNO"/>
+<property name="registrNO" column="REGISTRNO"/>
+<property name="classNO" column="CLASSNO"/>
+<property name="microNO" column="MICRONO"/>
+<property name="dossierNO" column="DOSSIERNO"/>
+<property name="model" column="MODEL"/>
+<property name="archiveCode" column="ARCHIVECODE"/>
+<property name="duty" column="DUTY"/>
+<property name="attendEmp" column="ATTENDEMP"/>
+<property name="attendEmpName" column="ATTENDEMPNAME"/>
+<property name="pigeonholeOrg" column="PIGEONHOLEORG"/>
+<property name="pigeonholeOrgName" column="PIGEONHOLEORGNAME"/>
+<property name="pigeonholeDate" column="PIGEONHOLEDATE"/>
+<property name="achievePhase" column="ACHIEVEPHASE"/>
+<property name="itemClass" column="ITEMCLASS"/>
+<property name="volume" column="VOLUME"/>
+<property name="totalLength" column="TOTALLENGTH"/>
+<property name="drawingNO" column="DRAWINGNO"/>
+<property name="specPage" column="SPECPAGE"/>
+<property name="cooperateUnits" column="COOPERATEUNITS"/>
+<property name="appraisalDate" column="APPRAISALDATE"/>
+<property name="appraisalUnit" column="APPRAISALUNIT"/>
+<property name="patentNO" column="PATENTNO"/>
+<property name="approveDate" column="APPROVEDATE"/>
+<property name="awardDate" column="AWARDDATE"/>
+<property name="awardUnit" column="AWARDUNIT"/>
+<property name="hortationLevel" column="HORTATIONLEVEL"/>
+<property name="merit" column="MERIT"/>
+<property name="technicData" column="TECHNICDATA"/>
+<property name="reachLevel" column="reachlevel"/>
+<property name="archivesType" column="ARCHIVESTYPE"/>
+
+<many-to-one
+    	name="archivesDossier"
+        class="com.js.oa.archives.po.ArchivesDossierPO"
+        not-null="true"
+    >
+        <column name="DOSSIER_ID" />
+    </many-to-one>
+
+<set name="archivesFileAccessory"
+    table="OA_ARCHIVESFILEACCESSORY"
+    lazy="true"
+    inverse="false"
+    cascade="none"
+    sort="unsorted">
+    <key column="FILE_ID"/>
+    <one-to-many class="com.js.oa.archives.po.ArchivesFileAccessoryPO"/>
+</set>
+
+<set name="archivesBorrow"
+    table="OA_ARCHIVESBORROW"
+    lazy="true"
+    inverse="false"
+    cascade="none"
+    sort="unsorted">
+    <key column="FILE_ID"/>
+    <one-to-many class="com.js.oa.archives.po.ArchivesBorrowPO"/>
+</set>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.system.vo.sysclientemail.SysClientEmailVO" table="sys_client_email">
+		<id name="id" column="id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="emailUrl" column="email_url"/>
+		<property name="sendTime" column="send_time"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.WorkFlowStockPO"
+        table="JSF_WORKFLOWSTOCK"
+        >
+        <id name="workFlowStockId" column="WORKFLOWSTOCK_ID">
+            <generator class="native" />
+        </id>
+        <property name="processId" column="PROCESSID" />
+		<property name="stockType" column="STOCK_TYPE" />
+        <many-to-one name="stock"
+            class="com.js.oa.routine.resource.po.StockPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="STOCKID"/>
+    </class>
+</hibernate-mapping>

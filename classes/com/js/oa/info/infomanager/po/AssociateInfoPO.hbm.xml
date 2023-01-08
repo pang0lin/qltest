@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.AssociateInfoPO"
+        table="OA_ASSOCIATEINFO"
+        >
+        <id name="associateInfoId" column="ASSOCIATEINFO_ID" type="long">
+            <generator class="native"/>
+        </id>
+
+        <!--相关信息-->
+        <property name="associateInfo" column="ASSOCIATEINFO"  />
+
+        <!--与OA_INFORMATION（信息）表是多对一的关系-->
+        <property name="masterInfo" column="MASTERINFO" />
+		<property name="domainId" column="DOMAIN_ID" />
+
+    </class>
+</hibernate-mapping>

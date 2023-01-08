@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.webmail.po.Affix" table="oa_web_mail_affix">
+		<id name="affixId" type="java.lang.Long">
+			<column name="affix_id" />
+			<generator class="native" />
+		</id>
+		<property name="affixName" type="java.lang.String">
+			<column name="affix_name" />
+		</property>
+		<property name="affixDisName" type="java.lang.String">
+			<column name="affix_dis_name" />
+		</property>
+		<property name="affixPath" type="java.lang.String">
+			<column name="affix_path" />
+		</property>
+
+
+		<property name="mailId" type="java.lang.String">
+			<column name="mail_id" />
+		</property>
+		<property name="affixSize" type="java.lang.Integer">
+			<column name="affix_size" />
+		</property>
+	</class>
+</hibernate-mapping>

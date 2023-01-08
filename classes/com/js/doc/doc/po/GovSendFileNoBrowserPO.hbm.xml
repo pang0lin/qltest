@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovSendFileNoBrowserPO" table="DOC_SENDFILENOBROWSER" >
+<id name="id" column="BROWSER_ID" type="long">
+ <generator class="native"/>
+</id>
+
+<property name="empId" column="EMP_ID" type="long" length="20"/>
+<property name="browserName" column="BROWSERNAME" type="string" length="20"/>
+<property name="browserOrgName" column="BROWSERORGNAME" type="string" length="200"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+<many-to-one
+	name="govSendFile"
+	class="com.js.doc.doc.po.GovDocumentSendFilePO"
+        insert = "true"
+        update = "true"
+	column="DOCUMENTSENDFILE_ID"
+
+/>
+</class>
+</hibernate-mapping>

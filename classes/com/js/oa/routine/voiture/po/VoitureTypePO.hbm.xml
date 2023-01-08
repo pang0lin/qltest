@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoitureTypePO" table="VEH_TYPE" >
+<id name="id" column="VOITURETYPEID" type="long">
+<generator class="native"/>
+</id>
+<property name="name" column="NAME" type="string" length="50"/>
+<property name="createdEmp" column="CREATEDEMP" type="long" length="20"/>
+<property name="createdOrg" column="CREATEDORG" type="long" length="20"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+</class>
+</hibernate-mapping>

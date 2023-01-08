@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+    
+<hibernate-mapping>
+    <class name="com.js.oa.scheme.taskcenter.po.TaskRemindPO" table="OA_TASKREMIND" >
+        <id name="remindId" type="java.lang.Long" column="REMIND_ID">
+            <generator class="native" />
+		</id>
+        <property name="empId" type="java.lang.Long" column="EMP_ID" length="20"/>
+        <property name="taskId" type="java.lang.Long" column="TASK_ID" length="20"/>
+        <property name="remindDomainId" type="java.lang.Long" column="DOMAIN_ID" length="20"/>
+    </class>
+</hibernate-mapping>

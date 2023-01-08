@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsOutMoPO" table="MS_OUTMO" >
+        <id name="outMoId" column="ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="sendOutId" column="SENDID" type="java.lang.Long"/>
+        <property name="sendOutMan" column="SENDMAN" type="java.lang.String"/>
+        <property name="domainId" column="DOMAIN_ID" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovCustomPO" table="form_content">
+    <id column="id" name="id" type="java.lang.Long">
+       <generator class="native"/>
+    </id>
+    <property name="govFormName" column="govFormName" />
+    <property name="govFormContent" column="govFormContent" type="net.sf.hibernate.type.TextType" />
+    <property name="govFormId" column="govFormId" />
+    <property name="domainId" column="domainId" />
+    <property name="govPrintFormContent" column="govPrintFormContent"  type="net.sf.hibernate.type.TextType" />
+    <property name="govCheckField" column="govCheckField" />
+    <property name="govFormType" column="govFormType" />
+    <property name="createOrg" column="createOrg"/>
+    <property name="createEmp" column="createEmp"/>
+    <property name="mustword" column="mustword"/>
+</class>
+</hibernate-mapping>

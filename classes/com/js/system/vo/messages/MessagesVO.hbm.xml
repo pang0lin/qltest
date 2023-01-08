@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.system.vo.messages.MessagesVO"
+        table="sys_messages"
+        >
+        <id name="message_id" column="message_id" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="message_toUserId" column="message_toUserId" />
+          <property name="data_id" column="data_id" />
+        <property name="message_type" column="message_type" />
+        <property name="message_title" column="message_title" />
+        <property name="message_url" column="message_url" />
+        <property name="message_time" column="message_time" />
+        <property name="message_send_UserName" column="message_send_UserName" />
+        <property name="message_status" column="message_status" />
+         <property name="message_show" column="message_show" />
+         <property name="message_send_UserId" column="message_send_UserId" />
+          <property name="message_date_begin" column="message_date_begin" />
+         <property name="message_date_end" column="message_date_end" />
+    </class>
+</hibernate-mapping>

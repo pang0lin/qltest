@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.StockChangePO"
+        table="ST_STOCKCHANGE"
+        >
+        <id name="id" column="SEQ">
+            <generator class="native" />
+        </id>
+        <property name="scNo" column="SC_NO" />
+        <property name="scDate" column="SC_DATE" />
+        <property name="scSeq" column="SC_SEQ" />
+        <property name="changeType" column="CHANGE_TYPE" />
+        <property name="changeStock" column="CHANGE_STOCK" />
+        <property name="drawDept" column="DRAWDEPT" />
+        <property name="goodsId" column="GOODS_ID" />
+        <property name="changeAmount" column="CHANGE_AMOUNT" />
+        <property name="changeMoney" column="CHANGE_MONEY" />
+	<property name="factMoney" column="FACTMONEY" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.webmail.po.Attach" table="oa_web_mail_attach">
+		<id name="attachId" type="java.lang.Long">
+			<column name="attach_id" />
+			<generator class="native" />
+		</id>
+		<property name="mailInfoId" type="java.lang.Long">
+			<column name="mail_info_id" />
+		</property>
+		<property name="attachName" type="java.lang.String">
+			<column name="attach_name" />
+		</property>
+		<property name="attachDisName" type="java.lang.String">
+			<column name="attach_dis_name" />
+		</property>
+	</class>
+</hibernate-mapping>

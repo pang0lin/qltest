@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.dcq.po.DcqFileaccessoryPO" table="dcq_fileaccessory" >
+<id name="ID" column="ID" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="fileID" column="fileID" />
+<property name="fileName" column="fileName" />
+<property name="businessID" column="businessID" />
+<property name="businessType" column="businessType" />
+<property name="filepath" column="filepath" />
+<property name="fileSaveName" column="fileSaveName" />
+<property name="bz" column="bz" />
+</class>
+</hibernate-mapping>

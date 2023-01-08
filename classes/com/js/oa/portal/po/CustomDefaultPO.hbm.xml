@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.portal.po.CustomDefaultPO" table="oa_portal_default" >
+        <id name="id" column="ID">
+             <generator class="native"/>
+        </id>
+        <property name="emp_id" column="emp_id" />
+		<property name="portal_id" column="portal_id" />
+		<property name="portalname" column="portalname" />
+		<property name="viewrangename" column="viewrangename" />
+		<property name="vieworg" column="vieworg" />
+		<property name="viewuser" column="viewuser" />
+		<property name="viewgroup" column="viewgroup" />
+		<property name="createdemp" column="createdemp" />
+		<property name="createdorg" column="createdorg" />
+	</class>
+</hibernate-mapping>

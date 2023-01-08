@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.officeroom.po.OfficeUsePO" table="OA_OFFICE_USE" >
+        <id name="applayId" column="APPLAY_ID">
+             <generator class="native"/>
+        </id>
+        <property name="applayNumber" column="APPLAY_NUMBER" type="java.lang.String"/>
+        <property name="applayBuildId" column="APPLAY_BUILDID" type="java.lang.String"/>
+        <property name="applayBuildNumber" column="APPLAY_BUILDNUMBER" type="java.lang.String"/>
+        
+        
+		<property name="applayClass" column="APPLAY_CLASS" type="java.lang.String"/>
+		<property name="applayUsername" column="APPLAY_USERNAME" type="java.lang.String"/>
+		<property name="applayUserId" column="APPLAY_USERID" type="java.lang.String"/>
+		
+		<property name="applayReason" column="APPLAY_REASON" type="java.lang.String"/>
+		<property name="applayTitle" column="APPLAY_TITLE" type="java.lang.String"/>
+		<property name="applaySex" column="APPLAY_SEX" type="java.lang.String"/>
+		<property name="applayOrg" column="APPLAY_ORG" type="java.lang.String"/>
+		<property name="applayOrgName" column="APPLAY_ORGNAME" type="java.lang.String"/>
+		
+		<property name="visitName" column="VISIT_NAME" type="java.lang.String"/>
+		<property name="visitWorkunit" column="VISIT_WORKUNIT" type="java.lang.String"/>
+		<property name="visitOrg" column="VISIT_ORG" type="java.lang.String"/>
+		<property name="visitOrgName" column="VISIT_ORGNAME" type="java.lang.String"/>
+		
+		<property name="visitBeginTime" column="VISIT_BEGINTIME" type="java.util.Date"/>
+		<property name="visitEndTime" column="VISIT_ENDTIME" type="java.util.Date"/>
+		<property name="bz" column="BZ" type="java.lang.String"/>
+		
+		<property name="applayStation" column="APPLAY_STATION" type="java.lang.Long"/>
+		<property name="applayIsUse" column="APPLAY_ISUSE" type="java.lang.String"/>
+		<property name="applayKth" column="APPLAY_KTH" type="java.lang.String"/>
+		<property name="applayIsoverdue" column="applay_isoverdue" type="java.lang.String"/>
+	
+	</class>
+</hibernate-mapping>

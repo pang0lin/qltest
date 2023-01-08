@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoitureSendPO" table="VEH_SEND" >
+<id name="id" column="SENDID" type="long">
+<generator class="native"/>
+</id>
+<property name="sendNumber" column="SENDNUMBER" type="string" length="20"/>
+<property name="sendStartDate" column="SENDSTARTDATE" type="timestamp" length="23"/>
+<property name="sendStartTime" column="SENDSTARTTIME"/>
+<property name="sendStartTimeTotal" column="SENDSTARTTIMETOTAL"/>
+<property name="sendEndDate" column="SENDENDDATE" type="timestamp" length="23"/>
+<property name="sendEndTime" column="SENDENDTIME"/>
+<property name="sendEndTimeTotal" column="SENDENDTIMETOTAL"/>
+<property name="sendStartKilo" column="SENDSTARTKILO" type="string" length="10"/>
+<property name="sendEndKilo" column="SENDENDKILO" type="string" length="10"/>
+<property name="keepingFee" column="KEEPINGFEE" type="double" length="12"/>
+<property name="travelFee" column="TRAVELFEE" type="double" length="12"/>
+<property name="sendHolidayCount" column="SENDHOLIDAYCOUNT" type="long" length="10"/>
+<property name="sendCount" column="SENDCOUNT" type="long" length="10"/>
+<property name="misMealFee" column="MISMEALFEE" type="double" length="12"/>
+<property name="overTimeHoliDay" column="OVERTIMEHOLIAY" type="string" length="8"/>
+<property name="overTimeWeekend" column="OVERTIMEWEEKEND" type="string" length="8"/>
+<property name="overTime" column="OVERTIME" type="string" length="8"/>
+<property name="kiloPrice" column="kiloPrice" type="double" length="12"/>
+<property name="otherAllowance" column="otherAllowance" type="double" length="12"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<many-to-one name="voiturePO"
+            class="com.js.oa.routine.voiture.po.VoiturePO"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="voitureId" />
+<many-to-one name="voitureApplyPO"
+            class="com.js.oa.routine.voiture.po.VoitureApplyPO"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="APPLYID" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFWorkFlowProcessPO"
+        table="JSF_WORKFLOWPROCESS"
+        >
+        <id name="wfWorkFlowProcessId" column="WF_WORKFLOWPROCESS_ID" type="long">
+            <generator class="native" />
+        </id>
+        <property name="accessDatabaseId" column="ACCESSDATABASEID" />
+        <property name="workFlowProcessName" column="WORKFLOWPROCESSNAME" />
+        <property name="processCreatedDate" column="PROCESSCREATEDDATE" />
+        <property name="processDescription" column="PROCESSDESCRIPTION" type="net.sf.hibernate.type.TextType" />
+        <property name="createdOrg" column="CREATEDORG" />
+        <property name="createdEmp" column="CREATEDEMP" />
+        <property name="createUserName" column="CREATEUSERNAME" />
+        <property name="useOrg" column="USEORG" />
+        <property name="useGroup" column="USEGROUP" />
+        <property name="usePerson" column="USEPERSON" />
+        <property name="processType" column="PROCESSTYPE" />
+        <property name="userScope" column="USERSCOPE" />
+
+        <property name="dossierFileSeeScope" column="DOSSIERFILESEESCOPE" />
+        <property name="dossierFileSeeGroup" column="DOSSIERFILESEEGROUP" />
+        <property name="dossierFileSeeOrg" column="DOSSIERFILESEEORG" />
+        <property name="dossierFileSeePerson" column="DOSSIERFILESEEPERSON" />
+        
+        <property name="dossierFileExportScope" column="DOSSIERFILEEXPORTSCOPE" />
+        <property name="dossierFileExportGroup" column="DOSSIERFILEEXPORTGROUP" />
+        <property name="dossierFileExportOrg" column="DOSSIERFILEEXPORTORG" />
+        <property name="dossierFileExportPerson" column="DOSSIERFILEEXPORTPERSON" />
+		
+        <property name="printFileSeeScope" column="PRINTFILESEESCOPE" />
+        <property name="printFileSeeGroup" column="PRINTFILESEEGROUP" />
+        <property name="printFileSeeOrg" column="PRINTFILESEEORG" />
+        <property name="printFileSeePerson" column="PRINTFILESEEPERSON" />
+        
+        <property name="remindField" column="REMINDFIELD" />
+        <property name="isPublish" column="ISPUBLISH" />
+        <property name="isDossier" column="ISDOSSIER" />
+        <property name="canCancel" column="CANCANCEL" />
+
+        <property name="formClassName" column="FORMCLASSNAME" />
+        <property name="formClassMethod" column="FORMCLASSMETHOD" />
+        <property name="formClassCompMethod" column="FORMCLASSCOMPMETHOD" />
+
+        <property name="formType" column="FORMTYPE" />
+        <property name="startJSP" column="STARTJSP" />
+        <property name="optJSP" column="OPTJSP" />        
+
+        <property name="domainId" column="DOMAIN_ID" />
+
+        <property name="dossierFileOperScope" column="DOSSIERFILEOPERSCOPE" />
+        <property name="dossierFileOperGroup" column="DOSSIERFILEOPERGROUP" />
+        <property name="dossierFileOperOrg" column="DOSSIERFILEOPERORG" />
+        <property name="dossierFileOperPerson" column="DOSSIERFILEOPERPERSON" />
+
+        <property name="processAdminScope" column="processAdminScope" />
+        <property name="processAdminOrg" column="processAdminOrg" />
+        <property name="processAdminGroup" column="processAdminGroup" />
+        <property name="processAdminPerson" column="processAdminPerson" />
+        
+        <property name="orderCode" column="ORDERCODE" />
+        
+        <property name="processStatus" column="process_status" />
+        <property name="lastUpdateTime" column="lastUpdateTime" />
+        <property name="processUseTime" column="processUseTime" />
+        <property name="ownerName" column="ownerName" />
+        <property name="ownerId" column="ownerId" />
+        <property name="ownerOrgId" column="ownerOrgId" />
+        
+        <property name="mainFormId" column="main_formid" />
+        <property name="infoChannelId" column="infoChannelId" />
+        <property name="sendFileType" column="sendFileType" />
+        
+        <property name="startUrl" column="startUrl" />
+        <property name="startMethod" column="startMethod" />
+        <property name="startPara" column="startPara" />
+        <property name="startNameSpace" column="startNameSpace" />
+        
+        <property name="completeUrl" column="completeUrl" />
+        <property name="completeMethod" column="completeMethod" />
+        <property name="completePara" column="completePara" />
+        <property name="completeNameSpace" column="completeNameSpace" />
+        
+        <property name="processDeadline" column="processDeadline" />
+        <property name="processDeadlineType" column="processDeadlineType" />
+        
+        <property name="isJx" column="isJx" />
+          
+
+        <!--与工作流包（JSF_PACKAGE）表示多对一的关系-->
+        <many-to-one name="wfPackage"
+            class="com.js.oa.jsflow.po.WFPackagePO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="WF_PACKAGE_ID" />
+
+        <!--与工作流启动时写控制表(JSF_WORKFLOWWRITECONTORL)是一对多的关系-->
+        <set name="wfWorkFlowWriteControl"
+            table="JSF_WORKFLOWWRITECONTORL"
+            
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_WORKFLOWPROCESS_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFWorkFlowWriteControlPO" />
+        </set>
+
+        <!--与流程中的活动表（JSF_ACTIVITY）是一对多的关系-->
+        <set name="wfActivity"
+            table="JSF_ACTIVITY"
+			
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_WORKFLOWPROCESS_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFActivityPO" />
+        </set>
+
+    </class>
+
+</hibernate-mapping>

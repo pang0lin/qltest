@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.oacollect.po.OaCollectFile" table="oa_collect_file" >
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="collectId" type="java.lang.Long">
+            <column name="collect_id" />
+        </property>
+        <property name="collectTitle" type="java.lang.String">
+            <column name="collect_title" length="200" />
+        </property>
+        <property name="fileName" type="java.lang.String">
+            <column name="file_name" length="200" />
+        </property>
+        <property name="fileNameSys" type="java.lang.String">
+            <column name="file_name_sys" length="200" />
+        </property>
+        <property name="filePath" type="java.lang.String">
+            <column name="file_path" length="200" />
+        </property>
+        <property name="collectEmpId" type="java.lang.Long">
+            <column name="collect_emp_id" />
+        </property>
+        <property name="collectEmpName" type="java.lang.String">
+            <column name="collect_emp_name" length="20" />
+        </property>
+        <property name="collectOrgId" type="java.lang.Long">
+            <column name="collect_org_id" />
+        </property>
+        <property name="collectOrgName" type="java.lang.String">
+            <column name="collect_org_name" length="20" />
+        </property>
+        <property name="collectEmpStatus" type="java.lang.Long">
+            <column name="collect_emp_status" />
+        </property>
+        <property name="remindCount" type="java.lang.Long">
+            <column name="remind_count" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="create_date" length="0" />
+        </property>
+        <property name="createdEmp" type="java.lang.Long">
+            <column name="created_emp" />
+        </property>
+        <property name="createdOrg" type="java.lang.Long">
+            <column name="created_org" />
+        </property>
+        <property name="fileType" type="java.lang.String">
+            <column name="file_type" length="20" />
+        </property>
+        <property name="fileSize" column="file_size"  />
+    </class>
+</hibernate-mapping>

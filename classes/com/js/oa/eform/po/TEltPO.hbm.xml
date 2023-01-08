@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.eform.po.TEltPO"
+        table="TELT"
+        >
+        <id name="id" column="ELT_ID">
+            <generator class="native" />
+        </id>
+        <property name="eltName" column="ELT_NAME" />
+        <property name="eltType" column="ELT_TYPE" />
+        <property name="eltEXEC" column="ELT_EXEC" />
+        <property name="eltShowMC" column="ELT_SHOWMC" />
+        <property name="eltValue" column="ELT_VALUE" />
+        <property name="eltHide" column="ELT_HIDE" />
+		<property name="eltFWYS" column="ELT_FWYS" />
+		<property name="eltOpen" column="ELT_OPEN" />
+		<property name="eltLink" column="ELT_LINK" />
+		<property name="eltControl" column="ELT_CONTROL" />
+		<property name="eltXSTJ" column="ELT_XSTJ" />
+		<property name="eltJS" column="ELT_JS" />
+		<property name="eltReadonly" column="ELT_READONLY" />
+		<property name="eltDefault" column="ELT_DEFAULT" />
+		<property name="eltTable" column="ELT_TABLE" />
+		<property name="eltYHZD" column="ELT_YHZD" />
+		<property name="eltDes" column="ELT_DES" />
+        
+		<many-to-one name="tpage"
+            class="com.js.oa.eform.po.TPagePO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="PAGE_ID" />
+
+		<many-to-one name="tarea"
+            class="com.js.oa.eform.po.TAreaPO"
+            cascade="save-update"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="AREA_ID" />
+
+        
+    </class>
+</hibernate-mapping>

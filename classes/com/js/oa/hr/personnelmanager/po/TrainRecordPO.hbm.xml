@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.TrainRecordPO"
+        table="OA_TRAINRECORD"
+        >
+        <id name="id" column="ID">
+            <generator class="native" />
+        </id>
+        <property name="trainName" column="TRAIN_NAME" />
+        <property name="beginDate" column="BEGIN_DATE" />
+        <property name="endDate" column="END_DATE" />
+        <property name="trainClass" column="TRAIN_CLASS" />
+        <property name="trainOrganizer" column="TRAIN_ORGANIZER" />
+        <property name="trainOrganizerID" column="TRAIN_ORGANIZERID" />
+		<property name="trainContent" column="TRAIN_CONTENT" />
+		<property name="trainAim" column="TRAIN_AIM" />
+                <property name="trainAddress" column="TRAIN_ADDRESS" />
+                <property name="trainActor" column="TRAIN_ACTOR" />
+                <property name="trainEmpID" column="TRAIN_EMPID" />
+                <property name="trainOrg" column="TRAIN_ORG" />
+                <property name="trainGroup" column="TRAIN_GROUP" />
+                <property name="trainEffect" column="TRAIN_EFFECT" />
+                <property name="trainResource" column="TRAIN_RESOURCE" />
+		<property name="domain" column="DOMAIN" />
+                <property name="createdEmpID" column="CREATEDEMPID" />
+                <property name="createdOrg" column="CREATEDORG" />
+    </class>
+</hibernate-mapping>

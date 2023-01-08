@@ -1,0 +1,313 @@
+workflow.myworkflow=新建流程
+workflow.moniter=办理查阅
+workflow.unfinished=在办流程
+workflow.finished=办结流程
+workflow.category=流程分类
+workflow.setup=流程设置
+
+workflow.newworkflowclosebutton=关闭
+workflow.newworkflowsendbutton=发送
+workflow.newworkflowbasicinfo=基本信息
+workflow.newworkflowchart=流程图
+
+workflow.categorynamelist=分类名称
+workflow.categorydescription=描述
+workflow.categoryoperation=处理
+workflow.categorydeleteremind=确定要删除记录吗？
+workflow.newactivitybuttonpdf=转PDF
+workflow.categorynew=分类设置
+workflow.categorymodify=修改分类设置
+workflow.categorynamepage=分类名称
+workflow.categorynameremind=请输入分类名称！
+workflow.categorydescriptionremind=流程分类描述太长！（最多允许250个字）
+
+workflow.setupcategory=所属分类
+workflow.setupusers=使用范围
+workflow.setuptype=类型
+workflow.setupcreator=创建人
+
+workflow.newworkflow=流程设置
+workflow.modifyworkflow=修改流程设置
+workflow.newworkflowcategory=分类
+workflow.newworkflowselect=请选择
+workflow.newworkflowfix=固化
+workflow.newworkflowrandom=随机
+workflow.newworkflowarchive=归档
+workflow.newworkflowcancel=取消
+workflow.newworkflowcanceldetail=发起人可以取消被审核后的流程
+workflow.newworkflowformtype=表单类型
+workflow.newworkflowdiyform=默认
+workflow.newworkflowjspfile=其它
+workflow.newworkflowjspfilestart=流程开始文件
+workflow.newworkflowjspfileflow=流程流转文件
+workflow.newworkflowupload=上传
+workflow.newworkflowuploadjsp=必须符合模板格式！
+workflow.newworkflowformuse=关联表单
+workflow.newworkflowauthorizeduser=进程监控
+workflow.newworkflowexportableuser=进程导出
+workflow.newworkflowmaintainuser=进程维护
+workflow.newworkflowformclass=表单处理类
+workflow.newworkflowsubmitmethod=表单提交方法
+workflow.newworkflowfinishmethod=流程结束方法
+workflow.newworkflowtip=无特殊要求，请勿修改！
+workflow.newworkflowps=说明
+workflow.newworkflowrandomtip=随机流程根据当前用户的主观判断去选择下一办理人,随机流程不需要定义流程节点,但会记录流转过程。
+workflow.newworkflowremindcategory=请选择分类！
+workflow.newworkflowremindname=请输入流程名称！
+workflow.newworkflowremindusers=请选择使用范围！
+workflow.newworkflowremindform=请选择使用表单！
+workflow.newworkflowinterface=接口
+workflow.newworkflowwarning=提醒项
+
+
+workflow.activityname=节点名称
+workflow.activitytype=节点类型
+workflow.activitydescription=节点描述
+workflow.activitysetup=节点设置
+workflow.activitynew=新增
+workflow.activitydeleteselect=删除
+workflow.activityclear=清空
+workflow.activitymodify=修改
+workflow.activitydelete=删除
+workflow.activitydeleteremind=请选择要删除的记录！
+workflow.activitymuldeleteconfirm=确定要删除这些记录吗？
+workflow.activityclearremind=确定要清空所有记录吗？
+workflow.activitysindeleteconfirm=确定要删除此记录吗？
+
+
+workflow.newactivity=节点设置
+workflow.modifyactivity=修改节点设置
+workflow.newactivitybasicinfo=基本信息
+workflow.newactivityinterface=接口
+workflow.newactivityoperbutton=扩展属性
+workflow.newactivityname=节点名称
+workflow.newactivitytype=节点类型
+workflow.newactivitystandard=标准
+workflow.newactivityson=子过程
+workflow.newactivitysonworkflow=子过程
+workflow.newactivitysontype=子过程
+workflow.newactivityvirtual=虚拟
+workflow.newactivityautoback=自动返回
+workflow.newactivityoriented=节点走向
+workflow.newactivityuseroriented=用户决定
+workflow.newactivityworkfloworiented=流程决定
+workflow.newactivityprocesstype=审批方式
+workflow.newactivitysingletype=单人
+workflow.newactivitysinglemul=单选
+workflow.newactivitymul=串行
+workflow.newactivitymulcollateral=并行
+workflow.newactivityformuse=关联表单
+workflow.newactivitydefault=默认
+workflow.newactivityselfdefine=其它
+workflow.newactivityformselect=请选择自定义表单
+workflow.newactivitydescription=节点描述
+workflow.newactivityperiod=办理期限
+workflow.newactivityperiodnone=无
+workflow.newactivityperiodfix=固定
+workflow.newactivityperiodfixdetail=天 提醒：提前
+workflow.newactivityperioddefine=定义办理期限
+workflow.newactivitydefinefiled=字段
+workflow.newactivitydefinecaculation=运算
+workflow.newactivitydefinevalue=值
+workflow.newactivitydefineremind=催办时间
+workflow.newactivitydefineadd=添加
+workflow.newactivitydefinenew=新办理期限条件
+workflow.newactivitydefinenewcondition=条件
+workflow.newactivitydefinenewoperation=操作符
+workflow.newactivitydefinenewoperation1=小于
+workflow.newactivitydefinenewoperation2=不大于
+workflow.newactivitydefinenewoperation3=不等于
+workflow.newactivitydefinenewoperation4=等于
+workflow.newactivitydefinenewoperation5=大于
+workflow.newactivitydefinenewoperation6=不小于
+workflow.newactivityparticipant=执行人
+workflow.newactivityroleselect=角色选择
+workflow.newactivityorggroup=用户群组组织
+workflow.newactivitydefaultselect=其它选择
+workflow.newactivityroleselect1=从角色中指定
+workflow.newactivityroleselect2=流程发起人
+workflow.newactivityroleselect3=上一节点执行人的上级
+workflow.newactivityroleselect4=所有用户
+workflow.newactivityroleselect5=从选定的群组中选择
+workflow.newactivityroleselect6=候选人员
+workflow.newactivityroleselect7=选定的范围中
+workflow.newactivityroleselect8=指定全部执行人
+workflow.newactivityroleselect9=表单中的字段值
+workflow.newactivityroleselect10=本部门中
+workflow.newactivityroleselect11=上一节点执行人的部门领导
+workflow.newactivityroleselect12=上一节点所有执行人
+workflow.newactivityroleselect13=流程发起人的上级
+workflow.newactivitycomment1=批示意见对应字段
+workflow.newactivitycomment2=自动增加批示意见
+workflow.newactivitycomment3=无批示意见
+workflow.newactivityneedreview=需要阅件
+workflow.newactivityneed=需要
+workflow.newactivityneedno=不需要
+workflow.newactivityreviewcomment=阅件意见对应字段
+workflow.newactivitywritecontrol=写控制
+workflow.newactivitysourcefield=源字段
+workflow.newactivityreadfield=读字段
+workflow.newactivitywritefield=写字段
+workflow.newactivitysignaturefield=签章保护字段
+workflow.newactivityprotectfield=保护字段
+workflow.newactivitycommentcheck=审批意见查看范围
+workflow.newactivityadvancedsetting=其它设置
+workflow.newactivityreplacement=允许代办
+workflow.newactivityreplacementdetail=选中该选项时，当流程中的办理人不在时，如指定了代办人，则可发给指定代办人办理，代办人由当前用户在个人设置里指定。
+workflow.newactivityworkflowmethod=流转表单处理方法
+workflow.newactivityreturnmethod=退回表单处理方法
+workflow.newactivityspecialwarning=无特殊要求，请勿修改！
+workflow.newactivityremindname=请输入节点名称！
+workflow.newactivitybuttonall=全选
+workflow.newactivitybuttonworkflow=流程按钮
+workflow.newactivitybuttonback=退回
+workflow.newactivitybuttonshift=转办
+workflow.newactivitybuttonvoid=作废
+workflow.newactivitybuttonreview=阅件
+workflow.newactivitybuttonurge=催办
+workflow.newactivitybuttonfeedback=反馈
+workflow.newactivitybuttonrecycle=收回
+workflow.newactivitybuttondrawback=撤办
+workflow.newactivitybuttonprint=打印
+workflow.newactivitybuttonunderapp=待办按钮
+workflow.newactivitybuttonunfinished=在办按钮
+workflow.newactivitybuttonfinished=办结按钮
+workflow.newactivitybuttoncommon=通用按钮
+
+workflow.activitysetup=节点顺序设置
+workflow.activitysetupprecursor=上一节点
+workflow.activitysetupstart=开始节点
+workflow.activitysetupother=其它节点
+workflow.activitysetupsuccessor=下一节点
+workflow.activitysetupdefault=默认
+workflow.activitysetupname=节点名称
+workflow.activitysetupcondition=条件
+workflow.activitysetupend=结束节点
+workflow.activitysetupoperator=操作符
+workflow.activitysetupremindcondition=请设置条件！
+
+
+workflow.workflowname=流程名称
+workflow.newworkflownowritefield=发起时不填的字段
+workflow.newactivitybuttonclose=关闭
+workflow.newactivitybuttonend=办理完毕
+workflow.newactivitybuttonsavefirst=保存
+workflow.newactivitybuttonsaveback=退回
+workflow.newactivitybuttonundo=撤办
+workflow.newactivitybuttonwait=催办
+workflow.newactivitybuttonfeedback=反馈
+workflow.newactivitybuttonreturn=收回
+workflow.newactivitybuttontran=转办
+workflow.newactivitybuttondelete=作废
+workflow.newactivitybuttonprint=打印
+workflow.newactivitybuttonselfsend=阅件
+
+workflow.createtime = 创建时间
+workflow.workflowdesign = 如何设计一个新流程
+workflow.searchnoquote = 查询条件不能包含单引号！
+workflow.workflownosamename = 不能添加相同名称的流程！
+workflow.newworkflowusedatabase = 使用数据库
+
+workflow.categorynosamename = 不能添加相同名称的分类！
+workflow.categorynospecialchar = 流程类不能包含特殊字符！
+workflow.categorynconfirmdelete = 不允许删除存在流程的流程分类，确定要删除记录吗？
+workflow.categorynselect = 请选择分类！
+
+workflow.workflownoempty = 流程名称不能为空！
+workflow.workflownoquote = 流程名称不能包含单引号！
+workflow.workflownodbquote = 流程名称不能包含双引号！
+workflow.workflowselectform = 请选择使用的表单！
+workflow.workflowftpjsp = 请上传流程使用JSP文件！
+workflow.workflowsuitrangenoempty = 使用范围不能为空！
+workflow.workflowsamename = 流程名称重复！
+
+workflow.activitydefine = 节点定义
+workflow.activitydelthis = 确实要删除该节点吗？
+workflow.activitydelsel = 确实要删除所选择的节点吗？
+workflow.activityseldel = 请选择要删除的节点！
+workflow.activitydelall = 确实要删除所有的节点吗？
+workflow.activityseries = 串行子过程
+workflow.activityparallel = 并行子过程
+
+workflow.activityminute = 分钟
+workflow.activityhour = 小时
+workflow.activityday = 天
+workflow.activityduedeal = 到期后处理
+workflow.activitydueremind = 系统中提醒
+workflow.activityduepress = 催办
+workflow.activitysubmitpersonupleader = 流程发起人的上级
+workflow.activitysubmitpersonuporg = 流程发起人上级部门 并且 职务级别
+workflow.activityallorg = 从所有组织中选择
+workflow.activityallgroup = 从选定的群组中选择
+
+workflow.activitysmsremind = 短信提醒
+workflow.activitytranrange = 转办范围
+workflow.activitytranall = 全部
+workflow.activitytranorg = 本部门
+workflow.activitytranunit = 本单位
+workflow.activitytranperson = 本节点办理人
+workflow.activitytrandiy = 自定义
+workflow.activitytransel = 选择
+
+workflow.activityselectform = 请选择本节点在流程办理过程中使用的表单！
+workflow.activityinputname = 请输入节点名称！
+workflow.activityselectdealtype = 请选择办理方式！
+workflow.activitydesclong = 节点描述太长了！（不能超过100个字）
+workflow.activityremindtimelarge = 提醒时间不能大于办理期限！
+
+workflow.activitytranselcandidate = 请选择候选人！
+workflow.activitytranselalldealer = 请选择全部办理人！
+workflow.activitytranselgroup = 请选择群组！
+workflow.activitytranselrange = 请选择范围！
+
+workflow.activityinfoview = 节点信息查看
+workflow.activitymodiinfo = 修改节点信息
+
+workflow.activitysetupexpress=设置表达式
+workflow.activitysetupnocondition = 无条件
+workflow.activitysetupinputcomparevalue = 请填写比较值！
+
+
+workflow.includesignsetuperror = 手写控件配置不正确！
+workflow.includegoldlinkerror = 连接数据库失败！请与管理员联系！
+workflow.includesuccessbackto = 成功退回到
+workflow.includehassuccesspress = 已成功发送催办！
+workflow.includehassuccessfeedback = 已成功发送反馈！
+workflow.includeconfirmundo = 您确定要撤办吗？
+workflow.includesuccessreceive = 成功收回到
+workflow.includeconfirmdelete = 您确定要作废吗？
+workflow.includeconfirmsaveread = 您确定要保存阅件吗？
+workflow.includeconfirmturntodeal = 您确定要提交办理吗？
+workflow.includeseltranuser = 请选择转办用户！
+workflow.includehassuccessturn = 已成功提交
+workflow.includehassuccessturntosign = 已成功提交！
+workflow.includehassuccessturnto = 已成功提交给
+
+workflow.includenotsetupleader = 未设置上级领导，请与系统管理员联系！
+workflow.includenoleader = 组织领导不存在
+workflow.includeleader = 的组织领导
+workflow.includeto = 给
+workflow.includedoing = 进行
+workflow.includenextuser = 下一办理人
+workflow.includeconfirmcompleteprocess = 您确实要结束流程吗？
+workflow.includeprocesshascomplete = 流程已结束！
+
+workflow.includeseldealuser = 请选择办理用户！
+workflow.includenosetupstartactivity = 未找到符合条件的后续节点，请与管理员联系！
+
+workflow.workflowhelp = 帮助
+
+workflow.includedocisbeing = 文档正在被
+workflow.includeediting = 正在编辑此文档！
+workflow.includeconfirmclosewindow = 您确认关闭窗口吗?
+workflow.includedelete = 删除
+workflow.includeconfirmdeleterecord = 确实要删除选中的记录吗？
+workflow.activitycomment = 批示意见
+
+workflow.workflowuploadjspfile = 请上传.jsp文件！
+workflow.workflowuploadclassfile = 请上传.class文件！
+
+workflow.sortbyname = 按流程排序
+
+
+

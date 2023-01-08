@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.netaddress.po.AddressDelPO" table="OA_NETADDRESSDEL" >
+<id name="id" column="del_id" type="long">
+    <generator class="native" />
+</id>
+<property name="empId" column="EMP_ID" type="long" length="20"/>
+<property name="netAddressId" column="NETADDRESS_ID"  />
+</class>
+</hibernate-mapping>

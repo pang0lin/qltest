@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovFileReadPO" table="DOC_FILEREAD" >
+
+<id name="id" column="ID" type="long">
+ <generator class="native"/>
+</id>
+
+<property name="fileType" column="FILETYPE"/>
+<property name="code" column="CODE"/>
+<property name="sendLeader" column="SENDLEADER"/>
+<property name="title" column="TITLE"/>
+<property name="leaderComment" column="LEADERCOMMENT"/>
+<property name="sendOrgComment" column="SENDORGCOMMENT"/>
+<property name="dealResult" column="DEALRESULT"/>
+<property name="linkMan" column="LINKMAN"/>
+<property name="linkPhone" column="LINKPHONE"/>
+<property name="sendTime" column="SENDTIME"/>
+<property name="createdEmp" column="CREATEDEMP"/>
+<property name="createdOrg" column="CREATEDORG"/>
+<property name="content" column="CONTENT"/>
+<property name="numCode" column="NUMCODE"/>
+<property name="numCodeYear" column="NUMCODEYEAR"/>
+<property name="note" column="NOTE"/>
+
+
+<set name="accessory"
+     table="DOC_FILEREAD_ACCESSORY"
+     lazy="false"
+     inverse="false"
+     cascade="delete"
+     sort="unsorted">
+    <key column="FILEREAD_ID"/>
+    <one-to-many class="com.js.doc.doc.po.GovFileReadAccePO"/>
+</set>
+
+</class>
+</hibernate-mapping>

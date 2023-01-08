@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--流程中活动表（JSF_ACTIVITY）的配置文件-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFActivityPO"
+        table="JSF_ACTIVITY"
+        >
+        <id name="wfActivityId" column="WF_ACTIVITY_ID" type="long">
+            <generator class="native" />
+        </id>
+
+        <!--活动名称-->
+        <property name="activityName" column="ACTIVITYNAME" />
+
+        <!--活动描述-->
+        <property name="activityDescription" column="ACTIVITYDESCRIPTION" />
+
+        <!--活动类型-->
+        <property name="activityType" column="ACTIVITYTYPE" />
+
+        <!--允许代办-->
+        <property name="allowStandFor" column="ALLOWSTANDFOR" />
+
+        <!--允许撤办-->
+        <property name="allowCancel" column="ALLOWCANCEL" />
+
+        <!--允许撤办-->
+        <property name="allowTransition" column="ALLOWTRANSITION" />
+
+		<!--允许短信提醒-->
+        <property name="allowSmsRemind" column="allowSmsRemind" />
+
+        <!--参与者类型-->
+        <property name="participantType" column="PARTICIPANTTYPE" />
+
+        <!--参与者-->
+        <property name="participantUser" column="PARTICIPANTUSER" />
+
+        <!--参与者组-->
+        <property name="participantGroup" column="PARTICIPANTGROUP" />
+
+        <!--参与者名称-->
+        <property name="participantUserName" column="PARTICIPANTUSERNAME" />
+
+        <!--参与者字段值-->
+        <property name="participantUserField" column="PARTICIPANTUSERFIELD" />
+
+        <!--催办类型-->
+        <property name="pressType" column="PRESSTYPE" />
+
+        <!--提醒时间-->
+        <property name="pressMotionTime" column="PRESSMOTIONTIME" />
+
+        <!--帮助文件地址-->
+        <property name="activityDocumentionation" column="ACTIVITYDOCUMENTATION" />
+
+        <!--活动的图标地址-->
+        <property name="activityIcon" column="ACTIVITYICON" />
+
+        <!--开始活动结束活动-->
+        <property name="activityBeginEnd" column="ACTIVITYBEGINEND" />
+
+        <!--办理期限-->
+        <property name="deadLineTime" column="DEADLINETIME" />
+
+        <!--办理方式-->
+        <property name="transactType" column="TRANSACTTYPE" />
+
+        <!--活动意见处理方式-->
+        <property name="actiCommType" column="ACTICOMMTYPE" />
+
+        <!--活动意见对应字段-->
+        <property name="actiCommField" column="ACTICOMMFIELD" />
+
+        <!--需要阅件-->
+        <property name="needPassRound" column="NEEDPASSROUND" />
+
+        <!--阅件用户类型-->
+        <property name="passRoundUserType" column="PASSROUNDUSERTYPE" />
+
+        <!--阅件用户-->
+        <property name="passRoundUser" column="PASSROUNDUSER" />
+
+        <!--阅件用户组-->
+        <property name="passRoundUserGroup" column="PASSROUNDUSERGROUP" />
+
+        <!--阅件用户名称-->
+        <property name="passRoundUserName" column="PASSROUNDUSERNAME" />
+
+        <!--阅件用户字段-->
+        <property name="passRoundUserField" column="PASSROUNDUSERFIELD" />
+
+	<property name="passRoundCommField" column="passRoundCommField" />
+
+        <property name="participantRole" column="participantRole" />
+
+        <property name="passRoundRole" column="passRoundRole" />
+
+        <property name="activityClass" column="activityClass" />
+
+        <property name="activitySubProc" column="activitySubProc" />
+
+        <property name="subProcType" column="subProcType" />
+
+        <property name="formClassMethod" column="FORMCLASSMETHOD" />
+
+        <property name="participantGivenOrgName" column="PARTICIPANTGIVENORGNAME" />
+
+        <property name="participantGivenOrg" column="PARTICIPANTGIVENORG" />
+
+        <property name="passRoundGivenOrgName" column="PASSROUNDGIVENORGNAME" />
+
+        <property name="passRoundGivenOrg" column="PASSROUNDGIVENORG" />
+
+	<property name="untreadMethod" column="UNTREADMETHOD" />
+
+        <property name="commentRange" column="COMMENTRANGE" />
+
+        <property name="commentRangeName" column="COMMENTRANGENAME" />
+
+        <property name="domainId" column="DOMAIN_ID" />
+		<!--工作流中每个活动对应一个自定义表单  -->
+        <property name="formId" column="FORM_ID" />
+
+        <property name="operButton" column="operButton" />
+
+        <property name="actiCommFieldType" column="actiCommFieldType" />
+        <property name="passRoundCommFieldType" column="passRoundCommFieldType" />
+
+		<!--转办范围-->
+		<property name="tranType" column="tranType" />
+		<property name="tranCustomExtent" column="tranCustomExtent" />
+		<property name="tranCustomExtentId" column="tranCustomExtentId" />
+		
+		<!--催办方式-->
+		<property name="pressDealType" column="pressDealType" />
+
+		<!--继承主流程相同数据表数据-->
+		<property name="extendMainTable" column="extendMainTable" />
+
+		<!--转阅范围-->
+		<property name="tranReadType" column="tranReadType" />
+		<property name="tranReadCustomExtent" column="tranReadCustomExtent" />
+		<property name="tranReadCustomExtentId" column="tranReadCustomExtentId" />
+		
+		<property name="mainFormId" column="main_formid" />
+		<property name="exeScript" column="exe_script" />
+		<!-- 过期处理方式 -->
+		<property name="handleType" column="handleType" />
+		<property name="handleClass" column="handleClass" />
+		<property name="handleMethod" column="handleMethod" />
+		<property name="handleParam" column="handleParam" />
+		<property name="handleView" column="handleView" />
+		
+		<!-- webserive调用 -->
+		<property name="webServiceUrl" column="webServiceUrl" />
+		<property name="webServiceMethod" column="webServiceMethod" />
+		<property name="webServicePara" column="webServicePara" />
+		<property name="webServiceNameSpace" column="webServiceNameSpace" />
+		
+		<property name="sendMsgToInitiator" column="sendMsgToInitiator" />
+		<property name="sendMsgToDealDone" column="sendMsgToDealDone" />
+		<property name="opinionmust" column="opinionmust" />
+		<property name="handSignType" column="handSignType" />
+		
+		<property name="beforeSubmit" column="beforeSubmit" />
+		<property name="opinionLengthSet" column="opinionLengthSet" />
+		<property name="opinionLengthMin" column="opinionLengthMin" />
+		<property name="opinionLengthMax" column="opinionLengthMax" />
+		<property name="allowAutoCheck" column="allowAutoCheck" />
+		<property name="isDivide" column="isDivide" />
+		<property name="isGather" column="isGather" />
+		<property name="isBranch" column="isBranch" />
+
+        <!--与工作流过程定义表（WF_WORKFLOWPROCESS）是多对一关系-->
+        <many-to-one name="wfWorkFlowProcess"
+            class="com.js.oa.jsflow.po.WFWorkFlowProcessPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="WF_WORKFLOWPROCESS_ID" />
+
+        <!--与读写控制表（WF_READWRITECONTROL）是一对多的关系-->
+        <set name="wfReadWriteControl"
+            table="JSF_READWRITECONTROL"
+			
+            lazy="false"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_ACTIVITY_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFReadWriteControlPO" />
+        </set>
+
+        <!--与保护字段控制表（WF_READWRITECONTROL）是一对多的关系-->
+        <set name="wfProtectControl"
+            table="JSF_PROTECTCONTROL"
+			
+            lazy="false"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_ACTIVITY_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFProtectControlPO" />
+        </set>
+
+        <!--与办理期限表（WF_PRESS）是一对多的关系-->
+        <set name="wfPress"
+            table="JSF_PRESS"
+			
+            lazy="false"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_ACTIVITY_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFPressPO" />
+        </set>
+
+        <!--与活动关系表（WF_TRANSITION）是一对多的关系（起始活动）-->
+        <set name="transitionFrom"
+			
+            table="JSF_TRANSITION"
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="TRANSITIONFROM" />
+            <one-to-many class="com.js.oa.jsflow.po.WFTransitionPO" />
+        </set>
+
+        <!--与活动关系表（WF_TRANSITION）是一对多的关系（结束活动）-->
+        <set name="transitionTo"
+            table="JSF_TRANSITION"
+			
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="TRANSITIONTO" />
+            <one-to-many class="com.js.oa.jsflow.po.WFTransitionPO" />
+        </set>
+
+    </class>
+</hibernate-mapping>

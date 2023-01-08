@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.dcq.po.DcqMeetingMaterialsPO" table="dcq_meetingMaterials" >
+<id name="MaterialsId" column="MaterialsId" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="dataName" column="dataName" />
+<property name="beginTime" column="beginTime" />
+<property name="readType" column="readType" />
+<property name="dataID" column="dataID" />
+<property name="oid" column="oid" />
+<property name="meetingSubject" column="meetingSubject" />
+<property name="meetingBatch" column="meetingBatch" />
+<property name="meetingType" column="meetingType" />
+<property name="registerDate" column="registerDate" />
+<property name="register" column="register" />
+<property name="registerID" column="registerID" />
+<property name="remark" column="remark" />
+<property name="mark" column="mark" />
+
+</class>
+</hibernate-mapping>

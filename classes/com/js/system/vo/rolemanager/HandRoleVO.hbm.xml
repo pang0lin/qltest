@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.rolemanager.HandRoleVO" table="ORG_HANDROLE" >
+	<id name="handRoleId" column="HANDROLE_ID" type="long">
+		<generator class="native"/>
+	</id>
+	<property name="roleDeliverId" column="ROLEDELIVERID" type="long" />
+	<property name="roleRecieveId" column="ROLERECIEVEID" type="long" />
+	<property name="roleDeliverName" column="ROLEDELIVERNAME" type="string" length="14" />
+	<property name="roleRecieveName" column="ROLERECIEVENAME" type="string" length="14" />
+	<property name="roleHandDate" column="ROLEHANDDATE" type="date" />
+    <property name="roleHandTransactor" column="ROLEHANDTRANSACTOR" type="string" length="14" />
+    <property name="createdOrg" column="CREATEDORG" type="string"/>
+    <property name="createdEmp" column="CREATEDEMP" type="string"/>
+
+	<!-- Describe many-to-manay relationship of org_handrole & org_role -->
+	<set name="role" table="ORG_ROLE_EXCHANGE" lazy="false" inverse="false" cascade="none" sort="unsorted"
+	>
+        	<key column="HANDROLE_ID" />
+                <many-to-many class="com.js.system.vo.rolemanager.RoleVO" column="ROLE_ID" outer-join="auto" />
+        </set>
+</class>
+</hibernate-mapping>

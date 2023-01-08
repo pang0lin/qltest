@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.audit.po.AuditOrgGroup" table="audit_org_group">
+        <id name="auditOrgGroupId" type="java.lang.Long">
+            <column name="audit_org_group_id" />
+            <generator class="native" />
+        </id>
+        <property name="groupId" type="java.lang.Long">
+            <column name="GROUP_ID"/>
+        </property>
+        <property name="groupName" type="java.lang.String">
+            <column name="GROUP_NAME" length="90" />
+        </property>
+        <property name="groupdescription" type="java.lang.String">
+            <column name="GROUPDESCRIPTION" length="600" />
+        </property>
+        <property name="createdorg" type="java.lang.Long">
+            <column name="CREATEDORG" />
+        </property>
+        <property name="createdemp" type="java.lang.Long">
+            <column name="CREATEDEMP" />
+        </property>
+        <property name="userrange" type="java.lang.String">
+            <column name="USERRANGE" length="3000" />
+        </property>
+        <property name="groupUserString" column="GROUPUSERSTRING" type="net.sf.hibernate.type.TextType" />
+		<property name="groupUserNames" column="GROUPUSERNAMES" type="net.sf.hibernate.type.TextType" />
+        <property name="rangename" type="java.lang.String">
+            <column name="RANGENAME" length="6000" />
+        </property>
+        <property name="rangeemp" type="java.lang.String">
+            <column name="RANGEEMP" length="3000" />
+        </property>
+        <property name="rangeorg" type="java.lang.String">
+            <column name="RANGEORG" length="3000" />
+        </property>
+        <property name="rangegroup" type="java.lang.String">
+            <column name="RANGEGROUP" length="3000" />
+        </property>
+        <property name="domainId" type="java.lang.Long">
+            <column name="DOMAIN_ID" />
+        </property>
+        <property name="groupType" type="java.lang.Long">
+            <column name="groupType" />
+        </property>
+        <property name="groupOrder" column="GROUPORDER" />
+        
+        <property name="auditLogId" type="java.lang.Long">
+            <column name="audit_log_id" />
+        </property>
+        <property name="operationType" type="java.lang.String">
+            <column name="operation_type" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

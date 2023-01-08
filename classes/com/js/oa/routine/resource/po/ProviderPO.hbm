@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.resource.po.ProviderPO"
+        table="PROVIDER">
+        <id name="id" column="PROVIDER_ID">
+            <generator class="assigned" />
+        </id>
+        <property name="name" column="PROVIDER_NAME" />
+        <property name="contactMethod" column="PROVIDER_CONTACT_METHOD" />
+        <property name="contacter" column="PROVIDER_CONTACTER" />
+        <property name="accounts" column="PROVIDER_ACCOUNTS" />
+        <property name="makeOutInvoiceAddress" column="MAKE_OUT_INVOICE_ADDRESS" />
+        <property name="consignmentAddress" column="CONSIGNMENT_ADDRESS" />
+	</class>
+</hibernate-mapping>

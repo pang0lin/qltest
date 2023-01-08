@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.crm.po.CstVisit" table="cst_v">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="cstName" type="java.lang.String">
+			<column name="cst_name" />
+		</property>
+		<property name="cstId" type="java.lang.String">
+			<column name="cst_id" />
+		</property>
+
+		<property name="visitTypeName" type="java.lang.String">
+			<column name="visit_type_name" />
+		</property>
+		<property name="visitType" type="java.lang.String">
+			<column name="visit_type" />
+		</property>
+		
+		<property name="visitTitle" type="java.lang.String">
+			<column name="visit_title" />
+		</property>
+
+		<property name="visitContent" type="java.lang.String">
+			<column name="visit_content" />
+		</property>
+		<property name="visitFeedBack" type="java.lang.String">
+			<column name="visit_feed_back" />
+		</property>
+		<property name="visitTime" type="java.lang.String">
+			<column name="visit_time" />
+		</property>
+		
+		<property name="createTime" type="java.lang.String">
+			<column name="create_time" />
+		</property>
+		
+		<property name="createUserId" type="java.lang.String">
+			<column name="create_user_id" />
+		</property>
+		<property name="createUserName" type="java.lang.String">
+			<column name="create_user_name" />
+		</property>
+		<property name="visitDesc" type="java.lang.String">
+			<column name="visit_desc" />
+		</property>
+		<property name="hangYe" type="java.lang.String">
+			<column name="hang_ye" />
+		</property>
+	    <property name="hangYeName" type="java.lang.String">
+			<column name="hang_ye_name" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class
+    name="com.js.oa.scheme.worklog.po.WorkProjectPO"
+    table="OA_WORKPROJECT"
+    
+>
+
+    <id
+        name="projectId"
+        type="java.lang.Long"
+        column="PROJECT_ID"
+    >
+        <generator class="native" />
+    </id>
+
+	<property
+        name="projectDomainId"
+        type="java.lang.Long"
+        column="DOMAIN_ID"
+        length="20"
+    >    
+	    <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <property
+        name="projectName"
+        type="java.lang.String"
+        column="PROJECTNAME"
+        not-null="true"
+        length="50"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectManager"
+        type="java.lang.Long"
+        column="PROJECTMANAGER"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectCode"
+        type="java.lang.String"
+        column="PROJECTCODE"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+	  <property
+        name="hasProjectTask"
+        type="java.lang.String"
+        column="HASPROJECTTASK"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+	<property
+        name="projectStatus"
+        type="java.lang.Integer"
+        column="PROJECTSTATUS"
+        length="1"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectRange"
+        type="java.lang.String"
+        column="PROJECTRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectUserRange"
+        type="java.lang.String"
+        column="PROJECTUSERRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectOrgRange"
+        type="java.lang.String"
+        column="PROJECTORGRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectGroupRange"
+        type="java.lang.String"
+        column="PROJECTGROUPRANGE"
+        length="1000"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectBeginTime"
+        type="java.sql.Timestamp"
+        column="PROJECTBEGINTIME"
+        length="7"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="projectEndTime"
+        type="java.sql.Timestamp"
+        column="PROJECTENDTIME"
+        length="7"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="createdOrg"
+        type="java.lang.Long"
+        column="CREATEDORG"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="createdEmp"
+        type="java.lang.Long"
+        column="CREATEDEMP"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <!-- associations -->
+    <!-- bi-directional one-to-many association to OaWorklog -->
+    <set
+        name="workLogs"
+        lazy="true"
+        inverse="true"
+		
+    >
+        <key>
+            <column name="PROJECT_ID" />
+        </key>
+        <one-to-many
+            class="com.js.oa.scheme.worklog.po.WorkLogPO"
+        />
+    </set>
+
+    <set
+        name="WorkProjectTasks"
+        lazy="true"
+        inverse="true"
+		
+    >
+        <key>
+            <column name="PROJECT_ID" />
+        </key>
+        <one-to-many
+            class="com.js.oa.scheme.worklog.po.WorkProjectTaskPO"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to OaWorkprojectclass -->
+    <many-to-one
+        name="workProjectClass"
+        class="com.js.oa.scheme.worklog.po.WorkProjectClassPO"
+        not-null="true"
+    >
+        <column name="CLASS_ID" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

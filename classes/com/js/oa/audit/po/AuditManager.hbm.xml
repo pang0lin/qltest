@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.audit.po.AuditManager" table="audit_manager">
+        <id name="managerId" type="java.lang.Long">
+            <column name="MANAGER_ID" />
+            <generator class="native" />
+        </id>
+        <property name="empId" type="java.lang.Long">
+            <column name="EMP_ID" />
+        </property>
+        <property name="empName" type="java.lang.String">
+            <column name="EMPNAME" length="50" />
+        </property>
+        <property name="rightScopeType" type="java.lang.Integer">
+            <column name="RIGHTSCOPETYPE" />
+        </property>
+        <property name="rightScopeScope" type="java.lang.String">
+            <column name="RIGHTSCOPESCOPE" length="2000" />
+        </property>
+        <property name="rightScope" type="java.lang.String">
+            <column name="RIGHTSCOPE" length="2000" />
+        </property>
+        <property name="createdEmp" type="java.lang.Long">
+            <column name="CREATEDEMP" />
+        </property>
+         <property name="createdEmpName" type="java.lang.String">
+            <column name="CREATEDEMPNAME" length="50" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

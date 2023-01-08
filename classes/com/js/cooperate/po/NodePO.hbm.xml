@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.cooperate.po.NodePO" table="CO_NODE" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="bodyId" column="body_id"/>
+<property name="nodeTitle" column="node_title"/>
+<property name="nodeType" column="node_type"/>
+<property name="nodeStart" column="node_start"/>
+<property name="nodeRight" column="node_right"/>
+<property name="term" column="term"/>
+<property name="nickName" column="nickName"/>
+<property name="parentNick" column="parentNick"/>
+<property name="status" column="status"/>
+<property name="isEnd" column="isEnd"/>
+<property name="chuan" column="chuan"/>
+</class>
+</hibernate-mapping>

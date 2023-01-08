@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovFileReadAccePO" table="DOC_FILEREAD_ACCESSORY" >
+<id name="id" column="ACCESSORY_ID" type="long">
+    <generator class="native"/>
+</id>
+
+<property name="displayName" column="DISPLAYNAME" />
+<property name="saveName" column="SAVENAME" />
+
+<many-to-one
+	name="fileRead"
+	class="com.js.doc.doc.po.GovFileReadPO"
+	cascade="none"
+	outer-join="false"
+	update="true"
+	insert="true"
+	column="FILEREAD_ID"
+/>
+</class>
+</hibernate-mapping>

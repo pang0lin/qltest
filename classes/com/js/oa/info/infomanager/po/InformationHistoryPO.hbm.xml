@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InformationHistoryPO"
+        table="OA_INFORMATIONHISTORY"
+        >
+        <id name="historyId" column="HISTORY_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="historyTitle" column="HISTORYTITLE" />
+        <property name="historySubTitle" column="HISTORYSUBTITLE" />
+        <property name="historyContent" column="HISTORYCONTENT" type="net.sf.hibernate.type.TextType" />
+        <property name="historyIssuerId" column="HISTORYISSUERID" />
+        <property name="historyIssuerName" column="HISTORYISSUERNAME" />
+        <property name="historyTime" column="HISTORYTIME" />
+        <property name="historyVersion" column="HISTORYVERSION" />
+        <property name="historySummary" column="HISTORYSUMMARY" />
+        <property name="historyIssueOrg" column="HISTORYISSUEORG" />
+        <property name="historyKey" column="HISTORYKEY" />
+        <property name="historyHead" column="HISTORYHEAD" />
+        <property name="historyHeadFile" column="HISTORYHEADFILE" />
+        <property name="historyRedIssueTime" column="HISTORYREDISSUETIME" />
+        <property name="historyRedIssueOrg" column="HISTORYREDISSUEORG" />
+
+        <property name="historySeal" column="HISTORYSEAL" />
+        <property name="historyMark" column="HISTORYMARK" />
+        <property name="historyAuthor" column="HISTORYAUTHOR" />
+        <property name="domainId" column="DOMAIN_ID" />
+        <property name="hisDisplayImage" column="HISDISPLAYIMAGE" />
+        <property name="isoDealCategory" column="isoDealCategory" />
+        <property name="isoAmendmentPage" column="isoAmendmentPage" />
+        <property name="isoModifyReason" column="isoModifyReason" />
+
+        <!--与OA_INFORMATION（信息）表是多对一的关系-->
+        <many-to-one name="information"
+            class="com.js.oa.info.infomanager.po.InformationPO"
+            cascade="none"
+            outer-join="auto"
+            update="false"
+            insert="true"
+            column="INFORMATION_ID" />
+
+        <!--与OA_INFORHISTORYACCESSORY（历史信息附件）表是一对多的关系-->
+        <set name="inforHistoryAccessory"
+            table="OA_INFORHISTORYACCESSORY"
+			
+            lazy="true"
+            inverse="false"
+            cascade="none"
+            sort="unsorted">
+            <key column="ACCESSORY_ID" />
+            <one-to-many class="com.js.oa.info.infomanager.po.InforHistoryAccessoryPO" />
+        </set>
+    </class>
+</hibernate-mapping>

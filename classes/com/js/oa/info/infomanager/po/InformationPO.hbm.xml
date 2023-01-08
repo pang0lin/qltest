@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InformationPO"
+        table="OA_INFORMATION"
+        >
+        <id name="informationId" column="INFORMATION_ID">
+            <generator class="native"/>
+        </id>
+        <property name="informationTitle" column="INFORMATIONTITLE"  />
+        <property name="informationSubTitle" column="INFORMATIONSUBTITLE"  />
+        <property name="informationSummary" column="INFORMATIONSUMMARY"  />
+        <property name="informationHead" column="INFORMATIONHEAD" />
+        <property name="informationHeadFile" column="INFORMATIONHEADFILE" />
+        <property name="informationSeal" column="INFORMATIONSEAL" />
+        <property name="informationContent" column="INFORMATIONCONTENT" type="net.sf.hibernate.type.TextType" />
+        <property name="informationStatus" column="INFORMATIONSTATUS" />
+        <property name="informationAuthor" column="INFORMATIONAUTHOR" />
+        <property name="reprocess" column="reprocess" />
+
+        <property name="informationIssuer" column="INFORMATIONISSUER" />
+        <property name="informationIssueOrg" column="INFORMATIONISSUEORG" />
+        <property name="informationReader" column="INFORMATIONREADER" />
+        <property name="informationReaderOrg" column="INFORMATIONREADERORG" />
+        <property name="informationReaderGroup" column="INFORMATIONREADERGROUP" />
+        <property name="informationReaderName" column="INFORMATIONREADERNAME" />
+        <property name="informationIssueTime" column="INFORMATIONISSUETIME" />
+        <property name="informationType" column="INFORMATIONTYPE" />
+
+        <property name="informationModifyTime" column="INFORMATIONMODIFYTIME" />
+        <property name="informationIsCommend" column="INFORMATIONISCOMMEND" />
+        <property name="informationKits" column="INFORMATIONKITS" />
+        <property name="informationVersion" column="INFORMATIONVERSION" />
+        <property name="informationValidType" column="INFORMATIONVALIDTYPE" />
+        <property name="validBeginTime" column="VALIDBEGINTIME" />
+        <property name="validEndTime" column="VALIDENDTIME" />
+        <property name="informationMark" column="INFORMATIONMARK" />
+        <property name="infoRedIssueTime" column="INFOREDISSUETIME" />
+        <property name="infoRedIssueOrg" column="INFOREDISSUEORG" />
+        <property name="informationKey" column="INFORMATIONKEY" />
+        <property name="informationIssuerId" column="INFORMATIONISSUERID" />
+        <property name="informationCommonNum" column="INFORMATIONCOMMONNUM" />
+        <property name="informationHeadId" column="INFORMATIONHEADID" />
+        <property name="informationSealId" column="INFORMATIONSEALID" />
+
+        <property name="infoDepaFlag" column="INFODEPAFLAG" />
+        <property name="infoDepaFlag2" column="INFODEPAFLAG2" />
+        <property name="forbidCopy" column="FORBIDCOPY" />
+        <property name="transmitToWebsite" column="TRANSMITTOWEBSITE" />
+        <property name="orderCode" column="ORDERCODE" />
+        <property name="displayTitle" column="displayTitle" />
+        <property name="otherChannel" column="otherChannel" />
+        <property name="titleColor" column="titleColor" />
+        <property name="showSign" column="showSign" />
+        <property name="showSignName" column="showSignName" />
+         <property name="isAllow" column="isAllow" />
+
+        <property name="modifyEmp" column="modifyEmp" />
+        <property name="dossierStatus" column="DOSSIERSTATUS" />
+
+        <property name="displayImage" column="displayImage" />
+
+        <property name="afficeHistoryDate" column="afficeHistoryDate" />
+
+		<property name="afficheHiTime" column="afficheHiTime" />
+
+
+        <property name="wordDisplayType" column="wordDisplayType" />
+        <property name="informationIssueOrgId" column="informationIssueOrgId" />
+
+        <property name="mustRead" column="MUSTREAD" />
+        <property name="comeFrom" column="COMEFROM" />
+        <!--与OA_INFORMATIONCHANNEL表是多对一的关系-->
+		<property name="isConf" column="ISCONF" />
+		<property name="documentNo" column="DOCUMENTNO" />
+		<property name="documentEditor" column="DOCUMENTEDITOR" />
+		<property name="documentType" column="DOCUMENTTYPE" />
+		<property name="domainId" column="DOMAIN_ID" />
+		<property name="issueOrgIdString" column="ISSUEORGIDSTRING" />
+		<property name="isoDocStatus" column="isoDocStatus" />
+		<property name="isoOldInfoId" column="isoOldInfoId" />
+		<property name="informationOrISODoc" column="informationOrISODoc" />
+		<property name="isoSecretStatus" column="isoSecretStatus" />
+        <property name="isoDealCategory" column="isoDealCategory" />
+        <property name="isoApplyName" column="isoApplyName" />
+        <property name="isoApplyId" column="isoApplyId" />
+        <property name="isoReceiveName" column="isoReceiveName" />
+        <property name="isoReceiveId" column="isoReceiveId" />
+        <property name="isoModifyReason" column="isoModifyReason" />
+        <property name="isoAmendmentPage" column="isoAmendmentPage" />
+        <property name="isoModifyVersion" column="isoModifyVersion" />
+        <property name="inforModifyMen" column="inforModifyMen" />
+	    <property name="inforModifyOrg" column="inforModifyOrg" />
+	    <property name="twoUserId" column="twoUserId" />
+        <!--xup update	    -->
+	    <property name="topTimeFrom" column="toptimefrom" />
+	    <property name="topTimeTo" column="toptimeto" />
+	    <property name="topTimeStart" column="toptimestart" />
+	    <property name="topTimeEnd" column="toptimeend" />
+	    <property name="orderCodeTemp" column="ORDERCODETEMP" />
+	    <property name="corpId" column="corp_id" />
+	    <property name="oid" column="oid" />
+
+        <many-to-one name="informationChannel"
+            class="com.js.oa.info.channelmanager.po.InformationChannelPO"
+            cascade="all"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="CHANNEL_ID" />
+
+        <!--与OA_INFORMATIONCOMMENT（信息评论）表是一对多的关系-->
+        <set name="informationComment"
+            table="OA_INFORMATIONCOMMENT"
+			
+            lazy="true"
+            inverse="false"
+            cascade="all"
+            sort="unsorted">
+            <key column="COMMENT_ID" />
+            <one-to-many class="com.js.oa.info.infomanager.po.InformationCommentPO" />
+        </set>
+
+        <!--与OA_INFORMATIONBROWSER（信息浏览人）表是一对多的关系-->
+        <set name="informationBrowser"
+            table="OA_INFORMATIONBROWSER"
+            
+            lazy="true"
+            inverse="true"
+            cascade="all"
+            sort="unsorted">
+            <key column="BROWSER_ID" />
+            <one-to-many class="com.js.oa.info.infomanager.po.InformationBrowserPO" />
+        </set>
+
+        <!--与OA_INFORMATIONACCESSORY（信息附件）表是一对多的关系-->
+        <set name="informationAccessory"
+            table="OA_INFORMATIONACCESSORY"
+            
+            lazy="false"
+            inverse="false"
+            cascade="save-update"
+            sort="unsorted">
+            <key column="INFORMATION_ID" />
+            <one-to-many class="com.js.oa.info.infomanager.po.InformationAccessoryPO" />
+        </set>
+
+        <!--与OA_INFORMATIONHISTORY（信息历史）表是一对多的关系-->
+        <set name="informationHistory"
+            table="OA_INFORMATIONHISTORY"
+			
+            lazy="true"
+            inverse="false"
+            cascade="all"
+            sort="unsorted">
+            <key column="HISTORY_ID" />
+            <one-to-many class="com.js.oa.info.infomanager.po.InformationHistoryPO" />
+        </set>
+
+
+    </class>
+</hibernate-mapping>

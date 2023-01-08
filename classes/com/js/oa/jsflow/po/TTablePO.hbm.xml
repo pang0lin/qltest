@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.TTablePO"
+        table="TTABLE"
+        >
+        <id name="tableId" column="TABLE_ID">
+            <generator class="assigned" />
+        </id>
+        <property name="tableCode" column="TABLE_CODE" />
+        <property name="tableDesName" column="TABLE_DESNAME" />
+        <property name="tableName" column="TABLE_NAME" />
+        <property name="tableModel" column="TABLE_MODEL" />
+        <property name="tableFilePath" column="TABLE_FILEPATH" />
+        <property name="tableManId" column="TABLE_MANID" />
+        <property name="tableMan" column="TABLE_MAN" />
+        <property name="tableRight" column="TABLE_RIGHT" />
+        <property name="tableOwner" column="TABLE_OWNER" />
+        <property name="tableDate" column="TABLE_DATE" />
+
+        <!--与字段表（TFIELD）是一对多的关系-->
+        <set name="field"
+            table="TFIELD"
+			
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="TABLE_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.TFieldPO" />
+        </set>
+
+
+    </class>
+</hibernate-mapping>

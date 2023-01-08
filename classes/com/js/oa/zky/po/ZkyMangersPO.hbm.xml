@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.zky.po.ZkyMangersPO" table="ZKY_MANGERS" >
+<id name="mangerId" column="MANGER_ID" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="mangerType" column="MANGER_TYPE" />
+<property name="mangerUsers" column="MANGER_USERS" />
+<property name="mangerUsername" column="MANGER_USERNAME" />
+<property name="mangerMenu" column="MANGER_MENU" />
+<property name="mangerMenuName" column="MANGER_MENUNAME" />
+
+</class>
+</hibernate-mapping>

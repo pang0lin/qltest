@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.eform.po.TAreaTypePO"
+        table="TAREATYPE"
+        >
+        <id name="id" column="AREATYPE_ID">
+            <generator class="native" />
+        </id>
+        <property name="areaTypeName" column="AREATYPE_NAME" />
+        <property name="areaTypeSort" column="AREATYPE_SORT" />
+        <property name="areaTypeDes" column="AREATYPE_DES" />
+        
+        
+
+        <set name="tarea"
+            
+            table="TAREA"
+            lazy="true"
+            inverse="true"
+            cascade="save-update"
+            sort="unsorted">
+            <key column="AREATYPE_ID" />
+            <one-to-many class="com.js.oa.eform.po.TAreaTypePO" />
+        </set>
+    </class>
+</hibernate-mapping>

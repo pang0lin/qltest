@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovSendFileReceiveOrgPO" table="DOC_SENDFILERECEIVEFILEORG" > 
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+ 
+
+<property name="sendFileId" column="SENDFILEID"  />
+<property name="receiveFileOrgId" column="RECEIVEFILEORGID" />
+<property name="receiveFileOrgName" column="RECEIVEFILEORGNAME"  />
+<property name="receiveFileEmpId" column="RECEIVEFILEEMPID"  />
+<property name="dealMaxTime" column="DEALMAXTIME"  />
+<property name="isFinished" column="ISFINISHED"  />
+<property name="isHaveTimeNeed" column="ISHAVETIMENEED"  />
+<property name="field1" column="FIELD1"  />
+<property name="field2" column="FIELD2"  />
+<property name="field3" column="FIELD3"  />
+<property name="sendFileTime" column="SENDFILETIME"  />
+</class>
+</hibernate-mapping>

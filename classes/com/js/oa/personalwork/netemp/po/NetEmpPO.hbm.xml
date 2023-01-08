@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.netemp.po.NetEmpPO" table="oa_netemp" >
+<id name="id" column="id" type="long">
+    <generator class="native" />
+</id>
+<property name="userId" column="user_id" />
+<property name="superiorsId" column="superiors_id" />
+<property name="superiorsName" column="superiors_name" />
+<property name="underlingId" column="underling_id" />
+<property name="underlingName" column="underling_name" />
+<property name="netEmpId" column="netEmp_id" />
+<property name="netEmpName" column="netEmp_name" />
+<property name="eventRelationEmpName" column="eventRelationEmpName" />
+<property name="eventRelationEmpId" column="eventRelationEmpId" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.webmail.po.WebMail" table="oa_web_mail_info">
+		<id name="mailInfoId" type="java.lang.Long">
+			<column name="mail_info_id" />
+			<generator class="native" />
+		</id>
+		<property name="mailId" type="java.lang.String">
+			<column name="mail_id" />
+		</property>
+		<property name="userId" type="java.lang.Long">
+			<column name="user_id" />
+		</property>
+		<property name="mailBox" type="java.lang.String">
+			<column name="mail_box" />
+		</property>
+		<property name="affixId" type="java.lang.String">
+			<column name="affix_id" />
+		</property>
+		<property name="frm" type="java.lang.String">
+			<column name="frm" />
+		</property>
+		<property name="too" type="java.lang.String">
+			<column name="too" />
+		</property>
+				<property name="cc" type="java.lang.String">
+			<column name="cc" />
+		</property>
+				<property name="bc" type="java.lang.String">
+			<column name="bc" />
+		</property>
+		<property name="subject" type="java.lang.String">
+			<column name="subject" />
+		</property>
+		<property name="content" type="java.lang.String">
+			<column name="content" />
+		</property>
+		<property name="grade" type="java.lang.String">
+			<column name="grade" />
+		</property>
+		<property name="isReply" type="java.lang.String">
+			<column name="is_reply" />
+		</property>
+			<property name="hasAttach" type="java.lang.String">
+			<column name="has_attach" />
+		</property>
+		<property name="isHtml" type="java.lang.String">
+			<column name="is_html" />
+		</property>
+	   <property name="mailSize" type="java.lang.Integer">
+			<column name="mail_size" />
+		</property>
+		<property name="sendDate" type="java.lang.String">
+			<column name="send_date" />
+		</property>
+	    <property name="mailState" type="java.lang.String">
+			<column name="mail_state" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

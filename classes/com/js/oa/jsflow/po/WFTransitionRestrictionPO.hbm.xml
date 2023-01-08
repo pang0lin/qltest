@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<!--转移约束表JSF_TRANSITIONRESTRICTION-->
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFTransitionRestrictionPO"
+        table="JSF_TRANSITIONRESTRICTION"
+        >
+        <id name="wfTransitionRestrictionId" column="WF_TRANSITIONRESTRICTION_ID" type="long">
+            <generator class="native" />
+        </id>
+
+        <!--条件字段-->
+        <property name="conditionField" column="CONDITIONFIELD" />
+
+        <!--比较值-->
+        <property name="compareValue" column="COMPAREVALUE" />
+
+        <!--条件操作符-->
+        <property name="relation" column="RELATION" />
+
+        <property name="domainId" column="DOMAIN_ID" />
+
+        <!--与活动关系表（JSF_TRANSITION）是多对一的关系-->
+        <many-to-one name="wfTransition"
+            class="com.js.oa.jsflow.po.WFTransitionPO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="WF_TRANSITION_ID"/>
+
+    </class>
+</hibernate-mapping>
+

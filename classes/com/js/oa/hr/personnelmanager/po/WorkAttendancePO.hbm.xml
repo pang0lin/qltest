@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.WorkAttendancePO"
+        table="ST_WORKATTENDANCE"
+        >
+        <id name="id" column="WATTEND_ID">
+            <generator class="native" />
+        </id>
+        <property name="org" column="WATTEND_ORG" />
+        <property name="emp" column="WATTEND_EMP" />
+        <property name="record" column="WATTEND_RECORD" />
+        <property name="year" column="WATTEND_YEAR" />
+        <property name="month" column="WATTEND_MONTH" />
+        <property name="fillDate" column="WATTEND_FILLDATE" />
+        <property name="domainId" column="DOMAIN_ID" />
+
+    </class>
+</hibernate-mapping>

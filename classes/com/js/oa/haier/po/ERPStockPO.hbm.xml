@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.haier.po.ERPStockPO"
+        table="JST_3007"
+        >
+        <id name="id" column="JST_3007_ID">
+            <generator class="native"/>
+        </id>
+        <property name="ERPth" column="JST_3007_TH"  />
+        <property name="ERPMC" column="JST_3007_MC"  />
+        <property name="ZCKKC" column="JST_3007_ZCKKC"  />
+        <property name="SHKC" column="JST_3007_SHKC"  />
+        <property name="WFL" column="JST_3007_WFL"  />
+        <property name="KYKC" column="JST_3007_KYKC"  />
+    </class>
+</hibernate-mapping>

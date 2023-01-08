@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.relation.po.RelationDataPO" table="OA_RELATIONDATA" >
+<id name="dataId" column="DATAID" type="long">
+<generator class="native" />
+</id>
+
+<property name="moduleType" column="MODULETYPE" />
+<property name="moduleSubId" column="MODULESUBID" />
+<property name="infoId" column="INFOID" />
+<property name="relationObjectType" column="RELATIONOBJECTTYPE" />
+<property name="relationInfoName" column="RELATIONINFONAME" />
+<property name="relationInfoId" column="RELATIONINFOID"/>
+<property name="relationSubId" column="RELATIONSUBID"/>
+<property name="relationInfoHref" column="RELATIONINFOHREF"  />
+<property name="domainId" column="DOMAINID" />
+
+</class>
+</hibernate-mapping>

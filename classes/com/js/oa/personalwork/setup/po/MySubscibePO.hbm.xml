@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.setup.po.MySubscibePO" table="OA_MYSUBSCIBE" >
+<id name="id" column="MYSUBSCIBE_ID" type="long">
+<generator class="native" />
+</id>
+<property name="empId" column="EMP_ID" type="long"  />
+<property name="channelId" column="CHANNEL_ID"  />
+<property name="subscibeBeginTime" column="SUBSCIBEBEGINTIME"  />
+<property name="subscibeEndTime" column="SUBSCIBEENDTIME"  />
+</class>
+</hibernate-mapping>

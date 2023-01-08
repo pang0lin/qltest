@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.info.isodoc.po.IsoBorrowUserPO"  table="OA_ISO_BorrowUser">
+
+		<id column="isoBorrowUserId" name="isoBorrowUserId" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="userId" column="userId" />
+		<property name="userName" column="userName" />
+		<property name="orgId" column="orgId"/>
+		<property name="orgName" column="orgName"/>
+		<property name="informationId" column="informationId"/>
+		<property name="borrowBeginTime" column="borrowBeginTime" />
+		<property name="borrowEndTime" column="borrowEndTime" />
+		<property name="borrowStatus" column="borrowStatus"/>
+		<property name="borrowReason" column="borrowReason"/>
+                <property name="informationName" column="informationName"/>
+                <property name="inforChannelName" column="inforChannelName"/>
+                <property name="inforChannelId" column="inforChannelId"/>
+                <property name="documentNO" column="documentNO"/>
+                <property name="domainId" column="Domain_id"/>
+	</class>
+</hibernate-mapping>

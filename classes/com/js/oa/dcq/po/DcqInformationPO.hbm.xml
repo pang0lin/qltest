@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.dcq.po.DcqInformationPO" table="dcq_information">
+		<id name="informationId" column="informationId" type="java.lang.Long">
+			<generator class="native" />
+		</id>
+		<property name="announcementTitle" column="announcementTitle" />
+		<property name="announcementType" column="announcementType" />
+		<property name="sendType" column="sendType" />
+		<property name="startDate" column="startDate" />
+		<property name="endDate" column="endDate" />
+		<property name="orgID" column="orgID" />
+		<property name="personID" column="personID" />
+		<property name="releaseDate" column="releaseDate" />
+		<property name="implement" column="implement" />
+		<property name="edmOrgID" column="edmOrgID" />
+		<property name="leadersIDs" column="leadersIDs" />
+		<property name="browserIDStr" column="browserIDStr" />
+		<property name="postNotice" column="postNotice" />
+		<property name="receiverID" column="receiverID" />
+		<property name="receiverType" column="receiverType" />
+		<property name="oid" column="oid" />
+		<property name="senderName" column="senderName" />
+		<property name="sendOrgName" column="sendOrgName" />
+		<property name="important" column="important" />
+		<property name="senderID" column="senderID" />
+		<property name="sendOrgID" column="sendOrgID" />
+		<property name="havContent" column="havContent" />
+		<property name="mark" column="mark" />
+		<property name="browseDate" column="browseDate" />
+		<property name="feedbackDate" column="feedbackDate" />
+		<property name="feedbackDepID" column="feedbackDepID" />
+		<property name="content" column="content" />
+		<property name="feedbackPersonID" column="feedbackPersonID" />
+	</class>
+</hibernate-mapping>

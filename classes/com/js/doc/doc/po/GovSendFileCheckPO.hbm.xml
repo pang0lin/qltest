@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovSendFileCheckPO" table="DOC_SENDFILECHECK" >
+<id name="id" column="SENDFILECHECK_ID" type="long">
+    <generator class="native"/>
+</id>
+
+<property name="sendFileCheckComeUnit" column="SENDFILECHECK_COMEUNIT" type="string" length="50"/>
+<property name="sendFileCheckFileNumber" column="SENDFILECHECK_FILENUMBER" type="string" length="50"/>
+<property name="sendFileCheckReceiveDate" column="SENDFILECHECK_RECEIVEDATE"/>
+<property name="sendFileCheckTitle" column="SENDFILECHECK_TITLE" type="string" length="200"/>
+<property name="sendFileCheckWriterComment" column="SENDFILECHECK_WRITERCOMMENT" type="string" length="500"/>
+<property name="sendFileCheckFinishDate" column="SENDFILECHECK_FINISHDATE" type="string" length="50"/>
+<property name="sendFileCheckLeaderComment" column="SENDFILECHECK_LEADERCOMMENT" type="string" length="500"/>
+<property name="createdOrg" column="CREATEDORG" type="long" length="20"/>
+<property name="createdEmp" column="CREATEDEMP" type="long" length="20"/>
+<property name="canEdit" column="canEdit" type="byte" length="1"/>
+
+<property name="field1" column="field1" />
+<property name="field2" column="field2" />
+<property name="field3" column="field3" />
+<property name="field4" column="field4" />
+<property name="field5" column="field5" />
+<property name="field6" column="field6" />
+<property name="field7" column="field7" />
+<property name="field8" column="field8" />
+<property name="field9" column="field9" />
+<property name="field10" column="field10" />
+
+<property name="submitPerson" column="SENDFILECHECK_SUBMITPERSON" />
+<property name="submitTime" column="SENDFILECHECK_SUBMITTIME" />
+<property name="receiveFileId" column="RECEIVEFILE_ID" />
+<property name="receiveFileLink" column="RECEIVEFILE_LINK" />
+<property name="thirdDossier" column="SENDFILECHECK_THIRDDOSSIER" />
+<set name="idea"
+     table="DOC_SENDFILECHECKCOMMENT"
+     lazy="true"
+     inverse="false"
+     cascade="delete"
+     sort="unsorted">
+    <key column="SENDFILECHECK_ID"/>
+    <one-to-many class="com.js.doc.doc.po.GovSendFileCheckCommentPO"/>
+</set>
+
+<set name="accessory"
+     table="DOC_SENDFILECHECK_ACCESSORY"
+     lazy="false"
+     inverse="false"
+     cascade="delete"
+     sort="unsorted">
+    <key column="SENDFILECHECK_ID"/>
+    <one-to-many class="com.js.doc.doc.po.GovSendFileCheckAccePO"/>
+</set>
+
+</class>
+</hibernate-mapping>

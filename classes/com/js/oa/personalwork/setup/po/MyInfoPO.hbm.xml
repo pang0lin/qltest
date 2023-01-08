@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.personalwork.setup.po.MyInfoPO" table="ORG_EMPLOYEE" >
+<id name="id" column="EMP_ID" type="long">
+	<generator class="native" />
+</id>
+<property name="empMobilePhone" column="EMPMOBILEPHONE"  />
+<property name="empEmail" column="EMPEMAIL"  />
+<property name="empEmail2" column="EMPEMAIL2"  />
+<property name="empEmail3" column="EMPEMAIL3"  />
+<property name="empPhone" column="EMPPHONE"  />
+<property name="empDescribe" column="EMPDESCRIBE"  />
+<property name="empGnome" column="EMPGNOME" type="string" length="200"/>
+<property name="empLivingPhoto" column="EMPLIVINGPHOTO" type="string" length="20"/>
+<property name="userPassword" column="USERPASSWORD" />
+<property name="isChangePwd" column="ISCHANGEPWD" />
+<property name="empbusPhone" column="EMPBUSINESSPHONE" />
+<property name="empsex" column="EMPSEX" />
+<property name="empBirth" column="EMPBIRTH" type="timestamp" length="7"/>
+<property name="empName" column="EMPNAME" type="string" length="20" not-null="true"/>
+<property name="empEnglishName" column="EMPENGLISHNAME" type="string" length="50"/>
+<property name="userAccounts" column="USERACCOUNTS" type="string"/>
+<property name="userSimpleName" column="USERSIMPLENAME" type="string"/>
+<property name="weixinId" column="weixinId" type="string"/>
+</class>
+</hibernate-mapping>

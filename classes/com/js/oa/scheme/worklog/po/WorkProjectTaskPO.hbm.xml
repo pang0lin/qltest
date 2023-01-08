@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+    <class name="com.js.oa.scheme.worklog.po.WorkProjectTaskPO" table="oa_workprojecttask">
+        <id name="task_id" column="task_id" type="long">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="task_code" column="task_code" type="string"/>
+        <property name="task_fathercode" column="task_fathercode" type="string"/>
+        <property name="task_name" column="task_name" type="string"/>
+		<property name="task_description" column="task_description" type="string"/>
+		<property name="task_achieve" column="task_achieve" type="string"/>
+		<property name="task_hour" column="task_hour" type="string"/>
+		<property name="task_level" column="task_level" type="int"/>
+		<property name="task_sort" column="task_sort" />
+		 <many-to-one
+        name="workProject"
+        class="com.js.oa.scheme.worklog.po.WorkProjectPO"
+        not-null="false" >
+        <column name="PROJECT_ID" />
+    </many-to-one>
+
+    </class>
+</hibernate-mapping>

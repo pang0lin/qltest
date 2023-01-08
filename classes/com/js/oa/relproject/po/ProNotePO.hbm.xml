@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.relproject.po.ProNotePO" table="PRO_NOTE" >
+<id name="id" column="ID" type="long">
+<generator class="native"/>
+</id>
+<property name="projectId" column="project_id"/>
+<property name="title" column="title"/>
+<property name="content" column="content"/>
+<property name="empId" column="emp_id"/>
+<property name="empName" column="emp_name"/>
+<property name="sendTime" column="sendtime"/>
+
+</class>
+</hibernate-mapping>

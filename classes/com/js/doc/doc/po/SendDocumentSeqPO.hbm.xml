@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.SendDocumentSeqPO"  table="doc_senddocumentseq">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+
+		<property name="seqName" column="seqName" />
+		<property name="seqUnitName" column="seqUnitName"/>
+		<property name="seqFileType" column="seqFileType"/>
+		<property name="seqIsUse" column="seqIsUse"/>
+		<property name="seqBitNum" column="seqBitNum"/>
+
+		<property name="seqIsYear" column="seqIsYear"/>
+		<property name="seqInitValue" column="seqInitValue"/>
+		<property name="seqFormat" column="seqFormat"/>
+		<property name="seqMode" column="seqMode"/>
+		<property name="seqfig" column="seqfig"/>
+                <property name="seqIsWord" column="seqIsWord"/>
+                <property name="createdEmp" column="createdEmp"/>
+                <property name="createdOrg" column="createdOrg"/>
+                <property name="corpId" column="corp_id"/>
+	</class>
+</hibernate-mapping>

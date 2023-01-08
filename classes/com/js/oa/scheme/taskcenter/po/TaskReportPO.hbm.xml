@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+    <class name="com.js.oa.scheme.taskcenter.po.TaskReportPO" table="OA_TASKREPORT" >
+
+    <id name="reportId" type="java.lang.Long" column="REPORT_ID">
+        <generator class="native" />
+    </id>
+
+	<property name="trDomainId" type="java.lang.Long" column="DOMAIN_ID" length="20"/>
+    <property name="reportInfo" type="java.lang.String" column="REPORTINFO" length="500"/>
+    <property name="finishRate" type="java.lang.Integer" column="FINISHRATE" length="3"/>
+    <property name="reportTime" type="java.sql.Timestamp" column="REPORTTIME" not-null="true" length="7"/>
+    <property name="checkOpinion" type="java.lang.String" column="CHECKOPINION" length="500"/>
+    <property name="checkTime" type="java.sql.Timestamp" column="CHECKTIME" length="7"/>
+    <property name="checkerName" type="java.lang.String" column="CHECKERNAME" length="20"/>
+    <property name="checkerId" type="java.lang.Long" column="CHECKERID" length="20"/>
+    <property name="taskId" type="java.lang.Long" column="TASK_ID" length="20"/>
+    <property name="reportAppend" column="REPORTAPPEND"/>
+    <many-to-one name="taskExec" class="com.js.oa.scheme.taskcenter.po.TaskExecPO" not-null="true">
+        <column name="TASKEXEC_ID" />
+    </many-to-one>
+	 <set name="taskReportAccessory"
+    table="OA_TASKREPORTACCESSORY"
+    lazy="true"
+    inverse="false"
+    cascade="all"
+    sort="unsorted">
+    <key column="REPORT_ID"/>
+    <one-to-many class="com.js.oa.scheme.taskcenter.po.TaskReportAccessoryPO"/>
+    </set>
+
+</class>
+</hibernate-mapping>

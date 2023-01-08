@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.system.vo.rolemanager.RoleVO" table="ORG_ROLE" >
+<id name="roleId" column="ROLE_ID" type="long">
+	<generator class="native"/>
+</id>
+<property name="roleName" column="ROLENAME" type="string"/>
+<property name="roleDescription" column="ROLEDESCRIPTION" type="string"/>
+<property name="roleUserId" column="ROLEUSERID" type="string"/>
+<property name="roleUserName" column="ROLEUSERNAME" type="string"/>
+<property name="createdOrg" column="CREATEDORG" type="long"/>
+<property name="createdEmp" column="CREATEDEMP" type="long"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="roleUseRange" column="ROLEUSERANGE"/>
+<property name="roleUseName" column="ROLEUSENAME"/>
+
+<property name="roleRange" column="ROLERANGE"/>
+<property name="roleRangeName" column="ROLERANGENAME"/>
+<property name="roleRangeType" column="ROLERANGETYPE"/>
+
+<!-- Describe many-to-many relationship of org_role & org_user. -->
+<set
+	name="employees"
+	table="ORG_USER_ROLE"
+	lazy="true"
+	inverse="false"
+	cascade="none"
+	sort="unsorted"
+	>
+	<key column="Role_id"/>
+	<many-to-many
+		class="com.js.system.vo.usermanager.EmployeeVO"
+		column="Emp_id"
+		outer-join="false"
+	/>
+</set>
+
+<!-- Describe many-to-many relationship of org_role & org_right. -->
+<set
+	name="rights"
+	table="ORG_ROLE_RIGHT"
+	lazy="true"
+	inverse="false"
+	cascade="none"
+	sort="unsorted"
+	>
+	<key column="Role_id"/>
+	<many-to-many
+		class="com.js.system.vo.rightmanager.RightVO"
+		column="Right_id"
+		outer-join="false"
+	/>
+</set>
+
+</class>
+</hibernate-mapping>

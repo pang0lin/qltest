@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.audit.po.AuditIpPO" table="audit_sec_ip" >
+<id name="auditIpId" column="audit_ip_id" type="long">
+	<generator class="native" />
+</id>
+<property name="ipId" type="java.lang.Long"><column name="IPID"/></property>
+<property name="ipApplyTime" column="IPAPPLYTIME" type="timestamp" length="7"/>
+<property name="ipAddressEnd" column="IPADDRESSEND" type="string" length="16"/>
+<property name="ipAddressBegin" column="IPADDRESSBEGIN" type="string" length="16"/>
+<property name="ipOpenBeginTime" column="IPOPENBEGINTIME" type="timestamp" length="7"/>
+<property name="ipOpenEndTime" column="IPOPENENDTIME" type="timestamp" length="7"/>
+<property name="ipIsOpen" column="IPISOPEN" type="byte" length="1"/>
+<property name="ipProposer" column="IPPROPOSER" type="string" length="20"/>
+<property name="confirmEmp" column="CONFIRMEMP" type="string"/>
+<property name="confirmOrg" column="CONFIRMORG" type="string"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="auditLogId" type="java.lang.Long"><column name="AUDIT_LOG_ID" /></property>
+<property name="operationType" type="java.lang.String"><column name="OPERATION_TYPE" length="20" /></property>
+</class>
+</hibernate-mapping>
+
+

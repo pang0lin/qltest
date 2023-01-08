@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+    
+<hibernate-mapping>
+    <class name="com.js.oa.scheme.taskcenter.po.TaskExecPO" table="OA_TASKEXEC" >
+        <id name="taskExecId" type="java.lang.Long" column="TASKEXEC_ID">
+            <generator class="native" />
+        </id>
+        <property name="teDomainId" type="java.lang.Long" column="DOMAIN_ID" length="20"/>
+        <property name="execEmpId" type="java.lang.Long" column="EXECEMPID" not-null="true" length="20"/>
+        <property name="isPrincipal" type="java.lang.Integer" column="ISPRINCIPAL" length="1"/>
+        
+		<many-to-one name="task" class="com.js.oa.scheme.taskcenter.po.TaskPO" not-null="true">
+            <column name="TASK_ID" />
+        </many-to-one>
+        <set name="taskReports" lazy="true" inverse="true" >
+            <key>
+                <column name="TASKEXEC_ID" />
+            </key>
+            <one-to-many class="com.js.oa.scheme.taskcenter.po.TaskReportPO"/>
+        </set>
+    </class>
+</hibernate-mapping>

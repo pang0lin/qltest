@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.WFPackagePO"
+        table="JSF_PACKAGE"
+        >
+        <id name="wfPackageId" column="WF_PACKAGE_ID" type="long">
+            <generator class="native" />
+        </id>
+        <property name="packageName" column="PACKAGENAME" />
+        <property name="packageCreatedDate" column="PACKAGECREATEDDATE" />
+        <property name="packageDescription" column="PACKAGEDESCRIPTION" />
+        <property name="createdEmp" column="CREATEDEMP" />
+        <property name="createdOrg" column="CREATEDORG" />
+        <property name="moduleId" column="WF_MODULE_ID" />
+        <property name="orderCode" column="ORDERCODE" />
+        <property name="domainId" column="DOMAIN_ID" />
+
+        <!--与工作流过程定义（JSF_WOKRFLOW_PROCESS）是一对多关系-->
+        <set name="wfWorkFlowProcess"
+            table="JSF_WORKFLOWPROCESS"
+			
+            lazy="true"
+            cascade="none"
+            inverse="true"
+            sort="unsorted">
+            <key column="WF_PACKAGE_ID" />
+            <one-to-many class="com.js.oa.jsflow.po.WFWorkFlowProcessPO" />
+        </set>
+    </class>
+</hibernate-mapping>

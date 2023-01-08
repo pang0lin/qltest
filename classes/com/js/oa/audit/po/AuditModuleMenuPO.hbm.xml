@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.audit.po.AuditModuleMenuPO" table="AUDIT_MENU_EXT" >
+        <id name="auditMenuExtId" column="AUDIT_MENU_EXT_ID" type="long">
+             <generator class="native"/>
+        </id>
+        <property name="menuExtId" column="menu_ext_ID" type="long"/>
+        <property name="auditLogId" type="java.lang.Long"><column name="AUDIT_LOG_ID" /></property>
+		<property name="auditOperationType" type="java.lang.String"><column name="AUDIT_OPERATION_TYPE" length="20" /></property>
+        <property name="menuName" column="MENU_NAME" type="java.lang.String"/>
+		<property name="menuBlone" column="MENU_BLONE" type="long"/>
+		<property name="menuLocation" column="MENU_LOCATION" type="long"/>
+		<property name="menuAction" column="MENU_ACTION" type="java.lang.String"/>
+		<property name="menuActionParams1" column="MENU_ACTIONPARAMS1" type="java.lang.String"/>
+		<property name="menuActionParams2" column="MENU_ACTIONPARAMS2" type="java.lang.String"/>
+		<property name="menuActionParams3" column="MENU_ACTIONPARAMS3" type="java.lang.String"/>
+		<property name="menuActionParams4" column="MENU_ACTIONPARAMS4" type="java.lang.String"/>
+		<property name="menuActionParams4Value" column="MENU_ACTIONPARAMS4VALUE" type="java.lang.String"/>
+		<property name="menuListTableMap" column="MENU_LISTTBLMAPPING" type="long"/>
+		<property name="menuListTableName" column="MENU_LISTTBLNAME" type="java.lang.String"/>
+		<property name="menuSubTableMap" column="MENU_SUBTBLMAPPING" type="long"/>
+		<property name="menuSubTableName" column="MENU_SUBTBLNAME" type="java.lang.String"/>
+		<property name="menuDefQueryCondition" column="MENU_DEFQUERYCONDITION" type="java.lang.String"/>
+		<property name="menuDefQueryOrder" column="MENU_DEFQUERYORDER" type="java.lang.String"/>
+		<property name="menuListQueryConditionElements" column="MENU_LISTQUERYELEMENTS" type="java.lang.String"/>
+		<property name="menuListDisplayElements" column="MENU_LISTDISPLAYELEMENTS" type="java.lang.String"/>
+		<property name="menuRefFlow" column="MENU_REFFLOW" type="java.lang.String"/>
+		<property name="menuRefFlowStatue" column="MENU_FEFFLOWSTATUE" type="java.lang.String"/>
+		<property name="menuMaintenanceTableMap" column="MENU_MANTENANCETBLMAPING" type="long"/>
+		<property name="menuMaintenanceTableName" column="MENU_MANTENANCETBLNAME" type="java.lang.String"/>
+		<property name="menuMaintenanceSubTableMap" column="MENU_MANTBL_SUBTBL" type="long"/>
+		<property name="menuMaintenanceSubTableName" column="MENU_MANTBL_SUBTBLNAME" type="java.lang.String"/>
+		<property name="menuStartFlow" column="MENU_STARTFLOW" type="java.lang.String"/>
+		<property name="menuFileLink" column="MENU_FILELIKEURL" type="java.lang.String"/>
+		<property name="menuHtmlLink" column="MENU_STATICLINKURL" type="java.lang.String"/>
+		<property name="menuOpenStyle" column="MENU_OPERTYPE" type="java.lang.Integer"/>
+		<property name="menuIsValide" column="MENU_ISVALIDE" type="java.lang.Integer"/>
+		<property name="menuMessageSend" column="MENU_SENDMESSAGE" type="java.lang.Integer"/>
+		<property name="domainId" column="MENU_DOMAINID" type="long"/>
+		<property name="menuLevel" column="MENU_LEVEL" type="java.lang.String"/>
+		<property name="menuScope" column="MENU_SCOPE" type="java.lang.String"/>
+		<property name="menuViewUser" column="MENU_VIEWUSER" type="java.lang.String"/>
+		<property name="menuViewOrg" column="MENU_VIEWORG" type="java.lang.String"/>
+		<property name="menuViewGroup" column="MENU_VIEWGROUP" type="java.lang.String"/>
+		<property name="menuCount" column="MENU_COUNT" type="java.lang.Integer"/>
+		<property name="menuSearchBound" column="MENU_SEARCHBOUND" type="java.lang.Long"/>
+		<property name="menuSearchHtml" column="MENU_SEARCHHTML" type="java.lang.String"/>
+		<property name="menuListHtml" column="MENU_LISTHTML" type="java.lang.String"/>
+		<property name="menuAccess" column="MENU_ACCESSS" type="java.lang.String"/>
+		<property name="menuRelationRefFlow" column="MENU_RELATIONREFFLOW" type="java.lang.String"/>
+		<property name="recordOperattion" column="MENU_RECORDOPERATION" type="java.lang.String"/>
+		<property name="operationType" column="MENU_OPERATIONTYPE" type="java.lang.String"/>
+		<property name="operationImg" column="MENU_OPERATIONIMG" type="java.lang.String"/>
+		<property name="operationComponert" column="MENU_OPERATIONCOMPONERT" type="java.lang.String"/>
+		<property name="parentOrder" column="MENU_PARENTORDER" type="long"/>
+		<!-- 补充的值开始 -->
+		 <property name="menuBloneHId" column="menuBloneHId" />
+		 <property name="menuAccesss" column="menuAccesss" />
+		 <property name="menuRelationRefFlow2" column="menuRelationRefFlow2" />
+		 <property name="zorder" column="zorder" />
+		 <property name="zorderLocation" column="zorderLocation" />
+		 <property name="zorderLacationOld" column="zorderLacationOld" />
+		 <property name="defHref" column="defHref" />
+		 <property name="defHrefOld" column="defHrefOld" />
+		 <property name="channel" column="channel" />
+		 <property name="channelOrder" column="channelOrder" />
+		 <property name="channelId" column="channelId" />
+		 <property name="queryCaseName" column="queryCaseName" />
+		 <property name="listCaseName" column="listCaseName" />
+		 <property name="model" column="model" />
+		  <property name="menuLocationSelValue" column="menuLocationSelValue" />
+		<!-- 补充的值结束 -->
+		<property name="menuAdd" column="menu_add" type="java.lang.String"/>
+		<property name="menuDel" column="menu_del" type="java.lang.String"/>
+		<property name="menuImp" column="menu_imp" type="java.lang.String"/>
+		<property name="menuExp" column="menu_exp" type="java.lang.String"/>
+		<property name="menuQuery" column="menu_query" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

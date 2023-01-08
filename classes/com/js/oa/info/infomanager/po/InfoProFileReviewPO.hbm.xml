@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InfoProFileReviewPO"
+        table="HAIER_FILEMANGERREVIEW"
+        >
+        <id name="ReviewId" column="REVIEW_ID">
+            <generator class="native"/>
+        </id>
+         <property name="fileId" column="FILE_ID"  />
+        <property name="fileName" column="FILENAME"  />
+        <property name="reviewDate" column="REVIEWDATE"/>
+         <property name="version" column="FILE_VERSION"/>
+        <property name="result" column="REVIEW_RESULT"  />
+        <property name="editId" column="EDITID" />
+        <property name="editName" column="EDITNAME" />
+        <property name="fileNum" column="FILENUM" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.routine.voiture.po.VoitureApplyPO" table="VEH_APPLY"  dynamic-update="true">
+<id name="id" column="APPLYID" type="long">
+<generator class="native"/>
+</id>
+<property name="voitureId" column="VOITUREID" type="long"/>
+<property name="orgId" column="ORGID" type="string" length="200"/>
+<property name="orgName" column="ORGNAME" type="string" length="200"/>
+<property name="empId" column="EMPID" type="string" length="20"/>
+<property name="empName" column="EMPNAME" type="string" length="20"/>
+<property name="destination" column="DESTINATION" type="string" length="100"/>
+<property name="reason" column="REASON" type="string" length="500"/>
+<property name="startDate" column="STARTDATE" type="timestamp" length="23"/>
+<property name="startTime" column="STARTTIME"/>
+<property name="endDate" column="ENDDATE" type="timestamp" length="23"/>
+<property name="endTime" column="ENDTIME"/>
+<property name="status" column="STATUS" type="string" length="1"/>
+<property name="fillDate" column="FILLDATE" type="timestamp" length="23"/>
+<property name="personNum" column="PERSONNUM" type="string" length="20"/>
+<property name="motorMan" column="MOTORMAN" type="string" length="50"/>
+<property name="voitureStyle" column="VOITURESTYLE" type="string" length="1"/>
+<property name="remark" column="REMARK" type="string" length="500"/>
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="ycr" column="YCR"></property>
+<property name="departurePlace" column="departurePlace"></property>
+<property name="vehiclePhone" column="vehiclePhone"></property>
+<property name="vehicleNum" column="vehicleNum"></property>
+<property name="carPoolId" column="carPoolId"></property>
+<set name="voitureSendPO"
+	
+    table="VEH_SEND"
+    lazy="true"
+    inverse="true"
+    cascade="save-update"
+    sort="unsorted">
+    <key column="APPLYID" />
+    <one-to-many class="com.js.oa.routine.voiture.po.VoitureSendPO" />
+</set>
+</class>
+</hibernate-mapping>

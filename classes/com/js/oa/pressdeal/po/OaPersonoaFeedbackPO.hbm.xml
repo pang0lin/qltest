@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+
+<hibernate-mapping package="com.js.oa.pressdeal.po">
+
+    <class name="OaPersonoaFeedbackPO" table="OA_PERSONOA_FEEDBACK" dynamic-insert="true" dynamic-update="true">
+        <id name="feedbackId" column="FEEDBACK_ID" type="long">
+            <generator class="native"/>
+        </id>
+ 
+        <property name="feedbackTime" column="FEEDBACK_TIME" type="timestamp"  not-null="true" />
+        <property name="userName" column="USER_NAME" type="string"  not-null="true" />
+        <property name="pressId" column="PRESS_ID" type="long"  not-null="true" />
+        <property name="content" column="CONTENT" type="string"  not-null="true" />
+        <property name="domainId" column="DOMAIN_ID" type="long"  not-null="true" />
+        <property name="standbyStr" column="STANDBY_STR" type="string" />
+        <property name="standbyFloat" column="STANDBY_FLOAT" type="float" />
+		<property name="feedbackStatus" column="FEEDBACK_STATUS" type="byte"/>
+    </class>
+    
+</hibernate-mapping>

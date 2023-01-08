@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.userdb.newCode.po.CodeSetPO" table="JSF_NEWCODE_RECORD" >
+<id name="codeSetId" column="codeSet_id" type="long">
+	<generator class="native" />
+</id>
+<property name="codeId" column="code_id"  />
+<property name="codeSetOrder" column="codeSet_order" />
+<property name="codeSetType" column="codeSet_type"  />
+<property name="codeSetContent" column="codeSet_content"  />
+<property name="codeSetBegin" column="codeSet_begin"  />
+<property name="codeSetStep" column="codeSet_step"  />
+<property name="codeSetIsRelyDate" column="codeSet_isRelyDate"  />
+<property name="codeSetRelySetId" column="codeSet_relySetId"  />
+<property name="codeSetIsComplete" column="codeSet_isComplete"  />
+<property name="codeSetCompleteCnt" column="codeSet_completeCnt"  />
+<property name="codeSetDateYear" column="codeSet_dateYear"  />
+<property name="codeSetDateMonth" column="codeSet_dateMonth"  />
+<property name="codeSetDateDay" column="codeSet_dateDay"  />
+<property name="codeSetDateSplit" column="codeSet_dateSplit"  />
+<property name="codeSetDateIsComplete" column="codeSet_dateIsComplete"  />
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.scheme.taskcenter.po.TaskPeriodicityAccessoryPO"
+        table="oa_taskperiodicityaccessory"
+        >
+        <id name="accessoryId" column="ACCESSORYID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="accessoryName" column="ACCESSORYNAME" />
+        <property name="accessorySaveName" column="ACCESSORYSAVENAME" />
+        <property name="domainId" column="DOMAIN_ID" />
+
+        <!--与OA_INFORMATIONHISTORY（信息）表是多对一的关系-->
+        <many-to-one name="periodicity"
+            class="com.js.oa.scheme.taskcenter.po.TaskPeriodicityAccessoryPO"
+            cascade="none"
+            outer-join="auto"
+            update="false"
+            insert="true"
+            column="PERIODICITYID" />
+    </class>
+</hibernate-mapping>

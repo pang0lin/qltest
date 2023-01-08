@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsManagePO" table="MS_MANAGE" >
+        <id name="msId" column="MS_ID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="msTitle" column="MSTITLE"/>
+        <property name="msRemark" column="MSREMARK"/>
+        <property name="domainId" column="DOMAIN_ID"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.BaseInfoPO"  table="DOC_senddocumentBASEINFO">
+
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="fileType" column="fileType" />
+		<property name="secretLevel" column="secretLevel" />
+		<property name="transactLevel" column="transactLevel"/>
+		<property name="contentLevel" column="contentLevel"/>
+		<property name="keepSecretLevel" column="keepSecretLevel"/>
+		<property name="unitWord" column="unitWord"/>
+		<property name="baseUnitClass" column="baseUnitClass"/>
+		<property name="topicalAreaClass" column="topicalAreaClass"/>
+		<property name="baseSorttopical" column="baseSorttopical"/>
+		<property name="baseQueryLevel" column="baseQueryLevel"/>
+		<property name="openProperty" column="openProperty" />
+		<property name="sendDropDownSelect1" column="send_drop_down_select1" />
+		<property name="sendDropDownSelect2" column="send_drop_down_select2" />
+	</class>
+</hibernate-mapping>

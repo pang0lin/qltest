@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.resource.po.GoodsStockPO"
+        table="ST_GOODSSTOCK"
+        >
+        <id name="id" column="GOODSSTOCK_ID">
+           <generator class="native" />
+        </id>
+        <property name="goodsId" column="GOODS_ID" />
+        <property name="stockId" column="STOCK_ID" />
+        <property name="amount" column="STOCK_AMOUNT" />
+        <property name="stockMoney" column="STOCKMONEY" />
+    </class>
+</hibernate-mapping>

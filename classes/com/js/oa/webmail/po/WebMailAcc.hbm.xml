@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.oa.webmail.po.WebMailAcc" table="oa_web_mail_acc">
+		<id name="mailAccId" type="java.lang.Long">
+			<column name="mail_acc_id" />
+			<generator class="native" />
+		</id>
+		<property name="mailAccUser" type="java.lang.String">
+			<column name="mail_acc_user" />
+		</property>
+		<property name="smtp" type="java.lang.String">
+			<column name="smtp" />
+		</property>
+
+		<property name="pop" type="java.lang.String">
+			<column name="pop" />
+		</property>
+
+		<property name="mailAccPwd" type="java.lang.String">
+			<column name="mail_acc_pwd" />
+		</property>
+		<property name="userId" type="java.lang.Long">
+			<column name="user_id" />
+		</property>
+		<property name="disName" type="java.lang.String">
+			<column name="dis_name" />
+		</property>
+		
+		<property name="defaultFlag" type="java.lang.String">
+			<column name="default_flag" />
+		</property>
+		
+		<property name="bakFlag" type="java.lang.String">
+			<column name="bak_flag" />
+		</property>
+		
+		<property name="smtpPort" type="int">
+			<column name="smtpport" />
+		</property>
+		
+		<property name="popPort" type="int">
+			<column name="popport" />
+		</property>
+		
+		<property name="smtpJMFS" type="java.lang.String">
+		    <column name="smtpJMFS"/>
+		</property>
+		
+		<property name="popJMFS" type="java.lang.String">
+		    <column name="popJMFS"/>
+		</property>
+
+	</class>
+</hibernate-mapping>

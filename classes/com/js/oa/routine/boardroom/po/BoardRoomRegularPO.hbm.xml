@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.routine.boardroom.po.BoardRoomRegularPO" table="OA_BOARDROOMRegular" >
+        <id name="regularId" column="regularId">
+             <generator class="native"/>
+        </id>
+        <property name="meetingCircle" column="meetingCircle"/>
+		<property name="meetingLength" column="meetingLength"/>
+		<property name="typeFlag" column="typeFlag"/>
+		<property name="bdroomAppType" column="bdroomAppType"/>
+		<property name="meetingDateBegin" column="meetingDateBegin"/>
+		<property name="meetingDateEnd" column="meetingDateEnd"/>
+		<property name="everyMeetingBegin" column="everyMeetingBegin"/>
+		<property name="everyMeetingEnd" column="everyMeetingEnd"/>
+		<property name="everyMeetingBeginTime" column="everyMeetingBeginTime"/>
+		<property name="everyMeetingEndTime" column="everyMeetingEndTime"/>
+
+
+	</class>
+</hibernate-mapping>

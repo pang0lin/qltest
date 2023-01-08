@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.archives.po.ArchivesWaitPigeonholePO" table="OA_WAITPIGEONHOLE" >
+<id name="waitPigeonholeId" column="WAITPIGEONHOLEID" >
+<generator class="native" />
+</id>
+
+<property name="pigeonholeFileId" column="PIGEONHOLEFILEID"/>
+<property name="pigeonholeCaption" column="PIGEONHOLECAPTION"/>
+<property name="pigeonholeTypeName" column="PIGEONHOLETYPENAME"/>
+<property name="pigeonholeFileName" column="PIGEONHOLEFILENAME"/>
+<property name="pigeonholePromulgator" column="PIGEONHOLEPROMULGATOR"/>
+<property name="pigeonholeDate" column="PIGEONHOLEDATE"/>
+<property name="pigeonholeState" column="PIGEONHOLESTATE"/>
+<property name="pigeonholeManageDate" column="PIGEONHOLEMANAGEDATE"/>
+<property name="domainId" column="DOMAIN_ID"/>
+
+<property name="createdEmp" column="createdEmp"/>
+<property name="createdOrg" column="createdOrg"/>
+<property name="fileID" column="FILE_ID"/>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovReceiveFilePO" table="DOC_receiveFile" >
+
+<id name="id" column="receiveFile_ID" type="long">
+ <generator class="native"/>
+</id>
+
+<property name="receiveFileFileNo" column="receiveFile_FILENO" type="string" length="50"/>
+<property name="receiveFileSendFileUnit" column="receiveFile_SENDFILEUNIT" type="string" length="50"/>
+<property name="receiveFileFileNumber" column="receiveFile_FILENUMBER" type="string" length="50"/>
+<property name="receiveFileTitle" column="receiveFile_TITLE" type="string" length="100"/>
+<property name="receiveFileSafetyGrade" column="receiveFile_SAFETYGRADE" type="string" length="10"/>
+<property name="receiveFileReceiveDate" column="receiveFile_RECEIVEDATE"   />
+<property name="receiveFileQuantity" column="receiveFile_QUANTITY" />
+<property name="receiveFileSettleComment" column="receiveFile_SETTLECOMMENT" type="string" length="500"/>
+<property name="receiveFileFinishDate" column="receiveFile_FINISHDATE" />
+<property name="receiveFileLeaderComment" column="receiveFile_LEADERCOMMENT" type="string" length="500"/>
+<property name="receiveFileDoComment" column="receiveFile_DOCOMMENT" type="string" length="500"/>
+<property name="accessoryNameFile" column="ACCESSORYNAME_FILE" type="string" length="100"/>
+<property name="accessorySaveNameFile" column="ACCESSORYSAVENAME_FILE" type="string" length="100"/>
+<property name="accessoryName" column="ACCESSORYNAME" type="string" length="200"/>
+<property name="accessorySaveName" column="ACCESSORYSAVENAME" type="string" length="200"/>
+<property name="receiveFileIsEnd" column="receiveFile_ISEND" type="byte" length="1"/>
+<property name="receiveFileEndDate" column="receiveFile_ENDDATE"  />
+<property name="receiveFileDoDepart" column="receiveFile_DODEPART" type="long" length="20"/>
+
+<property name="receiveFileTogetherDoDepart" column="receiveFile_TOGETHERDODEPART" type="string" length="200"/>
+<property name="receiveFileSendLeaderRead" column="receiveFile_SENDLEADERREAD" type="string" length="500"/>
+<property name="receiveFileSendLeaderCheck" column="receiveFile_SENDLEADERCHECK" type="string" length="500"/>
+<property name="receiveFileDoPerson" column="receiveFile_DOPERSON" type="string" length="200"/>
+
+<property name="receiveFileDoDepartNm" column="RECEIVEFILE_DODEPARTNM" type="string" length="50"/>
+<property name="receiveFileTogetherDoDepartNm" column="RECEIVEFILE_TOGETHERDODEPARTNM" type="string" length="200"/>
+<property name="receiveFileSendLeaderReaderNm" column="RECEIVEFILE_SENDLEADERREADERNM" type="string" length="500"/>
+<property name="receiveFileSendLeaderCheckNm" column="RECEIVEFILE_SENDLEADERCHECKNM" type="string" length="500"/>
+<property name="receiveFileMemo" column="RECEIVEFILE_MEMO" type="string" length="200"/>
+<property name="receiveFileLink" column="RECEIVEFILE_LINK" type="string"  />
+<property name="receiveFileIsFlowMode" column="RECEIVEFILE_ISFLOWMODE"    />
+
+<property name="createdEmp" column="CREATEDEMP"   />
+<property name="createdOrg" column="CREATEDORG"   />
+
+<property name="receiveFileTransPerson" column="receivefile_transPerson"   />
+<property name="receiveFileTransPersonNm" column="receivefile_transPersonNm"   />
+
+
+<property name="receiveFileSettleLeaderComment" column="receiveFileSettleLeaderComment"   />
+<property name="receiveFileTransAuditComment" column="receiveFileTransAuditComment"   />
+<property name="receiveFileType" column="receiveFileType"   />
+<property name="createdTime" column="createdTime"   />
+<property name="createdTimeYear" column="createdTimeYear"   />
+<property name="receiveFileFileNoCount" column="ReceiveFile_FileNoCount"   />
+<property name="receiveFileStatus" column="ReceiveFile_Status" />
+<property name="lwh" column="lwh" />
+<property name="zbstatus" column="zbstatus" />
+
+<property name="field1" column="field1" />
+<property name="field2" column="field2" />
+<property name="field3" column="field3" />
+<property name="field4" column="field4" />
+<property name="field5" column="field5" />
+<property name="field6" column="field6" />
+<property name="field7" column="field7" />
+<property name="field8" column="field8" />
+<property name="field9" column="field9" />
+<property name="field10" column="field10" />
+
+<property name="sendFileId" column="SENDFILE_ID" />
+<property name="sendFileLink" column="SENDFILE_LINK" />
+<property name="sendFileTitle" column="SENDFILE_TITLE" />
+<property name="thirdDossier" column="RECEIVEFILE_THIRDDOSSIER" />
+<property name="domainId" column="DOMAIN_ID"/>
+
+<property name="fileSendCheckId" column="FILESENDCHECK_ID" />
+<property name="fileSendCheckLink" column="FILESENDCHECK_LINK" />
+
+<property name="exchangeFileId" column="EXCHANGEFILE_ID" />
+<property name="exchangeFileLink" column="EXCHANGEFILE_LINK" />
+<property name="exchangeFileTitle" column="EXCHANGEFILE_TITLE" />
+
+<property name="zjkySeq" column="zjkySeq" />
+<property name="zjkyType" column="zjkyType" />
+<property name="zjkykeepTerm" column="zjkykeepTerm" />
+<property name="seqId" column="seqId" />
+<property name="tableId" column="tableId" />
+
+<property name="receiveTextField1" column="receive_text_field1" />
+<property name="receiveTextField2" column="receive_text_field2" />
+<property name="receiveDropDownSelect1" column="receive_drop_down_select1" />
+<property name="receiveDropDownSelect2" column="receive_drop_down_select2" />
+<property name="receiveMutliTextField1" column="receive_mutli_text_field1" />
+<property name="receiveFieldSelectMoreEmp" column="receiveFieldSelectMoreEmp" />
+
+<property name="field16" column="field16" />
+<property name="field17" column="field17" />
+<property name="field18" column="field18" />
+<property name="field19" column="field19" />
+<property name="field20" column="field20" />
+<property name="field21" column="field21" />
+<property name="field22" column="field22" />
+<property name="field23" column="field23" />
+<property name="field24" column="field24" />
+<property name="field25" column="field25" />
+<property name="field26" column="field26" />
+<property name="isDraf"  column="IS_DRAF" />
+<property name="receiveSyncForward"  column="receive_syncForward" />
+<property name="receiveAuthorName"  column="receive_authorName" />
+
+<property name="processId" column="processId" />
+<property name="isSubFlow" column="isSubFlow" />
+<property name="updateTimeStr" column="updateTimeStr" />
+</class>
+</hibernate-mapping>

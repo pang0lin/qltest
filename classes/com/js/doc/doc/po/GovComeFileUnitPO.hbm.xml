@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.doc.doc.po.GovComeFileUnitPO" table="DOC_COMEFILEUNIT" >
+
+<id name="id" column="COMEFILEUNIT_ID" type="long">
+ <generator class="native"/>
+</id>
+
+<property name="comeFileUnitName" column="COMEFILEUNIT_NAME" type="string" length="200"/>
+<property name="createdEmp" column="CREATEDEMP"/>
+<property name="createdOrg" column="CREATEDORG"/>
+<property name="domainId" column="DOMAIN_ID"/>
+</class>
+</hibernate-mapping>

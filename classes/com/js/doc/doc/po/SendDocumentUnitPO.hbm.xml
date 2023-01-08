@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class name="com.js.doc.doc.po.SendDocumentUnitPO"  table="DOC_documentUnit">
+	
+		<id column="ID" name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="unitType" column="unitType" />
+		<property name="unitWholeName" column="unitWholeName" />
+		<property name="unitShortName" column="unitShortName"/>
+		<property name="createdEmp" column="createdEmp"/>
+                <property name="createdOrg" column="createdOrg"/>
+                <property name="corpId" column="corp_id"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.eform.po.TPagePO"
+        table="TPAGE"
+        >
+        <id name="id" column="PAGE_ID">
+            <generator class="native" />
+        </id>
+        <property name="pageName" column="PAGE_NAME" />
+        <property name="pageDes" column="PAGE_DES" />
+        <property name="pageList" column="PAGE_LIST" />
+        <property name="pageRef" column="PAGE_REF" />
+        <property name="pageContent" column="PAGE_CONTENT" type="net.sf.hibernate.type.TextType"  />
+        <property name="pagePath" column="PAGE_PATH" />
+		<property name="domainId" column="DOMAIN_ID" />
+		<property name="pageFileName" column="PAGE_FILENAME" />
+		<property name="pageOwner" column="PAGE_OWNER" />
+		<property name="pageDate" column="PAGE_DATE" />
+		<property name="pageSession" column="PAGE_SESSION" />
+		<property name="pageType" column="PAGE_TYPE" />
+		
+		<property name="jsOnload" column="js_onload" />
+		<property name="jsBeforeCommit" column="js_beforecommit" />
+		
+		<property name="formClassName" column="formclassname" />
+		<property name="formClassSaveMethod" column="formclasssavemethod" />
+		<property name="formClassUpdateMethod" column="formclassupdatemethod" />
+		
+		<property name="createdEmp" column="createdEmp" />
+		<property name="createdOrg" column="createdOrg" />
+        <property name="printPageId" column="PRINT_PAGE_ID"/>
+        <property name="mobilePageId" column="mobile_page_id"/>
+        
+         <!-- 是否自定义表单初始化数据 -->
+         <property name="initdata" column="initdata"/>
+         <!-- 数据来源 -->
+         <property name="initdatatype" column="initdatatype"/>
+         <!-- sql 数据源 -->
+         <property name="datasourcename" column="datasourcename"/>
+         <!-- 获取数据的sql -->
+         <property name="fetchsql" column="fetchsql"/>
+         <!-- 接口类名 -->
+         <property name="interfacename" column="interfacename"/>
+         <!-- 接口方法名称 -->
+         <property name="interfacemethod" column="interfacemethod"/>
+         <!-- 接口参数 -->
+         <property name="interfacemethodpara" column="interfacemethodpara"/>
+         <!-- 表单字段与返回值的对应 -->
+         <property name="mappingfields"  column="mappingfields"/>
+         
+         
+         
+         
+        <set name="tarea"
+            
+            table="TAREA"
+            lazy="true"
+            inverse="true"
+            cascade="save-update"
+            sort="unsorted">
+            <key column="PAGE_ID" />
+            <one-to-many class="com.js.oa.eform.po.TPagePO" />
+        </set>
+    </class>
+</hibernate-mapping>

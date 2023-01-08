@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.jsflow.po.JSFPDraftPO"
+        table="JSF_P_DRAFT">
+        <id name="id" column="id" type="long">
+            <generator class="native" />
+        </id>
+        <property name="processId" column="process_Id" />
+        <property name="tableId" column="table_Id" />
+        <property name="recordId" column="record_Id" />
+        <property name="userId" column="user_Id" />
+        <property name="workTitle" column="work_Title" />
+        <property name="processName" column="process_Name" />
+        <property name="saveTime" column="saveTime" />
+        <property name="relProjectId" column="relproject_id" />
+
+    </class>
+</hibernate-mapping>

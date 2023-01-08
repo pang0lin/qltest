@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.info.infomanager.po.InformationCommentPO"
+        table="OA_INFORMATIONCOMMENT"
+        >
+        <id name="commentId" column="COMMENT_ID" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="commentContent" column="COMMENTCONTENT" />
+        <property name="commentIssuerName" column="COMMENTISSUERNAME" />
+        <property name="commentIssuerId" column="COMMENTISSUERID" />
+        <property name="commentIssueTime" column="COMMENTISSUETIME" />
+        <property name="commentIssuerOrg" column="COMMENTISSUERORG" />
+		<property name="domainId" column="DOMAIN_ID" />
+		<property name="commentParentId" column="COMMENTPARENTID" />
+		<property name="layer" column="LAYER" />
+		
+        <!--与OA_INFORMATION（信息）表是多对一的关系-->
+        <many-to-one name="information"
+            class="com.js.oa.info.infomanager.po.InformationPO"
+            cascade="none"
+            outer-join="auto"
+            update="false"
+            insert="true"
+            column="INFORMATION_ID" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.oacollect.po.OaCollect" table="oa_collect">
+        <id name="collectId" type="java.lang.Long">
+            <column name="collect_id" />
+            <generator class="native" />
+        </id>
+        <property name="collectTitle" type="java.lang.String">
+            <column name="collect_title" length="200" />
+        </property>
+        <property name="collectTTable" type="java.lang.String">
+            <column name="collect_tTable" length="20" />
+        </property>
+        <property name="collectTPage" type="java.lang.String">
+            <column name="collect_tPage" length="20" />
+        </property>
+        <property name="collectTProcess" type="java.lang.String">
+            <column name="collect_tProcess" length="20" />
+        </property>
+        <property name="collectTTableName" type="java.lang.String">
+            <column name="collect_tTable_name" length="20" />
+        </property>
+        <property name="collectTProcessName" type="java.lang.String">
+            <column name="collect_tProcess_name" length="20" />
+        </property>
+        <property name="collectOperationType" type="java.lang.String">
+            <column name="collect_operationType" length="10" />
+        </property>
+        <property name="collectRecordOperation" type="java.lang.String">
+            <column name="collect_recordOperation" length="10" />
+        </property>
+        <property name="collectOperationimg" type="java.lang.String">
+            <column name="collect_operationimg" length="10" />
+        </property>
+        <property name="collectOperationcomponert" type="java.lang.String">
+            <column name="collect_operationcomponert" length="10" />
+        </property>
+        <property name="collectOpenStyle" type="java.lang.String">
+            <column name="collect_openStyle" length="10" />
+        </property>
+        <property name="collectRelationRefFlow" type="java.lang.String">
+            <column name="collect_relationRefFlow" length="10" />
+        </property>
+        <property name="collectQueryelements" type="java.lang.String">
+            <column name="collect_queryelements" length="10" />
+        </property>
+        <property name="collectDisplayelements" type="java.lang.String">
+            <column name="collect_displayelements" length="10" />
+        </property>
+        <property name="collectDefquerycondition" type="java.lang.String">
+            <column name="collect_defquerycondition" length="200" />
+        </property>
+        <property name="collectDefqueryorder" type="java.lang.String">
+            <column name="collect_defqueryorder" length="100" />
+        </property>
+        <property name="collectMantblSubtbl" type="java.lang.Long">
+            <column name="collect_mantbl_subtbl"/>
+        </property>
+        <property name="collectMantblSubtblname" type="java.lang.String">
+            <column name="collect_mantbl_subtblname" length="40" />
+        </property>
+        <property name="collectStatus" type="java.lang.Long">
+            <column name="collect_status" />
+        </property>
+        <property name="collectEnable" type="java.lang.Long">
+            <column name="collect_enable" />
+        </property>
+          <property name="isMultiCollect" type="java.lang.Long">
+            <column name="is_multi_collect" />
+        </property>
+           <property name="collectZl" type="java.lang.Long">
+            <column name="collect_zl" />
+        </property>
+        <property name="collectBeginTime" type="java.util.Date">
+            <column name="collect_beginTime" length="0" />
+        </property>
+        <property name="collectEndTime" type="java.util.Date">
+            <column name="collect_endTime" length="0" />
+        </property>
+        <property name="createEmp" type="java.lang.String">
+            <column name="create_emp" length="20" />
+        </property>
+        <property name="createOrg" type="java.lang.String">
+            <column name="create_org" length="20" />
+        </property>
+         <property name="ifRemind" type="java.lang.Long">
+            <column name="if_remind" />
+        </property>
+         <property name="collectRemindDays" type="java.lang.Long">
+            <column name="collect_remind_days" />
+        </property>
+        <property name="ifRemindPerDay" type="java.lang.Long">
+            <column name="if_remind_per_day" />
+        </property>
+         <property name="collectRemindTime" type="java.lang.String">
+            <column name="collect_remind_time" />
+        </property>
+        <property name="categoryId" type="java.lang.Long">
+            <column name="category_id" />
+        </property>
+        <property name="collectEmps" type="java.lang.String">
+            <column name="oa_collect_empId" />
+        </property>
+        <property name="collectEmpNames" type="java.lang.String">
+            <column name="oa_collect_empName" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.hr.personnelmanager.po.SalaryPO"
+        table="oa_salary"
+        >
+        <id name="salary_id" column="salary_id">
+            <generator class="native" />
+        </id>
+        
+        	<many-to-one name="employeeVO"
+            class="com.js.system.vo.usermanager.EmployeeVO"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            column="emp_id" />
+        
+        
+        
+        <property name="sendTime" column="sendTime" />
+        <property name="fixed_salary" column="fixed_salary" />
+		<property name="allowance" column="allowance" />
+		<property name="performance" column="performance" />
+		<property name="yiecanfei" column="yiecanfei" />
+		<property name="jiaban" column="jiaban" />
+		<property name="jianzhi" column="jianzhi" />
+		<property name="other" column="other" />
+	    <property name="yuetotal" column="yuetotal" />
+        <property name="yanglaoxian" column="yanglaoxian" />
+        <property name="shiyexian" column="shiyexian" />
+		<property name="yiliaoxian" column="yiliaoxian" />
+		<property name="zhufangjijin" column="zhufangjijin" />
+		<property name="baoxiankoukuan" column="baoxiankoukuan" />
+		<property name="queqinkoukuan" column="queqinkoukuan" />
+		<property name="otherkoukuan" column="otherkoukuan" />
+		<property name="yingjiaoshuijin" column="yingjiaoshuijin" />
+		<property name="shourutotal" column="shourutotal" />
+		<property name="shifagongzhi" column="shifagongzhi" />
+		<property name="createdEmp" column="CREATEDEMP" />
+		<property name="createdOrg" column="CREATEDORG" />
+    </class>
+</hibernate-mapping>

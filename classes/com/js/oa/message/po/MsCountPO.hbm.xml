@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.message.po.MsCountPO" table="MS_COUNT" >
+        <id name="countId" column="COUNTID" type="java.lang.Long">
+             <generator class="native"/>
+        </id>
+        <property name="sendCountId" column="COUT_SENDMAN_ID" type="java.lang.Long"/>
+        <property name="sendCountMan" column="COUT_SENDMAN" type="java.lang.String"/>
+        <property name="modelCountId" column="MODELID" type="java.lang.Long"/>
+        <property name="modelName" column="MODELNAME" type="java.lang.String"/>
+        <property name="sumCount" column="SUNCOUTER" type="java.lang.Long"/>
+        <property name="countDate" column="COUTDATE" type="timestamp"/>
+		<property name="domainId" column="DOMAIN_ID"/>
+    </class>
+</hibernate-mapping>

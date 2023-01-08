@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.workplan.po.WorkplanProxyPO" table="oa_workplanproxy">
+<id name="id" column="id" type="long">
+	<generator class="native" />
+</id>
+<property name="leaderId" column="leaderId"/>
+<property name="leaderName" column="leaderName"/>
+<property name="proxyId" column="proxyId"/>
+<property name="proxyName" column="proxyName"/>
+<property name="proxystatus" column="proxystatus"/>
+<property name="proxybegin" column="proxybegin"/>
+<property name="proxyend" column="proxyend"/>
+
+</class>
+</hibernate-mapping>

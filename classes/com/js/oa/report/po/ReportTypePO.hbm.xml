@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+    <class name="com.js.oa.report.po.ReportTypePO" table="oa_reportType">
+        <id name="typeId" type="java.lang.Long">
+            <column name="typeId" />
+            <generator class="native" />
+        </id>
+        <property name="viewScopeId" type="java.lang.String">
+            <column name="viewScopeId" length="200" />
+        </property>
+        <property name="viewScope" type="java.lang.String">
+            <column name="viewScope" length="200" />
+        </property>
+        <property name="typeName" type="java.lang.String">
+            <column name="typeName" length="50" />
+        </property>
+        <property name="typeDescribe" type="java.lang.String">
+            <column name="typeDescribe" length="500" />
+        </property>
+        <property name="createEmp" type="java.lang.String">
+            <column name="createEmp" length="20" />
+        </property>
+        <property name="createEmpId" type="java.lang.Long">
+            <column name="createEmpId"/>
+        </property>
+        <property name="createDate">
+            <column name="createDate"/>
+        </property>
+        <property name="domainId" type="java.lang.String">
+            <column name="domainId" length="10" />
+        </property>
+        <property name="corpId" type="java.lang.String">
+            <column name="corpId" length="10" />
+        </property>
+        <property name="createOrgId" type="java.lang.Long">
+            <column name="createOrgId"/>
+        </property>
+        <property name="parentId" type="java.lang.Long">
+            <column name="parentId" length="20" />
+        </property>
+        <property name="orderCode" type="java.lang.String">
+            <column name="orderCode" length="100" />
+        </property>
+        <property name="typeLevel">
+            <column name="typeLevel"/>
+        </property>
+        <property name="sortCode">
+            <column name="sortCode"/>
+        </property>
+        <property name="insertSite">
+            <column name="insertSite"/>
+        </property>
+        <property name="oprEmpId" type="java.lang.String">
+            <column name="oprEmpId" length="100" />
+        </property>
+        <property name="oprEmpName" type="java.lang.String">
+            <column name="oprEmpName" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

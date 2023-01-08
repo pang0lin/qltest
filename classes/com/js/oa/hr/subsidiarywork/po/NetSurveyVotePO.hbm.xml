@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.hr.subsidiarywork.po.NetSurveyVotePO" table="OA_NETSURVEYVOTE" >
+<id name="id" column="VOTE_ID" type="long">
+    <generator class="native" />
+</id>
+<property name="surveyId" column="SURVEY_ID"  />
+<property name="employeeId" column="EMPLOYEE_ID"  />
+<property name="domainId" column="DOMAIN_ID"/>
+<property name="voteDate" column="VOTE_Date"/>
+<many-to-one
+	name="item"
+	class="com.js.oa.hr.subsidiarywork.po.NetSurveyItemPO"
+	cascade="none"
+	outer-join="auto"
+	update="false"
+	insert="true"
+	column="ITEM_ID"
+/>
+</class>
+</hibernate-mapping>

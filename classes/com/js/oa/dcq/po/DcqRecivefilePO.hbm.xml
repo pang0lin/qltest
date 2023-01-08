@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+<class name="com.js.oa.dcq.po.DcqRecivefilePO" table="dcq_recivefile" >
+<id name="file_id" column="file_id" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="file_oid" column="file_oid" />
+<property name="docTitle" column="docTitle" />
+<property name="docNo" column="docNo" />
+<property name="releaseDate" column="releaseDate" />
+<property name="releaseStatus" column="releaseStatus" />
+<property name="releaseDepID" column="releaseDepID" />
+<property name="postWord" column="postWord" />
+<property name="urgency" column="urgency" />
+<property name="file_dense" column="file_dense" />
+<property name="secrecyDateStr" column="secrecyDateStr" />
+<property name="sourceMethod" column="sourceMethod" />
+<property name="basis" column="basis" />
+<property name="file_standard" column="file_standard" />
+<property name="docType" column="docType" />
+<property name="kword" column="kword" />
+<property name="mainSent" column="mainSent" />
+<property name="copySent" column="copySent" />
+
+<property name="deptName" column="deptName" />
+<property name="creatorName" column="creatorName" />
+<property name="createDate" column="createDate" />
+<property name="issue" column="issue" />
+<property name="jointly" column="jointly" />
+
+<property name="nuclear" column="nuclear" />
+<property name="printing" column="printing" />
+<property name="proofreading" column="proofreading" />
+<property name="personID" column="personID" />
+<property name="deptID" column="deptID" />
+
+</class>
+</hibernate-mapping>
